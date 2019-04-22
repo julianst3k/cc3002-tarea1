@@ -5,7 +5,7 @@ import org.junit.Test;
 public class TestEntrenador {
     private Entrenador entrenador;
     @Before public void setUp(){
-        entrenador = new Entrenador();
+        entrenador = new Entrenador(new PokemonFuego());
     }
     @Test public void testInitial(){ // Inicialmente tenemos un pokemon activo, y 0 en la banca, esto el jugador ha de tener
         // siempre uno activo?
@@ -13,13 +13,11 @@ public class TestEntrenador {
         assertNotNull(entrenador.cardInfo(entrenador.getActiva()));
         assertNotNull(entrenador.activeSkillsInfo()); // No nulo
     }
-    @Test public void testSacarMano(){
-        assertEquals(entrenador.sacarMano().cantidadBanca()+entrenador.cantidadEnergias(), 1);
-    }
     @Test public void testMandarSkills(){
         assertNotNull(entrenador.selectAttack(1));
-        assertTrue(entrenador.sacarCarta(new Energia()).cantidadEnergias()>0);
-        assertTrue(entrenador.sacarCarta(new Pokemon()).cantidadBanca()>0);
+        assertTrue(entrenador.sacarCarta(new EnergiaPlanta()).cantidadEnergias()==1);
+        assertTrue(entrenador.sacarCarta(new PokemonPlanta()).cantidadBanca()==1);
+        assertNotNull(entrenador.cardInfoBanca(0));
         assertNotNull(entrenador.activeUseEnergy(0).getActive().Energy()); // No le habiamos puesto nada antes
     }
     @Test public void testActiveSwap(){

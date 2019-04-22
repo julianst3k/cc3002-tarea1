@@ -6,9 +6,14 @@ public class Entrenador {
     private ArrayList<Pokemon> Banca;
     private ArrayList<Energia> Energias
     public Entrenador(){
-        Activa=new Pokemon();
+        Activa=new Pokemon(); // No se si se pueda hacer esto, pq no se como se supone q se sacan inicialmente las cartas??
         Banca=new ArrayList<Pokemon>();
         Energias=new ArrayList<Energia>();
+    }
+    public Entrenador(Pokemon a){
+        Activa = a;
+        Banca = new ArrayList<Pokemon>();
+        Energias = new ArrayList<Energia>();
     }
     public Entrenador(ArrayList<Pokemon> Initials){ // Por si es necesario, no cacho
         assertNotNull(Initials);
@@ -36,23 +41,11 @@ public class Entrenador {
     public String activeSkillsInfo(){
          return "Los ataques del Pokemon son "+this.Activa.showSkills();
     }
+
     public Skill selectAttack(int A){ // Me imagino que el ataque es una clase
         return this.Activa.Skills(A);
     }
-    public void sacarMano(){
-        // La nueva carta puede ser Pokemon o Energia, no se como se se sabe q tipo es si no es por azar por ahora xd
-        Random rand = new Random();
-        int Type=rand.nextInt(1);// Aqui asumi que el tipo es random, y si sale Pokemon y ta full perdio el swap
-        if(Type==1){
-            this.Energias.add(new Energia());
-        }
-        else{
-            if(this.cantidadBanca==5){
-                return;
-            }
-            this.Banca.add(new Pokemon());
-        }
-    } // Esto es provisorio, evidentemente no creo que se haga asi, pero no tengo idea d q se supone q se hace xD
+
     public void sacarCarta(Energia a){ // Para testear con cartas de energia y pokemon, sin depender del azar
         this.Energias.add(a);
     }
@@ -68,6 +61,11 @@ public class Entrenador {
     }
     public Pokemon getActiva(){
         return this.Activa;
+    }
+    public String cardInfoBanca(int i){
+        if(i-1<=this.cantidadBanca()){
+            return cardInfo(this.Banca.get(i-1));
+        }
     }
     public void activeInfo(){
         System.out.println(cardInfo(this.Activa));
