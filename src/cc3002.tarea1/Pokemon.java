@@ -64,6 +64,7 @@ public abstract class Pokemon implements IPokemon {
         for (int i = 0; i < TiposPosibles.size(); i++) {
             energiasHash.put(TiposPosibles.get(i), 0);
         }
+        return energiasHash;
     }
 
     public void getAttacked(ISkill A) {
