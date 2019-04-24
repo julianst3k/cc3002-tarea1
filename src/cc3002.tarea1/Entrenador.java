@@ -19,7 +19,7 @@ public class Entrenador {
         Activa=Initials.get(0);
         Initials.remove(0);
         Banca=Initials;
-        Energias=new ArrayLIst<IEnergia>();
+        Energias=new ArrayList<IEnergia>();
     }
     public void activePokemonSwap(){
         if(this.Activa!=null){

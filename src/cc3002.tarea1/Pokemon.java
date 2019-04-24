@@ -60,8 +60,8 @@ public abstract class Pokemon implements IPokemon {
 
     public HashMap<String, Integer> inicializarHashEnergies() { //Basicamente creo un hash con campos de lista vacios!
         List<String> TiposPosibles = Arrays.asList("planta", "agua", "fuego", "lucha", "psiquico", "relampago"); // Y los tipos que puede tener la lista :)
-        HashMap<String, Integer> energiasHash = new HashMap<String, Integer>;
-        for (int i = 0; i < TiposPosibles.length; i++) {
+        HashMap<String, Integer> energiasHash = new HashMap<String, Integer>();
+        for (int i = 0; i < TiposPosibles.size(); i++) {
             energiasHash.put(TiposPosibles.get(i), 0);
         }
     }
