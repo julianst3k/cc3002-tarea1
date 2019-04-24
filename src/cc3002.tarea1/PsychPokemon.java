@@ -1,8 +1,9 @@
 package cc3002.tarea1;
 import java.util.ArrayList;
 public class PsychPokemon extends Pokemon{
-    public PsychPokemon(int id, double healthPoints, ArrayList<ISkill> skills){
-        super(id, healthPoints, skills);
+    public PsychPokemon(String name, int id, double healthPoints, ArrayList<ISkill> skills){
+        super(name, id, healthPoints, skills);
+        ;
     }
     public void attack(Pokemon A){
         A.attackedByPsych(this.getSelectedSkill());

@@ -1,19 +1,21 @@
 package cc3002.tarea1;
 import java.util.*;
 
-public abstract class Pokemon implements IPokemon {
+public abstract class Pokemon implements IPokemon, ICard {
     private int id;
+    private String name;
     private double healthPoints;
     private HashMap<String, Integer> energies;
     private ArrayList<ISkill> skills;
     private ISkill selectedSkill;
 
-    public Pokemon(int id, double healthPoints, ArrayList<ISkill> skills) {
+    public Pokemon(String name, int id, double healthPoints, ArrayList<ISkill> skills) {
         this.id = id;
         this.healthPoints = healthPoints;
         this.energies = this.inicializarHashEnergies();
         this.skills = skills;
         this.selectedSkill = null;
+        this.name = name;
     }
 
     public boolean enoughEnergy(int A) {
@@ -137,4 +139,7 @@ public abstract class Pokemon implements IPokemon {
         }
     }
     public abstract void attack(Pokemon A);
+    public String getName(){
+        return this.name;
+    }
 }

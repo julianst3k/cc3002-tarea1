@@ -1,8 +1,8 @@
 package cc3002.tarea1;
 import java.util.ArrayList;
 public class WaterPokemon extends Pokemon{
-    public WaterPokemon(int id, double healthPoints, ArrayList<ISkill> skills){
-        super(id, healthPoints, skills);
+    public WaterPokemon(String name, int id, double healthPoints, ArrayList<ISkill> skills){
+        super(name, id, healthPoints, skills);
     }
     public void attack(Pokemon A){
         A.attackedByWater(this.getSelectedSkill());

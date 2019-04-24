@@ -1,8 +1,8 @@
 package cc3002.tarea1;
 import java.util.ArrayList;
 public class FighterPokemon extends Pokemon{
-    public FighterPokemon(int id, double healthPoints, ArrayList<ISkill> skills){
-        super(id, healthPoints, skills);
+    public FighterPokemon(String name, int id, double healthPoints, ArrayList<ISkill> skills){
+        super(name, id, healthPoints, skills);
     }
     public void attack(Pokemon A){
         A.attackedByFighter(this.getSelectedSkill());

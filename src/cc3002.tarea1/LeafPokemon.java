@@ -3,8 +3,8 @@ package cc3002.tarea1;
 import java.util.ArrayList;
 
 public class LeafPokemon extends Pokemon{
-    public LeafPokemon(int id, double healthPoints, ArrayList<ISkill> skills){
-        super(id, healthPoints, skills);
+    public LeafPokemon(String name, int id, double healthPoints, ArrayList<ISkill> skills){
+        super(name, id, healthPoints, skills);
     }
     public void attack(Pokemon A){
         A.attackedByLeaf(this.getSelectedSkill());
