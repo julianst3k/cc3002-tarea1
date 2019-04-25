@@ -3,7 +3,6 @@ import cc3002.tarea1.Energy;
 
 public class PsychEnergy extends Energy {
     public PsychEnergy(){
-        super("psych");
-        this.setName("Energía de Sicko");
+        super("Energia de Sicko");
     }
 }

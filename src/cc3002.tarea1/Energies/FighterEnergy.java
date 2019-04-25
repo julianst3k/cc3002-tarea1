@@ -3,7 +3,6 @@ import cc3002.tarea1.Energy;
 
 public class FighterEnergy extends Energy {
     public FighterEnergy(){
-        super("fighter");
-        this.setName("Energía de Lucha");
+        super("Energia de Lucha");
     }
 }

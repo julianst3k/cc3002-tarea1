@@ -3,7 +3,6 @@ import cc3002.tarea1.Energy;
 
 public class LeafEnergy extends Energy {
     public LeafEnergy(){
-        super("leaf");
-        this.setName("Energía de Hoja");
+        super("Energia de Planta");
     }
 }

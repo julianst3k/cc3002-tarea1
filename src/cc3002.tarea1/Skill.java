@@ -5,13 +5,15 @@ import java.util.HashMap;
 public class Skill implements ISkill { // Es una skill generica ! Dado que el tipo lo da el pokemon :)
     private String name;
     private int damage;
+    private String description;
     private HashMap<String, Integer> costo;
-    public Skill(String name, int damage, ArrayList<IEnergia> costo){
+    public Skill(String name, int damage, ArrayList<IEnergia> costo, String description){
         this.name = name;
         this.damage = damage;
         this.costo = HashCreate(costo);
+        this.description = description;
     }
-    public HashMap<String, Integer> HashCreate(ArrayList<IEnergia> costo){
+    private HashMap<String, Integer> HashCreate(ArrayList<IEnergia> costo){
         HashMap<String, Integer> hash = new HashMap<String, Integer>();
         for(int i = 0; i<costo.size(); i++){
             String tipo = costo.get(i).getType();
@@ -31,7 +33,15 @@ public class Skill implements ISkill { // Es una skill generica ! Dado que el ti
     public String getName(){
         return this.name;
     }
+    public String getDescripcion(){ return this.description; }
     public HashMap<String, Integer> getCost(){
         return this.costo;
+    }
+    public String getCostString(){
+        String result = "";
+        for (HashMap.Entry<String, Integer> entry : this.getCost().entrySet()) {
+            result += entry.getKey()+": "+entry.getValue()+". ";
+        }
+        return result;
     }
 }

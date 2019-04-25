@@ -1,4 +1,5 @@
 package cc3002.tarea1;
+import java.lang.reflect.Array;
 import java.util.*;
 
 public abstract class Pokemon implements IPokemon, ICard {
@@ -12,21 +13,27 @@ public abstract class Pokemon implements IPokemon, ICard {
     public Pokemon(String name, int id, double healthPoints, ArrayList<ISkill> skills) {
         this.id = id;
         this.healthPoints = healthPoints;
-        this.energies = this.inicializarHashEnergies();
-        this.skills = skills;
+        this.energies = new HashMap<String, Integer>();
+        this.skills = this.setUp(skills);
         this.selectedSkill = null;
         this.name = name;
     }
-
+    public ArrayList<ISkill> setUp(ArrayList<ISkill> array){
+        ArrayList<ISkill> result = new ArrayList<ISkill>();
+        for(int i=0; i<4 && i<array.size(); i++){
+            result.add(array.get(i));
+        }
+        return result;
+    }
     public boolean enoughEnergy(int A) {
-        if (A > 4 || A == 0) {
+        if (A >= 4) {
             return false;
         }
         HashMap<String, Integer> energia = this.getEnergies();
-        HashMap<String, Integer> energiaNecesaria = this.skills.get(A - 1).getCost(); // El costo sera un HashMap :)
+        HashMap<String, Integer> energiaNecesaria = this.skills.get(A).getCost(); // El costo sera un HashMap :)
         for (HashMap.Entry<String, Integer> entry : energiaNecesaria.entrySet()) {
             String type = entry.getKey();
-            if (energia.get(type) < entry.getValue()) {
+            if (energia.get(type)==null || energia.get(type) < entry.getValue()) {
                 return false;
             }
         }
@@ -37,11 +44,9 @@ public abstract class Pokemon implements IPokemon, ICard {
         HashMap<String, Integer> energia = this.getEnergies();
         String result = "";
         for (HashMap.Entry<String, Integer> entry : energia.entrySet()) {
-            if (entry.getValue() == 0) {
-                continue;
-            }
-            result += "la cantidad de energias " + entry.getKey() + " es " + String.valueOf(entry.getValue());
+            result += entry.getKey() + ": " + String.valueOf(entry.getValue())+", ";
         }
+        result+= ".";
         return result;
     }
 
@@ -56,17 +61,13 @@ public abstract class Pokemon implements IPokemon, ICard {
 
     public void setEnergy(IEnergia A) {
         String tipo = A.getType(); // No se me ocurrio como hacerlo con double dispatch aja
-        Integer cantidadInicial = energies.get(tipo);
-        energies.put(tipo, cantidadInicial + 1);
-    }
-
-    public HashMap<String, Integer> inicializarHashEnergies() { //Basicamente creo un hash con campos de lista vacios!
-        List<String> TiposPosibles = Arrays.asList("planta", "agua", "fuego", "lucha", "psiquico", "relampago"); // Y los tipos que puede tener la lista :)
-        HashMap<String, Integer> energiasHash = new HashMap<String, Integer>();
-        for (int i = 0; i < TiposPosibles.size(); i++) {
-            energiasHash.put(TiposPosibles.get(i), 0);
+        if(energies.get(tipo)==null){
+            energies.put(tipo, 1);
         }
-        return energiasHash;
+        else {
+            Integer cantidadInicial = energies.get(tipo);
+            energies.put(tipo, cantidadInicial + 1);
+        }
     }
 
     public void getAttacked(ISkill A) {
@@ -78,7 +79,7 @@ public abstract class Pokemon implements IPokemon, ICard {
     }
 
     public void getAttackedVulnerable(ISkill A) {
-        this.healthPoints -= A.getDamage() / 2;
+        this.healthPoints -= A.getDamage() * 2;
     }
 
     public abstract String showSkills(); // No se el tipo, pero como el pokemon de tipo fuego solo tendra movimientos
@@ -114,7 +115,7 @@ public abstract class Pokemon implements IPokemon, ICard {
 
     public void selectSkill(int A) {
         if (enoughEnergy(A)) {
-            this.selectedSkill = this.skills.get(A - 1);
+            this.selectedSkill = this.skills.get(A);
         }
     }
 
@@ -125,10 +126,10 @@ public abstract class Pokemon implements IPokemon, ICard {
     public ISkill getSelectedSkill() {
         return this.selectedSkill;
     }
-
-    public int getSelectedSkillDmg() {
-        return this.getSelectedSkill().getDamage();
+    public int getSelectedSkillIndex(){
+        return this.getSkills().indexOf(this.getSelectedSkill());
     }
+
 
     public boolean isDed() {
         return this.getHp() <= 0;
@@ -139,6 +140,7 @@ public abstract class Pokemon implements IPokemon, ICard {
         }
     }
     public abstract void attack(Pokemon A);
+    public abstract String showSkill(int A);
     public String getName(){
         return this.name;
     }

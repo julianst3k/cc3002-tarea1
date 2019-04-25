@@ -4,13 +4,10 @@ public class Energy implements IEnergia, ICard {
     private String name;
     public Energy(String a){
         this.type = a;
-        this.name = null;
+        this.name = a;
     }
     public String getType(){
         return this.type;
-    }
-    public void setName(String a){
-        this.name = a;
     }
     public String getName(){
         return this.name;

@@ -15,4 +15,5 @@ public interface IPokemon {
     void attackedByFighter(ISkill A);
     void attack(Pokemon A);
     void setEnergy(IEnergia A);
+    String showSkill(int A);
 }
