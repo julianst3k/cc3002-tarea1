@@ -5,18 +5,26 @@ import cc3002.tarea1.ISkill;
 import java.util.ArrayList;
 
 public class LeafPokemon extends Pokemon{
+    /** A class for the Grass-type Pokemon
+     * @author: Julian Solis Torrejon
+     *
+     */
     public LeafPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
     }
+    @Override
     public void attack(Pokemon A){
         A.attackedByLeaf(this.getSelectedSkill());
     }
+    @Override
     public void attackedByWater(ISkill A) {
         this.getAttackedResist(A);
     }
+    @Override
     public void attackedByFire(ISkill A){
         this.getAttackedVulnerable(A);
     }
+    @Override
     public String showSkills(){
         String s="";
         for(int i=0; i<this.getSkills().size(); i++){
@@ -24,6 +32,7 @@ public class LeafPokemon extends Pokemon{
         }
         return s;
     }
+    @Override
     public String showSkill(int A){
         String result = this.getSkills().get(A).getName()+", de tipo hierba y realiza "+this.getSkills().get(A).getDamage()+" de daño. Descripcion: "+this.getSkills().get(A).getDescripcion()+". Requiere: "+this.getSkills().get(A).getCostString()+"\n";
         return result;

@@ -114,6 +114,11 @@ public abstract class Pokemon implements IPokemon, ICard {
     public void getAttackedVulnerable(ISkill A) {
         this.healthPoints -= A.getDamage() * 2;
     }
+
+    /** Shows the skills of the pokemon
+     *
+     * @return A string with enumerated skills
+     */
     public abstract String showSkills(); // No se el tipo, pero como el pokemon de tipo fuego solo tendra movimientos
     // de tipo fuego (??), entonces la implemento en su clase :)
     @Override
@@ -192,17 +197,36 @@ public abstract class Pokemon implements IPokemon, ICard {
             this.skills.add(a);
         }
     }
+
+    /** A pokemon attacks another one
+     *
+     * @param A A pokemon
+     */
     public abstract void attack(Pokemon A);
+
+    /** Show an specified skill, based on the index
+     *
+     * @param A index of the skill
+     * @return The string of the skill
+     */
     public abstract String showSkill(int A);
+    @Override
     public String getDescrp(){
         String s = "";
         s += "Nombre: "+this.getName()+", ID: "+this.getIndex()+", Health Points: "+Math.round(this.getHp())+", Energias: "+this.getEnergiesString()+"\n";
         s += this.showSkills();
         return s;
     }
+
+    /** Get the name of the card
+     *
+     * @return A string of the name
+     */
     public String getName(){
         return this.name;
     }
+
+    @Override
     public void jugarCarta(Entrenador a){
         a.jugarCartaPokemon(this);
     }
