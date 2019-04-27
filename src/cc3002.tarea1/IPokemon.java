@@ -1,11 +1,13 @@
 package cc3002.tarea1;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public interface IPokemon {
     int getIndex();
     ISkill getSelectedSkill();
     ArrayList<ISkill> getSkills();
-    double getHp();
+    int getHp();
+    HashMap<String, Integer> getEnergies();
     boolean isDed();
     void attackedByPsych(ISkill A);
     void attackedByFire(ISkill A);

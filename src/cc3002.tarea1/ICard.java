@@ -1,5 +1,6 @@
 package cc3002.tarea1;
 
 public interface ICard {
-    String getName();
+    String getDescrp();
+    void jugarCarta(Entrenador a);
 }

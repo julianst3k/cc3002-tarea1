@@ -3,11 +3,11 @@ import java.util.ArrayList;
 public class Entrenador {
     private Pokemon Activa;
     private ArrayList<Pokemon> Banca;
-    private ArrayList<IEnergia> Energias;
+    private ArrayList<ICard> Mano;
     public Entrenador(Pokemon a){ // Defino el inicio del juego con un pokemon activo :)
         Activa = a;
         Banca = new ArrayList<Pokemon>();
-        Energias = new ArrayList<IEnergia>();
+        Mano = new ArrayList<ICard>();
     }
     public void activePokemonSwap(){
         if(this.cantidadBanca()==0){
@@ -29,8 +29,8 @@ public class Entrenador {
             this.activePokemonSwap();
         }
     }
-    public String cardInfo(Pokemon A){
-        return "El pokemon es "+A.getName()+", su id es "+A.getIndex()+", Health Points = "+Math.round(A.getHp())+", y sus energias son: "+A.getEnergiesString();
+    public String cardInfo(ICard A){
+        return A.getDescrp();
     }
     public String activeSkillsInfo(){
          return "Los ataques del Pokemon son: "+this.Activa.showSkills();
@@ -46,18 +46,11 @@ public class Entrenador {
     public void selectAttack(int A){ // Me imagino que el ataque es una clase
         this.Activa.selectSkill(A-1);
     }
-    public void sacarCarta(IEnergia a){ // Para testear con cartas de energia y pokemon, sin depender del azar
-        this.Energias.add(a);
+    public void sacarCarta(ICard A){
+        this.Mano.add(A);
     }
-    public void sacarCarta(Pokemon b){
-        if(this.cantidadBanca()<5){
-            this.Banca.add(b);
-        }
-    }
-    public void activeUseEnergy(int A){
-        IEnergia forUse=this.getEnergias().get(A-1);
-        this.Energias.remove(A-1);
-        this.Activa.setEnergy(forUse);
+    public void activeUseEnergy(Energy A){
+        this.Activa.setEnergy(A);
     }
     public Pokemon getActiva(){
         return this.Activa;
@@ -72,11 +65,33 @@ public class Entrenador {
     //public void activeInfo(){
       //   System.out.println(cardInfo(this.Activa));
     //}
-
-    public String energyString(int A){
-        String s = this.getEnergias().get(A-1).getName();
-        return s;
+    public void jugarCarta(int A){
+        if(A>0 && A<=this.Mano.size()) {
+            ICard Card = this.Mano.get(A - 1);
+            this.Mano.remove(A - 1);
+            Card.jugarCarta(this);
+        }
     }
+    public String cardInfoMano(int i){
+        if(this.getMano().size()>=i){
+            return this.cardInfo(this.getMano().get(i-1));
+        }
+        else{
+            return "";
+        }
+    }
+    public void jugarCartaPokemon(Pokemon A){
+        if(this.cantidadBanca()<5){
+            this.Banca.add(A);
+        }
+        else{
+            this.Mano.add(A);
+        }
+    }
+    public void jugarCartaEnergia(Energy A){
+        this.activeUseEnergy(A);
+    }
+
     // public void energyInfo()
     // { public void bancaInfo(){
     //        for(int i=1; i<=this.cantidadBanca(); i++) {
@@ -93,14 +108,22 @@ public class Entrenador {
     public int cantidadBanca(){
         return this.Banca.size();
     }
-    public int cantidadEnergias(){
-        return this.Energias.size();
+    public ArrayList<ICard> getMano(){
+        return this.Mano;
     }
-    public ArrayList<IEnergia> getEnergias() {
-        return this.Energias;}
+    public String showMano(){
+        String result = "";
+        for(int i=0; i<this.getMano().size(); i++){
+            result += Integer.toString(i+1)+". "+this.getMano().get(i).getDescrp()+".\n";
+        }
+        return result;
+    }
     public void pokemonAttack(Pokemon A){ // seria por default el pokemon del enemigo?
         if(this.Activa.getSelectedSkill()!=null){
             this.Activa.attack(A);
         }
+    }
+    public int cantidadMano(){
+        return this.getMano().size();
     }
 }

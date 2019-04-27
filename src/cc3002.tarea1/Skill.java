@@ -2,7 +2,12 @@ package cc3002.tarea1;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Skill implements ISkill { // Es una skill generica ! Dado que el tipo lo da el pokemon :)
+public class Skill implements ISkill {
+    /**Clase para skills genericas. Basicamente se invoca para ser llamadas por los pokemon, los cuales le dan el
+    * tipo
+    * @author Julian Solis Torrejon
+    */
+
     private String name;
     private int damage;
     private String description;
@@ -13,6 +18,12 @@ public class Skill implements ISkill { // Es una skill generica ! Dado que el ti
         this.costo = HashCreate(costo);
         this.description = description;
     }
+
+    /**
+     * Genera un HashMap con las energias para las comparaciones
+     * @param costo Lista de energias
+     * @return HashMap
+     */
     private HashMap<String, Integer> HashCreate(ArrayList<IEnergia> costo){
         HashMap<String, Integer> hash = new HashMap<String, Integer>();
         for(int i = 0; i<costo.size(); i++){
@@ -27,16 +38,25 @@ public class Skill implements ISkill { // Es una skill generica ! Dado que el ti
         }
         return hash;
     }
+    @Override
     public int getDamage(){
         return this.damage;
     }
+    @Override
     public String getName(){
         return this.name;
     }
+    @Override
     public String getDescripcion(){ return this.description; }
+    @Override
     public HashMap<String, Integer> getCost(){
         return this.costo;
     }
+
+    /** The attack cost something, we want to know that :)
+     *
+     * @return String of the energies that the attack cost
+     */
     public String getCostString(){
         String result = "";
         for (HashMap.Entry<String, Integer> entry : this.getCost().entrySet()) {

@@ -4,7 +4,7 @@ import cc3002.tarea1.ISkill;
 
 import java.util.ArrayList;
 public class FirePokemon extends Pokemon{
-    public FirePokemon(String name, int id, double healthPoints, ArrayList<ISkill> skills){
+    public FirePokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
     }
     public void attack(Pokemon A){
