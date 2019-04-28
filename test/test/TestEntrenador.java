@@ -72,6 +72,7 @@ public class TestEntrenador {
         entrenador.jugarCarta(1);
         assertEquals(entrenador.cantidadBanca(), 1);
         assertEquals(entrenador.cardInfoBanca(1), "1. Nombre: Green, ID: 420, Health Points: 1000, Energias: \n1. Cures Cancer, de tipo hierba y realiza 420 de daño. Descripcion: Smoke that. Requiere: Energia de Fuego: 1. Energia de Planta: 1. \n");
+        assertEquals(faker.showEnemyField(entrenador), "Activo: Nombre: Byron, ID: 23, Health Points: 69, Energias: Energia de Fuego: 2. \n1. Big Flames, de tipo fuego y realiza 33 de daño. Descripcion: Pega. Requiere: Energia de Fuego: 2. \nBanca: \n1. Nombre: Green, ID: 420, Health Points: 1000, Energias: \n1. Cures Cancer, de tipo hierba y realiza 420 de daño. Descripcion: Smoke that. Requiere: Energia de Fuego: 1. Energia de Planta: 1. \n");
         entrenador.activePokemonSwap();
         assertEquals(entrenador.cardInfo(entrenador.getActiva()), "Nombre: Green, ID: 420, Health Points: 1000, Energias: \n1. Cures Cancer, de tipo hierba y realiza 420 de daño. Descripcion: Smoke that. Requiere: Energia de Fuego: 1. Energia de Planta: 1. \n");
         faker.pokemonAttack(entrenador);
@@ -90,5 +91,6 @@ public class TestEntrenador {
         entrenador.sacarCarta(genericGreenDay6); entrenador.jugarCarta(1);
         assertEquals(entrenador.cardInfoMano(1), "Nombre: Misunderstood Green, ID: 420, Health Points: 1000, Energias: \n1. Cures Cancer, de tipo hierba y realiza 420 de daño. Descripcion: Smoke that. Requiere: Energia de Fuego: 1. Energia de Planta: 1. \n");
         assertEquals(entrenador.cardInfoMano(2), "");
+
     }
 }

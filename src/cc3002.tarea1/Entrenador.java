@@ -206,7 +206,19 @@ public class Entrenador implements IEntrenador {
     public void getAttacked(){
         this.deadActive();
     }
+    @Override
+    public String showEnemyField(Entrenador A){
+        String s="";
+        s+="Activo: "+A.cardInfo(A.getActiva())+"Banca: \n";
+        for(int i=1; i<=A.getBanca().size(); i++){
+            s+=A.cardInfoBanca(i);
+        }
+        return s;
 
+    }
+    public void showEnemyFieldInfo(Entrenador A){
+        System.out.println(this.showEnemyField(A));
+    }
     /** Shows how many cards the trainer has that are not being played yet
      *
      * @return The amount of cards

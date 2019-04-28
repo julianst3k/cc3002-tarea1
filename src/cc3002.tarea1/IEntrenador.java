@@ -63,4 +63,10 @@ public interface IEntrenador {
      *
      */
     void getAttacked();
+
+    /** Show the active pokemon of the enemy
+     * @param A The enemy trainer
+     * @return An string of it
+     */
+    String showEnemyField(Entrenador A);
 }
