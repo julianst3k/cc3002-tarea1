@@ -43,27 +43,33 @@ public class TestEntrenador {
         genericGreenDay5 = new LeafPokemon("Green", 420, 1000, skillsGreen);
         genericGreenDay6 = new LeafPokemon("Misunderstood Green", 420, 1000, skillsGreen);
     }
-    @Test public void testInitial(){
+    @Test public void testInitial() {
         assertEquals(entrenador.cardInfo(entrenador.getActiva()), "Nombre: Byron, ID: 23, Health Points: 69, Energias: \n1. Big Flames, de tipo fuego y realiza 33 de daño. Descripcion: Pega. Requiere: Energia de Fuego: 2. \n");
         assertEquals(entrenador.activeSkillsInfo(), "Los ataques del Pokemon son: 1. Big Flames, de tipo fuego y realiza 33 de daño. Descripcion: Pega. Requiere: Energia de Fuego: 2. \n");
         assertEquals(entrenador.activeSelectedSkill(), "No hay ataque selecto");
     }
-    @Test public void testMandarSkills(){
+    @Test public void testJugarCartas() {
         entrenador.selectAttack(1);
         assertNull(entrenador.getActiva().getSelectedSkill()); // No hay suficientes energias!!
-        entrenador.sacarCarta(new FireEnergy()); faker.sacarCarta(new FireEnergy());
+        entrenador.sacarCarta(new FireEnergy());
+        faker.sacarCarta(new FireEnergy());
         assertEquals(entrenador.cantidadMano(), 1);
-        entrenador.sacarCarta(new FireEnergy()); faker.sacarCarta(new FireEnergy());
-        assertEquals(entrenador.showMano(), "1. Energia de Fuego.\n2. Energia de Fuego.\n" );
+        entrenador.sacarCarta(new FireEnergy());
+        faker.sacarCarta(new FireEnergy());
+        assertEquals(entrenador.showMano(), "1. Energia de Fuego.\n2. Energia de Fuego.\n");
         assertEquals(entrenador.cardInfoMano(2), "Energia de Fuego");
-        entrenador.jugarCarta(1); faker.jugarCarta(1);
+        entrenador.jugarCarta(1);
+        faker.jugarCarta(1);
         assertEquals(entrenador.showMano(), "1. Energia de Fuego.\n");
-        entrenador.jugarCarta(1); faker.jugarCarta(1);
-        entrenador.selectAttack(1); faker.selectAttack(1);
+        entrenador.jugarCarta(1);
+        faker.jugarCarta(1);
+        entrenador.selectAttack(1);
+        faker.selectAttack(1);
         System.out.println(entrenador.showMano());
         assertTrue((entrenador.getActiva().enoughEnergy(0)));
         assertEquals(entrenador.getActiva().getSelectedSkill().getName(), "Big Flames");
-        entrenador.sacarCarta(GreenDay); entrenador.jugarCarta(1);
+        entrenador.sacarCarta(GreenDay);
+        entrenador.jugarCarta(1);
         assertEquals(entrenador.cantidadBanca(), 1);
         assertEquals(entrenador.cardInfoBanca(1), "1. Nombre: Green, ID: 420, Health Points: 1000, Energias: \n1. Cures Cancer, de tipo hierba y realiza 420 de daño. Descripcion: Smoke that. Requiere: Energia de Fuego: 1. Energia de Planta: 1. \n");
         entrenador.activePokemonSwap();
@@ -75,7 +81,7 @@ public class TestEntrenador {
         entrenador.activePokemonSwap();
         assertEquals(entrenador.getActiva().getName(), "Byron");
     }
-    @Test public void addingWayTooMuch(){
+    @Test public void testAddingWayTooMuch(){
         entrenador.sacarCarta(genericGreenDay1); entrenador.jugarCarta(1);
         entrenador.sacarCarta(genericGreenDay2); entrenador.jugarCarta(1);
         entrenador.sacarCarta(genericGreenDay3); entrenador.jugarCarta(1);

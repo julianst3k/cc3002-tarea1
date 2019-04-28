@@ -1,6 +1,6 @@
 package cc3002.tarea1;
 import java.util.ArrayList;
-public class Entrenador {
+public class Entrenador implements IEntrenador {
     /** Defines the trainer. The trainer is allowed to see his cards and do actions with it.
      * @author: Julian Solis Torrejon
      */
@@ -13,10 +13,7 @@ public class Entrenador {
         Mano = new ArrayList<ICard>();
     }
 
-    /** Swap the active pokemon. This is used when the active pokemon is dead or when he just wants to
-     * swap it.
-     *
-     */
+    @Override
     public void activePokemonSwap(){
         if(this.cantidadBanca()==0){
             return;
@@ -33,20 +30,14 @@ public class Entrenador {
         }
     }
 
-    /** If the pokemon is dead, then the pokemon is swapped off
-     *
-     */
+    @Override
     public void deadActive(){
         if(this.getActiva().isDed()){
             this.activePokemonSwap();
         }
     }
 
-    /** Show the info of the card
-     *
-     * @param A A card
-     * @return A string
-     */
+    @Override
     public String cardInfo(ICard A){
         return A.getDescrp();
     }
@@ -72,18 +63,12 @@ public class Entrenador {
         }
     }
 
-    /** Select an attack of a list
-     *
-     * @param A The index + 1 of the attack
-     */
+    @Override
     public void selectAttack(int A){ // Me imagino que el ataque es una clase
         this.Activa.selectSkill(A-1);
     }
 
-    /** Gets a card from somewhere
-     *
-     * @param A A card
-     */
+    @Override
     public void sacarCarta(ICard A){
         this.Mano.add(A);
     }
@@ -96,10 +81,7 @@ public class Entrenador {
         this.Activa.setEnergy(A);
     }
 
-    /** Gets an active
-     *
-     * @return A pokemon
-     */
+    @Override
     public Pokemon getActiva(){
         return this.Activa;
     }
@@ -127,10 +109,7 @@ public class Entrenador {
             System.out.println(cardInfoBanca(i));
         }
     }
-    /** Plays a card from the set of cards
-     *
-     * @param A The index +1 of the card
-     */
+    @Override
     public void jugarCarta(int A){
         if(A>0 && A<=this.Mano.size()) {
             ICard Card = this.Mano.get(A - 1);
@@ -186,10 +165,7 @@ public class Entrenador {
      //   }
     // }
 
-    /** Get the list of 5-Pokemon
-     *
-     * @return An array with the list
-     */
+    @Override
     public ArrayList<Pokemon> getBanca(){
         return this.Banca;
     }
@@ -202,10 +178,7 @@ public class Entrenador {
         return this.Banca.size();
     }
 
-    /** Get the list of cards that are not played yet
-     *
-     * @return The array of cards
-     */
+    @Override
     public ArrayList<ICard> getMano(){
         return this.Mano;
     }
