@@ -1,25 +1,25 @@
-#Pókemon TCG
+# Pókemon TCG
 En este proyecto se implementará un TCG de Pokemón, el cual involucra diversos objetos que han de ser capaces de interacturar entre si. Por ahora solamente se encuentran los objetos principales.
 ## Como correr el programa
 Actualmente el programa simplemente consiste en objetos sin un main, por ende lo único que es posible correr son los tests existentes en la carpeta testing.
-##Implementación
+## Implementación
 La implementación consistió a grandes rasgos en cuatro objetos, los cuales son el entrenador, las cartas de energía, las cartas de Pokemon y las cartas de ataque.  
-###Entrenador
+### Entrenador
 El entrenador tiene como función jugar las cartas, por ende es posible de observar todas las cartas y elegir que hacer con ellas. Para ello le impuse una mano, la cual puede coger cualquier tipo de carta, una banca, a la cual van los pokemon que se juegan cuando ya hay previamente un activo, y un pokemon activo. El pokemon activo al morir debiese ser cambiado automaticamente, pero como el pokemon activo al morir no es capaz de ver cual es su entrenador (No es una facultad que le impuse), entonces la delegación de tal objetivo será hacia algún game driver que podría ser implementado posteriormente.
 Las cartas de la mano serán jugadas a partir del acceso de una lista, pero claramente aquí se enfrenta a dos formas de jugar una carta, siendo una de energía y otra de pokemon. Para resolver aquello se uso un double dispatch, donde se manda un mensaje a la carta a jugar, y la carta a jugar responde con su tipo. Si la carta jugada es un Pokemon, entonces va a la banca o activo, si la carta jugada es una carta de energía, entonces es seteada al pokemon activo.  
 
 El entrenador además tiene varios métodos para obtener acceso a la información de las cartas según lo que suponga necesario.  
-###Cartas
+### Cartas
 Ahora lo relevante serán las cartas. Las cartas es posible dividirlas en dos tipos, de energía y de Pokemon. Estas cartas tendrán en común dos métodos, el ser jugadas por un entrenador y el ofrecer una descripción de lo que hacen. Tanto las cartas de energía como las de Pokemon tendrán varias subclases que ofrecen el tipo de carta (Fuego, Agua, Planta, Rayo, Psíquico o Lucha) que ofrecen.  
-###Pokemon
+### Pokemon
 A grandes rasgos, la clase abstracta de Pokemon ofrece un getter para el nombre, el id, la cantidad de vida, las habilidades que tiene el pokemon y las energías. Las habilidades fueron implementadas a través de un arreglo, y las energías a través de un HashMap. Finalmente también los descriptores son strings que muestran información según lo necesario.  
 
 El HashMap del Pokemon se genera simplemente a través de la visualización del tipo de la carta de energía asociada. El tipo de la carta será un mensaje en string que dará la propia carta. Se pensó en un principio hacer esto por double dispatch, pero finalmente la situación era equivalente e incluso mas engorroso, dado que en vez de simplemente generar una clase solamente, habría que además generar un método adicional en la clase pokemon.
 
 El Pokemon puede agregar y deshabilitar habilidades, por si es necesario. La pelea entre Pokemon se hace de Pokemon a Pokemon (En vez de skill de Pokemon a Pokemon), dado que mediante el double dispatch se es capaz de conseguir el tipo del Pokemon que ataca al otro, y finalmente el Pokemon atacado es debilitado por una habilidad proveniente del Pokemon atacante.  
-###Energias
+### Energias
 Finalmente, las energías simplemente tienen un descriptor que enseña que tipo es. La implementación de las energías es suficiente pero no es mejorable, dado que existe una clase que se prefirió no eliminar que no tiene ningún próposito.  
-###Ataques
+### Ataques
 Por último, la clase de habilidad también tiene getters, en cuanto al daño que realiza, el nombre, la descripción y los costes. Los costes son un HashMap, mediante el cual el Pokemon es capaz de ver si tiene suficientes energías para satisfacer tal costo. El HashMap se hace mediante el uso de una lista en el constructor.
 ## Patrones de Diseño
 Se usaron dos clases abstractes, la de energía y la de pokemón, para asi ser extendidas por parte de los diversos tipos. Además, se uso una interfaz común para las cartas de Pokemón y Energía para realizar double dispatch para el juego de cartas. Las interacciones entre dos pokemón son descritas por un double dispatch. 
