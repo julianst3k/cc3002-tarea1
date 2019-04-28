@@ -195,14 +195,16 @@ public class Entrenador implements IEntrenador {
         return result;
     }
 
-    /** The active pokemon attacks the enemy's pokemon (In this case, the enemy pokemon doesnt exist??)
-     *
-     * @param A A pokemon
-     */
-    public void pokemonAttack(Pokemon A){ // seria por default el pokemon del enemigo?
-        if(this.Activa.getSelectedSkill()!=null){
-            this.Activa.attack(A);
+    @Override
+    public void pokemonAttack(Entrenador A){ // seria por default el pokemon del enemigo?
+        if(this.Activa.getSelectedSkill()!=null && A.getActiva()!=null){
+            this.Activa.attack(A.getActiva());
+            A.getAttacked();
         }
+    }
+    @Override
+    public void getAttacked(){
+        this.deadActive();
     }
 
     /** Shows how many cards the trainer has that are not being played yet

@@ -54,5 +54,13 @@ public interface IEntrenador {
      * @return An array with the list
      */
     ArrayList<Pokemon> getBanca();
-
+    /** The active pokemon attacks the enemy's pokemon
+     *
+     * @param A A trainer
+     */
+    void pokemonAttack(Entrenador A);
+    /** Trainer's pokemon is attacked
+     *
+     */
+    void getAttacked();
 }

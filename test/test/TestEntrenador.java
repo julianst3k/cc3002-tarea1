@@ -74,8 +74,7 @@ public class TestEntrenador {
         assertEquals(entrenador.cardInfoBanca(1), "1. Nombre: Green, ID: 420, Health Points: 1000, Energias: \n1. Cures Cancer, de tipo hierba y realiza 420 de daño. Descripcion: Smoke that. Requiere: Energia de Fuego: 1. Energia de Planta: 1. \n");
         entrenador.activePokemonSwap();
         assertEquals(entrenador.cardInfo(entrenador.getActiva()), "Nombre: Green, ID: 420, Health Points: 1000, Energias: \n1. Cures Cancer, de tipo hierba y realiza 420 de daño. Descripcion: Smoke that. Requiere: Energia de Fuego: 1. Energia de Planta: 1. \n");
-        faker.pokemonAttack(entrenador.getActiva());
-        entrenador.deadActive();
+        faker.pokemonAttack(entrenador);
         assertEquals(entrenador.getActiva().getName(), "Byron");
         assertEquals(entrenador.activeSelectedSkill(), "El ataque selecto es: Big Flames, de tipo fuego y realiza 33 de daño. Descripcion: Pega. Requiere: Energia de Fuego: 2. \n");
         entrenador.activePokemonSwap();
