@@ -197,7 +197,11 @@ public abstract class Pokemon implements IPokemon, ICard {
             this.skills.add(a);
         }
     }
-
+    public void deleteAttack(int a){
+        if(a<=this.getSkills().size()){
+            this.getSkills().remove(a-1);
+        }
+    }
     /** A pokemon attacks another one
      *
      * @param A A pokemon
