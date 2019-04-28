@@ -69,4 +69,24 @@ public interface IEntrenador {
      * @return An string of it
      */
     String showEnemyField(Entrenador A);
+    /** Gets the enemy active
+     * @param A The trainer
+     * @return His active
+     */
+    Pokemon enemyActive(Entrenador A);
+
+    /** Gets the enemy 5-Pokemon list
+     *
+     * @param A The trainer
+     * @return His pokemon that are not active
+     */
+    ArrayList<Pokemon> enemyBanca(Entrenador A);
+
+    /** Do a string that show the entire field of battle
+     *
+     * @param A The enemy trainer
+     * @return A string that show it
+     */
+    String showEntireField(Entrenador A);
+
 }

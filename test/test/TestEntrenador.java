@@ -80,6 +80,8 @@ public class TestEntrenador {
         assertEquals(entrenador.activeSelectedSkill(), "El ataque selecto es: Big Flames, de tipo fuego y realiza 33 de daño. Descripcion: Pega. Requiere: Energia de Fuego: 2. \n");
         entrenador.activePokemonSwap();
         assertEquals(entrenador.getActiva().getName(), "Byron");
+        assertEquals(entrenador.showEntireField(faker), "Tu campo: \nActivo: Nombre: Byron, ID: 23, Health Points: 69, Energias: Energia de Fuego: 2. \n1. Big Flames, de tipo fuego y realiza 33 de daño. Descripcion: Pega. Requiere: Energia de Fuego: 2. \nBanca: \nCampo enemigo: \nActivo: Nombre: Unkillable Demon King, ID: 666, Health Points: 10000, Energias: Energia de Fuego: 2. \n1. Bomb, de tipo fuego y realiza 10000 de daño. Descripcion: Kills everything. Requiere: Energia de Fuego: 2. \nBanca: \n" );
+
     }
     @Test public void testAddingWayTooMuch(){
         entrenador.sacarCarta(genericGreenDay1); entrenador.jugarCarta(1);
@@ -91,6 +93,7 @@ public class TestEntrenador {
         entrenador.sacarCarta(genericGreenDay6); entrenador.jugarCarta(1);
         assertEquals(entrenador.cardInfoMano(1), "Nombre: Misunderstood Green, ID: 420, Health Points: 1000, Energias: \n1. Cures Cancer, de tipo hierba y realiza 420 de daño. Descripcion: Smoke that. Requiere: Energia de Fuego: 1. Energia de Planta: 1. \n");
         assertEquals(entrenador.cardInfoMano(2), "");
+        assertEquals(faker.enemyBanca(entrenador), entrenador.getBanca());
 
     }
 }

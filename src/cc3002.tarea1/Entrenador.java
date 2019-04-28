@@ -98,12 +98,21 @@ public class Entrenador implements IEntrenador {
         }
         return result;
     }
+    /** Print in the console the active pokemon info
+     *
+     */
     public void activeInfo(){
        System.out.println(cardInfo(this.Activa));
     }
+    /** Print in the console the cards that are not being played yet
+     *
+     */
     public void manoInfo(){
         System.out.println(this.showMano());
     }
+    /** Print in the console the reserve pokemon info
+     *
+     */
     public void bancaInfo(){
         for(int i=1; i<=this.getBanca().size(); i++) {
             System.out.println(cardInfoBanca(i));
@@ -154,17 +163,6 @@ public class Entrenador implements IEntrenador {
         this.activeUseEnergy(A);
     }
 
-    // public void energyInfo()
-    // { public void bancaInfo(){
-    //        for(int i=1; i<=this.cantidadBanca(); i++) {
-    //            System.out.println(cardInfoBanca(i));
-    //        }
-    //    }
-     //   for(int i=1; i<=this.Energias.size(); i++){
-     //       System.out.println(this.energyString(i));
-     //   }
-    // }
-
     @Override
     public ArrayList<Pokemon> getBanca(){
         return this.Banca;
@@ -198,7 +196,7 @@ public class Entrenador implements IEntrenador {
     @Override
     public void pokemonAttack(Entrenador A){ // seria por default el pokemon del enemigo?
         if(this.Activa.getSelectedSkill()!=null && A.getActiva()!=null){
-            this.Activa.attack(A.getActiva());
+            this.Activa.attack(this.enemyActive(A));
             A.getAttacked();
         }
     }
@@ -209,13 +207,26 @@ public class Entrenador implements IEntrenador {
     @Override
     public String showEnemyField(Entrenador A){
         String s="";
-        s+="Activo: "+A.cardInfo(A.getActiva())+"Banca: \n";
+        s+="Activo: "+A.cardInfo(this.enemyActive(A))+"Banca: \n";
         for(int i=1; i<=A.getBanca().size(); i++){
             s+=A.cardInfoBanca(i);
         }
         return s;
 
     }
+    @Override
+    public ArrayList<Pokemon> enemyBanca(Entrenador A){
+        return A.getBanca();
+    }
+    @Override
+    public Pokemon enemyActive(Entrenador A){
+        return A.getActiva();
+    }
+
+    /** Print into the console the enemy field
+     *
+     * @param A The trainer
+     */
     public void showEnemyFieldInfo(Entrenador A){
         System.out.println(this.showEnemyField(A));
     }
@@ -225,5 +236,21 @@ public class Entrenador implements IEntrenador {
      */
     public int cantidadMano(){
         return this.getMano().size();
+    }
+    @Override
+    public String showEntireField(Entrenador A){
+        String result = "Tu campo: "+"\n";
+        result+=A.showEnemyField(this);
+        result+="Campo enemigo: "+"\n";
+        result+=this.showEnemyField(A);
+        return result;
+    }
+
+    /** Print in the console the entire field info
+     *
+     * @param A Enemy
+     */
+    public void showEntireFieldInfo(Entrenador A){
+        System.out.println(this.showEntireField(A));
     }
 }
