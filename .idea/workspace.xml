@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e54f3207-1a2f-4a2d-aa19-02ac0ee0fe87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/IEntrenador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/IEntrenador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test/TestEntrenador.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/TestEntrenador.java" afterDir="false" />
-    </list>
+    <list default="true" id="e54f3207-1a2f-4a2d-aa19-02ac0ee0fe87" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +53,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="uml://JAVA/cc3002.tarea1">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
@@ -71,7 +67,7 @@
                 <node x="722.75" y="0.0">cc3002.tarea1.IEntrenador</node>
                 <node x="1242.75" y="0.0">cc3002.tarea1.ISkill</node>
                 <node x="293.0" y="156.0">cc3002.tarea1.ICard</node>
-                <node x="722.75" y="413.0">cc3002.tarea1.Entrenador</node>
+                <node x="722.75" y="437.0">cc3002.tarea1.Entrenador</node>
                 <node x="160.0" y="1235.0">cc3002.tarea1.PokemonTypes</node>
                 <node x="77.0" y="437.0">cc3002.tarea1.Pokemon</node>
                 <node x="570.5" y="168.5">cc3002.tarea1.IEnergia</node>
@@ -95,8 +91,8 @@
                   <point x="0.0" y="374.0" />
                 </edge>
                 <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.IEntrenador">
-                  <point x="0.0" y="-362.0" />
-                  <point x="0.0" y="181.5" />
+                  <point x="0.0" y="-386.0" />
+                  <point x="0.0" y="193.5" />
                 </edge>
                 <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.ISkill">
                   <point x="0.0" y="-98.0" />
@@ -119,7 +115,7 @@
                   <point x="0.0" y="62.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="1005.0" y="220.0" />
+              <settings layout="Hierarchic Group" zoom="1.0" x="1195.5" y="273.0" />
               <SelectedNodes>
                 <node>cc3002.tarea1.IEnergia</node>
               </SelectedNodes>
@@ -128,6 +124,7 @@
                 <Category>Constructors</Category>
                 <Category>Properties</Category>
                 <Category>Methods</Category>
+                <Category>Inner Classes</Category>
               </Categories>
               <SCOPE>All</SCOPE>
               <VISIBILITY>private</VISIBILITY>
@@ -135,11 +132,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="112" column="50" selection-start-line="112" selection-start-column="50" selection-end-line="112" selection-end-column="50" />
+            <state relative-caret-position="213">
+              <caret line="105" column="5" lean-forward="true" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
               <folding>
                 <element signature="e#3192#3193#0" expanded="true" />
                 <element signature="e#3248#3249#0" expanded="true" />
@@ -547,7 +544,7 @@
       <workItem from="1556068247865" duration="1085000" />
       <workItem from="1556074498640" duration="600000" />
       <workItem from="1556139878058" duration="18218000" />
-      <workItem from="1556329114925" duration="26556000" />
+      <workItem from="1556329114925" duration="27189000" />
     </task>
     <servers />
   </component>
@@ -584,10 +581,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78141000" />
+    <option name="totallyTimeSpent" value="78774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1936912" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -651,7 +649,7 @@
       <FILTER>test.*</FILTER>
       <FILTER>cc3002.tarea1.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/tarea1$test_in_cc3002_tarea1.ic" NAME="test in cc3002-tarea1 Coverage Results" MODIFIED="1556417221840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/tarea1$test_in_cc3002_tarea1.ic" NAME="test in cc3002-tarea1 Coverage Results" MODIFIED="1556417864959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.*</FILTER>
       <FILTER>cc3002.tarea1.*</FILTER>
     </SUITE>
@@ -1041,82 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/cc3002.tarea1">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>cc3002.tarea1</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">cc3002.tarea1.IPokemon</node>
-            <node x="1136.75" y="196.0">cc3002.tarea1.Skill</node>
-            <node x="435.75" y="749.0">cc3002.tarea1.Energy</node>
-            <node x="485.75" y="1235.0">cc3002.tarea1.Energies</node>
-            <node x="722.75" y="0.0">cc3002.tarea1.IEntrenador</node>
-            <node x="1242.75" y="0.0">cc3002.tarea1.ISkill</node>
-            <node x="293.0" y="156.0">cc3002.tarea1.ICard</node>
-            <node x="722.75" y="413.0">cc3002.tarea1.Entrenador</node>
-            <node x="160.0" y="1235.0">cc3002.tarea1.PokemonTypes</node>
-            <node x="77.0" y="437.0">cc3002.tarea1.Pokemon</node>
-            <node x="570.5" y="168.5">cc3002.tarea1.IEnergia</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.IPokemon">
-              <point x="-84.0" y="-374.0" />
-              <point x="161.0" y="412.0" />
-              <point x="136.5" y="412.0" />
-              <point x="0.0" y="193.5" />
-            </edge>
-            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.ICard">
-              <point x="-60.5" y="-62.0" />
-              <point x="496.25" y="412.0" />
-              <point x="474.5" y="412.0" />
-              <point x="60.5" y="37.5" />
-            </edge>
-            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.Pokemon">
-              <point x="0.0" y="-13.0" />
-              <point x="0.0" y="374.0" />
-            </edge>
-            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.IEntrenador">
-              <point x="0.0" y="-362.0" />
-              <point x="0.0" y="181.5" />
-            </edge>
-            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.ISkill">
-              <point x="0.0" y="-98.0" />
-              <point x="0.0" y="73.0" />
-            </edge>
-            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.ICard">
-              <point x="84.0" y="-374.0" />
-              <point x="329.0" y="412.0" />
-              <point x="353.5" y="412.0" />
-              <point x="-60.5" y="37.5" />
-            </edge>
-            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.IEnergia">
-              <point x="60.5" y="-62.0" />
-              <point x="617.25" y="412.0" />
-              <point x="623.5" y="412.0" />
-              <point x="0.0" y="25.0" />
-            </edge>
-            <edge source="cc3002.tarea1.Energies" target="cc3002.tarea1.Energy">
-              <point x="0.0" y="-13.0" />
-              <point x="0.0" y="62.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="1005.0" y="220.0" />
-          <SelectedNodes>
-            <node>cc3002.tarea1.IEnergia</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Properties</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/IEntrenador.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
@@ -1139,8 +1061,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="112" column="50" selection-start-line="112" selection-start-column="50" selection-end-line="112" selection-end-column="50" />
+        <state relative-caret-position="213">
+          <caret line="105" column="5" lean-forward="true" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
           <folding>
             <element signature="e#3192#3193#0" expanded="true" />
             <element signature="e#3248#3249#0" expanded="true" />
@@ -1167,6 +1089,83 @@
             <element signature="e#6816#6817#0" expanded="true" />
             <element signature="e#6875#6876#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/cc3002.tarea1">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>cc3002.tarea1</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">cc3002.tarea1.IPokemon</node>
+            <node x="1136.75" y="196.0">cc3002.tarea1.Skill</node>
+            <node x="435.75" y="749.0">cc3002.tarea1.Energy</node>
+            <node x="485.75" y="1235.0">cc3002.tarea1.Energies</node>
+            <node x="722.75" y="0.0">cc3002.tarea1.IEntrenador</node>
+            <node x="1242.75" y="0.0">cc3002.tarea1.ISkill</node>
+            <node x="293.0" y="156.0">cc3002.tarea1.ICard</node>
+            <node x="722.75" y="437.0">cc3002.tarea1.Entrenador</node>
+            <node x="160.0" y="1235.0">cc3002.tarea1.PokemonTypes</node>
+            <node x="77.0" y="437.0">cc3002.tarea1.Pokemon</node>
+            <node x="570.5" y="168.5">cc3002.tarea1.IEnergia</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.IPokemon">
+              <point x="-84.0" y="-374.0" />
+              <point x="161.0" y="412.0" />
+              <point x="136.5" y="412.0" />
+              <point x="0.0" y="193.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.ICard">
+              <point x="-60.5" y="-62.0" />
+              <point x="496.25" y="412.0" />
+              <point x="474.5" y="412.0" />
+              <point x="60.5" y="37.5" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.Pokemon">
+              <point x="0.0" y="-13.0" />
+              <point x="0.0" y="374.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.IEntrenador">
+              <point x="0.0" y="-386.0" />
+              <point x="0.0" y="193.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.ISkill">
+              <point x="0.0" y="-98.0" />
+              <point x="0.0" y="73.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.ICard">
+              <point x="84.0" y="-374.0" />
+              <point x="329.0" y="412.0" />
+              <point x="353.5" y="412.0" />
+              <point x="-60.5" y="37.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.IEnergia">
+              <point x="60.5" y="-62.0" />
+              <point x="617.25" y="412.0" />
+              <point x="623.5" y="412.0" />
+              <point x="0.0" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energies" target="cc3002.tarea1.Energy">
+              <point x="0.0" y="-13.0" />
+              <point x="0.0" y="62.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="1195.5" y="273.0" />
+          <SelectedNodes>
+            <node>cc3002.tarea1.IEnergia</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
