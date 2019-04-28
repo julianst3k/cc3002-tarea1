@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e54f3207-1a2f-4a2d-aa19-02ac0ee0fe87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Energies/FighterEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Energies/FighterEnergy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Energies/FireEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Energies/FireEnergy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Energies/LeafEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Energies/LeafEnergy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Energies/LightEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Energies/LightEnergy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Energies/PsychEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Energies/PsychEnergy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Energies/WaterEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Energies/WaterEnergy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Energy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Energy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/ICard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/ICard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/IEnergia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/IEnergia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/IPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/IPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/ISkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/ISkill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Pokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/FighterPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/FighterPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/FirePokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/FirePokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/LeafPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/LeafPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/LightPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/LightPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/PsychPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/PsychPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/WaterPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/WaterPokemon.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,61 +35,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Energies/LeafEnergy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-              <folding>
-                <element signature="e#126#127#0" expanded="true" />
-                <element signature="e#168#169#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Energies/FireEnergy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-              <folding>
-                <element signature="e#126#127#0" expanded="true" />
-                <element signature="e#167#168#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Energies/FighterEnergy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-              <folding>
-                <element signature="e#132#133#0" expanded="true" />
-                <element signature="e#173#174#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/IEnergia.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/IPokemon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="90" column="24" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -130,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test/TestEnergiesCards.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
@@ -143,9 +74,115 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test/TestEntrenador.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="75" column="64" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/test/TestFirePokemon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test/TestWaterPokemon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="478">
+              <caret line="42" column="76" selection-start-line="42" selection-start-column="76" selection-end-line="42" selection-end-column="76" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/cc3002.tarea1">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>cc3002.tarea1</OriginalElement>
+              <nodes>
+                <node x="0.0" y="0.0">cc3002.tarea1.IPokemon</node>
+                <node x="1147.75" y="196.0">cc3002.tarea1.Skill</node>
+                <node x="485.75" y="796.0">cc3002.tarea1.Energy</node>
+                <node x="535.75" y="1354.0">cc3002.tarea1.Energies</node>
+                <node x="1228.25" y="0.0">cc3002.tarea1.ISkill</node>
+                <node x="342.99999999999994" y="156.0">cc3002.tarea1.ICard</node>
+                <node x="809.75" y="0.0">cc3002.tarea1.Entrenador</node>
+                <node x="197.49999999999994" y="1354.0">cc3002.tarea1.PokemonTypes</node>
+                <node x="114.49999999999994" y="436.0">cc3002.tarea1.Pokemon</node>
+                <node x="607.75" y="168.0">cc3002.tarea1.IEnergia</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.IPokemon">
+                  <point x="-84.0" y="-434.0" />
+                  <point x="198.49999999999994" y="411.0" />
+                  <point x="161.5" y="411.0" />
+                  <point x="0.0" y="193.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.ICard">
+                  <point x="-60.5" y="-74.0" />
+                  <point x="546.25" y="411.0" />
+                  <point x="524.5" y="411.0" />
+                  <point x="60.50000000000006" y="37.0" />
+                </edge>
+                <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.Pokemon">
+                  <point x="0.0" y="-13.0" />
+                  <point x="0.0" y="434.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.ISkill">
+                  <point x="0.0" y="-146.0" />
+                  <point x="0.0" y="73.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.ICard">
+                  <point x="84.0" y="-434.0" />
+                  <point x="366.49999999999994" y="411.0" />
+                  <point x="403.49999999999994" y="411.0" />
+                  <point x="-60.5" y="37.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.IEnergia">
+                  <point x="60.5" y="-74.0" />
+                  <point x="667.25" y="411.0" />
+                  <point x="686.25" y="411.0" />
+                  <point x="0.0" y="25.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Energies" target="cc3002.tarea1.Energy">
+                  <point x="0.0" y="-13.0" />
+                  <point x="0.0" y="74.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="220.0" y="220.0" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Pokemon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
+            <state relative-caret-position="2308">
               <caret line="228" column="13" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -157,8 +194,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="229" column="34" selection-start-line="229" selection-start-column="34" selection-end-line="229" selection-end-column="34" />
+            <state relative-caret-position="180">
+              <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+              <folding>
+                <element signature="e#3192#3193#0" expanded="true" />
+                <element signature="e#3248#3249#0" expanded="true" />
+                <element signature="e#3276#3277#0" expanded="true" />
+                <element signature="e#3327#3328#0" expanded="true" />
+                <element signature="e#4637#4638#0" expanded="true" />
+                <element signature="e#4676#4677#0" expanded="true" />
+                <element signature="e#5147#5148#0" expanded="true" />
+                <element signature="e#5180#5181#0" expanded="true" />
+                <element signature="e#5358#5359#0" expanded="true" />
+                <element signature="e#5398#5399#0" expanded="true" />
+                <element signature="e#5541#5542#0" expanded="true" />
+                <element signature="e#5573#5574#0" expanded="true" />
+                <element signature="e#6412#6413#0" expanded="true" />
+                <element signature="e#6456#6457#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -210,17 +263,14 @@
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/WaterPokemon.java" />
         <option value="$PROJECT_DIR$/test/TestEntrenador.java" />
         <option value="$PROJECT_DIR$/test/test/TestFighterPokemon.java" />
-        <option value="$PROJECT_DIR$/test/test/TestFirePokemon.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/TestPsychPokemon.java" />
         <option value="$PROJECT_DIR$/test/test/TestPsychPokemon.java" />
         <option value="$PROJECT_DIR$/test/test/TestLightPokemon.java" />
         <option value="$PROJECT_DIR$/test/test/TestPokemonAttacks.java" />
         <option value="$PROJECT_DIR$/test/test/TestEnergiesCards.java" />
         <option value="$PROJECT_DIR$/test/test/TestWaterPokemon.java" />
-        <option value="$PROJECT_DIR$/test/test/TestEntrenador.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/Skill.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/Pokemon.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/Energy.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/FirePokemon.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/LightPokemon.java" />
@@ -238,6 +288,9 @@
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/IPokemon.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/ICard.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/ISkill.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" />
+        <option value="$PROJECT_DIR$/test/test/TestEntrenador.java" />
+        <option value="$PROJECT_DIR$/test/test/TestFirePokemon.java" />
       </list>
     </option>
   </component>
@@ -317,6 +370,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -467,32 +521,11 @@
       <workItem from="1556068247865" duration="1085000" />
       <workItem from="1556074498640" duration="600000" />
       <workItem from="1556139878058" duration="18218000" />
-      <workItem from="1556329114925" duration="15952000" />
+      <workItem from="1556329114925" duration="19577000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 01h 24m 19s.xml">
-      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 01h 24m 47s.xml">
-      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 01h 26m 24s.xml">
-      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 01h 26m 34s.xml">
-      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 01h 26m 40s.xml">
-      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 01h 27m 26s.xml">
-      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 01h 28m 06s.xml">
-      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
-    </history-entry>
     <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 01h 28m 17s.xml">
       <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
     </history-entry>
@@ -502,9 +535,30 @@
     <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 17h 11m 23s.xml">
       <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
     </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 18h 03m 36s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 18h 03m 43s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 20h 30m 09s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 20h 30m 47s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 20h 31m 27s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 20h 32m 04s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.04.27 at 20h 32m 16s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67537000" />
+    <option name="totallyTimeSpent" value="71162000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -572,7 +626,7 @@
       <FILTER>test.*</FILTER>
       <FILTER>cc3002.tarea1.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/tarea1$test_in_cc3002_tarea1.ic" NAME="test in cc3002-tarea1 Coverage Results" MODIFIED="1556399021249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/tarea1$test_in_cc3002_tarea1.ic" NAME="test in cc3002-tarea1 Coverage Results" MODIFIED="1556407935357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.*</FILTER>
       <FILTER>cc3002.tarea1.*</FILTER>
     </SUITE>
@@ -581,11 +635,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Skill.java" />
-    <entry file="file://$PROJECT_DIR$/src/LeafPokemon.java" />
-    <entry file="file://$PROJECT_DIR$/src/LightPokemon.java" />
-    <entry file="file://$PROJECT_DIR$/src/PsychPokemon.java" />
-    <entry file="file://$PROJECT_DIR$/src/FighterPokemon.java" />
     <entry file="file://$PROJECT_DIR$/src/Energy/LightEnergy.java" />
     <entry file="file://$PROJECT_DIR$/src/WaterPokemon.java" />
     <entry file="file://$PROJECT_DIR$/src/Energies/LeafEnergy.java" />
@@ -633,40 +682,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test/TestFirePokemon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test/TestPokemonAttacks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="452">
           <caret line="54" column="73" selection-start-line="54" selection-start-column="73" selection-end-line="54" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test/TestWaterPokemon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="42" column="76" selection-start-line="42" selection-start-column="76" selection-end-line="42" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test/TestEntrenador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="46" column="119" selection-start-line="46" selection-start-column="119" selection-end-line="46" selection-end-column="119" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -850,23 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Pokemon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="228" column="13" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="229" column="34" selection-start-line="229" selection-start-column="34" selection-end-line="229" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/IEnergia.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -892,6 +894,223 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/TestWaterPokemon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="42" column="76" selection-start-line="42" selection-start-column="76" selection-end-line="42" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">cc3002.tarea1</node>
+            <node x="" y="">com</node>
+            <node x="" y="">images</node>
+            <node x="" y="">netscape</node>
+            <node x="" y="">junit</node>
+            <node x="" y="">test</node>
+            <node x="" y="">org</node>
+            <node x="" y="">toolbarButtonGraphics</node>
+            <node x="" y="">sun</node>
+            <node x="" y="">jdk</node>
+            <node x="" y="">META-INF</node>
+            <node x="" y="">groovyjarjarasm</node>
+            <node x="" y="">java</node>
+            <node x="" y="">groovy</node>
+            <node x="" y="">javax</node>
+            <node x="" y="">groovyjarjarcommonscli</node>
+            <node x="" y="">groovyjarjarantlr</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="237.0" y="261.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram//home/lulio3k/Documentos/TareaMetodologias/clone/cc3002-tarea1/src/cc3002.tarea1">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/cc3002.tarea1</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="430.5" y="293.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/cc3002.tarea1.ISkill">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>cc3002.tarea1.ISkill</OriginalElement>
+          <nodes>
+            <node x="" y="">cc3002.tarea1.ISkill</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="44.0" y="13.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram//home/lulio3k/Documentos/TareaMetodologias/clone/cc3002-tarea1/src/cc3002.tarea1/Energies;/home/lulio3k/Documentos/TareaMetodologias/clone/cc3002-tarea1/src/cc3002.tarea1/PokemonTypes;">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/cc3002.tarea1/Energies;/home/lulio3k/Documentos/TareaMetodologias/clone/cc3002-tarea1/src/cc3002.tarea1/PokemonTypes;</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="430.5" y="293.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/cc3002.tarea1">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>cc3002.tarea1</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">cc3002.tarea1.IPokemon</node>
+            <node x="1147.75" y="196.0">cc3002.tarea1.Skill</node>
+            <node x="485.75" y="796.0">cc3002.tarea1.Energy</node>
+            <node x="535.75" y="1354.0">cc3002.tarea1.Energies</node>
+            <node x="1228.25" y="0.0">cc3002.tarea1.ISkill</node>
+            <node x="342.99999999999994" y="156.0">cc3002.tarea1.ICard</node>
+            <node x="809.75" y="0.0">cc3002.tarea1.Entrenador</node>
+            <node x="197.49999999999994" y="1354.0">cc3002.tarea1.PokemonTypes</node>
+            <node x="114.49999999999994" y="436.0">cc3002.tarea1.Pokemon</node>
+            <node x="607.75" y="168.0">cc3002.tarea1.IEnergia</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.IPokemon">
+              <point x="-84.0" y="-434.0" />
+              <point x="198.49999999999994" y="411.0" />
+              <point x="161.5" y="411.0" />
+              <point x="0.0" y="193.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.ICard">
+              <point x="-60.5" y="-74.0" />
+              <point x="546.25" y="411.0" />
+              <point x="524.5" y="411.0" />
+              <point x="60.50000000000006" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.Pokemon">
+              <point x="0.0" y="-13.0" />
+              <point x="0.0" y="434.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.ISkill">
+              <point x="0.0" y="-146.0" />
+              <point x="0.0" y="73.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.ICard">
+              <point x="84.0" y="-434.0" />
+              <point x="366.49999999999994" y="411.0" />
+              <point x="403.49999999999994" y="411.0" />
+              <point x="-60.5" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.IEnergia">
+              <point x="60.5" y="-74.0" />
+              <point x="667.25" y="411.0" />
+              <point x="686.25" y="411.0" />
+              <point x="0.0" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energies" target="cc3002.tarea1.Energy">
+              <point x="0.0" y="-13.0" />
+              <point x="0.0" y="74.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="220.0" y="220.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Pokemon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2308">
+          <caret line="228" column="13" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+          <folding>
+            <element signature="e#3192#3193#0" expanded="true" />
+            <element signature="e#3248#3249#0" expanded="true" />
+            <element signature="e#3276#3277#0" expanded="true" />
+            <element signature="e#3327#3328#0" expanded="true" />
+            <element signature="e#4637#4638#0" expanded="true" />
+            <element signature="e#4676#4677#0" expanded="true" />
+            <element signature="e#5147#5148#0" expanded="true" />
+            <element signature="e#5180#5181#0" expanded="true" />
+            <element signature="e#5358#5359#0" expanded="true" />
+            <element signature="e#5398#5399#0" expanded="true" />
+            <element signature="e#5541#5542#0" expanded="true" />
+            <element signature="e#5573#5574#0" expanded="true" />
+            <element signature="e#6412#6413#0" expanded="true" />
+            <element signature="e#6456#6457#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/TestEntrenador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="75" column="64" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/TestFirePokemon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

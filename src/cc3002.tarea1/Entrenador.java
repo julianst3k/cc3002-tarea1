@@ -116,10 +116,17 @@ public class Entrenador {
         }
         return result;
     }
-    //public void activeInfo(){
-      //   System.out.println(cardInfo(this.Activa));
-    //}
-
+    public void activeInfo(){
+       System.out.println(cardInfo(this.Activa));
+    }
+    public void manoInfo(){
+        System.out.println(this.showMano());
+    }
+    public void bancaInfo(){
+        for(int i=1; i<=this.getBanca().size(); i++) {
+            System.out.println(cardInfoBanca(i));
+        }
+    }
     /** Plays a card from the set of cards
      *
      * @param A The index +1 of the card
