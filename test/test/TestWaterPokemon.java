@@ -40,6 +40,6 @@ public class TestWaterPokemon {
     }
     @Test public void testEnergies(){
         waterPokemon.setEnergy(new LightEnergy());
-        assertEquals(waterPokemon.getEnergiesString(), "Energia de Rayo: 1. ");
+        assertEquals(waterPokemon.getEnergiesString(), "LIGHT: 1. ");
     }
 }

@@ -2,7 +2,7 @@ package cc3002.tarea1;
 import java.lang.reflect.Array;
 import java.util.*;
 
-public abstract class Pokemon implements IPokemon, ICard {
+public abstract class Pokemon implements IPokemon, ICardPlayable {
     /** Clase abstracta para pokemon
      * @author: Julian Solis Torrejon
      *
@@ -10,14 +10,14 @@ public abstract class Pokemon implements IPokemon, ICard {
     private int id;
     private String name;
     private int healthPoints;
-    private HashMap<String, Integer> energies;
+    private EnergyCounter energies;
     private ArrayList<ISkill> skills;
     private ISkill selectedSkill;
 
     public Pokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills) {
         this.id = id;
         this.healthPoints = healthPoints;
-        this.energies = new HashMap<String, Integer>();
+        this.energies = new EnergyCounter();
         this.skills = this.setUp(skills);
         this.selectedSkill = null;
         this.name = name;
@@ -40,19 +40,11 @@ public abstract class Pokemon implements IPokemon, ICard {
      * @param A Index of attack
      * @return <code>true</code> if it can, <code>false</code> if it cant
      */
-    public boolean enoughEnergy(int A) {
-        if (A >= 4) {
+    public boolean enoughEnergy(int index) {
+        if (index >= 4) {
             return false;
         }
-        HashMap<String, Integer> energia = this.getEnergies();
-        HashMap<String, Integer> energiaNecesaria = this.skills.get(A).getCost(); // El costo sera un HashMap :)
-        for (HashMap.Entry<String, Integer> entry : energiaNecesaria.entrySet()) {
-            String type = entry.getKey();
-            if (energia.get(type)==null || energia.get(type) < entry.getValue()) {
-                return false;
-            }
-        }
-        return true;
+        return this.getEnergies().greaterThan(this.getSkills().get(index).getCost());
     }
 
     /** Show the user through a string how many energies the pokemon has
@@ -60,10 +52,12 @@ public abstract class Pokemon implements IPokemon, ICard {
      * @return String that show you energies
      */
     public String getEnergiesString() {
-        HashMap<String, Integer> energia = this.getEnergies();
+        EnergyCounter energia = this.getEnergies();
         String result = "";
-        for (HashMap.Entry<String, Integer> entry : energia.entrySet()) {
-            result += entry.getKey() + ": " + String.valueOf(entry.getValue())+". ";
+        for (EnergyType entry : EnergyType.values()) {
+            if(energia.getMap().get(entry)>0) {
+                result += String.valueOf(entry) + ": " + String.valueOf(energia.getMap().get(entry)) + ". ";
+            }
         }
         return result;
     }
@@ -80,39 +74,33 @@ public abstract class Pokemon implements IPokemon, ICard {
      *
      * @param A, input energy
      */
-    public void setEnergy(IEnergia A) {
-        String tipo = A.getType(); // No se me ocurrio como hacerlo con double dispatch aja
-        if(energies.get(tipo)==null){
-            energies.put(tipo, 1);
-        }
-        else {
-            Integer cantidadInicial = energies.get(tipo);
-            energies.put(tipo, cantidadInicial + 1);
-        }
+    public void setEnergy(IEnergia energy) {
+        energy.getSetted(this);
     }
+
 
     /** The pokemon is attacked by someone who doesnt have any special interactions
      *
      * @param A The skill that the other pokemon uses
      */
-    public void getAttacked(ISkill A) {
-        this.healthPoints -= A.getDamage();
+    public void getAttacked(ISkill skill) {
+        this.healthPoints -= skill.getDamage();
     }
 
     /** The pokemon is attacked by someone who is weak against him
      *
      * @param A The skill that the other pokemon uses
      */
-    public void getAttackedResist(ISkill A) {
-        this.healthPoints -= A.getDamage() - 30;
+    public void getAttackedResist(ISkill skill) {
+        this.healthPoints -= skill.getDamage() - 30;
     }
 
     /** The pokemon is attacked by someone who is strong against him
      *
      * @param A The skill that the other pokemon uses
      */
-    public void getAttackedVulnerable(ISkill A) {
-        this.healthPoints -= A.getDamage() * 2;
+    public void getAttackedVulnerable(ISkill skill) {
+        this.healthPoints -= skill.getDamage() * 2;
     }
 
     /** Shows the skills of the pokemon
@@ -122,38 +110,38 @@ public abstract class Pokemon implements IPokemon, ICard {
     public abstract String showSkills(); // No se el tipo, pero como el pokemon de tipo fuego solo tendra movimientos
     // de tipo fuego (??), entonces la implemento en su clase :)
     @Override
-    public HashMap<String, Integer> getEnergies() {
+    public EnergyCounter getEnergies() {
         return energies;
     }
     @Override
-    public void attackedByFire(ISkill A) { // getAttacked(Attack) :)
-        getAttacked(A);
+    public void attackedByFire(ISkill skill) { // getAttacked(Attack) :)
+        getAttacked(skill);
     }
     @Override
-    public void attackedByWater(ISkill A) {
-        getAttacked(A);
-    }
-    @Override
-
-    public void attackedByLeaf(ISkill A) {
-        getAttacked(A);
+    public void attackedByWater(ISkill skill) {
+        getAttacked(skill);
     }
     @Override
 
-    public void attackedByLight(ISkill A) {
-        getAttacked(A);
+    public void attackedByLeaf(ISkill skill) {
+        getAttacked(skill);
     }
     @Override
 
-
-    public void attackedByFighter(ISkill A) {
-        getAttacked(A);
+    public void attackedByLight(ISkill skill) {
+        getAttacked(skill);
     }
     @Override
 
 
-    public void attackedByPsych(ISkill A) {
-        getAttacked(A);
+    public void attackedByFighter(ISkill skill) {
+        getAttacked(skill);
+    }
+    @Override
+
+
+    public void attackedByPsych(ISkill skill) {
+        getAttacked(skill);
     }
 
     /** Select some attack to be the main one
@@ -161,9 +149,9 @@ public abstract class Pokemon implements IPokemon, ICard {
      * @param A Index of the attack that i want to select
      *
      */
-    public void selectSkill(int A) {
-        if (enoughEnergy(A)) {
-            this.selectedSkill = this.skills.get(A);
+    public void selectSkill(int index) {
+        if (this.enoughEnergy(index)) {
+            this.selectedSkill = this.skills.get(index);
         }
     }
 
@@ -206,14 +194,14 @@ public abstract class Pokemon implements IPokemon, ICard {
      *
      * @param A A pokemon
      */
-    public abstract void attack(Pokemon A);
+    public abstract void attack(Pokemon enemyPoke);
 
     /** Show an specified skill, based on the index
      *
      * @param A index of the skill
      * @return The string of the skill
      */
-    public abstract String showSkill(int A);
+    public abstract String showSkill(int index);
     @Override
     public String getDescrp(){
         String s = "";
@@ -222,16 +210,13 @@ public abstract class Pokemon implements IPokemon, ICard {
         return s;
     }
 
-    /** Get the name of the card
-     *
-     * @return A string of the name
-     */
+    @Override
     public String getName(){
         return this.name;
     }
 
     @Override
-    public void jugarCarta(Entrenador a){
-        a.jugarCartaPokemon(this);
+    public void jugarCarta(Entrenador myTrainer){
+        myTrainer.jugarCartaPokemon(this);
     }
 }

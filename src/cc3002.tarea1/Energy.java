@@ -1,21 +1,24 @@
 package cc3002.tarea1;
-abstract public class Energy implements IEnergia, ICard {
+abstract public class Energy implements IEnergia, ICardPlayable {
     /** A class that implement the IEnergia and ICard methods
      * @author: Julian Solis Torrejon
      *
      */
-    private String type;
+    private String name;
+
     public Energy(String a){
-        this.type = a;
+        this.name = a;
     }
     @Override
-    public String getType(){
-        return this.type;
+    public String getName() { return this.name; }
+    @Override
+    public String getDescrp() { return this.name; }
+    @Override
+    public void jugarCarta(Entrenador player){
+        player.jugarCartaEnergia(this);
     }
     @Override
-    public String getDescrp() { return this.type; }
+    abstract public void getSetted(IPokemon pokemon);
     @Override
-    public void jugarCarta(Entrenador a){
-        a.jugarCartaEnergia(this);
-    }
+    abstract public void getSetted(ISkill skill);
 }

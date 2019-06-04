@@ -1,5 +1,7 @@
 package cc3002.tarea1.Energies;
 import cc3002.tarea1.Energy;
+import cc3002.tarea1.IPokemon;
+import cc3002.tarea1.ISkill;
 
 public class LeafEnergy extends Energy {
     /** A class for the grass-type energies
@@ -8,5 +10,11 @@ public class LeafEnergy extends Energy {
      */
     public LeafEnergy(){
         super("Energia de Planta");
+    }
+    public void getSetted(IPokemon pokemon){
+        pokemon.getEnergies().setLeafEnergy();
+    }
+    public void getSetted(ISkill skill){
+        skill.getCost().setLeafEnergy();
     }
 }

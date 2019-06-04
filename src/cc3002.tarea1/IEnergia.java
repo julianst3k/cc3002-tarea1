@@ -3,10 +3,14 @@ public interface IEnergia {
     /** An interface for energies
      * @author Julian Solis Torrejon
      */
-    /** An interface for energies. The getType() thing is almost dead code, but it is used in many places so i
-     * left it here
+    /** Set an energy for a pokemon
      *
-     * @return A string with the name of the card
+     * @param pokemon A pokemon
      */
-    String getType();
+    void getSetted(IPokemon pokemon);
+    /** Set an energy for a skill
+     *
+     * @param skill A skill
+     */
+    void getSetted(ISkill skill);
 }

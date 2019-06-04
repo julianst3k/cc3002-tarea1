@@ -17,7 +17,7 @@ public interface IEntrenador {
      *
      * @param A A card
      */
-    void sacarCarta(ICard A);
+    void sacarCarta(ICardPlayable A);
     /** Gets an active
      *
      * @return A pokemon
@@ -37,7 +37,7 @@ public interface IEntrenador {
      * @param A A card
      * @return A string
      */
-    String cardInfo(ICard A);
+    String cardInfo(ICardPlayable A);
     /** Select some attack to be the main one
      *
      * @param A Index of the attack that i want to select
@@ -48,7 +48,7 @@ public interface IEntrenador {
      *
      * @return The array of cards
      */
-    ArrayList<ICard> getMano();
+    ArrayList<ICardPlayable> getMano();
     /** Get the list of 5-Pokemon
      *
      * @return An array with the list

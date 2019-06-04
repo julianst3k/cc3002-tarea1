@@ -52,12 +52,17 @@ public class TestFighterPokemon {
     }
     @Test public void initialConditions(){
         assertEquals(fighterOne.getName(), "Clout");
-        assertEquals(fighterOne.showSkills(), "1. Slap, de tipo lucha y realiza 45 de daño. Descripcion: Slapping. Requiere: Energia de Agua: 1. Energia de Lucha: 1. \n2. Big Slap, de tipo lucha y realiza 60 de daño. Descripcion: More Slapping. Requiere: Energia de Agua: 1. Energia de Lucha: 2. \n3. XXXTentaslap, de tipo lucha y realiza 100 de daño. Descripcion: Slap powered by mysoginia. Requiere: Energia de Agua: 2. Energia de Lucha: 2. \n4. Hug, de tipo lucha y realiza 30 de daño. Descripcion: Do love. Requiere: \n");
+        assertEquals(fighterOne.showSkills(), "1. Slap, de tipo lucha y realiza 45 de daño. Descripcion: Slapping. Requiere: FIGHTER: 1. WATER: 1. \n2. Big Slap, de tipo lucha y realiza 60 de daño. Descripcion: More Slapping. Requiere: FIGHTER: 2. WATER: 1. \n3. XXXTentaslap, de tipo lucha y realiza 100 de daño. Descripcion: Slap powered by mysoginia. Requiere: FIGHTER: 2. WATER: 2. \n4. Hug, de tipo lucha y realiza 30 de daño. Descripcion: Do love. Requiere: \n");
         assertFalse(fighterOne.enoughEnergy(4));
+        fighterOne.selectSkill(4);
+        assertNull(fighterOne.getSelectedSkill());
+
         assertFalse(fighterOne.enoughEnergy(0));
         assertTrue(fighterOne.enoughEnergy(3));
     }
     @Test public void fighterFighting(){
+        fighterOne.attack(psychOne);
+        assertTrue(psychOne.getHp()==100);
         psychOne.selectSkill(0); psychOne.attack(fighterOne);
         assertTrue(fighterOne.getHp()==800);
         leafOne.selectSkill(0); leafOne.attack(fighterOne);
@@ -68,9 +73,9 @@ public class TestFighterPokemon {
         fighterOne.attack(psychOne);
         assertTrue(psychOne.getHp()==100);
         psychOne.addAttack(fighterSkill3);
-        assertEquals(psychOne.showSkill(1), "XXXTentaslap, de tipo psiquico y realiza 100 de daño. Descripcion: Slap powered by mysoginia. Requiere: Energia de Agua: 2. Energia de Lucha: 2. \n");
+        assertEquals(psychOne.showSkill(1), "XXXTentaslap, de tipo psiquico y realiza 100 de daño. Descripcion: Slap powered by mysoginia. Requiere: FIGHTER: 2. WATER: 2. \n");
         fighterOne.deleteAttack(4);
-        assertEquals(fighterOne.showSkills(), "1. Slap, de tipo lucha y realiza 45 de daño. Descripcion: Slapping. Requiere: Energia de Agua: 1. Energia de Lucha: 1. \n2. Big Slap, de tipo lucha y realiza 60 de daño. Descripcion: More Slapping. Requiere: Energia de Agua: 1. Energia de Lucha: 2. \n3. XXXTentaslap, de tipo lucha y realiza 100 de daño. Descripcion: Slap powered by mysoginia. Requiere: Energia de Agua: 2. Energia de Lucha: 2. \n");
+        assertEquals(fighterOne.showSkills(), "1. Slap, de tipo lucha y realiza 45 de daño. Descripcion: Slapping. Requiere: FIGHTER: 1. WATER: 1. \n2. Big Slap, de tipo lucha y realiza 60 de daño. Descripcion: More Slapping. Requiere: FIGHTER: 2. WATER: 1. \n3. XXXTentaslap, de tipo lucha y realiza 100 de daño. Descripcion: Slap powered by mysoginia. Requiere: FIGHTER: 2. WATER: 2. \n");
     }
 
 }

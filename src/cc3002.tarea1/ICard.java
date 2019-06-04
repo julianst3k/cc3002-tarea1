@@ -12,9 +12,9 @@ public interface ICard {
      */
     String getDescrp();
 
-    /** Plays a card to get inserted into the trainer's set of cards
+    /** Get the name of the card
      *
-     * @param a The trainer
+             * @return A string of the name
      */
-    void jugarCarta(Entrenador a);
+    String getName();
 }

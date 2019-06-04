@@ -22,7 +22,7 @@ public interface ISkill {
      *
      * @return A hashMap of String, Integer
      */
-    HashMap<String, Integer> getCost();
+    EnergyCounter getCost();
 
     /** Get the description of the skill
      *

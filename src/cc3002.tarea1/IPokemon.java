@@ -34,7 +34,7 @@ public interface IPokemon {
      *
      * @return a HashMap
      */
-    HashMap<String, Integer> getEnergies();
+    EnergyCounter getEnergies();
 
     /** Returns the current status of deadness
      *

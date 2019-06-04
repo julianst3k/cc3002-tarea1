@@ -12,12 +12,15 @@ public class FirePokemon extends Pokemon{
         super(name, id, healthPoints, skills);
     }
     @Override
-    public void attack(Pokemon A){
-        A.attackedByFire(this.getSelectedSkill());
+    public void attack(Pokemon enemyPok){
+        if(this.getSelectedSkill()==null){
+            return;
+        }
+        enemyPok.attackedByFire(this.getSelectedSkill());
     }
     @Override
-    public void attackedByWater(ISkill A) {
-        this.getAttackedVulnerable(A);
+    public void attackedByWater(ISkill skill) {
+        this.getAttackedVulnerable(skill);
     }
     @Override
     public String showSkills(){
@@ -28,8 +31,8 @@ public class FirePokemon extends Pokemon{
         return s;
     }
     @Override
-    public String showSkill(int A){
-        String result = this.getSkills().get(A).getName()+", de tipo fuego y realiza "+this.getSkills().get(A).getDamage()+" de daño. Descripcion: "+this.getSkills().get(A).getDescripcion()+". Requiere: "+this.getSkills().get(A).getCostString()+"\n";
+    public String showSkill(int skillIndex){
+        String result = this.getSkills().get(skillIndex).getName()+", de tipo fuego y realiza "+this.getSkills().get(skillIndex).getDamage()+" de daño. Descripcion: "+this.getSkills().get(skillIndex).getDescripcion()+". Requiere: "+this.getSkills().get(skillIndex).getCostString()+"\n";
         return result;
     }
 }

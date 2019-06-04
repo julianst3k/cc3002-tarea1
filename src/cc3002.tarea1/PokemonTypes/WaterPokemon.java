@@ -12,23 +12,26 @@ public class WaterPokemon extends Pokemon{
     }
     @Override
 
-    public void attack(Pokemon A){
-        A.attackedByWater(this.getSelectedSkill());
+    public void attack(Pokemon enemyPok){
+        if(this.getSelectedSkill()==null){
+            return;
+        }
+        enemyPok.attackedByWater(this.getSelectedSkill());
     }
     @Override
 
-    public void attackedByFighter(ISkill A) {
-        this.getAttackedResist(A);
+    public void attackedByFighter(ISkill skill) {
+        this.getAttackedResist(skill);
     }
     @Override
 
-    public void attackedByLight(ISkill A){
-        this.getAttackedVulnerable(A);
+    public void attackedByLight(ISkill skill){
+        this.getAttackedVulnerable(skill);
     }
     @Override
 
-    public void attackedByLeaf(ISkill A){
-        this.getAttackedVulnerable(A);
+    public void attackedByLeaf(ISkill skill){
+        this.getAttackedVulnerable(skill);
     }
     @Override
 
@@ -41,8 +44,8 @@ public class WaterPokemon extends Pokemon{
     }
     @Override
 
-    public String showSkill(int A){
-        String result = this.getSkills().get(A).getName()+", de tipo agua y realiza "+this.getSkills().get(A).getDamage()+" de daño. Descripcion: "+this.getSkills().get(A).getDescripcion()+". Requiere: "+this.getSkills().get(A).getCostString()+"\n";;
+    public String showSkill(int skillIndex){
+        String result = this.getSkills().get(skillIndex).getName()+", de tipo agua y realiza "+this.getSkills().get(skillIndex).getDamage()+" de daño. Descripcion: "+this.getSkills().get(skillIndex).getDescripcion()+". Requiere: "+this.getSkills().get(skillIndex).getCostString()+"\n";;
         return result;
     }
 }

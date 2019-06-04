@@ -11,7 +11,7 @@ public class Skill implements ISkill {
     private String name;
     private int damage;
     private String description;
-    private HashMap<String, Integer> costo;
+    private EnergyCounter costo;
     public Skill(String name, int damage, ArrayList<IEnergia> costo, String description){
         this.name = name;
         this.damage = damage;
@@ -24,19 +24,12 @@ public class Skill implements ISkill {
      * @param costo Lista de energias
      * @return HashMap
      */
-    private HashMap<String, Integer> HashCreate(ArrayList<IEnergia> costo){
-        HashMap<String, Integer> hash = new HashMap<String, Integer>();
-        for(int i = 0; i<costo.size(); i++){
-            String tipo = costo.get(i).getType();
-            if(hash.get(tipo)==null){
-                hash.put(tipo, 1);
-            }
-            else{
-                int initial = hash.get(tipo);
-                hash.put(tipo, initial + 1);
-            }
+    private EnergyCounter HashCreate(ArrayList<IEnergia> costo){
+        this.costo = new EnergyCounter();
+        for(int i = 0; i<costo.size(); i++) {
+            costo.get(i).getSetted(this);
         }
-        return hash;
+        return this.costo;
     }
     @Override
     public int getDamage(){
@@ -49,7 +42,7 @@ public class Skill implements ISkill {
     @Override
     public String getDescripcion(){ return this.description; }
     @Override
-    public HashMap<String, Integer> getCost(){
+    public EnergyCounter getCost(){
         return this.costo;
     }
 
@@ -58,10 +51,12 @@ public class Skill implements ISkill {
      * @return String of the energies that the attack cost
      */
     public String getCostString(){
-        String result = "";
-        for (HashMap.Entry<String, Integer> entry : this.getCost().entrySet()) {
-            result += entry.getKey()+": "+entry.getValue()+". ";
-        }
-        return result;
+            String result = "";
+            for (EnergyType entry : EnergyType.values()) {
+                if(costo.getMap().get(entry)>0) {
+                    result += String.valueOf(entry) + ": " + String.valueOf(costo.getMap().get(entry)) + ". ";
+                }
+            }
+            return result;
     }
 }

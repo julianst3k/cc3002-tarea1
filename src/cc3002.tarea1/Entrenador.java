@@ -6,11 +6,25 @@ public class Entrenador implements IEntrenador {
      */
     private Pokemon Activa;
     private ArrayList<Pokemon> Banca;
-    private ArrayList<ICard> Mano;
-    public Entrenador(Pokemon a){ // Defino el inicio del juego con un pokemon activo :)
-        Activa = a;
+    private ArrayList<ICardPlayable> Mano;
+    private Mazo mazo;
+    private CardStack pila;
+    private Premio premio;
+    private IPokemon objective;
+    public Entrenador(Pokemon pokemonActivo, Mazo newMazo, Premio newPremio){ // Defino el inicio del juego con un pokemon activo :)
+        Activa = pokemonActivo;
+        objective = Activa;
         Banca = new ArrayList<Pokemon>();
-        Mano = new ArrayList<ICard>();
+        Mano = new ArrayList<ICardPlayable>();
+        pila = new CardStack();
+        premio = newPremio;
+        if(newMazo.getSize()==60) {
+            mazo = newMazo;
+        }
+        else {
+            System.out.println("No hay suficientes cartas para iniciar");
+            throw new AssertionError();
+        }
     }
 
     @Override
@@ -33,13 +47,14 @@ public class Entrenador implements IEntrenador {
     @Override
     public void deadActive(){
         if(this.getActiva().isDed()){
+            pila.addCarta(this.getActiva());
             this.activePokemonSwap();
         }
     }
 
     @Override
-    public String cardInfo(ICard A){
-        return A.getDescrp();
+    public String cardInfo(ICardPlayable card){
+        return card.getDescrp();
     }
 
     /** Show the info of the skills of the active pokemon
@@ -64,21 +79,21 @@ public class Entrenador implements IEntrenador {
     }
 
     @Override
-    public void selectAttack(int A){ // Me imagino que el ataque es una clase
-        this.Activa.selectSkill(A-1);
+    public void selectAttack(int indexAttack){ // Me imagino que el ataque es una clase
+        this.Activa.selectSkill(indexAttack-1);
     }
 
     @Override
-    public void sacarCarta(ICard A){
-        this.Mano.add(A);
+    public void sacarCarta(ICardPlayable newCard){
+        this.Mano.add(newCard);
     }
 
     /** Set an energy in the pokemon
      *
-     * @param A An energy
+     * @param energyCard An energy
      */
-    public void activeUseEnergy(Energy A){
-        this.Activa.setEnergy(A);
+    public void activeUseEnergy(Energy energyCard){
+        this.objective.setEnergy(energyCard);
     }
 
     @Override
@@ -86,15 +101,24 @@ public class Entrenador implements IEntrenador {
         return this.Activa;
     }
 
+    /** Set the objective for the energy card, this will be played by the controller
+     *
+     * @param card the card that will be played
+     */
+    public void cardObjective(IPokemon card){
+        if(this.getBanca().contains(card) || this.getActiva()==card){
+            this.objective = card;
+        }
+    }
     /** Gets the info of a card that is on the 5-Pokemon's list
      *
-     * @param i The index + 1 of the pokemon
+     * @param index The index + 1 of the pokemon
      * @return A string of information
      */
-    public String cardInfoBanca(int i){
+    public String cardInfoBanca(int index){
         String result = "";
-        if(i<=this.cantidadBanca()){
-             result += i+". "+cardInfo(this.getBanca().get(i-1));
+        if(index<=this.cantidadBanca()){
+             result += index+". "+cardInfo(this.getBanca().get(index-1));
         }
         return result;
     }
@@ -119,22 +143,22 @@ public class Entrenador implements IEntrenador {
         }
     }
     @Override
-    public void jugarCarta(int A){
-        if(A>0 && A<=this.Mano.size()) {
-            ICard Card = this.Mano.get(A - 1);
-            this.Mano.remove(A - 1);
+    public void jugarCarta(int cardIndex){
+        if(cardIndex>0 && cardIndex<=this.Mano.size()) {
+            ICardPlayable Card = this.Mano.get(cardIndex - 1);
+            this.Mano.remove(cardIndex - 1);
             Card.jugarCarta(this);
         }
     }
 
     /** Get the info of some card in the set of cards
      *
-     * @param i Index + 1 of the card
+     * @param index Index + 1 of the card
      * @return A string with the information
      */
-    public String cardInfoMano(int i){
-        if(this.getMano().size()>=i){
-            return this.cardInfo(this.getMano().get(i-1));
+    public String cardInfoMano(int index){
+        if(this.getMano().size()>=index){
+            return this.cardInfo(this.getMano().get(index-1));
         }
         else{
             return "";
@@ -143,24 +167,24 @@ public class Entrenador implements IEntrenador {
 
     /** Plays a pokemon card. This is thrown by the playCard() when the argument is a Pokemon card
      *
-     * @param A A pokemon card
+     * @param poke A pokemon card
      */
-    public void jugarCartaPokemon(Pokemon A){
+    public void jugarCartaPokemon(Pokemon poke){
         if(this.cantidadBanca()<5){
-            this.Banca.add(A);
+            this.Banca.add(poke);
             this.deadActive();
         }
         else{
-            this.Mano.add(A);
+            this.Mano.add(poke);
         }
     }
 
     /** Same as above, but with the energy card
      *
-     * @param A A energy card
+     * @param cardE A energy card
      */
-    public void jugarCartaEnergia(Energy A){
-        this.activeUseEnergy(A);
+    public void jugarCartaEnergia(Energy cardE){
+        this.activeUseEnergy(cardE);
     }
 
     @Override
@@ -177,7 +201,7 @@ public class Entrenador implements IEntrenador {
     }
 
     @Override
-    public ArrayList<ICard> getMano(){
+    public ArrayList<ICardPlayable> getMano(){
         return this.Mano;
     }
 
@@ -194,10 +218,10 @@ public class Entrenador implements IEntrenador {
     }
 
     @Override
-    public void pokemonAttack(Entrenador A){ // seria por default el pokemon del enemigo?
-        if(this.Activa.getSelectedSkill()!=null && A.getActiva()!=null){
-            this.Activa.attack(this.enemyActive(A));
-            A.getAttacked();
+    public void pokemonAttack(Entrenador enemyTrainer){ // seria por default el pokemon del enemigo?
+        if(this.Activa.getSelectedSkill()!=null && enemyTrainer.getActiva()!=null){
+            this.Activa.attack(this.enemyActive(enemyTrainer));
+            enemyTrainer.getAttacked();
         }
     }
     @Override
@@ -205,30 +229,30 @@ public class Entrenador implements IEntrenador {
         this.deadActive();
     }
     @Override
-    public String showEnemyField(Entrenador A){
+    public String showEnemyField(Entrenador enemyTrainer){
         String s="";
-        s+="Activo: "+A.cardInfo(this.enemyActive(A))+"Banca: \n";
-        for(int i=1; i<=A.getBanca().size(); i++){
-            s+=A.cardInfoBanca(i);
+        s+="Activo: "+enemyTrainer.cardInfo(this.enemyActive(enemyTrainer))+"Banca: \n";
+        for(int i=1; i<=enemyTrainer.getBanca().size(); i++){
+            s+=enemyTrainer.cardInfoBanca(i);
         }
         return s;
 
     }
     @Override
-    public ArrayList<Pokemon> enemyBanca(Entrenador A){
-        return A.getBanca();
+    public ArrayList<Pokemon> enemyBanca(Entrenador enemyTrainer){
+        return enemyTrainer.getBanca();
     }
     @Override
-    public Pokemon enemyActive(Entrenador A){
-        return A.getActiva();
+    public Pokemon enemyActive(Entrenador enemyTrainer){
+        return enemyTrainer.getActiva();
     }
 
     /** Print into the console the enemy field
      *
-     * @param A The trainer
+     * @param enemyTrainer The trainer
      */
-    public void showEnemyFieldInfo(Entrenador A){
-        System.out.println(this.showEnemyField(A));
+    public void showEnemyFieldInfo(Entrenador enemyTrainer){
+        System.out.println(this.showEnemyField(enemyTrainer));
     }
     /** Shows how many cards the trainer has that are not being played yet
      *
@@ -238,19 +262,19 @@ public class Entrenador implements IEntrenador {
         return this.getMano().size();
     }
     @Override
-    public String showEntireField(Entrenador A){
+    public String showEntireField(Entrenador enemyTrainer){
         String result = "Tu campo: "+"\n";
-        result+=A.showEnemyField(this);
+        result+=enemyTrainer.showEnemyField(this);
         result+="Campo enemigo: "+"\n";
-        result+=this.showEnemyField(A);
+        result+=this.showEnemyField(enemyTrainer);
         return result;
     }
 
     /** Print in the console the entire field info
      *
-     * @param A Enemy
+     * @param enemyTrainer Enemy
      */
-    public void showEntireFieldInfo(Entrenador A){
-        System.out.println(this.showEntireField(A));
+    public void showEntireFieldInfo(Entrenador enemyTrainer){
+        System.out.println(this.showEntireField(enemyTrainer));
     }
 }
