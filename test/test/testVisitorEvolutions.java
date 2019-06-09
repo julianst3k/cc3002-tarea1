@@ -25,25 +25,35 @@ public class testVisitorEvolutions {
     private Pokemon enduranceTester3;
     private  Pokemon firstEvoCopy;
     private Pokemon secondEvoCopy;
+    private Entrenador secondTrainer;
     private Mazo mazo;
+    private Mazo secondMazo;
+    private Pokemon thirdEvo;
     EnergyCounter energy;
+    EnergyCounter energy2;
 
     @Before public void setUp(){
         firstEvo = new BasicFirePokemon("Myth",35, 100, new ArrayList<>(Arrays.asList(new nullSkill())));
         firstEvoCopy = new BasicFirePokemon("Myth",35, 100, new ArrayList<>(Arrays.asList(new nullSkill())));
         secondEvo = new Phase1FirePokemon("Myth Evo", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
+        thirdEvo = new Phase2FirePokemon("Myth Evo Omega", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
         secondEvoCopy = new Phase1FirePokemon("Myth Evo", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
         secondEvoNoFirst = new Phase1FirePokemon("Beach", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
-        enduranceTester2 = new BasicFirePokemon("Myth", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
-        enduranceTester = new BasicFirePokemon("Myth", 37, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
-        enduranceTester3 = new BasicFirePokemon("Myth", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
+        enduranceTester2 = new BasicLightPokemon("Myth", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
+        enduranceTester = new BasicPsychPokemon("Myth", 37, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
+        enduranceTester3 = new BasicWaterPokemon("Myth", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
         mazo = new Mazo(new ArrayList<ICardPlayable>(Arrays.asList(secondEvo, new FireEnergy(), new WaterEnergy(), secondEvoNoFirst, enduranceTester, enduranceTester2, enduranceTester3, firstEvoCopy, secondEvoCopy)));
         for(int i=mazo.getSize(); i<60; i++){
             mazo.addCarta(new FireEnergy());
         }
+        secondMazo = new Mazo(new ArrayList<>(Arrays.asList(secondEvo, new FireEnergy(), new WaterEnergy(), thirdEvo)));
+        for(int i=secondMazo.getSize(); i<60; i++){
+            secondMazo.addCarta(new FireEnergy());
+        }
         myTrainer= new Entrenador(firstEvo, mazo, null);
+        secondTrainer = new Entrenador(firstEvo, secondMazo, null);
         energy = myTrainer.getActiva().getEnergies();
-
+        energy2 = secondTrainer.getActiva().getEnergies();
     }
     @Test public void getEvolved(){
         myTrainer.sacarCarta();
@@ -52,6 +62,7 @@ public class testVisitorEvolutions {
         myTrainer.jugarCarta(1);
         assertEquals(myTrainer.getActiva(), secondEvo);
         assertEquals(myTrainer.getActiva().getEnergies(), energy);
+
 
     }
     @Test public void dontGetEvolved(){
@@ -74,6 +85,16 @@ public class testVisitorEvolutions {
         myTrainer.jugarCarta(2);
         assertTrue(myTrainer.getBanca().contains(secondEvoCopy));
         assertTrue(!myTrainer.getBanca().contains(firstEvoCopy));
+    }
+    @Test public void getTripleEvolved(){
+        secondTrainer.sacarCarta();
+        secondTrainer.sacarCarta(); secondTrainer.jugarCarta(2);
+        secondTrainer.sacarCarta(); secondTrainer.jugarCarta(2);
+        secondTrainer.jugarCarta(1);
+        secondTrainer.sacarCarta();
+        secondTrainer.jugarCarta(1);
+        assertEquals(secondTrainer.getActiva(), thirdEvo);
+        assertEquals(secondTrainer.getActiva().getEnergies(), energy2);
     }
 
 }
