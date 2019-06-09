@@ -18,7 +18,9 @@ public abstract class Pokemon implements IPokemon {
         this.id = id;
         this.healthPoints = healthPoints;
         this.energies = new EnergyCounter();
-        this.skills = this.setUp(skills);
+        if(skills!=null) {
+            this.skills = this.setUp(skills);
+        }
         this.selectedSkill = null;
         this.name = name;
     }
@@ -192,6 +194,10 @@ public abstract class Pokemon implements IPokemon {
     @Override
     public String getName(){
         return this.name;
+    }
+    @Override
+    public void setInitialEnergies(EnergyCounter array){
+        this.energies = array;
     }
 
 }

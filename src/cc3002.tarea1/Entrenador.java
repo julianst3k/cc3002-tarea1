@@ -1,4 +1,5 @@
 package cc3002.tarea1;
+import cc3002.tarea1.PlayVisitor.PlayVisitor;
 import cc3002.tarea1.PokemonTypes.IBasicType;
 
 import java.util.ArrayList;
@@ -86,8 +87,8 @@ public class Entrenador implements IEntrenador {
     }
 
     @Override
-    public void sacarCarta(ICardPlayable newCard){
-        this.Mano.add(newCard);
+    public void sacarCarta(){
+        this.Mano.add(this.mazo.sacarCarta());
     }
 
     /** Set an energy in the pokemon
@@ -288,5 +289,37 @@ public class Entrenador implements IEntrenador {
      */
     public void showEntireFieldInfo(Entrenador enemyTrainer){
         System.out.println(this.showEntireField(enemyTrainer));
+    }
+    @Override
+    public void accept(PlayVisitor visitor){
+        visitor.visitedEntrenador(this);
+    }
+    @Override
+    public void pokemonEvolve(int index, IPokemon after){
+        if(index == 0){
+            after.setInitialEnergies(this.Activa.getEnergies());
+            this.Activa = after;
+        }
+        else{
+            after.setInitialEnergies(Banca.get(index-1).getEnergies());
+            this.Banca.remove(index-1); this.Banca.add(index-1,after);
+        }
+    }
+    @Override
+    public int pokemonPlace(IPokemon poke){
+        if(this.getActiva()==poke){
+            return 0;
+        }
+        else{
+            return this.getBanca().indexOf(poke)+1;
+        }
+    }
+
+    /** Provides a functionality to get the current deck
+     *
+     * @return the current deck
+     */
+    public Mazo getMazo(){
+        return mazo;
     }
 }

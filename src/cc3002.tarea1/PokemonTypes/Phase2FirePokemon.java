@@ -13,7 +13,7 @@ public class Phase2FirePokemon extends AbstractFirePokemon implements IPhase2Typ
     }
     public void jugarCarta(Entrenador myTrainer){
         PlayVisitor visitor = new PlayBasic(myTrainer);
-        this.accept(visitor);
+        this.accept(visitor); myTrainer.accept(visitor);
         visitor.play();
     }
     public void accept(PlayVisitor visitor){

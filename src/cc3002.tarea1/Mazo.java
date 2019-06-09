@@ -10,7 +10,7 @@ public class Mazo implements ICardComposite {
         }
     }
     public boolean isFull(){
-        return this.mazo.size()>60;
+        return this.mazo.size()>=60;
     }
     @Override
     public void addCarta(ICardPlayable card){
@@ -35,4 +35,14 @@ public class Mazo implements ICardComposite {
         return this.mazo.size();
     }
 
+    /** Pops a card from the deck, so it could be possibly played by the trainer
+     *
+     * @return The card
+     */
+    public ICardPlayable sacarCarta(){ ICardPlayable card = mazo.get(0);
+    mazo.remove(0);
+    return card;}
+    public String cardOfCertainIndex(int index){
+        return mazo.get(index).getName();
+    }
 }

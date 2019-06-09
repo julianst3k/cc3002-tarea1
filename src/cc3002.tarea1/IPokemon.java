@@ -1,4 +1,6 @@
 package cc3002.tarea1;
+import cc3002.tarea1.PlayVisitor.PlayVisitor;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -112,4 +114,11 @@ public interface IPokemon extends ICardPlayable {
      * @return <code>true</code> if it can, <code>false</code> if it cant
      */
     boolean enoughEnergy(int index);
+    /** Set a set of energies on the pokemon
+     *
+     * @param array The set of energies
+     */
+    void setInitialEnergies(EnergyCounter array);
+    void accept(PlayVisitor visitor);
+
 }

@@ -1,5 +1,7 @@
 package cc3002.tarea1;
 
+import cc3002.tarea1.PlayVisitor.PlayVisitor;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -13,11 +15,9 @@ public interface IEntrenador {
      * @param index The index +1 of the card
      */
     void jugarCarta(int index);
-    /** Gets a card from somewhere
-     *
-     * @param card A card
+    /** Gets a card from the deck
      */
-    void sacarCarta(ICardPlayable card);
+    void sacarCarta();
     /** Gets an active
      *
      * @return A pokemon
@@ -88,5 +88,20 @@ public interface IEntrenador {
      * @return A string that show it
      */
     String showEntireField(Entrenador trainer);
+    /** Accept a visitor
+     * @param visitor The visitor, indeed
+     */
+    void accept(PlayVisitor visitor);
+    /** Replace a Pokemon with another one, transferring the energies to the new one
+     * @param index index of the Original pokemon
+     * @param after New pokemon that replaces the old one
+     */
+    void pokemonEvolve(int index, IPokemon after);
 
+    /** Gets the index of some Pokemon (0 if Active).
+     *
+     * @param poke Pokemon that will return the index
+     * @return An integer that show the current position
+     */
+    int pokemonPlace(IPokemon poke);
 }
