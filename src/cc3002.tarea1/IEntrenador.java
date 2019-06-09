@@ -10,19 +10,19 @@ public interface IEntrenador {
      */
     /** Plays a card from the set of cards
      *
-     * @param A The index +1 of the card
+     * @param index The index +1 of the card
      */
-    void jugarCarta(int A);
+    void jugarCarta(int index);
     /** Gets a card from somewhere
      *
-     * @param A A card
+     * @param card A card
      */
-    void sacarCarta(ICardPlayable A);
+    void sacarCarta(ICardPlayable card);
     /** Gets an active
      *
      * @return A pokemon
      */
-    Pokemon getActiva();
+    IPokemon getActiva();
     /** Swap the active pokemon. This is used when the active pokemon is dead or when he just wants to
      * swap it.
      *
@@ -34,16 +34,16 @@ public interface IEntrenador {
     void deadActive();
     /** Show the info of the card
      *
-     * @param A A card
+     * @param card A card
      * @return A string
      */
-    String cardInfo(ICardPlayable A);
+    String cardInfo(ICardPlayable card);
     /** Select some attack to be the main one
      *
-     * @param A Index of the attack that i want to select
+     * @param index Index of the attack that i want to select
      *
      */
-    void selectAttack(int A);
+    void selectAttack(int index);
     /** Get the list of cards that are not played yet
      *
      * @return The array of cards
@@ -53,7 +53,7 @@ public interface IEntrenador {
      *
      * @return An array with the list
      */
-    ArrayList<Pokemon> getBanca();
+    ArrayList<IPokemon> getBanca();
     /** The active pokemon attacks the enemy's pokemon
      *
      * @param A A trainer
@@ -65,28 +65,28 @@ public interface IEntrenador {
     void getAttacked();
 
     /** Show the active pokemon of the enemy
-     * @param A The enemy trainer
+     * @param trainer The enemy trainer
      * @return An string of it
      */
-    String showEnemyField(Entrenador A);
+    String showEnemyField(Entrenador trainer);
     /** Gets the enemy active
-     * @param A The trainer
+     * @param trainer The trainer
      * @return His active
      */
-    Pokemon enemyActive(Entrenador A);
+    IPokemon enemyActive(Entrenador trainer);
 
     /** Gets the enemy 5-Pokemon list
      *
-     * @param A The trainer
+     * @param trainer The trainer
      * @return His pokemon that are not active
      */
-    ArrayList<Pokemon> enemyBanca(Entrenador A);
+    ArrayList<IPokemon> enemyBanca(Entrenador trainer);
 
     /** Do a string that show the entire field of battle
      *
-     * @param A The enemy trainer
+     * @param trainer The enemy trainer
      * @return A string that show it
      */
-    String showEntireField(Entrenador A);
+    String showEntireField(Entrenador trainer);
 
 }

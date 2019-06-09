@@ -2,7 +2,7 @@ package cc3002.tarea1;
 import java.lang.reflect.Array;
 import java.util.*;
 
-public abstract class Pokemon implements IPokemon, ICardPlayable {
+public abstract class Pokemon implements IPokemon {
     /** Clase abstracta para pokemon
      * @author: Julian Solis Torrejon
      *
@@ -35,11 +35,7 @@ public abstract class Pokemon implements IPokemon, ICardPlayable {
         }
         return result;
     }
-    /** Verify that the energy that the pokemon have is enough to let it select some attack
-     *
-     * @param A Index of attack
-     * @return <code>true</code> if it can, <code>false</code> if it cant
-     */
+    @Override
     public boolean enoughEnergy(int index) {
         if (index >= 4) {
             return false;
@@ -72,7 +68,7 @@ public abstract class Pokemon implements IPokemon, ICardPlayable {
 
     /** The input energy is indexed to the hashMap
      *
-     * @param A, input energy
+     * @param energy, input energy
      */
     public void setEnergy(IEnergia energy) {
         energy.getSetted(this);
@@ -81,7 +77,7 @@ public abstract class Pokemon implements IPokemon, ICardPlayable {
 
     /** The pokemon is attacked by someone who doesnt have any special interactions
      *
-     * @param A The skill that the other pokemon uses
+     * @param skill The skill that the other pokemon uses
      */
     public void getAttacked(ISkill skill) {
         this.healthPoints -= skill.getDamage();
@@ -89,7 +85,7 @@ public abstract class Pokemon implements IPokemon, ICardPlayable {
 
     /** The pokemon is attacked by someone who is weak against him
      *
-     * @param A The skill that the other pokemon uses
+     * @param skill The skill that the other pokemon uses
      */
     public void getAttackedResist(ISkill skill) {
         this.healthPoints -= skill.getDamage() - 30;
@@ -97,17 +93,13 @@ public abstract class Pokemon implements IPokemon, ICardPlayable {
 
     /** The pokemon is attacked by someone who is strong against him
      *
-     * @param A The skill that the other pokemon uses
+     * @param skill The skill that the other pokemon uses
      */
     public void getAttackedVulnerable(ISkill skill) {
         this.healthPoints -= skill.getDamage() * 2;
     }
 
-    /** Shows the skills of the pokemon
-     *
-     * @return A string with enumerated skills
-     */
-    public abstract String showSkills(); // No se el tipo, pero como el pokemon de tipo fuego solo tendra movimientos
+    // No se el tipo, pero como el pokemon de tipo fuego solo tendra movimientos
     // de tipo fuego (??), entonces la implemento en su clase :)
     @Override
     public EnergyCounter getEnergies() {
@@ -144,11 +136,7 @@ public abstract class Pokemon implements IPokemon, ICardPlayable {
         getAttacked(skill);
     }
 
-    /** Select some attack to be the main one
-     *
-     * @param A Index of the attack that i want to select
-     *
-     */
+    @Override
     public void selectSkill(int index) {
         if (this.enoughEnergy(index)) {
             this.selectedSkill = this.skills.get(index);
@@ -163,11 +151,7 @@ public abstract class Pokemon implements IPokemon, ICardPlayable {
     public ISkill getSelectedSkill() {
         return this.selectedSkill;
     }
-
-    /** Give us a way to get a description of the main skill
-     *
-     * @return Index of the selected skill
-     */
+    @Override
     public int getSelectedSkillIndex(){
         return this.getSkills().indexOf(this.getSelectedSkill());
     }
@@ -192,16 +176,11 @@ public abstract class Pokemon implements IPokemon, ICardPlayable {
     }
     /** A pokemon attacks another one
      *
-     * @param A A pokemon
+     * @param enemyPoke A pokemon
      */
-    public abstract void attack(Pokemon enemyPoke);
+    public abstract void attack(IPokemon enemyPoke);
 
-    /** Show an specified skill, based on the index
-     *
-     * @param A index of the skill
-     * @return The string of the skill
-     */
-    public abstract String showSkill(int index);
+
     @Override
     public String getDescrp(){
         String s = "";
@@ -215,8 +194,4 @@ public abstract class Pokemon implements IPokemon, ICardPlayable {
         return this.name;
     }
 
-    @Override
-    public void jugarCarta(Entrenador myTrainer){
-        myTrainer.jugarCartaPokemon(this);
-    }
 }

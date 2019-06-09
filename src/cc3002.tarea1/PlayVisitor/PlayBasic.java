@@ -2,10 +2,11 @@ package cc3002.tarea1.PlayVisitor;
 
 import cc3002.tarea1.Entrenador;
 import cc3002.tarea1.ICardPlayable;
+import cc3002.tarea1.IPokemon;
 import cc3002.tarea1.PokemonTypes.IBasicType;
 
 public class PlayBasic extends PlayVisitor {
-    ICardPlayable cardToBePlayed;
+    IPokemon cardToBePlayed;
     public PlayBasic(Entrenador trainer){
         super(trainer);
         cardToBePlayed = null;
@@ -19,7 +20,12 @@ public class PlayBasic extends PlayVisitor {
         this.entrenador = entrenador;
     }
     public void play(){
-
+        if(entrenador.getBanca().size()<5){
+            entrenador.addToBanca(cardToBePlayed);
+        }
+        else{
+            entrenador.backToHand(cardToBePlayed);
+        }
     }
 
 }

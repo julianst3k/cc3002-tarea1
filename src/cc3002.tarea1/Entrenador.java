@@ -1,20 +1,22 @@
 package cc3002.tarea1;
+import cc3002.tarea1.PokemonTypes.IBasicType;
+
 import java.util.ArrayList;
 public class Entrenador implements IEntrenador {
     /** Defines the trainer. The trainer is allowed to see his cards and do actions with it.
      * @author: Julian Solis Torrejon
      */
-    private Pokemon Activa;
-    private ArrayList<Pokemon> Banca;
+    private IPokemon Activa;
+    private ArrayList<IPokemon> Banca;
     private ArrayList<ICardPlayable> Mano;
     private Mazo mazo;
     private CardStack pila;
     private Premio premio;
     private IPokemon objective;
-    public Entrenador(Pokemon pokemonActivo, Mazo newMazo, Premio newPremio){ // Defino el inicio del juego con un pokemon activo :)
+    public Entrenador(IPokemon pokemonActivo, Mazo newMazo, Premio newPremio){ // Defino el inicio del juego con un pokemon activo :)
         Activa = pokemonActivo;
         objective = Activa;
-        Banca = new ArrayList<Pokemon>();
+        Banca = new ArrayList<IPokemon>();
         Mano = new ArrayList<ICardPlayable>();
         pila = new CardStack();
         premio = newPremio;
@@ -33,7 +35,7 @@ public class Entrenador implements IEntrenador {
             return;
         }
         else if(!this.getActiva().isDed()){
-            Pokemon AuxActive=this.getActiva();
+            IPokemon AuxActive=this.getActiva();
             this.Activa=this.Banca.get(0);
             this.Banca.remove(0);
             this.Banca.add(AuxActive);
@@ -97,7 +99,7 @@ public class Entrenador implements IEntrenador {
     }
 
     @Override
-    public Pokemon getActiva(){
+    public IPokemon getActiva(){
         return this.Activa;
     }
 
@@ -173,7 +175,7 @@ public class Entrenador implements IEntrenador {
      *
      * @param poke A pokemon card
      */
-    public void jugarCartaPokemon(Pokemon poke){
+    public void addToBanca(IPokemon poke){
         if(this.cantidadBanca()<5){
             this.Banca.add(poke);
             this.deadActive();
@@ -182,7 +184,13 @@ public class Entrenador implements IEntrenador {
             this.Mano.add(poke);
         }
     }
-
+    /** Sometimes the card cant be played, but we already did so, so we add the card back to the hand
+     * @param card Add a card to the hand that hasnt been played
+     *
+     */
+    public void backToHand(ICardPlayable card){
+        this.Mano.add(card);
+    }
     /** Same as above, but with the energy card
      *
      * @param cardE A energy card
@@ -192,7 +200,7 @@ public class Entrenador implements IEntrenador {
     }
 
     @Override
-    public ArrayList<Pokemon> getBanca(){
+    public ArrayList<IPokemon> getBanca(){
         return this.Banca;
     }
 
@@ -243,11 +251,11 @@ public class Entrenador implements IEntrenador {
 
     }
     @Override
-    public ArrayList<Pokemon> enemyBanca(Entrenador enemyTrainer){
+    public ArrayList<IPokemon> enemyBanca(Entrenador enemyTrainer){
         return enemyTrainer.getBanca();
     }
     @Override
-    public Pokemon enemyActive(Entrenador enemyTrainer){
+    public IPokemon enemyActive(Entrenador enemyTrainer){
         return enemyTrainer.getActiva();
     }
 

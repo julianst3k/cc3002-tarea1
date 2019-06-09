@@ -1,7 +1,9 @@
 package cc3002.tarea1.PokemonTypes;
+import cc3002.tarea1.IPokemon;
 import cc3002.tarea1.Pokemon;
 import cc3002.tarea1.ISkill;
 import java.util.ArrayList;
+
 public abstract class AbstractWaterPokemon extends Pokemon{
     /** A class for the Waaa-type Pokemon
      * @author: Julian Solis Torrejon
@@ -12,7 +14,7 @@ public abstract class AbstractWaterPokemon extends Pokemon{
     }
     @Override
 
-    public void attack(Pokemon enemyPok){
+    public void attack(IPokemon enemyPok){
         if(this.getSelectedSkill()==null){
             return;
         }
