@@ -21,10 +21,10 @@ public class TestWaterPokemon {
     private ArrayList<ISkill> skillsWater;
     @Before public void setUp(){
         skillsWater = new ArrayList<>(Arrays.asList(new Skill("generic", 100, new ArrayList<IEnergia>(), "XD")));
-        waterPokemon = new WaterPokemon("Zuko", 33, 1000, skillsWater);
-        leafPokemon = new LeafPokemon("Chikorita", 33, 300, skillsWater);
-        fighterPokemon = new FighterPokemon("Zuko", 33, 300, skillsWater);
-        lightPokemon = new LightPokemon("Zuko", 33, 300, skillsWater);
+        waterPokemon = new BasicWaterPokemon("Zuko", 33, 1000, skillsWater);
+        leafPokemon = new BasicLeafPokemon("Chikorita", 33, 300, skillsWater);
+        fighterPokemon = new BasicFighterPokemon("Zuko", 33, 300, skillsWater);
+        lightPokemon = new BasicLightPokemon("Zuko", 33, 300, skillsWater);
     }
     @Test public void testResist() {
         waterPokemon.selectSkill(0);

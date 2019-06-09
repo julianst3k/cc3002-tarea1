@@ -1,17 +1,13 @@
 package test;
 import static org.junit.Assert.*;
 
+import cc3002.tarea1.*;
 import cc3002.tarea1.Energies.FireEnergy;
 import org.junit.Before;
 import org.junit.Test;
-import cc3002.tarea1.Entrenador;
-import cc3002.tarea1.PokemonTypes.FirePokemon;
-import cc3002.tarea1.PokemonTypes.LeafPokemon;
-import cc3002.tarea1.Pokemon;
+import cc3002.tarea1.PokemonTypes.*;
 import cc3002.tarea1.Energies.LeafEnergy;
-import cc3002.tarea1.Skill;
-import cc3002.tarea1.ISkill;
-import cc3002.tarea1.IEnergia;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -26,22 +22,32 @@ public class TestEntrenador {
     private Pokemon genericGreenDay1; Pokemon genericGreenDay2; private Pokemon genericGreenDay3; Pokemon genericGreenDay4; private Pokemon genericGreenDay5; Pokemon genericGreenDay6;
     private Skill elMataNachos;
     private Entrenador faker;
+    private Mazo mazo;
+    private Premio premio;
+    private ArrayList<ICardPlayable> newMazo;
     @Before public void setUp(){
         Green = new ArrayList<IEnergia>(Arrays.asList(new LeafEnergy(), new FireEnergy()));
         LeafAttack = new Skill("Cures Cancer", 420, Green, "Smoke that" );
         ByronsEnergies = new ArrayList<IEnergia>(Arrays.asList(new FireEnergy(), new FireEnergy()));
         skills = new ArrayList<ISkill>(Arrays.asList(new Skill("Big Flames", 33, ByronsEnergies, "Pega")));
         skillsGreen = new ArrayList<ISkill>(Arrays.asList(LeafAttack));
-        entrenador = new Entrenador(new FirePokemon("Byron", 23, 69, skills));
         elMataNachos = new Skill("Bomb", 10000, ByronsEnergies, "Kills everything");
-        faker = new Entrenador(new FirePokemon("Unkillable Demon King", 666, 10000, new ArrayList<ISkill>(Arrays.asList(elMataNachos))));
-        GreenDay = new LeafPokemon("Green", 420, 1000, skillsGreen);
-        genericGreenDay1 = new LeafPokemon("Green", 420, 1000, skillsGreen);
-        genericGreenDay2 = new LeafPokemon("Green", 420, 1000, skillsGreen);
-        genericGreenDay3 = new LeafPokemon("Green", 420, 1000, skillsGreen);
-        genericGreenDay4 = new LeafPokemon("Green", 420, 1000, skillsGreen);
-        genericGreenDay5 = new LeafPokemon("Green", 420, 1000, skillsGreen);
-        genericGreenDay6 = new LeafPokemon("Misunderstood Green", 420, 1000, skillsGreen);
+        GreenDay = new BasicLeafPokemon("Green", 420, 1000, skillsGreen);
+        genericGreenDay1 = new BasicLeafPokemon("Green", 420, 1000, skillsGreen);
+        genericGreenDay2 = new BasicLeafPokemon("Green", 420, 1000, skillsGreen);
+        genericGreenDay3 = new BasicLeafPokemon("Green", 420, 1000, skillsGreen);
+        genericGreenDay4 = new BasicLeafPokemon("Green", 420, 1000, skillsGreen);
+        genericGreenDay5 = new BasicLeafPokemon("Green", 420, 1000, skillsGreen);
+        genericGreenDay6 = new BasicLeafPokemon("Misunderstood Green", 420, 1000, skillsGreen);
+        newMazo = new ArrayList<>(Arrays.asList(new FireEnergy(), new FireEnergy(), GreenDay, genericGreenDay1, genericGreenDay2, genericGreenDay3, genericGreenDay4, genericGreenDay5, genericGreenDay6));
+        mazo = new Mazo(newMazo);
+        for(int i=mazo.getSize(); i<60; i++){
+            mazo.addCarta(new FireEnergy());
+        }
+        entrenador = new Entrenador(new BasicFirePokemon("Byron", 23, 69, skills), mazo, premio);
+        faker = new Entrenador(new BasicFirePokemon("Unkillable Demon King", 666, 10000, new ArrayList<ISkill>(Arrays.asList(elMataNachos))), mazo, premio);
+
+
     }
     @Test public void testInitial() {
         assertEquals(entrenador.cardInfo(entrenador.getActiva()), "Nombre: Byron, ID: 23, Health Points: 69, Energias: \n1. Big Flames, de tipo fuego y realiza 33 de daño. Descripcion: Pega. Requiere: FIRE: 2. \n");

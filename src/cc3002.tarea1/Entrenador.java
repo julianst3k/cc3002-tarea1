@@ -103,11 +103,15 @@ public class Entrenador implements IEntrenador {
 
     /** Set the objective for the energy card, this will be played by the controller
      *
-     * @param card the card that will be played
+     * @param index  the index of the card that will be set to be played, if index = 0, then the card to be played is the active one.
+     *               This is mainly to play energy cards into pokemon ones. So, the program should ask the trainer which card he wants to set the energy to
      */
-    public void cardObjective(IPokemon card){
-        if(this.getBanca().contains(card) || this.getActiva()==card){
-            this.objective = card;
+    public void setObjective(int index){
+        if(index == 0){
+            this.objective = this.getActiva();
+        }
+        else{
+            this.objective = this.getBanca().get(index-1);
         }
     }
     /** Gets the info of a card that is on the 5-Pokemon's list

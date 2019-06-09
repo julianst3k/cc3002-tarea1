@@ -22,9 +22,9 @@ public class TestPsychPokemon {
     private ArrayList<ISkill> skillsWater;
     @Before public void setUp(){
         skillsWater = new ArrayList<>(Arrays.asList(new Skill("generic", 100, new ArrayList<IEnergia>(), "XD")));
-        psychPokemon = new PsychPokemon("Zuko", 33, 300, skillsWater);
-        fighterPokemon = new FighterPokemon("Chikorita", 33, 300, skillsWater);
-        psychPokemon1 = new PsychPokemon("Zuko", 33, 300, skillsWater);
+        psychPokemon = new BasicPsychPokemon("Zuko", 33, 300, skillsWater);
+        fighterPokemon = new BasicFighterPokemon("Chikorita", 33, 300, skillsWater);
+        psychPokemon1 = new BasicPsychPokemon("Zuko", 33, 300, skillsWater);
 
     }
     @Test public void testResist(){

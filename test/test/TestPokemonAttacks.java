@@ -26,13 +26,13 @@ public class TestPokemonAttacks {
     private ArrayList<ISkill> skillsWater;
     @Before public void setUp(){
         skillsWater = new ArrayList<>(Arrays.asList(new Skill("generic", 100, new ArrayList<IEnergia>(), "XD")));
-        lightPokemon = new LightPokemon("Azula", 33, 300, skillsWater);
-        fighterPokemon = new FighterPokemon("Iron Man dies", 33, 300, skillsWater);
-        waterPokemon = new WaterPokemon("Squirtle", 33, 300, skillsWater);
-        punchingBag = new FirePokemon("Kanojedo", 400, 10000, skillsWater);
-        leafPokemon = new LeafPokemon("Eco", 400, 300, skillsWater);
-        psychPokemon = new PsychPokemon("Pedro Engel", 300, 300, skillsWater);
-        firePokemon = new FirePokemon("My Mixtape", 300, 300, skillsWater);
+        lightPokemon = new BasicLightPokemon("Azula", 33, 300, skillsWater);
+        fighterPokemon = new BasicFighterPokemon("Iron Man dies", 33, 300, skillsWater);
+        waterPokemon = new BasicWaterPokemon("Squirtle", 33, 300, skillsWater);
+        punchingBag = new BasicFirePokemon("Kanojedo", 400, 10000, skillsWater);
+        leafPokemon = new BasicLeafPokemon("Eco", 400, 300, skillsWater);
+        psychPokemon = new BasicPsychPokemon("Pedro Engel", 300, 300, skillsWater);
+        firePokemon = new BasicFirePokemon("My Mixtape", 300, 300, skillsWater);
     }
     @Test public void testResist(){
         lightPokemon.selectSkill(0); fighterPokemon.selectSkill(0); waterPokemon.selectSkill(0);

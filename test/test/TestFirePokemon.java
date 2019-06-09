@@ -22,9 +22,9 @@ public class TestFirePokemon {
     private ArrayList<ISkill> skillsWater;
     @Before public void setUp(){
         skillsWater = new ArrayList<>(Arrays.asList(new Skill("generic", 100, new ArrayList<IEnergia>(), "XD")));
-        firePokemon = new FirePokemon("Zuko", 33, 300, skillsWater);
-        leafPokemon = new LeafPokemon("Chikorita", 33, 300, skillsWater);
-        waterPokemon = new WaterPokemon("Squirtle", 33, 300, skillsWater);
+        firePokemon = new BasicFirePokemon("Zuko", 33, 300, skillsWater);
+        leafPokemon = new BasicLeafPokemon("Chikorita", 33, 300, skillsWater);
+        waterPokemon = new BasicWaterPokemon("Squirtle", 33, 300, skillsWater);
     }
     @Test public void testResist(){
         firePokemon.selectSkill(0); leafPokemon.selectSkill(0); waterPokemon.selectSkill(0);
