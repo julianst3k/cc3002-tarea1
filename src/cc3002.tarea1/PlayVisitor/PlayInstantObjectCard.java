@@ -1,5 +1,5 @@
 package cc3002.tarea1.PlayVisitor;
-import cc3002.tarea1.Effect.*;
+import cc3002.tarea1.Effect.PokemonEffect;
 import cc3002.tarea1.Entrenador;
 
 public class PlayInstantObjectCard extends PlayObjectCard{

@@ -10,4 +10,18 @@ public abstract class TrainerCard implements ICardPlayable {
      */
 
     public abstract IEffect getEffect();
+    private String name;
+    private String description;
+    public TrainerCard(String nombre, String descrp){
+        name = nombre;
+        description = descrp;
+    }
+    @Override
+    public String getDescrp(){
+        return description;
+    }
+    @Override
+    public String getName(){
+        return name;
+    }
 }

@@ -104,4 +104,8 @@ public interface IEntrenador {
      * @return An integer that show the current position
      */
     int pokemonPlace(IPokemon poke);
+    /** Set a new stadium for the game :)
+     * @param card The card that will be setted
+     */
+    void setStadium(StadiumCard card);
 }

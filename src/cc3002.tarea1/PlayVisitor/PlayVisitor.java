@@ -1,9 +1,6 @@
 package cc3002.tarea1.PlayVisitor;
 
-import cc3002.tarea1.AttachObjectCard;
-import cc3002.tarea1.Entrenador;
-import cc3002.tarea1.InstantObjectCard;
-import cc3002.tarea1.ObjectCard;
+import cc3002.tarea1.*;
 import cc3002.tarea1.PokemonTypes.IPhase1Type;
 import cc3002.tarea1.PokemonTypes.IBasicType;
 import cc3002.tarea1.PokemonTypes.IPhase2Type;
@@ -64,4 +61,10 @@ public abstract class PlayVisitor {
      *
      */
     public abstract void play();
+
+    /** Visited an stadium card
+     *
+     * @param card The card
+     */
+    public void visitedStadiumCard(StadiumCard card){};
 }

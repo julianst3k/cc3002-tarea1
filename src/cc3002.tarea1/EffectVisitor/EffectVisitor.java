@@ -7,4 +7,5 @@ public class EffectVisitor {
 
     }
     public void visitedNullPokemonEffect(PokemonEffect effect){};
+    public void visitedNullGlobalEffect(){};
 }

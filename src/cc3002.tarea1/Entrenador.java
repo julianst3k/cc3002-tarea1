@@ -3,7 +3,9 @@ import cc3002.tarea1.PlayVisitor.PlayVisitor;
 import cc3002.tarea1.PokemonTypes.IBasicType;
 
 import java.util.ArrayList;
-public class Entrenador implements IEntrenador {
+import java.util.Observable;
+
+public class Entrenador extends Observable implements IEntrenador {
     /**
      * Defines the trainer. The trainer is allowed to see his cards and do actions with it.
      *
@@ -353,5 +355,10 @@ public class Entrenador implements IEntrenador {
      */
     public IPokemon getObjective(){
         return this.objective;
+    }
+    @Override
+    public void setStadium(StadiumCard card){
+        setChanged();
+        notifyObservers(card);
     }
 }

@@ -5,8 +5,7 @@ import cc3002.tarea1.PlayVisitor.PlayObjectCard;
 import cc3002.tarea1.PlayVisitor.PlayVisitor;
 
 public abstract class ObjectCard extends TrainerCard  {
-    private String name;
-    private String description;
+
     private PokemonEffect effect;
 
     /** Creates a Object Card
@@ -15,18 +14,10 @@ public abstract class ObjectCard extends TrainerCard  {
      * @param desc Description
      */
     public ObjectCard(String nam, String desc, PokemonEffect newEffect){
-        name = name;
-        description = description;
+        super(nam, desc);
         effect = newEffect;
     }
-    @Override
-    public String getDescrp(){
-        return description;
-    }
-    @Override
-    public String getName(){
-        return name;
-    }
+
     public PokemonEffect getEffect(){
         return effect;
     }
