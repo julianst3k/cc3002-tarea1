@@ -58,38 +58,39 @@ public interface IPokemon extends ICardPlayable {
      *
      * @param skill a skill
      */
-    void attackedByPsych(ISkill skill);
+    void attackedByPsych(Attack skill);
     /** Changes the HP of the Pokemon that is being attacked by a Fire Pokemon with a skill A
      *
      * @param skill a skill
      */
-    void attackedByFire(ISkill skill);
+    void attackedByFire(Attack skill);
     /** Changes the HP of the Pokemon that is being attacked by a Water Pokemon with a skill A
      *
      * @param skill a skill
      */
-    void attackedByWater(ISkill skill);
+    void attackedByWater(Attack skill);
     /** Changes the HP of the Pokemon that is being attacked by a Grass Pokemon with a skill A
      *
      * @param skill a skill
      */
-    void attackedByLeaf(ISkill skill);
+    void attackedByLeaf(Attack skill);
     /** Changes the HP of the Pokemon that is being attacked by a Light Pokemon with a skill A
      *
      * @param skill a skill
      */
-    void attackedByLight(ISkill skill);
+    void attackedByLight(Attack skill);
     /** Changes the HP of the Pokemon that is being attacked by a Fire Pokemon with a skill A
      *
      * @param skill a skill
      */
-    void attackedByFighter(ISkill skill);
+    void attackedByFighter(Attack skill);
 
     /** Tell the pokemon to attack another pokemon
      *
      * @param poke the another pokemon
+     * @param attack Attack which will be used. This parameter was set since now pokemon can have no attack abilities :)
      */
-    void attack(IPokemon poke);
+    void attack(IPokemon poke, Attack attack);
 
     /** Put a energy into the hashmap
      *
@@ -130,5 +131,11 @@ public interface IPokemon extends ICardPlayable {
      *
      */
     ObjectCard getActualObject();
+
+    /** Use an ability, which could be an ability or an attack
+     *
+     * @param pokemon
+     */
+    void useSkill(IPokemon pokemon);
 
 }

@@ -1,4 +1,5 @@
 package cc3002.tarea1.PokemonTypes;
+import cc3002.tarea1.Attack;
 import cc3002.tarea1.IPokemon;
 import cc3002.tarea1.Pokemon;
 import cc3002.tarea1.ISkill;
@@ -14,20 +15,17 @@ public abstract class AbstractPsychPokemon extends Pokemon{
     }
     @Override
 
-    public void attack(IPokemon enemyPok) {
-        if(this.getSelectedSkill()==null){
-            return;
-        }
-        enemyPok.attackedByPsych(this.getSelectedSkill());
+    public void attack(IPokemon enemyPok, Attack attack) {
+        enemyPok.attackedByPsych(attack);
     }
     @Override
 
-    public void attackedByFighter(ISkill skill) {
+    public void attackedByFighter(Attack skill) {
         this.getAttackedResist(skill);
     }
     @Override
 
-    public void attackedByPsych(ISkill skill){
+    public void attackedByPsych(Attack skill){
         this.getAttackedVulnerable(skill);
     }
     @Override
@@ -42,7 +40,7 @@ public abstract class AbstractPsychPokemon extends Pokemon{
     @Override
 
     public String showSkill(int skillIndex){
-        String result = this.getSkills().get(skillIndex).getName()+", de tipo psiquico y realiza "+this.getSkills().get(skillIndex).getDamage()+" de daño. Descripcion: "+this.getSkills().get(skillIndex).getDescripcion()+". Requiere: "+this.getSkills().get(skillIndex).getCostString()+"\n";;
+        String result = this.getSkills().get(skillIndex).getName()+", de tipo psiquico y realiza "+this.getSkills().get(skillIndex).showAttributes()+"\n";;
         return result;
     }
 }

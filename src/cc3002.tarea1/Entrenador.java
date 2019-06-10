@@ -1,4 +1,6 @@
 package cc3002.tarea1;
+import cc3002.tarea1.Effect.GlobalEffect;
+import cc3002.tarea1.Effect.NullGlobalEffect;
 import cc3002.tarea1.PlayVisitor.PlayVisitor;
 import cc3002.tarea1.PokemonTypes.IBasicType;
 
@@ -18,6 +20,7 @@ public class Entrenador extends Observable implements IEntrenador {
     private CardStack pila;
     private Premio premio;
     private IPokemon objective;
+    private GlobalEffect currentEffect;
 
     public Entrenador(IPokemon pokemonActivo, Mazo newMazo, Premio newPremio) { // Defino el inicio del juego con un pokemon activo :)
         Activa = pokemonActivo;
@@ -32,6 +35,7 @@ public class Entrenador extends Observable implements IEntrenador {
             System.out.println("No hay suficientes cartas para iniciar");
             throw new AssertionError();
         }
+        currentEffect = new NullGlobalEffect();
     }
 
     @Override
@@ -249,7 +253,7 @@ public class Entrenador extends Observable implements IEntrenador {
     @Override
     public void pokemonAttack(Entrenador enemyTrainer) { // seria por default el pokemon del enemigo?
         if (this.Activa.getSelectedSkill() != null && enemyTrainer.getActiva() != null) {
-            this.Activa.attack(this.enemyActive(enemyTrainer));
+            this.Activa.useSkill(this.enemyActive(enemyTrainer));
             enemyTrainer.getAttacked();
         }
     }
@@ -360,5 +364,13 @@ public class Entrenador extends Observable implements IEntrenador {
     public void setStadium(StadiumCard card){
         setChanged();
         notifyObservers(card);
+    }
+
+    /** Set the global effect that it is affecting the trainer
+     *
+     * @param effect the effect :)
+     */
+    public void setCurrentGlobalEffect(GlobalEffect effect){
+        currentEffect=effect;
     }
 }

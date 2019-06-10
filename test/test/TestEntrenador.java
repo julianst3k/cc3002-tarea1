@@ -2,6 +2,10 @@ package test;
 import static org.junit.Assert.*;
 
 import cc3002.tarea1.*;
+import cc3002.tarea1.Effect.InstantEffect;
+import cc3002.tarea1.Effect.NullInstantEfect;
+import cc3002.tarea1.Effect.NullPokemonEffect;
+import cc3002.tarea1.Effect.PokemonEffect;
 import cc3002.tarea1.Energies.FireEnergy;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,14 +30,16 @@ public class TestEntrenador {
     private Mazo firstmazo;
     private Mazo fakersmazo;
     private Mazo secondmazo;
+    private PokemonEffect voidEffect;
     private Premio premio;
     @Before public void setUp(){
+        voidEffect = new NullPokemonEffect();
         Green = new ArrayList<IEnergia>(Arrays.asList(new LeafEnergy(), new FireEnergy()));
-        LeafAttack = new Skill("Cures Cancer", 420, Green, "Smoke that" );
+        LeafAttack = new Attack("Cures Cancer", 420, Green, "Smoke that", voidEffect);
         ByronsEnergies = new ArrayList<IEnergia>(Arrays.asList(new FireEnergy(), new FireEnergy()));
-        skills = new ArrayList<ISkill>(Arrays.asList(new Skill("Big Flames", 33, ByronsEnergies, "Pega")));
+        skills = new ArrayList<ISkill>(Arrays.asList(new Attack("Big Flames", 33, ByronsEnergies, "Pega", voidEffect)));
         skillsGreen = new ArrayList<ISkill>(Arrays.asList(LeafAttack));
-        elMataNachos = new Skill("Bomb", 10000, ByronsEnergies, "Kills everything");
+        elMataNachos = new Attack("Bomb", 10000, ByronsEnergies, "Kills everything", voidEffect);
         GreenDay = new BasicLeafPokemon("Green", 420, 1000, skillsGreen);
         genericGreenDay1 = new BasicLeafPokemon("Green", 420, 1000, skillsGreen);
         genericGreenDay2 = new BasicLeafPokemon("Green", 420, 1000, skillsGreen);

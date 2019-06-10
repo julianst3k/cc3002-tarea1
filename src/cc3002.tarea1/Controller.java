@@ -16,7 +16,7 @@ public class Controller implements Observer {
         EnergyCardsPlayed = 0;
         inTurn = first; first.addObserver(this);
         notInTurn = second; second.addObserver(this);
-        currentStadium = new NullStadiumCard(this);
+        currentStadium = new NullStadiumCard(); inTurn.setCurrentGlobalEffect(currentStadium.getEffect()); notInTurn.setCurrentGlobalEffect(currentStadium.getEffect());
     }
 
     /** Ask a certain card that if it is playable

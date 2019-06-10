@@ -1,4 +1,5 @@
 package cc3002.tarea1.PokemonTypes;
+import cc3002.tarea1.Attack;
 import cc3002.tarea1.IPokemon;
 import cc3002.tarea1.Pokemon;
 import cc3002.tarea1.ISkill;
@@ -15,18 +16,15 @@ public abstract class AbstractLeafPokemon extends Pokemon{
         super(name, id, healthPoints, skills);
     }
     @Override
-    public void attack(IPokemon enemyPok) {
-        if(this.getSelectedSkill()==null){
-            return;
-        }
-        enemyPok.attackedByLeaf(this.getSelectedSkill());
+    public void attack(IPokemon enemyPok, Attack attack) {
+        enemyPok.attackedByLeaf(attack);
     }
     @Override
-    public void attackedByWater(ISkill skill) {
+    public void attackedByWater(Attack skill) {
         this.getAttackedResist(skill);
     }
     @Override
-    public void attackedByFire(ISkill skill){
+    public void attackedByFire(Attack skill){
         this.getAttackedVulnerable(skill);
     }
     @Override
@@ -39,7 +37,7 @@ public abstract class AbstractLeafPokemon extends Pokemon{
     }
     @Override
     public String showSkill(int skillIndex){
-        String result = this.getSkills().get(skillIndex).getName()+", de tipo hierba y realiza "+this.getSkills().get(skillIndex).getDamage()+" de daño. Descripcion: "+this.getSkills().get(skillIndex).getDescripcion()+". Requiere: "+this.getSkills().get(skillIndex).getCostString()+"\n";
+        String result = this.getSkills().get(skillIndex).getName()+", de tipo hierba y realiza "+this.getSkills().get(skillIndex).showAttributes()+"\n";
         return result;
     }
 }

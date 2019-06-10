@@ -1,5 +1,8 @@
 package cc3002.tarea1;
 
+import cc3002.tarea1.Effect.InstantEffect;
+import cc3002.tarea1.Effect.PokemonEffect;
+
 import java.util.HashMap;
 
 public interface ISkill {
@@ -12,11 +15,7 @@ public interface ISkill {
      */
     String getName();
 
-    /** Get the damage that the skill deals
-     *
-     * @return An integer of the damage
-     */
-    int getDamage();
+
 
     /** Get the hashMap of the energy cards that the skill costs
      *
@@ -35,4 +34,19 @@ public interface ISkill {
      * @return An String.
      */
     String getCostString();
+
+    /** Get used by the user pokemon
+     *
+     * @param user User Pokemon
+     * @param objective Objective Pokemon
+     */
+    void beUsed(Pokemon user, IPokemon objective);
+
+    /** Show attributes
+     *
+     * @return An string with attributes
+     */
+    String showAttributes();
+    PokemonEffect getEffect();
+
 }

@@ -1,4 +1,6 @@
 package cc3002.tarea1;
+import cc3002.tarea1.Effect.PokemonEffect;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -9,14 +11,15 @@ public class Skill implements ISkill {
     */
 
     private String name;
-    private int damage;
     private String description;
     private EnergyCounter costo;
-    public Skill(String name, int damage, ArrayList<IEnergia> costo, String description){
+    private PokemonEffect effect;
+
+    public Skill(String name, ArrayList<IEnergia> costo, String description, PokemonEffect eff){
         this.name = name;
-        this.damage = damage;
         this.costo = HashCreate(costo);
         this.description = description;
+        effect = eff;
     }
 
     /**
@@ -30,10 +33,6 @@ public class Skill implements ISkill {
             costo.get(i).getSetted(this);
         }
         return this.costo;
-    }
-    @Override
-    public int getDamage(){
-        return this.damage;
     }
     @Override
     public String getName(){
@@ -58,5 +57,16 @@ public class Skill implements ISkill {
                 }
             }
             return result;
+    }
+    @Override
+    public void beUsed(Pokemon user, IPokemon poke){
+        this.effect.applyEffect(poke);
+        this.effect.applyEffect(user);
+    }
+    public PokemonEffect getEffect(){
+        return effect;
+    }
+    public String showAttributes(){
+        return "Descripcion: "+this.getDescripcion()+". Requiere: "+this.getCostString();
     }
 }

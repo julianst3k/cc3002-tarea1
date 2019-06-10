@@ -84,7 +84,7 @@ public abstract class Pokemon implements IPokemon {
      *
      * @param skill The skill that the other pokemon uses
      */
-    public void getAttacked(ISkill skill) {
+    public void getAttacked(Attack skill) {
         this.healthPoints -= skill.getDamage();
     }
 
@@ -92,7 +92,7 @@ public abstract class Pokemon implements IPokemon {
      *
      * @param skill The skill that the other pokemon uses
      */
-    public void getAttackedResist(ISkill skill) {
+    public void getAttackedResist(Attack skill) {
         this.healthPoints -= skill.getDamage() - 30;
     }
 
@@ -100,7 +100,7 @@ public abstract class Pokemon implements IPokemon {
      *
      * @param skill The skill that the other pokemon uses
      */
-    public void getAttackedVulnerable(ISkill skill) {
+    public void getAttackedVulnerable(Attack skill) {
         this.healthPoints -= skill.getDamage() * 2;
     }
 
@@ -111,33 +111,33 @@ public abstract class Pokemon implements IPokemon {
         return energies;
     }
     @Override
-    public void attackedByFire(ISkill skill) { // getAttacked(Attack) :)
+    public void attackedByFire(Attack skill) { // getAttacked(Attack) :)
         getAttacked(skill);
     }
     @Override
-    public void attackedByWater(ISkill skill) {
-        getAttacked(skill);
-    }
-    @Override
-
-    public void attackedByLeaf(ISkill skill) {
+    public void attackedByWater(Attack skill) {
         getAttacked(skill);
     }
     @Override
 
-    public void attackedByLight(ISkill skill) {
+    public void attackedByLeaf(Attack skill) {
         getAttacked(skill);
     }
     @Override
 
-
-    public void attackedByFighter(ISkill skill) {
+    public void attackedByLight(Attack skill) {
         getAttacked(skill);
     }
     @Override
 
 
-    public void attackedByPsych(ISkill skill) {
+    public void attackedByFighter(Attack skill) {
+        getAttacked(skill);
+    }
+    @Override
+
+
+    public void attackedByPsych(Attack skill) {
         getAttacked(skill);
     }
 
@@ -179,12 +179,13 @@ public abstract class Pokemon implements IPokemon {
             this.getSkills().remove(a-1);
         }
     }
-    /** A pokemon attacks another one
-     *
-     * @param enemyPoke A pokemon
-     */
-    public abstract void attack(IPokemon enemyPoke);
-
+    @Override
+    public void useSkill(IPokemon poke){
+        if(this.getSelectedSkill()==null){
+            return;
+        }
+        this.getSelectedSkill().beUsed(this, poke);
+    }
 
     @Override
     public String getDescrp(){

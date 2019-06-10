@@ -67,4 +67,11 @@ public abstract class PlayVisitor {
      * @param card The card
      */
     public void visitedStadiumCard(StadiumCard card){};
+
+    /** Visited a support card
+     *
+     * @param card The card
+     */
+    public void visitedSupportCard(SupportCard card){};
+
 }

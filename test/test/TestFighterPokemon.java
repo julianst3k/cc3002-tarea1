@@ -1,6 +1,11 @@
 package test;
 import static org.junit.Assert.*;
 
+import cc3002.tarea1.Attack;
+import cc3002.tarea1.Effect.InstantEffect;
+import cc3002.tarea1.Effect.NullInstantEfect;
+import cc3002.tarea1.Effect.NullPokemonEffect;
+import cc3002.tarea1.Effect.PokemonEffect;
 import cc3002.tarea1.Energies.FighterEnergy;
 import cc3002.tarea1.Energies.WaterEnergy;
 import cc3002.tarea1.PokemonTypes.*;
@@ -28,18 +33,20 @@ public class TestFighterPokemon {
     private AbstractPsychPokemon psychOne;
     private AbstractLeafPokemon leafOne;
     private AbstractLightPokemon lightOne;
+    private PokemonEffect nullEffect;
     @Before public void setUp(){
+        nullEffect = new NullPokemonEffect();
         energiaFighter = new ArrayList<IEnergia>(Arrays.asList(new FighterEnergy(), new WaterEnergy()));
         energiaFighter2 = new ArrayList<IEnergia>(Arrays.asList(new FighterEnergy(), new FighterEnergy(), new WaterEnergy()));
         energiaFighter3 = new ArrayList<IEnergia>(Arrays.asList(new FighterEnergy(), new FighterEnergy(), new WaterEnergy(), new WaterEnergy()));
-        fighterSkill1= new Skill("Slap", 45, energiaFighter, "Slapping");
-        fighterSkill2 = new Skill("Big Slap", 60, energiaFighter2, "More Slapping");
-        fighterSkill3 = new Skill("XXXTentaslap", 100, energiaFighter3, "Slap powered by mysoginia");
-        fighterSkill4 = new Skill("Hug", 30, new ArrayList<IEnergia>(), "Do love");
-        fighterSkill5 = new Skill("Dab", 420, energiaFighter3, "Dab");
+        fighterSkill1= new Attack("Slap", 45, energiaFighter, "Slapping", nullEffect);
+        fighterSkill2 = new Attack("Big Slap", 60, energiaFighter2, "More Slapping", nullEffect);
+        fighterSkill3 = new Attack("XXXTentaslap", 100, energiaFighter3, "Slap powered by mysoginia", nullEffect);
+        fighterSkill4 = new Attack("Hug", 30, new ArrayList<IEnergia>(), "Do love", nullEffect);
+        fighterSkill5 = new Attack("Dab", 420, energiaFighter3, "Dab", nullEffect);
         fighterSkills = new ArrayList<>(Arrays.asList(fighterSkill1, fighterSkill2, fighterSkill3, fighterSkill4, fighterSkill5));
         fighterOne = new BasicFighterPokemon("Clout", 100, 1000, fighterSkills);
-        skillToUse = new Skill("Generic Skill", 100, new ArrayList<IEnergia>(), ":)");
+        skillToUse = new Attack("Generic Skill", 100, new ArrayList<IEnergia>(), ":)", nullEffect);
         psychOne = new BasicPsychPokemon("Alakazam", 65, 100, new ArrayList<ISkill>(Arrays.asList(skillToUse)));
         leafOne = new BasicLeafPokemon("VapeGod", 101, 100, new ArrayList<ISkill>(Arrays.asList(skillToUse)));
         lightOne = new BasicLightPokemon("Screwed", 100, 60, new ArrayList<>());
@@ -55,16 +62,16 @@ public class TestFighterPokemon {
         assertTrue(fighterOne.enoughEnergy(3));
     }
     @Test public void fighterFighting(){
-        fighterOne.attack(psychOne);
+        fighterOne.useSkill(psychOne);
         assertTrue(psychOne.getHp()==100);
-        psychOne.selectSkill(0); psychOne.attack(fighterOne);
+        psychOne.selectSkill(0); psychOne.useSkill(fighterOne);
         assertTrue(fighterOne.getHp()==800);
-        leafOne.selectSkill(0); leafOne.attack(fighterOne);
+        leafOne.selectSkill(0); leafOne.useSkill(fighterOne);
         assertTrue(fighterOne.getHp()==600);
         fighterOne.selectSkill(3);
-        fighterOne.attack(lightOne);
+        fighterOne.useSkill(lightOne);
         assertTrue(lightOne.isDed());
-        fighterOne.attack(psychOne);
+        fighterOne.useSkill(psychOne);
         assertTrue(psychOne.getHp()==100);
         psychOne.addAttack(fighterSkill3);
         assertEquals(psychOne.showSkill(1), "XXXTentaslap, de tipo psiquico y realiza 100 de daño. Descripcion: Slap powered by mysoginia. Requiere: FIGHTER: 2. WATER: 2. \n");
