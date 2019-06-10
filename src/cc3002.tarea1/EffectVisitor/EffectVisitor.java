@@ -11,4 +11,5 @@ public class EffectVisitor {
     public void visitedNullPokemonEffect(PokemonEffect effect){};
     public void visitedNullGlobalEffect(GlobalEffect effect){};
     public void visitedNullInstantEffect(InstantEffect effect){};
+    public void visitedWingBuzz(PokemonEffect effect){};
 }

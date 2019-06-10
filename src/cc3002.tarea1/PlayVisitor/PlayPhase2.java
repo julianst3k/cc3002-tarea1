@@ -46,6 +46,7 @@ public class PlayPhase2 extends PlayVisitor {
     public void play(){
         if(cardToBeEvolved!=null) {
             entrenador.pokemonEvolve(entrenador.pokemonPlace(cardToBeEvolved), cardToBePlayed);
+            cardToBePlayed.subscribePokemon(entrenador.getActualController());
         }
         else{
             entrenador.backToHand(cardToBePlayed);

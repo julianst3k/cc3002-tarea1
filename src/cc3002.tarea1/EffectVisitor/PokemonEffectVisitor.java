@@ -10,4 +10,7 @@ public class PokemonEffectVisitor extends EffectVisitor {
     }
     public void visitedNullPokemonEffect(PokemonEffect effect){
     }
+    public void visitedWingBuzz(PokemonEffect effect){
+
+    }
 }

@@ -21,6 +21,8 @@ public class Entrenador extends Observable implements IEntrenador {
     private Premio premio;
     private IPokemon objective;
     private GlobalEffect currentEffect;
+    private Controller actualController;
+    private int selectedCard;
 
     public Entrenador(IPokemon pokemonActivo, Mazo newMazo, Premio newPremio) { // Defino el inicio del juego con un pokemon activo :)
         Activa = pokemonActivo;
@@ -36,6 +38,8 @@ public class Entrenador extends Observable implements IEntrenador {
             throw new AssertionError();
         }
         currentEffect = new NullGlobalEffect();
+        actualController = new Controller(this, this); // Controlador provisorio
+        selectedCard = 1;
     }
 
     @Override
@@ -166,10 +170,17 @@ public class Entrenador extends Observable implements IEntrenador {
     @Override
     public void jugarCarta(int cardIndex) {
         if (cardIndex > 0 && cardIndex <= this.Mano.size()) {
+            sacarCartaMano(cardIndex).jugarCarta(this);
+        }
+
+    }
+    public ICardPlayable sacarCartaMano(int cardIndex){
+        if (cardIndex > 0 && cardIndex <= this.Mano.size()) {
             ICardPlayable Card = this.Mano.get(cardIndex - 1);
             this.Mano.remove(cardIndex - 1);
-            Card.jugarCarta(this);
+            return Card;
         }
+        return null;
     }
 
     /**
@@ -252,7 +263,7 @@ public class Entrenador extends Observable implements IEntrenador {
 
     @Override
     public void pokemonAttack(Entrenador enemyTrainer) { // seria por default el pokemon del enemigo?
-        if (this.Activa.getSelectedSkill() != null && enemyTrainer.getActiva() != null) {
+        if (enemyTrainer.getActiva() != null) {
             this.Activa.useSkill(this.enemyActive(enemyTrainer));
             enemyTrainer.getAttacked();
         }
@@ -354,23 +365,67 @@ public class Entrenador extends Observable implements IEntrenador {
     public Mazo getMazo() {
         return mazo;
     }
-    /** Return the actual objective pokemon
+
+    /**
+     * Return the actual objective pokemon
+     *
      * @return Actual objective pokemon
      */
-    public IPokemon getObjective(){
+    public IPokemon getObjective() {
         return this.objective;
     }
+
     @Override
-    public void setStadium(StadiumCard card){
+    public void setStadium(StadiumCard card) {
         setChanged();
         notifyObservers(card);
     }
 
-    /** Set the global effect that it is affecting the trainer
+    /**
+     * Set the global effect that it is affecting the trainer
      *
      * @param effect the effect :)
      */
-    public void setCurrentGlobalEffect(GlobalEffect effect){
-        currentEffect=effect;
+    public void setCurrentGlobalEffect(GlobalEffect effect) {
+        currentEffect = effect;
+    }
+
+    /** A new controller subscribe to the trainer, and the pokemon do too! That means that the old controller shouldnt affect the trainer anymore.
+     *
+     * @param control The new controller
+     */
+
+    public void subscribeTrainer(Controller control) {
+        deleteObserver(actualController);
+        this.addObserver(control);
+        actualController = control;
+        this.getActiva().subscribePokemon(control);
+    }
+
+    /**
+     * Retorna el control suscrito al entrenador actualmente
+     *
+     * @return The controller
+     */
+    public Controller getActualController() {
+        return actualController;
+    }
+    /** Discard a card from the deck
+     *
+     */
+    public void descartarMazo(){
+        pila.addCarta(mazo.sacarCarta());
+    }
+    /** Discard a card from the playable cards
+     *
+     */
+    public void descartarMano(int cardIndex){
+        pila.addCarta(sacarCartaMano(cardIndex));
+    }
+    /** Select the card that will be played, if neccesary
+     *
+     */
+    public void setSelectedCard(int cardIndex){
+        selectedCard = cardIndex;
     }
 }

@@ -2,7 +2,7 @@ package cc3002.tarea1;
 import java.lang.reflect.Array;
 import java.util.*;
 
-public abstract class Pokemon implements IPokemon {
+public abstract class Pokemon extends Observable implements IPokemon {
     /** Clase abstracta para pokemon
      * @author: Julian Solis Torrejon
      *
@@ -185,6 +185,7 @@ public abstract class Pokemon implements IPokemon {
             return;
         }
         this.getSelectedSkill().beUsed(this, poke);
+        this.notifyObservers(this.getSelectedSkill());
     }
 
     @Override
@@ -210,5 +211,9 @@ public abstract class Pokemon implements IPokemon {
     @Override
     public ObjectCard getActualObject(){
         return this.associated;
+    }
+    @Override
+    public void subscribePokemon(Controller control){
+        this.addObserver(control);
     }
 }

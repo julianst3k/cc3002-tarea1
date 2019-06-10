@@ -1,5 +1,6 @@
 package cc3002.tarea1;
 
+import cc3002.tarea1.ControlVisitor.ControlVisitor;
 import cc3002.tarea1.Effect.InstantEffect;
 import cc3002.tarea1.Effect.PokemonEffect;
 
@@ -27,4 +28,8 @@ public class Attack extends Skill {
     public String showAttributes(){
         return this.getDamage()+" de daño. Descripcion: "+this.getDescripcion()+". Requiere: "+this.getCostString();
     }
+    public void accept(ControlVisitor visitor){
+        visitor.visitedAttack(this);
+    }
+
 }

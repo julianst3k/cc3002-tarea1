@@ -33,6 +33,7 @@ public class PlayBasic extends PlayVisitor {
     public void play(){
         if(entrenador.getBanca().size()<5){
             entrenador.addToBanca(cardToBePlayed);
+            cardToBePlayed.subscribePokemon(entrenador.getActualController());
         }
         else{
             entrenador.backToHand(cardToBePlayed);

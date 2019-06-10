@@ -10,10 +10,11 @@ public class Controller implements Observer {
      */
     private Entrenador inTurn;
     private Entrenador notInTurn;
-    private int EnergyCardsPlayed;
+    private int energyCardsPlayed;
+    private int wingBuzzPlayed;
     private StadiumCard currentStadium;
     public Controller(Entrenador first, Entrenador second){
-        EnergyCardsPlayed = 0;
+        energyCardsPlayed = 0; wingBuzzPlayed=0;
         inTurn = first; first.addObserver(this);
         notInTurn = second; second.addObserver(this);
         currentStadium = new NullStadiumCard(); inTurn.setCurrentGlobalEffect(currentStadium.getEffect()); notInTurn.setCurrentGlobalEffect(currentStadium.getEffect());
@@ -34,12 +35,31 @@ public class Controller implements Observer {
     public void endTurn(){
         Entrenador trainerHolder = inTurn;
         notInTurn = inTurn;
-        EnergyCardsPlayed = 0;
+        energyCardsPlayed = 0; wingBuzzPlayed = 0;
         notInTurn = trainerHolder;
+    }
+    public void selectSkill(int index){
+        inTurn.selectAttack(index);
+    }
+    public void useSkill(){
+        if(inTurn.getActiva().getSelectedSkill() != null && inTurn.getActiva().getSelectedSkill().isUsable(this)) {
+            inTurn.pokemonAttack(notInTurn);
+        }
+        else{
+            System.out.println("Not usable");
+        }
     }
     public void update(Observable o, Object arg){
         if(arg instanceof StadiumCard){
             this.setStadium((StadiumCard) arg);
+        }
+        if(arg instanceof WingBuzz){
+            inTurn.descartarMano(0);
+            notInTurn.descartarMazo();
+            wingBuzzPlayed++;
+        }
+        if(arg instanceof Attack){
+            endTurn();
         }
     }
 
@@ -49,5 +69,11 @@ public class Controller implements Observer {
      */
     public void setStadium(StadiumCard arg){
         currentStadium = arg;
+    }
+    /** Get the wingbuzz status
+     *
+     */
+    public int getWingBuzzPlayed(){
+        return wingBuzzPlayed;
     }
 }

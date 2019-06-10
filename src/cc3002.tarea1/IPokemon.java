@@ -138,4 +138,10 @@ public interface IPokemon extends ICardPlayable {
      */
     void useSkill(IPokemon pokemon);
 
+    /** Subscribe to a pokemon
+     *
+     * @param control The controller
+     */
+    void subscribePokemon(Controller control);
+
 }

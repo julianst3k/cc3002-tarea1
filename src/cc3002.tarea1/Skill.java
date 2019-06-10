@@ -1,8 +1,11 @@
 package cc3002.tarea1;
+import cc3002.tarea1.ControlVisitor.ControlVisitor;
+import cc3002.tarea1.ControlVisitor.UsableSkillVisitor;
 import cc3002.tarea1.Effect.PokemonEffect;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Observable;
 
 public class Skill implements ISkill {
     /**Clase para skills genericas. Basicamente se invoca para ser llamadas por los pokemon, los cuales le dan el
@@ -61,12 +64,19 @@ public class Skill implements ISkill {
     @Override
     public void beUsed(Pokemon user, IPokemon poke){
         this.effect.applyEffect(poke);
-        this.effect.applyEffect(user);
     }
     public PokemonEffect getEffect(){
         return effect;
     }
     public String showAttributes(){
         return "Descripcion: "+this.getDescripcion()+". Requiere: "+this.getCostString();
+    }
+    public void accept(ControlVisitor visitor){
+        visitor.visitedSkill(this);
+    }
+    public boolean isUsable(Controller contr){
+        ControlVisitor visitor = new UsableSkillVisitor(contr);
+        this.accept(visitor);
+        return visitor.usable();
     }
 }

@@ -49,4 +49,10 @@ public interface ISkill {
     String showAttributes();
     PokemonEffect getEffect();
 
+    /** Gives you the status of a skill, if it is usable, then we can play the skill
+     *
+     * @param control Controller that will gives us the status
+     * @return True if it usable, False if it is not.
+     */
+    boolean isUsable(Controller control);
 }
