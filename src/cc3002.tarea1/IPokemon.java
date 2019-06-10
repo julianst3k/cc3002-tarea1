@@ -121,4 +121,14 @@ public interface IPokemon extends ICardPlayable {
     void setInitialEnergies(EnergyCounter array);
     void accept(PlayVisitor visitor);
 
+    /** Set an object card to the Pokemon, if it has one already then it gets unequipped
+     *
+     * @param card object card
+     */
+    void setObject(ObjectCard card);
+    /** Return the object card
+     *
+     */
+    ObjectCard getActualObject();
+
 }

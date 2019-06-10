@@ -13,6 +13,8 @@ public abstract class Pokemon implements IPokemon {
     private EnergyCounter energies;
     private ArrayList<ISkill> skills;
     private ISkill selectedSkill;
+    private ObjectCard associated;
+
 
     public Pokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills) {
         this.id = id;
@@ -23,6 +25,7 @@ public abstract class Pokemon implements IPokemon {
         }
         this.selectedSkill = null;
         this.name = name;
+        associated = null;
     }
 
     /** Limits the amount of skills that can be input
@@ -199,5 +202,12 @@ public abstract class Pokemon implements IPokemon {
     public void setInitialEnergies(EnergyCounter array){
         this.energies = array;
     }
-
+    @Override
+    public void setObject(ObjectCard object){
+        this.associated = object;
+    }
+    @Override
+    public ObjectCard getActualObject(){
+        return this.associated;
+    }
 }
