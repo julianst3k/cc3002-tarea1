@@ -2,35 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e54f3207-1a2f-4a2d-aa19-02ac0ee0fe87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/ControlVisitor/ControlVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/ControlVisitor/UsableSkillVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Effect/WingBuzzEffect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/WingBuzz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Attack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Attack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/EffectVisitor/EffectVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/EffectVisitor/EffectVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/EffectVisitor/PokemonEffectVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/EffectVisitor/PokemonEffectVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Entrenador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Entrenador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/IPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/IPokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/ISkill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/ISkill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayBasic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayBasic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayPhase1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayPhase1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayPhase2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayPhase2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Pokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Pokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Skill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Skill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Attack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/EffectVisitor/EffectVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/EffectVisitor/EffectVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/EffectVisitor/PokemonEffectVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/EffectVisitor/PokemonEffectVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/IPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/IPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/ISkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/ISkill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayBasic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayPhase1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayPhase1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayPhase2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayPhase2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Pokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test/TestWaterPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/TestWaterPokemon.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="41" column="35" lean-forward="true" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+            <state relative-caret-position="467">
+              <caret line="85" column="11" selection-start-line="85" selection-start-column="11" selection-end-line="85" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1415#1416#0" expanded="true" />
@@ -76,6 +50,15 @@
                 <element signature="e#2109#2110#0" expanded="true" />
                 <element signature="e#2146#2147#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test/TestWaterPokemon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -152,26 +135,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="265" column="12" selection-start-line="265" selection-start-column="12" selection-end-line="265" selection-end-column="12" />
+            <state relative-caret-position="255">
+              <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6562#6563#0" expanded="true" />
-                <element signature="e#6760#6761#0" expanded="true" />
-                <element signature="e#6852#6853#0" expanded="true" />
-                <element signature="e#7078#7079#0" expanded="true" />
-                <element signature="e#7173#7174#0" expanded="true" />
-                <element signature="e#7910#7911#0" expanded="true" />
-                <element signature="e#8384#8385#0" expanded="true" />
-                <element signature="e#8505#8506#0" expanded="true" />
-                <element signature="e#8745#8746#0" expanded="true" />
-                <element signature="e#8954#8955#0" expanded="true" />
-                <element signature="e#9494#9495#0" expanded="true" />
-                <element signature="e#9602#9603#0" expanded="true" />
-                <element signature="e#10371#10372#0" expanded="true" />
-                <element signature="e#10552#10553#0" expanded="true" />
-                <element signature="e#10894#10895#0" expanded="true" />
-                <element signature="e#11525#11526#0" expanded="true" />
+                <element signature="e#6681#6682#0" expanded="true" />
+                <element signature="e#6879#6880#0" expanded="true" />
+                <element signature="e#6971#6972#0" expanded="true" />
+                <element signature="e#7197#7198#0" expanded="true" />
+                <element signature="e#7292#7293#0" expanded="true" />
+                <element signature="e#8029#8030#0" expanded="true" />
+                <element signature="e#8503#8504#0" expanded="true" />
+                <element signature="e#8624#8625#0" expanded="true" />
+                <element signature="e#8864#8865#0" expanded="true" />
+                <element signature="e#9073#9074#0" expanded="true" />
+                <element signature="e#9613#9614#0" expanded="true" />
+                <element signature="e#9721#9722#0" expanded="true" />
+                <element signature="e#10490#10491#0" expanded="true" />
+                <element signature="e#10671#10672#0" expanded="true" />
+                <element signature="e#11013#11014#0" expanded="true" />
+                <element signature="e#11644#11645#0" expanded="true" />
                 <element signature="e#11277#11278#0" expanded="true" />
                 <element signature="e#11326#11327#0" expanded="true" />
                 <element signature="e#11421#11422#0" expanded="true" />
@@ -205,15 +188,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicLeafPokemon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -279,7 +253,6 @@
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractPsychPokemon.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractWaterPokemon.java" />
         <option value="$PROJECT_DIR$/test/test/TestEntrenador.java" />
-        <option value="$PROJECT_DIR$/test/test/TestWaterPokemon.java" />
         <option value="$PROJECT_DIR$/test/test/TestPsychPokemon.java" />
         <option value="$PROJECT_DIR$/test/test/TestPokemonAttacks.java" />
         <option value="$PROJECT_DIR$/test/test/TestFirePokemon.java" />
@@ -302,6 +275,7 @@
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/ControlVisitor/UsableSkillVisitor.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/ControlVisitor/ControlVisitor.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/ISkill.java" />
+        <option value="$PROJECT_DIR$/test/test/TestWaterPokemon.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/Controller.java" />
       </list>
@@ -567,7 +541,7 @@
       <workItem from="1560051836366" duration="3877000" />
       <workItem from="1560055938162" duration="5739000" />
       <workItem from="1560126370787" duration="20195000" />
-      <workItem from="1560182648487" duration="5879000" />
+      <workItem from="1560182648487" duration="8623000" />
     </task>
     <servers />
   </component>
@@ -604,7 +578,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131923000" />
+    <option name="totallyTimeSpent" value="134667000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -619,7 +593,7 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21582733" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21582733" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -628,7 +602,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3099352" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3099352" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39954075" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -905,13 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test/TestWaterPokemon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test/testVisitorEvolutions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1168,28 +1135,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/TestWaterPokemon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="265" column="12" selection-start-line="265" selection-start-column="12" selection-end-line="265" selection-end-column="12" />
+        <state relative-caret-position="255">
+          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6562#6563#0" expanded="true" />
-            <element signature="e#6760#6761#0" expanded="true" />
-            <element signature="e#6852#6853#0" expanded="true" />
-            <element signature="e#7078#7079#0" expanded="true" />
-            <element signature="e#7173#7174#0" expanded="true" />
-            <element signature="e#7910#7911#0" expanded="true" />
-            <element signature="e#8384#8385#0" expanded="true" />
-            <element signature="e#8505#8506#0" expanded="true" />
-            <element signature="e#8745#8746#0" expanded="true" />
-            <element signature="e#8954#8955#0" expanded="true" />
-            <element signature="e#9494#9495#0" expanded="true" />
-            <element signature="e#9602#9603#0" expanded="true" />
-            <element signature="e#10371#10372#0" expanded="true" />
-            <element signature="e#10552#10553#0" expanded="true" />
-            <element signature="e#10894#10895#0" expanded="true" />
-            <element signature="e#11525#11526#0" expanded="true" />
+            <element signature="e#6681#6682#0" expanded="true" />
+            <element signature="e#6879#6880#0" expanded="true" />
+            <element signature="e#6971#6972#0" expanded="true" />
+            <element signature="e#7197#7198#0" expanded="true" />
+            <element signature="e#7292#7293#0" expanded="true" />
+            <element signature="e#8029#8030#0" expanded="true" />
+            <element signature="e#8503#8504#0" expanded="true" />
+            <element signature="e#8624#8625#0" expanded="true" />
+            <element signature="e#8864#8865#0" expanded="true" />
+            <element signature="e#9073#9074#0" expanded="true" />
+            <element signature="e#9613#9614#0" expanded="true" />
+            <element signature="e#9721#9722#0" expanded="true" />
+            <element signature="e#10490#10491#0" expanded="true" />
+            <element signature="e#10671#10672#0" expanded="true" />
+            <element signature="e#11013#11014#0" expanded="true" />
+            <element signature="e#11644#11645#0" expanded="true" />
             <element signature="e#11277#11278#0" expanded="true" />
             <element signature="e#11326#11327#0" expanded="true" />
             <element signature="e#11421#11422#0" expanded="true" />
@@ -1202,8 +1176,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="41" column="35" lean-forward="true" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+        <state relative-caret-position="467">
+          <caret line="85" column="11" selection-start-line="85" selection-start-column="11" selection-end-line="85" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1415#1416#0" expanded="true" />

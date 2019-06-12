@@ -4,6 +4,8 @@ import cc3002.tarea1.Effect.NullGlobalEffect;
 import cc3002.tarea1.PlayVisitor.PlayVisitor;
 import cc3002.tarea1.PokemonTypes.IBasicType;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Observable;
 
@@ -38,7 +40,7 @@ public class Entrenador extends Observable implements IEntrenador {
             throw new AssertionError();
         }
         currentEffect = new NullGlobalEffect();
-        actualController = new Controller(this, this); // Controlador provisorio
+        actualController = new Controller(this, this, new BufferedReader(new InputStreamReader(System.in))); // Controlador provisorio
         selectedCard = 1;
     }
 

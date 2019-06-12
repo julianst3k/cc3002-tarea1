@@ -9,6 +9,9 @@ import cc3002.tarea1.PokemonTypes.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -17,6 +20,7 @@ public class TestWaterPokemon {
     private Pokemon fighterPokemon;
     private Pokemon leafPokemon;
     private Pokemon lightPokemon;
+    private String xD;
     private ArrayList<ISkill> skillsWater;
     @Before public void setUp(){
         skillsWater = new ArrayList<>(Arrays.asList(new Attack("generic", 100, new ArrayList<IEnergia>(), "XD", new NullPokemonEffect())));
