@@ -9,8 +9,11 @@ import cc3002.tarea1.PlayVisitor.PlayVisitor;
 import java.util.ArrayList;
 
 public class Phase2LightPokemon extends AbstractLightPokemon implements IPhase2Type {
-    public Phase2LightPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
+    private int preEvolutionID;
+
+    public Phase2LightPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills, int preid){
         super(name, id, healthPoints, skills);
+        preEvolutionID= preid;
     }
     public void jugarCarta(Entrenador myTrainer){
         PlayVisitor visitor = new PlayPhase2(myTrainer);
@@ -19,6 +22,9 @@ public class Phase2LightPokemon extends AbstractLightPokemon implements IPhase2T
     }
     public void accept(PlayVisitor visitor){
         visitor.visitedPhase2Type(this);
+    }
+    public int getPreEvolutionID(){
+        return preEvolutionID;
     }
 
 }

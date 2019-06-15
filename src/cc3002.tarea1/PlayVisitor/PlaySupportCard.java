@@ -18,6 +18,6 @@ public class PlaySupportCard extends PlayVisitor{
     }
     @Override
     public void play(){
-        toBePlayed.getEffect().applyEffect();
+        entrenador.notifyObservers(toBePlayed.getEffect());
     }
 }

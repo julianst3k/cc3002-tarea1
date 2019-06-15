@@ -1,5 +1,6 @@
 package cc3002.tarea1.Effect;
 
+import cc3002.tarea1.Controller;
 import cc3002.tarea1.EffectVisitor.EffectVisitor;
 
 public abstract class IEffect {
@@ -16,6 +17,5 @@ public abstract class IEffect {
     /** Applies an effect, which depends on which effect it is
      *
      */
-    public void applyEffect(){};
-    public abstract void accept(EffectVisitor visitor);
+    public abstract void applyEffect(Controller controller);
 }

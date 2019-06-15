@@ -14,6 +14,6 @@ public class PlayInstantObjectCard extends PlayObjectCard{
     }
     @Override
     public void play(){
-        toBePlayed.getEffect().applyEffect(entrenador.getObjective());
+        entrenador.notifyObservers(toBePlayed.getEffect());
     }
 }

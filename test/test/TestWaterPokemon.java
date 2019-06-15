@@ -23,7 +23,7 @@ public class TestWaterPokemon {
     private String xD;
     private ArrayList<ISkill> skillsWater;
     @Before public void setUp(){
-        skillsWater = new ArrayList<>(Arrays.asList(new Attack("generic", 100, new ArrayList<IEnergia>(), "XD", new NullPokemonEffect())));
+        skillsWater = new ArrayList<>(Arrays.asList(new BasicAttack("generic", 100, new ArrayList<IEnergia>(), "XD")));
         waterPokemon = new BasicWaterPokemon("Zuko", 33, 1000, skillsWater);
         leafPokemon = new BasicLeafPokemon("Chikorita", 33, 300, skillsWater);
         fighterPokemon = new BasicFighterPokemon("Zuko", 33, 300, skillsWater);

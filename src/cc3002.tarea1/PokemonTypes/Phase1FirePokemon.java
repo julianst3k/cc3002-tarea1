@@ -9,8 +9,11 @@ import cc3002.tarea1.PlayVisitor.PlayPhase1;
 import java.util.ArrayList;
 
 public class Phase1FirePokemon extends AbstractFirePokemon implements IPhase1Type {
-    public Phase1FirePokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
+    private int preEvolutionID;
+
+    public Phase1FirePokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills, int preid){
         super(name, id, healthPoints, skills);
+        preEvolutionID= preid;
     }
     public void jugarCarta(Entrenador myTrainer){
         PlayVisitor visitor = new PlayPhase1(myTrainer);
@@ -19,6 +22,9 @@ public class Phase1FirePokemon extends AbstractFirePokemon implements IPhase1Typ
     }
     public void accept(PlayVisitor visitor){
         visitor.visitedPhase1Type(this);
+    }
+    public int getPreEvolutionID(){
+        return preEvolutionID;
     }
 
 

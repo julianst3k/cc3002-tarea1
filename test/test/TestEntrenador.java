@@ -35,11 +35,11 @@ public class TestEntrenador {
     @Before public void setUp(){
         voidEffect = new NullPokemonEffect();
         Green = new ArrayList<IEnergia>(Arrays.asList(new LeafEnergy(), new FireEnergy()));
-        LeafAttack = new Attack("Cures Cancer", 420, Green, "Smoke that", voidEffect);
+        LeafAttack = new BasicAttack("Cures Cancer", 420, Green, "Smoke that");
         ByronsEnergies = new ArrayList<IEnergia>(Arrays.asList(new FireEnergy(), new FireEnergy()));
-        skills = new ArrayList<ISkill>(Arrays.asList(new Attack("Big Flames", 33, ByronsEnergies, "Pega", voidEffect)));
+        skills = new ArrayList<ISkill>(Arrays.asList(new BasicAttack("Big Flames", 33, ByronsEnergies, "Pega")));
         skillsGreen = new ArrayList<ISkill>(Arrays.asList(LeafAttack));
-        elMataNachos = new Attack("Bomb", 10000, ByronsEnergies, "Kills everything", voidEffect);
+        elMataNachos = new BasicAttack("Bomb", 10000, ByronsEnergies, "Kills everything");
         GreenDay = new BasicLeafPokemon("Green", 420, 1000, skillsGreen);
         genericGreenDay1 = new BasicLeafPokemon("Green", 420, 1000, skillsGreen);
         genericGreenDay2 = new BasicLeafPokemon("Green", 420, 1000, skillsGreen);

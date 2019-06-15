@@ -17,23 +17,47 @@ public class EnergyCounter {
         energies.put(EnergyType.FIGHTER, 1+this.getFighterEnergy());
 
     }
+    public void setFighterEnergy(int amount){
+        energies.put(EnergyType.FIGHTER, amount+this.getFighterEnergy());
+
+    }
     public void setFireEnergy(){
         energies.put(EnergyType.FIRE, 1+this.getFireEnergy());
+
+    }
+    public void setFireEnergy(int amount){
+        energies.put(EnergyType.FIRE, amount+this.getFireEnergy());
 
     }
     public void setLeafEnergy(){
         energies.put(EnergyType.LEAF, 1+this.getLeafEnergy());
     }
+    public void setLeafEnergy(int amount){
+        energies.put(EnergyType.LEAF, amount+this.getLeafEnergy());
+    }
+
     public void setLightEnergy(){
         energies.put(EnergyType.LIGHT, 1+this.getLightEnergy());
+
+    }
+    public void setLightEnergy(int amount){
+        energies.put(EnergyType.LIGHT, amount+this.getLightEnergy());
 
     }
     public void setPsychEnergy(){
         energies.put(EnergyType.PSYCH, 1+this.getPsychEnergy());
 
     }
+    public void setPsychEnergy(int amount){
+        energies.put(EnergyType.PSYCH, amount+this.getPsychEnergy());
+
+    }
     public void setWaterEnergy(){
         energies.put(EnergyType.WATER, 1+this.getWaterEnergy());
+
+    }
+    public void setWaterEnergy(int amount){
+        energies.put(EnergyType.WATER, amount+this.getWaterEnergy());
 
     }
     public int getFighterEnergy(){

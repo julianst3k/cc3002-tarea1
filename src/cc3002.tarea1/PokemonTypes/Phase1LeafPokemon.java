@@ -10,8 +10,11 @@ import java.util.ArrayList;
 
 
 public class Phase1LeafPokemon extends  AbstractLeafPokemon implements IPhase1Type {
-    public Phase1LeafPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
+    private int preEvolutionID;
+
+    public Phase1LeafPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills, int preid){
         super(name, id, healthPoints, skills);
+        preEvolutionID= preid;
     }
     public void jugarCarta(Entrenador myTrainer){
         PlayVisitor visitor = new PlayPhase1(myTrainer);
@@ -20,6 +23,9 @@ public class Phase1LeafPokemon extends  AbstractLeafPokemon implements IPhase1Ty
     }
     public void accept(PlayVisitor visitor){
         visitor.visitedPhase1Type(this);
+    }
+    public int getPreEvolutionID(){
+        return preEvolutionID;
     }
 
 }

@@ -63,7 +63,7 @@ public class Skill implements ISkill {
     }
     @Override
     public void beUsed(Pokemon user, IPokemon poke){
-        this.effect.applyEffect(poke);
+        user.releaseEffect(this.getEffect());
     }
     public PokemonEffect getEffect(){
         return effect;
@@ -79,4 +79,6 @@ public class Skill implements ISkill {
         this.accept(visitor);
         return visitor.usable();
     }
+    @Override
+    public void setToPokemon(Pokemon poke){} // The normal case doesnt include any special interaction
 }

@@ -1,4 +1,5 @@
 package cc3002.tarea1;
+import cc3002.tarea1.Effect.IEffect;
 import cc3002.tarea1.PlayVisitor.PlayVisitor;
 
 import java.util.ArrayList;
@@ -143,5 +144,18 @@ public interface IPokemon extends ICardPlayable {
      * @param control The controller
      */
     void subscribePokemon(Controller control);
+    /** Since setChanged() is protected, the effect is released by the skill and the Pokemon set the change
+     * @param effect The effect that is being released
+     */
+    void releaseEffect(IEffect effect);
+    /** Applies the energy burnt effect based on the pokemon type
+     *
+     */
+    void getEnergyBurnt();
 
+    /** Set the health points of a pokemon to a certain integer
+     *
+     * @param health health points that will be setted
+     */
+     void setHealthPoints(int health);
 }

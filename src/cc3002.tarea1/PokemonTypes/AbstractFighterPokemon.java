@@ -14,7 +14,9 @@ public abstract class AbstractFighterPokemon extends Pokemon{
     }
     @Override
     public void attack(IPokemon enemyPok, Attack attack){
-        enemyPok.attackedByFighter(attack);
+        if(getEnergies().greaterThan(attack.getCost())) {
+            enemyPok.attackedByFighter(attack);
+        }
     }
     @Override
     public void attackedByPsych(Attack skill){
@@ -36,5 +38,12 @@ public abstract class AbstractFighterPokemon extends Pokemon{
     public String showSkill(int skillIndex){
         String result = this.getSkills().get(skillIndex).getName()+", de tipo lucha y realiza "+this.getSkills().get(skillIndex).showAttributes()+"\n";
         return result;
+    }
+    @Override
+    public void getEnergyBurnt(){
+        int total = totalEnergyCounter();
+        EnergyCounter newCounter = new EnergyCounter();
+        newCounter.setFighterEnergy(total);
+        this.setInitialEnergies(newCounter);
     }
 }

@@ -93,10 +93,9 @@ public interface IEntrenador {
      */
     void accept(PlayVisitor visitor);
     /** Replace a Pokemon with another one, transferring the energies to the new one
-     * @param index index of the Original pokemon
      * @param after New pokemon that replaces the old one
      */
-    void pokemonEvolve(int index, IPokemon after);
+    void pokemonEvolve(IPokemon after);
 
     /** Gets the index of some Pokemon (0 if Active).
      *

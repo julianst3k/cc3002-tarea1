@@ -6,7 +6,7 @@ import cc3002.tarea1.Effect.PokemonEffect;
 
 import java.util.ArrayList;
 
-public class Attack extends Skill {
+public abstract class Attack extends Skill {
     private int damage;
     public Attack(String name, int dmg, ArrayList<IEnergia> costo, String description, PokemonEffect eff){
         super(name, costo, description, eff);
@@ -22,7 +22,7 @@ public class Attack extends Skill {
     @Override
     public void beUsed(Pokemon user, IPokemon poke){
         user.attack(poke, this);
-        this.getEffect().applyEffect(poke);
+        user.releaseEffect(this.getEffect());
     }
     @Override
     public String showAttributes(){

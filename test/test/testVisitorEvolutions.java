@@ -34,11 +34,11 @@ public class testVisitorEvolutions {
 
     @Before public void setUp(){
         firstEvo = new BasicFirePokemon("Myth",35, 100, new ArrayList<>(Arrays.asList(new nullSkill())));
-        firstEvoCopy = new BasicFirePokemon("Myth",35, 100, new ArrayList<>(Arrays.asList(new nullSkill())));
-        secondEvo = new Phase1FirePokemon("Myth Evo", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
-        thirdEvo = new Phase2FirePokemon("Myth Evo Omega", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
-        secondEvoCopy = new Phase1FirePokemon("Myth Evo", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
-        secondEvoNoFirst = new Phase1FirePokemon("Beach", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
+        firstEvoCopy = new BasicFirePokemon("Mythx",35, 100, new ArrayList<>(Arrays.asList(new nullSkill())));
+        secondEvo = new Phase1FirePokemon("Myth Evo", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())), 35);
+        thirdEvo = new Phase2FirePokemon("Myth Evo Omega", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())), 35);
+        secondEvoCopy = new Phase1FirePokemon("Myth Evo Copy", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())), 35);
+        secondEvoNoFirst = new Phase1FirePokemon("Beach", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())), 36);
         enduranceTester2 = new BasicLightPokemon("Myth", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
         enduranceTester = new BasicPsychPokemon("Myth", 37, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
         enduranceTester3 = new BasicWaterPokemon("Myth", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
@@ -70,6 +70,7 @@ public class testVisitorEvolutions {
         myTrainer.sacarCarta();
         myTrainer.sacarCarta();
         myTrainer.sacarCarta();
+        myTrainer.setObjective(0);
         myTrainer.jugarCarta(4);
         assertTrue(myTrainer.getMano().contains(secondEvoNoFirst));
     }
@@ -77,11 +78,13 @@ public class testVisitorEvolutions {
         myTrainer.sacarCarta();
         myTrainer.sacarCarta(); myTrainer.jugarCarta(2);
         myTrainer.sacarCarta(); myTrainer.jugarCarta(2);
+        myTrainer.setObjective(0);
         myTrainer.jugarCarta(1);
         myTrainer.sacarCarta(); myTrainer.sacarCarta();
         myTrainer.sacarCarta(); myTrainer.jugarCarta(2); myTrainer.sacarCarta(); myTrainer.jugarCarta(2); myTrainer.sacarCarta(); myTrainer.jugarCarta(2);
         myTrainer.jugarCarta(2);
         myTrainer.sacarCarta();
+        myTrainer.setObjective(4);
         myTrainer.jugarCarta(2);
         assertTrue(myTrainer.getBanca().contains(secondEvoCopy));
         assertTrue(!myTrainer.getBanca().contains(firstEvoCopy));
@@ -90,8 +93,10 @@ public class testVisitorEvolutions {
         secondTrainer.sacarCarta();
         secondTrainer.sacarCarta(); secondTrainer.jugarCarta(2);
         secondTrainer.sacarCarta(); secondTrainer.jugarCarta(2);
+        secondTrainer.setObjective(0);
         secondTrainer.jugarCarta(1);
         secondTrainer.sacarCarta();
+        secondTrainer.setObjective(0);
         secondTrainer.jugarCarta(1);
         assertEquals(secondTrainer.getActiva(), thirdEvo);
         assertEquals(secondTrainer.getActiva().getEnergies(), energy2);

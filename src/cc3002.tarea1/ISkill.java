@@ -55,4 +55,10 @@ public interface ISkill {
      * @return True if it usable, False if it is not.
      */
     boolean isUsable(Controller control);
+
+    /** Lets the skill to fill some special effects if it is needed
+     *
+     * @param poke The pokemon which the skill is set to
+     */
+    void setToPokemon(Pokemon poke);
 }

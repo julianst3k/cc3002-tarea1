@@ -24,7 +24,7 @@ public class Entrenador extends Observable implements IEntrenador {
     private IPokemon objective;
     private GlobalEffect currentEffect;
     private Controller actualController;
-    private int selectedCard;
+    private ICardPlayable selectedCard;
 
     public Entrenador(IPokemon pokemonActivo, Mazo newMazo, Premio newPremio) { // Defino el inicio del juego con un pokemon activo :)
         Activa = pokemonActivo;
@@ -40,22 +40,34 @@ public class Entrenador extends Observable implements IEntrenador {
             throw new AssertionError();
         }
         currentEffect = new NullGlobalEffect();
-        actualController = new Controller(this, this, new BufferedReader(new InputStreamReader(System.in))); // Controlador provisorio
-        selectedCard = 1;
+        actualController = new Controller(this, this); // Controlador provisorio
+        selectedCard = null;
     }
 
     @Override
     public void activePokemonSwap() {
-        if (this.cantidadBanca() == 0) {
+        if(this.Activa != null) {
+            activePokemonSwapWithIndex(1);
+        }
+        else {
+            this.Activa = this.Banca.get(0);
+            this.Banca.remove(0);
+        }
+    }
+
+    /** Swap a pokemon from the sideline with the active pokemon
+     *
+     * @param index index+1 of the pokemon
+     */
+    public void activePokemonSwapWithIndex(int index){
+        if(this.getBanca().size()<index){
             return;
-        } else if (!this.getActiva().isDed()) {
+        }
+        else{
             IPokemon AuxActive = this.getActiva();
-            this.Activa = this.Banca.get(0);
-            this.Banca.remove(0);
-            this.Banca.add(AuxActive);
-        } else {
-            this.Activa = this.Banca.get(0);
-            this.Banca.remove(0);
+            this.Activa = this.Banca.get(index-1);
+            this.Banca.remove(index-1);
+            this.Banca.add(index-1, AuxActive);
         }
     }
 
@@ -63,6 +75,7 @@ public class Entrenador extends Observable implements IEntrenador {
     public void deadActive() {
         if (this.getActiva().isDed()) {
             pila.addCarta(this.getActiva());
+            this.Activa = null;
             this.activePokemonSwap();
         }
     }
@@ -339,14 +352,15 @@ public class Entrenador extends Observable implements IEntrenador {
     }
 
     @Override
-    public void pokemonEvolve(int index, IPokemon after) {
-        if (index == 0) {
-            after.setInitialEnergies(this.Activa.getEnergies());
+    public void pokemonEvolve(IPokemon after) {
+        after.setInitialEnergies(this.getObjective().getEnergies());
+
+        if (this.getObjective() == this.Activa) {
             this.Activa = after;
         } else {
-            after.setInitialEnergies(Banca.get(index - 1).getEnergies());
-            this.Banca.remove(index - 1);
-            this.Banca.add(index - 1, after);
+            int place = pokemonPlace(this.getObjective());
+            this.Banca.remove(place - 1);
+            this.Banca.add( place - 1, after);
         }
     }
 
@@ -392,8 +406,8 @@ public class Entrenador extends Observable implements IEntrenador {
         currentEffect = effect;
     }
 
-    /** A new controller subscribe to the trainer, and the pokemon do too! That means that the old controller shouldnt affect the trainer anymore.
-     *
+    /** A new controller subscribe to the trainer, and the pokemon do too! That means that the old controller shouldnt affect the trainer anymore. It is implied that the new controller
+     * starts a new game. So subscribing a pokemon that is not the active one would be redundant
      * @param control The new controller
      */
 
@@ -424,10 +438,17 @@ public class Entrenador extends Observable implements IEntrenador {
     public void descartarMano(int cardIndex){
         pila.addCarta(sacarCartaMano(cardIndex));
     }
-    /** Select the card that will be played, if neccesary
+    /** Select the card that will be played, if necessary
      *
      */
     public void setSelectedCard(int cardIndex){
-        selectedCard = cardIndex;
+        if(cardIndex<=Mano.size()) {
+            selectedCard = this.Mano.get(cardIndex - 1);
+        }
     }
+
+    /** Return the selected card
+     * @return The selected card
+     */
+    public ICardPlayable getSelectedCard(){return selectedCard;}
 }

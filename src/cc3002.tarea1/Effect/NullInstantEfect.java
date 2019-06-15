@@ -1,12 +1,11 @@
 package cc3002.tarea1.Effect;
 
+import cc3002.tarea1.Controller;
 import cc3002.tarea1.EffectVisitor.EffectVisitor;
 
 public class NullInstantEfect extends InstantEffect {
     public NullInstantEfect(){
         super("Do nothing");
     }
-    public void accept(EffectVisitor visitor){
-        visitor.visitedNullInstantEffect(this);
-    }
+    public void applyEffect(Controller controller){}
 }

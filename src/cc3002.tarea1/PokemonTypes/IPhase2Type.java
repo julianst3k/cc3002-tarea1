@@ -5,4 +5,9 @@ import cc3002.tarea1.IPokemon;
 import cc3002.tarea1.PlayVisitor.PlayVisitor;
 
 public interface IPhase2Type extends IPokemon {
+    /** Provides the ID of the pre evolution
+     *
+     * @return The ID
+     */
+    int getPreEvolutionID();
 }

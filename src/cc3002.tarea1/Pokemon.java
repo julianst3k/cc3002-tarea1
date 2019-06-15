@@ -1,4 +1,6 @@
 package cc3002.tarea1;
+import cc3002.tarea1.Effect.IEffect;
+
 import java.lang.reflect.Array;
 import java.util.*;
 
@@ -28,7 +30,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
         associated = null;
     }
 
-    /** Limits the amount of skills that can be input
+    /** Limits the amount of skills that can be input and setup effects that needs to do so
      *
      * @param array List of skills that the constructor get
      * @return array List of skills that the pokemon will have
@@ -37,6 +39,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
         ArrayList<ISkill> result = new ArrayList<ISkill>();
         for(int i=0; i<4 && i<array.size(); i++){
             result.add(array.get(i));
+            array.get(i).setToPokemon(this);
         }
         return result;
     }
@@ -86,6 +89,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
      */
     public void getAttacked(Attack skill) {
         this.healthPoints -= skill.getDamage();
+        this.releasesDefenses(skill.getDamage());
     }
 
     /** The pokemon is attacked by someone who is weak against him
@@ -94,6 +98,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
      */
     public void getAttackedResist(Attack skill) {
         this.healthPoints -= skill.getDamage() - 30;
+        this.releasesDefenses(skill.getDamage()-30);
     }
 
     /** The pokemon is attacked by someone who is strong against him
@@ -102,6 +107,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
      */
     public void getAttackedVulnerable(Attack skill) {
         this.healthPoints -= skill.getDamage() * 2;
+        this.releasesDefenses(skill.getDamage()*2);
     }
 
     // No se el tipo, pero como el pokemon de tipo fuego solo tendra movimientos
@@ -185,6 +191,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
             return;
         }
         this.getSelectedSkill().beUsed(this, poke);
+        setChanged();
         this.notifyObservers(this.getSelectedSkill());
     }
 
@@ -206,7 +213,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
     }
     @Override
     public void setObject(ObjectCard object){
-        this.associated = object;
+        this.associated = object; object.getEffect().setPokemon(this);
     }
     @Override
     public ObjectCard getActualObject(){
@@ -215,5 +222,33 @@ public abstract class Pokemon extends Observable implements IPokemon {
     @Override
     public void subscribePokemon(Controller control){
         this.addObserver(control);
+    }
+    @Override
+    public void releaseEffect(IEffect effect){
+        setChanged();
+        notifyObservers(effect);
+    }
+
+    /** Return the total amount of energies
+     *
+     * @return The total amount of energies
+     */
+    public int totalEnergyCounter(){
+        int total = 0;
+        EnergyCounter counter = getEnergies();
+
+        for (EnergyType type : EnergyType.values()) {
+            total += counter.getMap().get(type);
+        }
+        return total;
+    }
+    @Override
+    public void setHealthPoints(int health){
+        healthPoints = health;
+    }
+    public void releasesDefenses(int receivedDmg){
+        for(int i=0; i<getSkills().size(); i++){
+            this.getSkills().get(i).getEffect().applyDefense(receivedDmg);
+        }
     }
 }

@@ -21,7 +21,7 @@ public class TestPsychPokemon {
     private Pokemon fighterPokemon;
     private ArrayList<ISkill> skillsWater;
     @Before public void setUp(){
-        skillsWater = new ArrayList<>(Arrays.asList(new Attack("generic", 100, new ArrayList<IEnergia>(), "XD", new NullPokemonEffect())));
+        skillsWater = new ArrayList<>(Arrays.asList(new BasicAttack("generic", 100, new ArrayList<IEnergia>(), "XD")));
         psychPokemon = new BasicPsychPokemon("Zuko", 33, 300, skillsWater);
         fighterPokemon = new BasicFighterPokemon("Chikorita", 33, 300, skillsWater);
         psychPokemon1 = new BasicPsychPokemon("Zuko", 33, 300, skillsWater);

@@ -1,8 +1,6 @@
 package cc3002.tarea1.PokemonTypes;
-import cc3002.tarea1.Attack;
-import cc3002.tarea1.IPokemon;
-import cc3002.tarea1.Pokemon;
-import cc3002.tarea1.ISkill;
+import cc3002.tarea1.*;
+
 import java.util.ArrayList;
 
 public abstract class AbstractLightPokemon extends Pokemon{
@@ -15,7 +13,9 @@ public abstract class AbstractLightPokemon extends Pokemon{
     }
     @Override
     public void attack(IPokemon enemyPok, Attack attack){
-        enemyPok.attackedByLight(attack);
+        if(getEnergies().greaterThan(attack.getCost())) {
+            enemyPok.attackedByLight(attack);
+        }
     }
     @Override
     public void attackedByFighter(Attack skill){
@@ -33,5 +33,12 @@ public abstract class AbstractLightPokemon extends Pokemon{
     public String showSkill(int skillIndex){
         String result = this.getSkills().get(skillIndex).getName()+", de tipo rayo y realiza "+this.getSkills().get(skillIndex).showAttributes()+"\n";;
         return result;
+    }
+    @Override
+    public void getEnergyBurnt(){
+        int total = totalEnergyCounter();
+        EnergyCounter newCounter = new EnergyCounter();
+        newCounter.setLightEnergy(total);
+        this.setInitialEnergies(newCounter);
     }
 }

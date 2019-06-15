@@ -1,6 +1,9 @@
 package cc3002.tarea1;
 
 
+import cc3002.tarea1.Effect.IEffect;
+import cc3002.tarea1.Effect.WingBuzzEffect;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Observable;
@@ -17,15 +20,22 @@ public class Controller implements Observer {
     private int energyCardsPlayed;
     private int wingBuzzPlayed;
     private StadiumCard currentStadium;
-    final private BufferedReader userInput;
-    public Controller(Entrenador first, Entrenador second, BufferedReader newBuffer){
+    public boolean turnedStarted;
+    public Controller(Entrenador first, Entrenador second){
         energyCardsPlayed = 0; wingBuzzPlayed=0;
-        inTurn = first; first.addObserver(this);
-        notInTurn = second; second.addObserver(this);
+        inTurn = first; first.subscribeTrainer(this);
+        notInTurn = second; second.subscribeTrainer(this);
         currentStadium = new NullStadiumCard(); inTurn.setCurrentGlobalEffect(currentStadium.getEffect()); notInTurn.setCurrentGlobalEffect(currentStadium.getEffect());
-        userInput = newBuffer;
+        turnedStarted = false;
     }
 
+    /** Start the turn, if the turn is not
+     *
+     */
+    public void startTurn(){
+        if(!turnedStarted)
+            inTurn.sacarCarta();
+    }
     /** Ask a certain card that if it is playable
      *
      * @param card The card that gets asked
@@ -40,9 +50,10 @@ public class Controller implements Observer {
      */
     public void endTurn(){
         Entrenador trainerHolder = inTurn;
-        notInTurn = inTurn;
+        inTurn = notInTurn;
         energyCardsPlayed = 0; wingBuzzPlayed = 0;
-        notInTurn = trainerHolder;
+        notInTurn = trainerHolder; turnedStarted = false;
+        this.startTurn();
     }
     public void selectSkill(int index){
         inTurn.selectAttack(index);
@@ -59,10 +70,8 @@ public class Controller implements Observer {
         if(arg instanceof StadiumCard){
             this.setStadium((StadiumCard) arg);
         }
-        if(arg instanceof WingBuzz){
-            inTurn.descartarMano(0);
-            notInTurn.descartarMazo();
-            wingBuzzPlayed++;
+        if(arg instanceof IEffect){
+            ((IEffect) arg).applyEffect(this);
         }
         if(arg instanceof Attack){
             endTurn();
@@ -82,11 +91,10 @@ public class Controller implements Observer {
     public int getWingBuzzPlayed(){
         return wingBuzzPlayed;
     }
-    public String readTheLine() throws IOException{
-        String result = userInput.readLine();
-        if(result==null){
-            throw new IOException("null");
-        }
-        return result;
-    }
+    public void playCard(int index){ inTurn.jugarCarta(index);}
+    public void setWingBuzzPlayed(){ wingBuzzPlayed = 1;}
+    public Entrenador getNotInTurnTrainer(){ return notInTurn; }
+    public Entrenador getInTurnTrainer(){ return inTurn; }
+    public void selectCard(int index){ inTurn.setSelectedCard(index);}
+    public void selectObjective(int index){ inTurn.setObjective(index);}
 }
