@@ -2,16 +2,14 @@ package test;
 import static org.junit.Assert.*;
 
 import cc3002.tarea1.*;
-import cc3002.tarea1.Effect.NullInstantEfect;
-import cc3002.tarea1.Effect.NullPokemonEffect;
+
 import cc3002.tarea1.Energies.*;
 import cc3002.tarea1.PokemonTypes.*;
+import cc3002.tarea1.Skill.BasicAttack;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 

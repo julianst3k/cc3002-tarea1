@@ -1,8 +1,12 @@
 package test;
 
 import cc3002.tarea1.*;
+import cc3002.tarea1.Card.Mazo;
+import cc3002.tarea1.Card.Premio;
+import cc3002.tarea1.Skill.WingBuzz;
 import cc3002.tarea1.Energies.FireEnergy;
 import cc3002.tarea1.PokemonTypes.BasicFirePokemon;
+import cc3002.tarea1.Skill.BasicAttack;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -37,20 +41,23 @@ public class TestWingBuzz {
         assertEquals(iDoTheEffect.getActiva().getSelectedSkill(), null);
         bigController.useSkill();
         assertTrue(bigController.getWingBuzzPlayed()==0);
+        bigController.selectObjective(0);
         bigController.playCard(1);
         bigController.selectSkill(1);
         bigController.useSkill();
         assertTrue(bigController.getWingBuzzPlayed()==0); // No cards to be buzzed
         bigController.endTurn();
         bigController.endTurn();
+        assertEquals(enemyTrainer.getMazo().getSize(), 59);
         bigController.selectCard(1);
         bigController.useSkill();
         assertTrue(bigController.getWingBuzzPlayed()==1);
         assertTrue(iDoTheEffect.getMano().size()==0); // Popeo la que seleccione
-        assertTrue(enemyTrainer.getMazo().getSize()==58); //Popeo 1
+        assertEquals(enemyTrainer.getMazo().getSize(),58); //Popeo 1
     }
     @Test public void cantBePlayedTwice(){
         bigController.startTurn();
+        bigController.selectObjective(0);
         bigController.playCard(1);
         bigController.selectSkill(1);
         bigController.useSkill();

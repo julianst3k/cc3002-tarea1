@@ -1,11 +1,10 @@
 package cc3002.tarea1;
-import cc3002.tarea1.Effect.GlobalEffect;
-import cc3002.tarea1.Effect.NullGlobalEffect;
-import cc3002.tarea1.PlayVisitor.PlayVisitor;
-import cc3002.tarea1.PokemonTypes.IBasicType;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import cc3002.tarea1.Card.*;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
+import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor;
+import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
+
 import java.util.ArrayList;
 import java.util.Observable;
 
@@ -22,7 +21,7 @@ public class Entrenador extends Observable implements IEntrenador {
     private CardStack pila;
     private Premio premio;
     private IPokemon objective;
-    private GlobalEffect currentEffect;
+    private StadiumCard stadiumCard;
     private Controller actualController;
     private ICardPlayable selectedCard;
 
@@ -39,7 +38,7 @@ public class Entrenador extends Observable implements IEntrenador {
             System.out.println("No hay suficientes cartas para iniciar");
             throw new AssertionError();
         }
-        currentEffect = new NullGlobalEffect();
+        stadiumCard = new NullStadiumCard();
         actualController = new Controller(this, this); // Controlador provisorio
         selectedCard = null;
     }
@@ -185,9 +184,10 @@ public class Entrenador extends Observable implements IEntrenador {
     @Override
     public void jugarCarta(int cardIndex) {
         if (cardIndex > 0 && cardIndex <= this.Mano.size()) {
-            sacarCartaMano(cardIndex).jugarCarta(this);
+            ICardPlayable carta = sacarCartaMano(cardIndex);
+            PlayVisitor visitor = new PlayVisitor(this);
+            carta.accept(visitor);
         }
-
     }
     public ICardPlayable sacarCartaMano(int cardIndex){
         if (cardIndex > 0 && cardIndex <= this.Mano.size()) {
@@ -347,7 +347,7 @@ public class Entrenador extends Observable implements IEntrenador {
     }
 
     @Override
-    public void accept(PlayVisitor visitor) {
+    public void accept(VisitorFather visitor) {
         visitor.visitedEntrenador(this);
     }
 
@@ -393,17 +393,16 @@ public class Entrenador extends Observable implements IEntrenador {
 
     @Override
     public void setStadium(StadiumCard card) {
-        setChanged();
-        notifyObservers(card);
+        this.actualController.setStadium(card);
     }
 
     /**
-     * Set the global effect that it is affecting the trainer
+     * Set the stadium card that it is affecting the trainer
      *
-     * @param effect the effect :)
+     * @param card the effect :)
      */
-    public void setCurrentGlobalEffect(GlobalEffect effect) {
-        currentEffect = effect;
+    public void setCurrentStadium(StadiumCard card) {
+        stadiumCard = card;
     }
 
     /** A new controller subscribe to the trainer, and the pokemon do too! That means that the old controller shouldnt affect the trainer anymore. It is implied that the new controller
@@ -451,4 +450,16 @@ public class Entrenador extends Observable implements IEntrenador {
      * @return The selected card
      */
     public ICardPlayable getSelectedCard(){return selectedCard;}
+
+    /** Return the card stack
+     *
+     * @return the stack
+     */
+    public CardStack getPila(){return pila;}
+
+    /** Returns
+     *
+     * @return
+     */
+    public StadiumCard getStadiumCard(){return stadiumCard;}
 }

@@ -1,9 +1,8 @@
 package cc3002.tarea1;
 
-import cc3002.tarea1.Effect.InstantEffect;
-import cc3002.tarea1.Effect.PokemonEffect;
 
-import java.util.HashMap;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
+import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 public interface ISkill {
     /** An interface for the skill
@@ -47,7 +46,6 @@ public interface ISkill {
      * @return An string with attributes
      */
     String showAttributes();
-    PokemonEffect getEffect();
 
     /** Gives you the status of a skill, if it is usable, then we can play the skill
      *
@@ -61,4 +59,16 @@ public interface ISkill {
      * @param poke The pokemon which the skill is set to
      */
     void setToPokemon(Pokemon poke);
+    /** Apply an effect on demand
+     * @param controller the controller who demand the effect
+     */
+    void applyEffect(Controller controller);
+    /** Apply defensive effect on demand
+     * @param dmg The dmg received
+     */
+    void applyDefense(int dmg);
+    /** Use effect visitor if needed
+     *
+     */
+    void accept(VisitorFather visitor);
 }

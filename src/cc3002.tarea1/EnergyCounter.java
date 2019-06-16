@@ -97,6 +97,13 @@ public class EnergyCounter {
         return true;
 
     }
+    public int totalCounter(){
+        int counter = 0;
+        for (EnergyType type : EnergyType.values()) {
+            counter += energies.get(type);
+        }
+        return counter;
+    }
 
 
 

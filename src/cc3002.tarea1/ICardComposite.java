@@ -7,5 +7,10 @@ public interface ICardComposite extends ICard  {
      * @param card The trainer
      */
     void addCarta(ICardPlayable card);
+
+    /** Return the getSize
+     *
+     * @return get size
+     */
     int getSize();
 }

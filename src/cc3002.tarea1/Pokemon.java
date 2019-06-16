@@ -1,7 +1,8 @@
 package cc3002.tarea1;
-import cc3002.tarea1.Effect.IEffect;
 
-import java.lang.reflect.Array;
+import cc3002.tarea1.Card.ObjectCard;
+import cc3002.tarea1.Skill.Attack;
+
 import java.util.*;
 
 public abstract class Pokemon extends Observable implements IPokemon {
@@ -12,6 +13,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
     private int id;
     private String name;
     private int healthPoints;
+    private int maxHp;
     private EnergyCounter energies;
     private ArrayList<ISkill> skills;
     private ISkill selectedSkill;
@@ -20,7 +22,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
 
     public Pokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills) {
         this.id = id;
-        this.healthPoints = healthPoints;
+        this.healthPoints = healthPoints; maxHp = this.healthPoints;
         this.energies = new EnergyCounter();
         if(skills!=null) {
             this.skills = this.setUp(skills);
@@ -28,6 +30,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
         this.selectedSkill = null;
         this.name = name;
         associated = null;
+
     }
 
     /** Limits the amount of skills that can be input and setup effects that needs to do so
@@ -187,7 +190,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
     }
     @Override
     public void useSkill(IPokemon poke){
-        if(this.getSelectedSkill()==null){
+        if(this.getSelectedSkill()==null || !this.getEnergies().greaterThan(this.getSelectedSkill().getCost())){
             return;
         }
         this.getSelectedSkill().beUsed(this, poke);
@@ -213,7 +216,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
     }
     @Override
     public void setObject(ObjectCard object){
-        this.associated = object; object.getEffect().setPokemon(this);
+        this.associated = object;
     }
     @Override
     public ObjectCard getActualObject(){
@@ -223,24 +226,13 @@ public abstract class Pokemon extends Observable implements IPokemon {
     public void subscribePokemon(Controller control){
         this.addObserver(control);
     }
-    @Override
-    public void releaseEffect(IEffect effect){
-        setChanged();
-        notifyObservers(effect);
-    }
 
     /** Return the total amount of energies
      *
      * @return The total amount of energies
      */
     public int totalEnergyCounter(){
-        int total = 0;
-        EnergyCounter counter = getEnergies();
-
-        for (EnergyType type : EnergyType.values()) {
-            total += counter.getMap().get(type);
-        }
-        return total;
+        return this.getEnergies().totalCounter();
     }
     @Override
     public void setHealthPoints(int health){
@@ -248,7 +240,12 @@ public abstract class Pokemon extends Observable implements IPokemon {
     }
     public void releasesDefenses(int receivedDmg){
         for(int i=0; i<getSkills().size(); i++){
-            this.getSkills().get(i).getEffect().applyDefense(receivedDmg);
+            this.getSkills().get(i).applyDefense(receivedDmg);
         }
+    }
+
+    @Override
+    public int getMaxHp(){
+        return maxHp;
     }
 }

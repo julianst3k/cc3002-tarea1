@@ -1,5 +1,6 @@
 package cc3002.tarea1.PokemonTypes;
 import cc3002.tarea1.*;
+import cc3002.tarea1.Skill.Attack;
 
 import java.util.ArrayList;
 

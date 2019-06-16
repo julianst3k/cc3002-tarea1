@@ -2,13 +2,11 @@ package test;
 import static org.junit.Assert.*;
 
 import cc3002.tarea1.*;
-import cc3002.tarea1.Effect.InstantEffect;
-import cc3002.tarea1.Effect.NullInstantEfect;
-import cc3002.tarea1.Effect.NullPokemonEffect;
-import cc3002.tarea1.Effect.PokemonEffect;
 import cc3002.tarea1.Energies.FighterEnergy;
 import cc3002.tarea1.Energies.WaterEnergy;
 import cc3002.tarea1.PokemonTypes.*;
+import cc3002.tarea1.Skill.BasicAttack;
+import cc3002.tarea1.Skill.Skill;
 import org.junit.Before;
 import org.junit.Test;
 

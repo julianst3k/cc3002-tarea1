@@ -1,8 +1,12 @@
 package test;
 
 import cc3002.tarea1.*;
+import cc3002.tarea1.Card.Mazo;
+import cc3002.tarea1.Card.Premio;
 import cc3002.tarea1.Energies.*;
 import cc3002.tarea1.PokemonTypes.*;
+import cc3002.tarea1.Skill.BasicAttack;
+import cc3002.tarea1.Skill.EnergyBurn;
 import org.junit.Before;
 import org.junit.Test;
 

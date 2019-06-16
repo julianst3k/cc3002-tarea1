@@ -2,14 +2,13 @@ package test;
 import static org.junit.Assert.*;
 
 import cc3002.tarea1.*;
-import cc3002.tarea1.Energies.FighterEnergy;
+import cc3002.tarea1.Card.Mazo;
 import cc3002.tarea1.Energies.FireEnergy;
 import cc3002.tarea1.Energies.WaterEnergy;
 import cc3002.tarea1.PokemonTypes.*;
-import org.junit.After;
+import cc3002.tarea1.Skill.nullSkill;
 import org.junit.Before;
 import org.junit.Test;
-import cc3002.tarea1.Energies.LeafEnergy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -76,8 +75,8 @@ public class testVisitorEvolutions {
     }
     @Test public void getEvolvedFromTheSidelines(){
         myTrainer.sacarCarta();
-        myTrainer.sacarCarta(); myTrainer.jugarCarta(2);
-        myTrainer.sacarCarta(); myTrainer.jugarCarta(2);
+        myTrainer.sacarCarta(); myTrainer.setObjective(0); myTrainer.jugarCarta(2);
+        myTrainer.sacarCarta(); myTrainer.setObjective(0); myTrainer.jugarCarta(2);
         myTrainer.setObjective(0);
         myTrainer.jugarCarta(1);
         myTrainer.sacarCarta(); myTrainer.sacarCarta();
@@ -91,8 +90,8 @@ public class testVisitorEvolutions {
     }
     @Test public void getTripleEvolved(){
         secondTrainer.sacarCarta();
-        secondTrainer.sacarCarta(); secondTrainer.jugarCarta(2);
-        secondTrainer.sacarCarta(); secondTrainer.jugarCarta(2);
+        secondTrainer.sacarCarta(); myTrainer.setObjective(0); secondTrainer.jugarCarta(2);
+        secondTrainer.sacarCarta(); myTrainer.setObjective(0); secondTrainer.jugarCarta(2);
         secondTrainer.setObjective(0);
         secondTrainer.jugarCarta(1);
         secondTrainer.sacarCarta();

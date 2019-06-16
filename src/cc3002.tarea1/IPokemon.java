@@ -1,9 +1,10 @@
 package cc3002.tarea1;
-import cc3002.tarea1.Effect.IEffect;
-import cc3002.tarea1.PlayVisitor.PlayVisitor;
+import cc3002.tarea1.Card.ObjectCard;
+import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor;
+import cc3002.tarea1.Skill.Attack;
+import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public interface IPokemon extends ICardPlayable {
     /** An interface for the Pokemon class
@@ -121,7 +122,7 @@ public interface IPokemon extends ICardPlayable {
      * @param array The set of energies
      */
     void setInitialEnergies(EnergyCounter array);
-    void accept(PlayVisitor visitor);
+    void accept(VisitorFather visitor);
 
     /** Set an object card to the Pokemon, if it has one already then it gets unequipped
      *
@@ -144,10 +145,6 @@ public interface IPokemon extends ICardPlayable {
      * @param control The controller
      */
     void subscribePokemon(Controller control);
-    /** Since setChanged() is protected, the effect is released by the skill and the Pokemon set the change
-     * @param effect The effect that is being released
-     */
-    void releaseEffect(IEffect effect);
     /** Applies the energy burnt effect based on the pokemon type
      *
      */
@@ -158,4 +155,9 @@ public interface IPokemon extends ICardPlayable {
      * @param health health points that will be setted
      */
      void setHealthPoints(int health);
+    /** Returns the max hp of a pokemon
+     *
+     * @return maximum health points
+     */
+    int getMaxHp();
 }

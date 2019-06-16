@@ -1,4 +1,8 @@
 package cc3002.tarea1;
+
+import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor;
+import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
+
 public interface IEnergia {
     /** An interface for energies
      * @author Julian Solis Torrejon
@@ -13,4 +17,8 @@ public interface IEnergia {
      * @param skill A skill
      */
     void getSetted(ISkill skill);
+    /** Gets accepted by the visitor
+     * @param visitor The visitor
+     */
+    void accept(VisitorFather visitor);
 }

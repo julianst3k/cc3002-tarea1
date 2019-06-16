@@ -2,11 +2,11 @@ package test;
 import static org.junit.Assert.*;
 
 import cc3002.tarea1.*;
-import cc3002.tarea1.Effect.InstantEffect;
-import cc3002.tarea1.Effect.NullInstantEfect;
-import cc3002.tarea1.Effect.NullPokemonEffect;
-import cc3002.tarea1.Effect.PokemonEffect;
+import cc3002.tarea1.Card.Mazo;
+import cc3002.tarea1.Card.Premio;
 import cc3002.tarea1.Energies.FireEnergy;
+import cc3002.tarea1.Skill.BasicAttack;
+import cc3002.tarea1.Skill.Skill;
 import org.junit.Before;
 import org.junit.Test;
 import cc3002.tarea1.PokemonTypes.*;
@@ -30,10 +30,8 @@ public class TestEntrenador {
     private Mazo firstmazo;
     private Mazo fakersmazo;
     private Mazo secondmazo;
-    private PokemonEffect voidEffect;
     private Premio premio;
     @Before public void setUp(){
-        voidEffect = new NullPokemonEffect();
         Green = new ArrayList<IEnergia>(Arrays.asList(new LeafEnergy(), new FireEnergy()));
         LeafAttack = new BasicAttack("Cures Cancer", 420, Green, "Smoke that");
         ByronsEnergies = new ArrayList<IEnergia>(Arrays.asList(new FireEnergy(), new FireEnergy()));
@@ -77,7 +75,9 @@ public class TestEntrenador {
         faker.sacarCarta();
         assertEquals(entrenador.showMano(), "1. Energia de Fuego.\n2. Energia de Fuego.\n");
         assertEquals(entrenador.cardInfoMano(2), "Energia de Fuego");
+        entrenador.setObjective(0);
         entrenador.jugarCarta(1);
+        faker.setObjective(0);
         faker.jugarCarta(1);
         assertEquals(entrenador.showMano(), "1. Energia de Fuego.\n");
         entrenador.jugarCarta(1);
@@ -103,6 +103,7 @@ public class TestEntrenador {
 
     }
     @Test public void testAddingWayTooMuch(){
+        entrenador.setObjective(0);  faker.setObjective(0);
         secondTrainer.sacarCarta(); secondTrainer.jugarCarta(1);
         secondTrainer.sacarCarta(); secondTrainer.jugarCarta(1);
         secondTrainer.sacarCarta(); secondTrainer.jugarCarta(1);

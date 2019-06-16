@@ -1,8 +1,9 @@
 package cc3002.tarea1;
 
-import cc3002.tarea1.PlayVisitor.PlayVisitor;
+import cc3002.tarea1.Card.StadiumCard;
+import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor;
+import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public interface IEntrenador {
@@ -91,7 +92,7 @@ public interface IEntrenador {
     /** Accept a visitor
      * @param visitor The visitor, indeed
      */
-    void accept(PlayVisitor visitor);
+    void accept(VisitorFather visitor);
     /** Replace a Pokemon with another one, transferring the energies to the new one
      * @param after New pokemon that replaces the old one
      */
