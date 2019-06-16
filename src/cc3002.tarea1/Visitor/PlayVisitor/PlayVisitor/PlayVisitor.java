@@ -1,16 +1,17 @@
 package cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor;
 
-import cc3002.tarea1.*;
 import cc3002.tarea1.Card.*;
+import cc3002.tarea1.Energy;
+import cc3002.tarea1.Entrenador;
 import cc3002.tarea1.PokemonTypes.IPhase1Type;
 import cc3002.tarea1.PokemonTypes.IBasicType;
 import cc3002.tarea1.PokemonTypes.IPhase2Type;
+import cc3002.tarea1.Skill.WingBuzz;
 import cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase1Available;
 import cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase2Available;
 import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectPlayEnergy;
 import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
-import com.sun.source.tree.InstanceOfTree;
 
 
 public class PlayVisitor extends VisitorFather {
@@ -68,12 +69,18 @@ public class PlayVisitor extends VisitorFather {
     }
     @Override
     public void visitedInstantObjectCard(InstantObjectCard card ){
-        entrenador.getActualController().manageEffect(card);
+        if(entrenador.getObjective()!=null){
+            entrenador.getActualController().manageEffect(card);
+        }
+        else{
+            entrenador.backToHand(card);
+        }
     }
     @Override
     public void visitedAttachObjectCard(AttachObjectCard card){
         if(entrenador.getObjective().getActualObject()!=null){
             entrenador.getObjective().setObject(card);
+
         }
         else{
             entrenador.backToHand(card);
@@ -88,11 +95,10 @@ public class PlayVisitor extends VisitorFather {
     public void visitedStadiumCard(StadiumCard card){
         entrenador.setStadium(card);
     }
-    /** This is called after the card is played, so it is the expected action that the card will take after being played.
-     *
-     */
-    public void play(){};
-
+    @Override
+    public void visitedPokemonPark(PokemonPark card){
+        entrenador.setStadium(card);
+    }
 
 
 }

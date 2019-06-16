@@ -1,9 +1,6 @@
 package cc3002.tarea1.PokemonTypes;
 
-import cc3002.tarea1.Entrenador;
 import cc3002.tarea1.ISkill;
-import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor;
-import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayPhase1;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 
@@ -16,11 +13,7 @@ public class Phase1FirePokemon extends AbstractFirePokemon implements IPhase1Typ
         super(name, id, healthPoints, skills);
         preEvolutionID= preid;
     }
-    public void jugarCarta(Entrenador myTrainer){
-        PlayVisitor visitor = new PlayPhase1(myTrainer);
-        this.accept(visitor); myTrainer.accept(visitor);
-        visitor.play();
-    }
+
     public void accept(VisitorFather visitor){
         visitor.visitedPhase1Type(this);
     }

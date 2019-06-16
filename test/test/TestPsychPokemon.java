@@ -29,6 +29,7 @@ public class TestPsychPokemon {
         assertTrue(psychPokemon.getHp()==100);
         fighterPokemon.useSkill(psychPokemon);
         assertTrue(psychPokemon.getHp()==30);
+        psychPokemon1.selectSkill(0);
         psychPokemon1.useSkill(fighterPokemon);
         assertTrue(fighterPokemon.getHp()==100);
     }

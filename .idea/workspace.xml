@@ -2,78 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e54f3207-1a2f-4a2d-aa19-02ac0ee0fe87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/NullStadiumCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/ObjectCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/PokemonPark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/Potion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/ProfessorJuniper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/StadiumCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Skill/EnergyBurn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Skill/HydroPump.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Skill/InvisibleWall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Skill/nullSkill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/Phase1Available.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/Phase2Available.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/UsableCardVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectPlayEnergy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayEnergyCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/VisitorFather.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test/ControllerSimulateATurnTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test/HydroPumpTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test/PokemonParkTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test/PotionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test/ProfessorJuniperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/RareCandy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Moneda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/RareCandyEffect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/RareCandyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/AttachObjectCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Attack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/BasicAttack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/CardStack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/ControlVisitor/ControlVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/ControlVisitor/UsableSkillVisitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/AttachObjectCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/AttachObjectCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/InstantObjectCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/InstantObjectCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/PokemonPark.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/PokemonPark.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/Potion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/Potion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/StadiumCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/StadiumCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/SupportCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/SupportCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/TrainerCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Card/TrainerCard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Effect/EnergyBurnEffect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Effect/GlobalEffect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Effect/IEffect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Effect/InstantEffect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Effect/NullGlobalEffect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Effect/NullInstantEfect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Effect/NullPokemonEffect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Effect/PokemonEffect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Effect/WingBuzzEffect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/EffectVisitor/EffectVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/EffectVisitor/GlobalEffectVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/EffectVisitor/InstantEffectVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/EffectVisitor/PokemonEffectVisitor.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Energy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Energy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/EnergyBurn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/EnergyCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/EnergyCounter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Entrenador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Entrenador.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/ICardPlayable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/ICardPlayable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/IEnergia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/IEnergia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/IEntrenador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/IEntrenador.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/IPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/IPokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/ISkill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/ISkill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/InstantObjectCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Mazo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/NullStadiumCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/ObjectCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayAttachObjectCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayBasic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayInstantObjectCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayObjectCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayPhase1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayPhase2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayStadiumCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlaySupportCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PlayVisitor/PlayVisitor.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Pokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Pokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/AbstractFighterPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/AbstractFighterPokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/AbstractFirePokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/AbstractFirePokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/AbstractLeafPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/AbstractLeafPokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/AbstractLightPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/AbstractLightPokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/AbstractPsychPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/AbstractPsychPokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/AbstractWaterPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/AbstractWaterPokemon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/BasicFighterPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/BasicFighterPokemon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/BasicFirePokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/BasicFirePokemon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/BasicLeafPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/BasicLeafPokemon.class" afterDir="false" />
@@ -92,83 +38,49 @@
       <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/Phase2LightPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/Phase2LightPokemon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/Phase2PsychPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/Phase2PsychPokemon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/Phase2WaterPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/PokemonTypes/Phase2WaterPokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Premio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Skill.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/StadiumCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/SupportCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/TrainerCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/WingBuzz.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/nullSkill.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Skill/WingBuzz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Skill/WingBuzz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/ControlVisitor/Phase2Available.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/ControlVisitor/Phase2Available.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/ControlVisitor/UsableCardVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/ControlVisitor/UsableCardVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/EffectVisitor/EffectPlayEnergy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/EffectVisitor/EffectPlayEnergy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/EffectVisitor/EffectVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/EffectVisitor/EffectVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/PlayVisitor/PlayAttachObjectCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/PlayVisitor/PlayBasic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/PlayVisitor/PlayEnergyCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/PlayVisitor/PlayInstantObjectCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/PlayVisitor/PlayObjectCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/PlayVisitor/PlayPhase1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/PlayVisitor/PlayPhase2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/PlayVisitor/PlayStadiumCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/PlayVisitor/PlaySupportCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/PlayVisitor/PlayVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/PlayVisitor/PlayVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/VisitorFather.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cc3002-tarea1/cc3002/tarea1/Visitor/PlayVisitor/VisitorFather.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/ControllerSimulateATurnTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/ControllerSimulateATurnTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/HydroPumpTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/HydroPumpTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/PokemonParkTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/PokemonParkTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/PotionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/PotionTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestEnergyBurner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestEnergyBurner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestEntrenador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestEntrenador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestFighterPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestFighterPokemon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestFirePokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestFirePokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestPokemonAttacks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestPokemonAttacks.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestPsychPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestPsychPokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestWaterPokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestWaterPokemon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestWingBuzz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/TestWingBuzz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/testVisitorEvolutions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/cc3002-tarea1/test/testVisitorEvolutions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/AttachObjectCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/AttachObjectCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Skill/Attack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/BasicAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Skill/BasicAttack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/CardStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/CardStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/ControlVisitor/ControlVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/ControlVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/ControlVisitor/UsableSkillVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/UsableSkillVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Card/AttachObjectCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/AttachObjectCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Card/InstantObjectCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/InstantObjectCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Card/PokemonPark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/PokemonPark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Card/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/Potion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Card/StadiumCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/StadiumCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Card/SupportCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/SupportCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Card/TrainerCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/TrainerCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Effect/EnergyBurnEffect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Effect/GlobalEffect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Effect/IEffect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Effect/InstantEffect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Effect/InvisibleWallEffect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Effect/NullGlobalEffect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Effect/NullInstantEfect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Effect/NullPokemonEffect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Effect/PokemonEffect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Effect/WingBuzzEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Skill/WingBuzz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/EffectVisitor/EffectVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/EffectVisitor/GlobalEffectVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/EffectVisitor/InstantEffectVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/EffectVisitor/PokemonEffectVisitor.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Energy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Energy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/EnergyBurn.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/EnergyCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/EnergyCounter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/ICardComposite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/ICardComposite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/ICardPlayable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/ICardPlayable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/IEnergia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/IEnergia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/IEntrenador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/IEntrenador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/IPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/IPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/ISkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/ISkill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/InstantObjectCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/InstantObjectCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/InvisibleWall.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/Mazo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/NullStadiumCard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/ObjectCard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayAttachObjectCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayAttachObjectCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayBasic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayInstantObjectCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayInstantObjectCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayObjectCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayObjectCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayPhase1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayPhase1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayPhase2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayPhase2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayStadiumCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayStadiumCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlaySupportCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlaySupportCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Pokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractFighterPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractFighterPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractFirePokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractFirePokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractLeafPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractLeafPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractLightPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractLightPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractPsychPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractPsychPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractWaterPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractWaterPokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicFighterPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicFighterPokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicFirePokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicFirePokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicLeafPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicLeafPokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicLightPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicLightPokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicPsychPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicPsychPokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicWaterPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicWaterPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/IBasicType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/IBasicType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/IPhase1Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/IPhase1Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/IPhase2Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/IPhase2Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1FighterPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1FighterPokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1FirePokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1FirePokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1LeafPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1LeafPokemon.java" afterDir="false" />
@@ -181,23 +93,29 @@
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase2LightPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase2LightPokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase2PsychPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase2PsychPokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase2WaterPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase2WaterPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Premio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/Premio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Skill/Skill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/StadiumCard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/SupportCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/SupportCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/TrainerCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Card/TrainerCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/WingBuzz.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/nullSkill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Skill/WingBuzz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Skill/WingBuzz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/UsableCardVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/UsableCardVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectPlayEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectPlayEnergy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayAttachObjectCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayBasic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayEnergyCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayInstantObjectCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayObjectCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayPhase1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayPhase2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayStadiumCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlaySupportCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/VisitorFather.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/VisitorFather.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test/ControllerSimulateATurnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/ControllerSimulateATurnTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test/HydroPumpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/HydroPumpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test/PokemonParkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/PokemonParkTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test/PotionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/PotionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test/TestEnergyBurner.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/TestEnergyBurner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test/TestEntrenador.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/TestEntrenador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test/TestFighterPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/TestFighterPokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test/TestFirePokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/TestFirePokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test/TestInvisibleWall.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/TestInvisibleWall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test/TestPokemonAttacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/TestPokemonAttacks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test/TestPsychPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/TestPsychPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test/TestWaterPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/TestWaterPokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test/TestWingBuzz.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/TestWingBuzz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test/testVisitorEvolutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/testVisitorEvolutions.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -232,21 +150,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+            <state relative-caret-position="438">
+              <caret line="74" column="13" lean-forward="true" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
               <folding>
-                <element signature="e#3053#3054#0" expanded="true" />
-                <element signature="e#3096#3097#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#3330#3331#0" expanded="true" />
+                <element signature="e#3373#3374#0" expanded="true" />
+                <element signature="e#3441#3442#0" expanded="true" />
+                <element signature="e#3484#3485#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/Phase1Available.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/RareCandy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="135">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -255,41 +176,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicFirePokemon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-              <folding>
-                <element signature="e#782#783#0" expanded="true" />
-                <element signature="e#828#829#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test/testVisitorEvolutions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayPhase2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="46" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/Phase2Available.java">
+        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectPlayEnergy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/RareCandyEffect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1089#1090#0" expanded="true" />
+                <element signature="e#1124#1125#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/UsableCardVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -298,10 +220,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayPhase1.java">
+        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/UsableSkillVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
+            <state relative-caret-position="195">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -309,35 +231,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="188" column="18" selection-start-line="188" selection-start-column="18" selection-end-line="188" selection-end-column="18" />
+            <state relative-caret-position="-435">
+              <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3821#3822#0" expanded="true" />
-                <element signature="e#3855#3856#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1FirePokemon.java">
+        <entry file="file://$PROJECT_DIR$/test/test/RareCandyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+            <state relative-caret-position="273">
+              <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
               <folding>
-                <element signature="e#863#864#0" expanded="true" />
-                <element signature="e#910#911#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/IEntrenador.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/test/TestEnergyBurner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="285">
+              <caret line="106" column="36" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -378,6 +297,9 @@
       <find>banca</find>
       <find>useSkill</find>
       <find>accept</find>
+      <find>selectedskill</find>
+      <find>pokemonpark</find>
+      <find>evol</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/test/test</dir>
@@ -389,21 +311,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PlayVisitor/PlayVisitor.java" />
-        <option value="$PROJECT_DIR$/src/cc3002/tarea1/Visitor/PlayVisitor/PlayUsability.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayUsability.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/ISkill.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/Energy.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/IEntrenador.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/IEnergia.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Skill/Skill.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Skill/Attack.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicFighterPokemon.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicFirePokemon.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicLeafPokemon.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicLightPokemon.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicPsychPokemon.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicWaterPokemon.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1FighterPokemon.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1FirePokemon.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1LeafPokemon.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1LightPokemon.java" />
@@ -415,31 +324,44 @@
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase2LightPokemon.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase2PsychPokemon.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase2WaterPokemon.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/AttachObjectCard.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/InstantObjectCard.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/PokemonPark.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/StadiumCard.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicWaterPokemon.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicPsychPokemon.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicLightPokemon.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicLeafPokemon.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicFirePokemon.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicFighterPokemon.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/SupportCard.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/TrainerCard.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Skill/WingBuzz.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/ICardPlayable.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/ControlVisitor.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/IPokemon.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Controller.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/VisitorFather.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectVisitor.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectPlayEnergy.java" />
-        <option value="$PROJECT_DIR$/test/test/ControllerLimitingTest.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/StadiumCard.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/InstantObjectCard.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayStadiumCard.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/CardStack.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/ICardComposite.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1FighterPokemon.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/Phase2Available.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/UsableCardVisitor.java" />
+        <option value="$PROJECT_DIR$/test/test/TestFirePokemon.java" />
+        <option value="$PROJECT_DIR$/test/test/HydroPumpTest.java" />
+        <option value="$PROJECT_DIR$/test/test/TestPsychPokemon.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/TrainerCard.java" />
+        <option value="$PROJECT_DIR$/test/test/TestWingBuzz.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Skill/WingBuzz.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectVisitor.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectDeadPokemon.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/AttachObjectCard.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/ExpShare.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/VisitorFather.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectPlayEnergy.java" />
+        <option value="$PROJECT_DIR$/test/test/PokemonParkTest.java" />
         <option value="$PROJECT_DIR$/test/test/ControllerSimulateATurnTest.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/PokemonPark.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Pokemon.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/IPokemon.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/Potion.java" />
+        <option value="$PROJECT_DIR$/test/test/PotionTest.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Moneda.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Controller.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/RareCandyEffect.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Card/RareCandy.java" />
         <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayVisitor.java" />
-        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/Phase1Available.java" />
+        <option value="$PROJECT_DIR$/test/test/RareCandyTest.java" />
+        <option value="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" />
+        <option value="$PROJECT_DIR$/test/test/TestEnergyBurner.java" />
       </list>
     </option>
   </component>
@@ -567,6 +489,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../Elements/7mo Semestre/Metodologias/Source_code/LibraryExampleLecture/src" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -600,6 +523,10 @@
         </pattern>
         <pattern>
           <option name="PATTERN" value="cc3002.tarea1.Effect.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="cc3002.tarea1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -719,44 +646,44 @@
       <workItem from="1560126370787" duration="20195000" />
       <workItem from="1560182648487" duration="9366000" />
       <workItem from="1560569560928" duration="69628000" />
-      <workItem from="1560668461945" duration="992000" />
+      <workItem from="1560668461945" duration="13470000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PokemonParkTest - 2019.06.15 at 23h 49m 13s.xml">
-      <configuration name="PokemonParkTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokemonParkTest - 2019.06.15 at 23h 49m 14s.xml">
-      <configuration name="PokemonParkTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokemonParkTest_testPokemonPark - 2019.06.15 at 23h 53m 05s.xml">
-      <configuration name="PokemonParkTest.testPokemonPark" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokemonParkTest_testPokemonPark - 2019.06.15 at 23h 53m 09s.xml">
-      <configuration name="PokemonParkTest.testPokemonPark" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.06.15 at 23h 53m 13s.xml">
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 06h 36m 17s.xml">
       <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 00h 18m 23s.xml">
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 06h 37m 25s.xml">
       <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 00h 18m 31s.xml">
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 06h 38m 25s.xml">
       <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 00h 18m 58s.xml">
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 06h 38m 37s.xml">
       <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 02h 30m 10s.xml">
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 06h 41m 32s.xml">
       <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 03h 08m 06s.xml">
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 06h 41m 46s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 06h 41m 56s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 06h 43m 26s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 06h 43m 59s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.16 at 06h 44m 41s.xml">
       <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206030000" />
+    <option name="totallyTimeSpent" value="218508000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -779,7 +706,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3099352" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39848813" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -817,7 +744,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/test/PokemonParkTest.java</url>
-          <line>52</line>
+          <line>51</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
@@ -837,8 +764,9 @@
       <FILTER>test.*</FILTER>
       <FILTER>cc3002.tarea1.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/tarea1$test_in_cc3002_tarea1.ic" NAME="test in cc3002-tarea1 Coverage Results" MODIFIED="1560061045261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/tarea1$test_in_cc3002_tarea1.ic" NAME="test in cc3002-tarea1 Coverage Results" MODIFIED="1560676069515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.*</FILTER>
+      <FILTER>cc3002.tarea1.Effect.*</FILTER>
       <FILTER>cc3002.tarea1.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/tarea1$TestEntrenador_testMandarSkills.ic" NAME="TestEntrenador.testMandarSkills Coverage Results" MODIFIED="1556160233706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -846,106 +774,1694 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/statements/InvokeMethod.class">
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/Phase1Available.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="75">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/statements/RunBefores.class">
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/Phase2Available.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+    <entry file="file://$PROJECT_DIR$/test/test/ProfessorJuniperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        <state>
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+    <entry file="file://$PROJECT_DIR$/test/test/TestEnergiesCards.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/TestEntrenador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1050">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/TestFighterPokemon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-435">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/TestInvisibleWall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/TestPokemonAttacks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-121">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/TestWaterPokemon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/testVisitorEvolutions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="58" column="56" lean-forward="true" selection-start-line="58" selection-start-column="56" selection-end-line="58" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/TestFirePokemon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/HydroPumpTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/TestPsychPokemon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Energies/PsychEnergy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="158" selection-start-line="158" selection-end-line="158" />
+        <state relative-caret-position="45">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/TrainerCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
           <folding>
-            <element signature="e#2111#2112#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="e#5951#6086#0" expanded="true" />
-            <element signature="e#6484#6648#0" expanded="true" />
-            <element signature="e#6647#6648#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Skill/WingBuzz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding>
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/Mazo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cc3002-tarea1.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Skill/Skill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-507">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractFighterPokemon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/TestWingBuzz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="74" column="53" lean-forward="true" selection-start-line="74" selection-start-column="53" selection-end-line="74" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/cc3002.tarea1.Entrenador">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>cc3002.tarea1.Entrenador</OriginalElement>
+          <nodes>
+            <node x="143.0" y="0.0">java.lang.Deprecated</node>
+            <node x="0.0" y="76.0">cc3002.tarea1.IEntrenador</node>
+            <node x="73.25" y="152.0">cc3002.tarea1.Entrenador</node>
+            <node x="143.0" y="76.0">java.util.Observable</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.IEntrenador">
+              <point x="-29.0" y="-13.0" />
+              <point x="102.25" y="127.0" />
+              <point x="61.5" y="127.0" />
+              <point x="0.0" y="13.0" />
+            </edge>
+            <edge source="java.util.Observable" target="java.lang.Deprecated">
+              <point x="0.0" y="-13.0" />
+              <point x="0.0" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="java.util.Observable">
+              <point x="29.0" y="-13.0" />
+              <point x="160.25" y="127.0" />
+              <point x="201.0" y="127.0" />
+              <point x="0.0" y="13.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-36.5" y="36.0" />
+          <SelectedNodes>
+            <node>cc3002.tarea1.Entrenador</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/cc3002.tarea1.Card">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>cc3002.tarea1.Card</OriginalElement>
+          <nodes>
+            <node x="315.0" y="395.0">cc3002.tarea1.Card.Mazo</node>
+            <node x="171.0" y="200.0">cc3002.tarea1.Card.PokemonPark</node>
+            <node x="0.0" y="212.0">cc3002.tarea1.Card.NullStadiumCard</node>
+            <node x="314.0" y="212.0">cc3002.tarea1.Card.AttachObjectCard</node>
+            <node x="492.0" y="212.0">cc3002.tarea1.Card.InstantObjectCard</node>
+            <node x="398.75" y="0.0">cc3002.tarea1.Card.TrainerCard</node>
+            <node x="677.0" y="212.0">cc3002.tarea1.Card.ProfessorJuniper</node>
+            <node x="97.76249999999999" y="124.0">cc3002.tarea1.Card.StadiumCard</node>
+            <node x="431.01250000000005" y="124.0">cc3002.tarea1.Card.ObjectCard</node>
+            <node x="0.0" y="490.0">cc3002.tarea1.Card.CardStack</node>
+            <node x="694.5" y="124.0">cc3002.tarea1.Card.SupportCard</node>
+            <node x="0.0" y="395.0">cc3002.tarea1.Card.Premio</node>
+            <node x="525.5" y="300.0">cc3002.tarea1.Card.Potion</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="cc3002.tarea1.Card.InstantObjectCard" target="cc3002.tarea1.Card.ObjectCard">
+              <point x="0.0" y="-13.0" />
+              <point x="574.5" y="175.0" />
+              <point x="518.0125" y="175.0" />
+              <point x="29.0" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.AttachObjectCard" target="cc3002.tarea1.Card.ObjectCard">
+              <point x="0.0" y="-13.0" />
+              <point x="393.0" y="175.0" />
+              <point x="460.01250000000005" y="175.0" />
+              <point x="-29.0" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.StadiumCard" target="cc3002.tarea1.Card.TrainerCard">
+              <point x="0.0" y="-13.0" />
+              <point x="159.2625" y="99.0" />
+              <point x="427.0833333333333" y="99.0" />
+              <point x="-56.666666666666686" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.ProfessorJuniper" target="cc3002.tarea1.Card.SupportCard">
+              <point x="0.0" y="-13.0" />
+              <point x="0.0" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.NullStadiumCard" target="cc3002.tarea1.Card.StadiumCard">
+              <point x="0.0" y="-13.0" />
+              <point x="75.5" y="175.0" />
+              <point x="128.5125" y="175.0" />
+              <point x="-30.75" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.Potion" target="cc3002.tarea1.Card.InstantObjectCard">
+              <point x="0.0" y="-25.0" />
+              <point x="0.0" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.PokemonPark" target="cc3002.tarea1.Card.StadiumCard">
+              <point x="0.0" y="-25.0" />
+              <point x="232.5" y="175.0" />
+              <point x="190.0125" y="175.0" />
+              <point x="30.75" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.SupportCard" target="cc3002.tarea1.Card.TrainerCard">
+              <point x="0.0" y="-13.0" />
+              <point x="756.0" y="99.0" />
+              <point x="540.4166666666666" y="99.0" />
+              <point x="56.66666666666663" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.ObjectCard" target="cc3002.tarea1.Card.TrainerCard">
+              <point x="0.0" y="-13.0" />
+              <point x="489.01250000000005" y="99.0" />
+              <point x="483.75" y="99.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.9497076023391813" x="232.70935960591135" y="210.70935960591135" />
+          <SelectedNodes>
+            <node>cc3002.tarea1.Card.Mazo</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/cc3002.tarea1">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>cc3002.tarea1</OriginalElement>
+          <nodes>
+            <node x="3328.382120555075" y="1431.0">cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase1Available</node>
+            <node x="3176.688169960618" y="7275.0">cc3002.tarea1.Energy</node>
+            <node x="1677.6730721491786" y="895.0">cc3002.tarea1.Card.PokemonPark</node>
+            <node x="1046.3750000000002" y="1714.0">cc3002.tarea1.IEntrenador</node>
+            <node x="2109.362189568461" y="931.5">cc3002.tarea1.Card.NullStadiumCard</node>
+            <node x="298.97307214917873" y="1455.5">cc3002.tarea1.ICardComposite</node>
+            <node x="268.72307214917873" y="1140.5">cc3002.tarea1.ICard</node>
+            <node x="5335.122876857596" y="1467.5">cc3002.tarea1.Card.InstantObjectCard</node>
+            <node x="2164.7651737763636" y="8164.0">cc3002.tarea1.Card.TrainerCard</node>
+            <node x="3061.5249776979317" y="1809.5">cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor</node>
+            <node x="4454.889095117214" y="7762.0">cc3002.tarea1.Energies</node>
+            <node x="5208.406256286056" y="1164.5">cc3002.tarea1.Card.ObjectCard</node>
+            <node x="2523.9798366272844" y="7606.0">cc3002.tarea1.Visitor.PlayVisitor.VisitorFather</node>
+            <node x="2156.5985071096966" y="3915.0">cc3002.tarea1.Controller</node>
+            <node x="4670.751134671536" y="6767.0">cc3002.tarea1.ISkill</node>
+            <node x="950.0735071096972" y="8054.0">cc3002.tarea1.ICardPlayable</node>
+            <node x="3624.382120555075" y="1431.0">cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase2Available</node>
+            <node x="1243.3750000000002" y="2336.0">cc3002.tarea1.Entrenador</node>
+            <node x="2751.823297025663" y="8371.0">cc3002.tarea1.Card.SupportCard</node>
+            <node x="5386.45621019093" y="5041.5">cc3002.tarea1.Card.Potion</node>
+            <node x="412.375" y="1833.5">cc3002.tarea1.Card.Mazo</node>
+            <node x="4121.080817019441" y="4730.0">cc3002.tarea1.IPokemon</node>
+            <node x="3726.9270737039333" y="931.5">cc3002.tarea1.Skill</node>
+            <node x="4990.9008450306455" y="220.0">cc3002.tarea1.EnergyCounter</node>
+            <node x="5059.622876857596" y="1467.5">cc3002.tarea1.Card.AttachObjectCard</node>
+            <node x="3823.632120555075" y="1845.5">cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableCardVisitor</node>
+            <node x="2688.823297025663" y="8471.0">cc3002.tarea1.Card.ProfessorJuniper</node>
+            <node x="2430.125" y="1104.0">cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor</node>
+            <node x="1522.362189568461" y="436.5">cc3002.tarea1.Card.StadiumCard</node>
+            <node x="1648.3750000000002" y="1443.0">cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectPlayEnergy</node>
+            <node x="5085.4008450306455" y="0.0">cc3002.tarea1.EnergyType</node>
+            <node x="2365.6480721491785" y="424.0">cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableSkillVisitor</node>
+            <node x="723.375" y="1869.5">cc3002.tarea1.Card.CardStack</node>
+            <node x="4529.3689075630255" y="1164.5">cc3002.tarea1.PokemonTypes</node>
+            <node x="4696.622876857596" y="5608.0">cc3002.tarea1.Pokemon</node>
+            <node x="1829.862189568461" y="1140.5">cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor</node>
+            <node x="101.375" y="1869.5">cc3002.tarea1.Card.Premio</node>
+            <node x="3446.688169960618" y="7117.0">cc3002.tarea1.IEnergia</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="cc3002.tarea1.EnergyCounter" target="cc3002.tarea1.EnergyType">
+              <point x="-76.25" y="-277.5" />
+              <point x="5067.1508450306455" y="200.0" />
+              <point x="5128.9008450306455" y="200.0" />
+              <point x="-14.5" y="85.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.Skill">
+              <point x="-57.14285714285711" y="-529.5" />
+              <point x="4799.480019714739" y="5518.0" />
+              <point x="4487.8689075630255" y="5518.0" />
+              <point x="4487.8689075630255" y="1034.0" />
+              <point x="3830.1329560568747" y="1034.0" />
+              <point x="42.70588235294122" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.Card.InstantObjectCard">
+              <point x="178.75" y="-145.5" />
+              <point x="3435.2749776979317" y="1664.0" />
+              <point x="5353.956210190929" y="1664.0" />
+              <point x="-94.16666666666652" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Entrenador">
+              <point x="-118.73684210526335" y="-337.5" />
+              <point x="2178.8616650044332" y="3885.0" />
+              <point x="1523.1250000000002" y="3885.0" />
+              <point x="93.25" y="709.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.InstantObjectCard" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="-18.833333333333485" y="25.0" />
+              <point x="5429.289543524263" y="1684.0" />
+              <point x="5364.95621019093" y="1684.0" />
+              <point x="5364.95621019093" y="7576.0" />
+              <point x="2888.545054018589" y="7576.0" />
+              <point x="169.5652173913045" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.TrainerCard" target="cc3002.tarea1.ICardPlayable">
+              <point x="-34.14285714285734" y="-73.5" />
+              <point x="2250.1223166335058" y="8124.0" />
+              <point x="1063.0735071096972" y="8124.0" />
+              <point x="0.0" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor" target="cc3002.tarea1.Skill">
+              <point x="34.25" y="-73.5" />
+              <point x="2601.375" y="1014.0" />
+              <point x="3737.603544292169" y="1014.0" />
+              <point x="-49.82352941176475" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Card.Premio">
+              <point x="-157.0526315789475" y="-709.5" />
+              <point x="1272.8223684210527" y="2286.0" />
+              <point x="356.0" y="2286.0" />
+              <point x="109.125" y="85.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.EnergyCounter">
+              <point x="102.85714285714289" y="-529.5" />
+              <point x="4959.480019714739" y="5568.0" />
+              <point x="5671.928432413151" y="5568.0" />
+              <point x="5671.928432413151" y="855.0" />
+              <point x="5219.6508450306455" y="855.0" />
+              <point x="76.25" y="277.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase1Available" target="cc3002.tarea1.PokemonTypes">
+              <point x="103.5" y="-61.5" />
+              <point x="3569.882120555075" y="1341.0" />
+              <point x="4571.8689075630255" y="1341.0" />
+              <point x="-42.5" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.IEnergia">
+              <point x="-78.5" y="349.0" />
+              <point x="4199.580817019441" y="5568.0" />
+              <point x="3520.4336134453783" y="5568.0" />
+              <point x="3520.4336134453783" y="7097.0" />
+              <point x="3514.7881699606182" y="7097.0" />
+              <point x="-45.399999999999636" y="-49.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.CardStack" target="cc3002.tarea1.ICardPlayable">
+              <point x="-116.39999999999964" y="85.5" />
+              <point x="752.4750000000004" y="2306.0" />
+              <point x="724.8735071096971" y="2306.0" />
+              <point x="724.8735071096971" y="7974.0" />
+              <point x="1036.4852718155792" y="7974.0" />
+              <point x="-26.58823529411802" y="-25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectPlayEnergy">
+              <point x="-178.75" y="-145.5" />
+              <point x="3077.7749776979317" y="1694.0" />
+              <point x="1921.7083333333333" y="1694.0" />
+              <point x="109.33333333333303" y="49.5" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.IPokemon">
+              <point x="18.21428571428578" y="13.0" />
+              <point x="4632.583193277311" y="1391.0" />
+              <point x="4607.372876857596" y="1391.0" />
+              <point x="4607.372876857596" y="4690.0" />
+              <point x="4363.717180655805" y="4690.0" />
+              <point x="85.63636363636351" y="-349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor">
+              <point x="14.842105263157919" y="-337.5" />
+              <point x="2312.440612372855" y="3805.0" />
+              <point x="2397.8753474631976" y="3805.0" />
+              <point x="2397.8753474631976" y="1381.0" />
+              <point x="2443.8250000000003" y="1381.0" />
+              <point x="-123.29999999999995" y="73.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Card.StadiumCard">
+              <point x="-14.842105263157919" y="-337.5" />
+              <point x="2282.756401846539" y="3785.0" />
+              <point x="2298.362189568461" y="3785.0" />
+              <point x="2298.362189568461" y="815.0" />
+              <point x="1797.7621895684606" y="815.0" />
+              <point x="122.39999999999964" y="61.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.ISkill">
+              <point x="94.58333333333303" y="-85.5" />
+              <point x="3384.771503293951" y="7255.0" />
+              <point x="4119.057665986713" y="7255.0" />
+              <point x="4119.057665986713" y="7087.0" />
+              <point x="4776.501134671536" y="7087.0" />
+              <point x="-35.25" y="145.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather" target="cc3002.tarea1.Card.SupportCard">
+              <point x="130.0" y="169.0" />
+              <point x="2848.9798366272844" y="8014.0" />
+              <point x="2856.953343736981" y="8014.0" />
+              <point x="2856.953343736981" y="8351.0" />
+              <point x="2883.6566303589966" y="8351.0" />
+              <point x="18.833333333333485" y="-25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase2Available" target="cc3002.tarea1.PokemonTypes">
+              <point x="37.75" y="-61.5" />
+              <point x="3813.132120555075" y="1351.0" />
+              <point x="4584.011764705882" y="1351.0" />
+              <point x="-30.357142857142833" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableSkillVisitor">
+              <point x="-50.41666666666663" y="-13.0" />
+              <point x="3737.0104070372668" y="875.0" />
+              <point x="2557.448072149178" y="875.0" />
+              <point x="54.799999999999955" y="73.5" />
+            </edge>
+            <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="35.25" y="145.0" />
+              <point x="4847.001134671536" y="7087.0" />
+              <point x="4870.497165376966" y="7087.0" />
+              <point x="4870.497165376966" y="7536.0" />
+              <point x="2837.6754888011974" y="7536.0" />
+              <point x="118.695652173913" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.Mazo" target="cc3002.tarea1.ICardPlayable">
+              <point x="-36.375" y="121.5" />
+              <point x="521.5" y="2316.0" />
+              <point x="490.625" y="2316.0" />
+              <point x="490.625" y="7984.0" />
+              <point x="1023.1911541685206" y="7984.0" />
+              <point x="-39.88235294117658" y="-25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase1Available" target="cc3002.tarea1.Controller">
+              <point x="34.5" y="61.5" />
+              <point x="3500.882120555075" y="3855.0" />
+              <point x="2386.651138688644" y="3855.0" />
+              <point x="89.05263157894751" y="-337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.Potion" target="cc3002.tarea1.Card.InstantObjectCard">
+              <point x="79.66666666666652" y="-37.5" />
+              <point x="5585.622876857597" y="4700.0" />
+              <point x="5561.789543524263" y="4700.0" />
+              <point x="5561.789543524263" y="1694.0" />
+              <point x="5542.289543524263" y="1694.0" />
+              <point x="94.16666666666652" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.Skill">
+              <point x="-48.75" y="-145.5" />
+              <point x="3207.7749776979317" y="1654.0" />
+              <point x="3163.0121672663927" y="1654.0" />
+              <point x="3163.0121672663927" y="1084.0" />
+              <point x="3787.4270737039333" y="1084.0" />
+              <point x="0.0" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor">
+              <point x="-146.25" y="-145.5" />
+              <point x="3110.2749776979317" y="1684.0" />
+              <point x="2019.8750000000002" y="1684.0" />
+              <point x="2019.8750000000002" y="1381.0" />
+              <point x="2116.862189568461" y="1381.0" />
+              <point x="123.0" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.ICardPlayable" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="79.76470588235316" y="-25.0" />
+              <point x="1142.8382129920503" y="8014.0" />
+              <point x="2588.9798366272844" y="8014.0" />
+              <point x="-130.0" y="169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.Pokemon">
+              <point x="54.64285714285711" y="13.0" />
+              <point x="4669.011764705882" y="1411.0" />
+              <point x="4851.122876857596" y="1411.0" />
+              <point x="4851.122876857596" y="5588.0" />
+              <point x="4845.194305429024" y="5588.0" />
+              <point x="-11.428571428571331" y="-529.5" />
+            </edge>
+            <edge source="cc3002.tarea1.IEnergia" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="56.75" y="49.0" />
+              <point x="3616.938169960618" y="7245.0" />
+              <point x="4119.057665986713" y="7245.0" />
+              <point x="4119.057665986713" y="7506.0" />
+              <point x="2786.805923583806" y="7506.0" />
+              <point x="67.82608695652152" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableCardVisitor" target="cc3002.tarea1.Card.SupportCard">
+              <point x="146.25" y="109.5" />
+              <point x="4164.882120555075" y="2316.0" />
+              <point x="4038.8669467787117" y="2316.0" />
+              <point x="4038.8669467787117" y="5538.0" />
+              <point x="3414.188169960618" y="5538.0" />
+              <point x="3414.188169960618" y="8351.0" />
+              <point x="2958.9899636923296" y="8351.0" />
+              <point x="94.16666666666652" y="-25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.Card.PokemonPark">
+              <point x="-113.75" y="-145.5" />
+              <point x="3142.7749776979317" y="1674.0" />
+              <point x="2208.987189568461" y="1674.0" />
+              <point x="2208.987189568461" y="1381.0" />
+              <point x="2168.362189568461" y="1381.0" />
+              <point x="2168.362189568461" y="1074.0" />
+              <point x="1881.0730721491786" y="1074.0" />
+              <point x="90.40000000000009" y="49.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.ISkill">
+              <point x="-64.0" y="529.5" />
+              <point x="4792.622876857596" y="6687.0" />
+              <point x="4837.3874983079" y="6687.0" />
+              <point x="25.636363636363512" y="-145.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="-14.235294117647072" y="13.0" />
+              <point x="3773.1917795862864" y="1064.0" />
+              <point x="3040.0249776979317" y="1064.0" />
+              <point x="3040.0249776979317" y="5468.0" />
+              <point x="2604.773314888154" y="5468.0" />
+              <point x="2604.773314888154" y="7496.0" />
+              <point x="2685.0667931490234" y="7496.0" />
+              <point x="-33.91304347826099" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IEnergia" target="cc3002.tarea1.IPokemon">
+              <point x="0.0" y="-49.0" />
+              <point x="3560.188169960618" y="7097.0" />
+              <point x="3542.988169960618" y="7097.0" />
+              <point x="3542.988169960618" y="5578.0" />
+              <point x="4230.980817019441" y="5578.0" />
+              <point x="-47.09999999999991" y="349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.Skill">
+              <point x="28.545454545454504" y="-349.0" />
+              <point x="4306.626271564895" y="4710.0" />
+              <point x="4297.853544292168" y="4710.0" />
+              <point x="4297.853544292168" y="1064.0" />
+              <point x="3808.780014880404" y="1064.0" />
+              <point x="21.35294117647061" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.IPokemon">
+              <point x="-148.57142857142844" y="-529.5" />
+              <point x="4708.051448286167" y="5558.0" />
+              <point x="4387.980817019441" y="5558.0" />
+              <point x="109.90000000000009" y="349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableCardVisitor" target="cc3002.tarea1.PokemonTypes">
+              <point x="55.71428571428578" y="-109.5" />
+              <point x="4074.3464062693606" y="1634.0" />
+              <point x="4559.083193277311" y="1634.0" />
+              <point x="4559.083193277311" y="1371.0" />
+              <point x="4608.297478991597" y="1371.0" />
+              <point x="-6.071428571428669" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.IEntrenador">
+              <point x="-39.26315789473665" y="-709.5" />
+              <point x="1390.6118421052636" y="2226.0" />
+              <point x="1307.4750000000006" y="2226.0" />
+              <point x="74.60000000000036" y="241.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather" target="cc3002.tarea1.PokemonTypes">
+              <point x="84.78260869565202" y="-169.0" />
+              <point x="2803.7624453229364" y="7516.0" />
+              <point x="4618.372876857596" y="7516.0" />
+              <point x="4618.372876857596" y="1401.0" />
+              <point x="4644.726050420168" y="1401.0" />
+              <point x="30.35714285714289" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather" target="cc3002.tarea1.Skill">
+              <point x="-16.956521739130494" y="-169.0" />
+              <point x="2702.023314888154" y="7486.0" />
+              <point x="2615.773314888154" y="7486.0" />
+              <point x="2615.773314888154" y="5478.0" />
+              <point x="3051.0249776979317" y="5478.0" />
+              <point x="3051.0249776979317" y="1074.0" />
+              <point x="3780.30942664511" y="1074.0" />
+              <point x="-7.117647058823536" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.Card.StadiumCard">
+              <point x="-81.25" y="-145.5" />
+              <point x="3175.2749776979317" y="1664.0" />
+              <point x="2697.2230721491787" y="1664.0" />
+              <point x="2697.2230721491787" y="1361.0" />
+              <point x="2408.625" y="1361.0" />
+              <point x="2408.625" y="805.0" />
+              <point x="1818.1621895684611" y="805.0" />
+              <point x="142.80000000000018" y="61.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.IEnergia">
+              <point x="127.99999999999977" y="529.5" />
+              <point x="4984.622876857596" y="6727.0" />
+              <point x="5009.148861944264" y="6727.0" />
+              <point x="5009.148861944264" y="7097.0" />
+              <point x="3650.988169960618" y="7097.0" />
+              <point x="90.80000000000018" y="-49.0" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="42.5" y="13.0" />
+              <point x="4656.8689075630255" y="1411.0" />
+              <point x="4629.372876857596" y="1411.0" />
+              <point x="4629.372876857596" y="7526.0" />
+              <point x="2820.718967062067" y="7526.0" />
+              <point x="101.73913043478251" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.ICardPlayable">
+              <point x="-15.699999999999818" y="349.0" />
+              <point x="4262.380817019442" y="5588.0" />
+              <point x="3684.188169960618" y="5588.0" />
+              <point x="3684.188169960618" y="8034.0" />
+              <point x="1169.4264482861674" y="8034.0" />
+              <point x="106.35294117647027" y="-25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.EnergyCounter">
+              <point x="142.72727272727252" y="-349.0" />
+              <point x="4420.808089746713" y="4710.0" />
+              <point x="5649.928432413151" y="4710.0" />
+              <point x="5649.928432413151" y="875.0" />
+              <point x="5158.6508450306455" y="875.0" />
+              <point x="15.25" y="277.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.EnergyType">
+              <point x="148.57142857142867" y="-529.5" />
+              <point x="5005.194305429024" y="5588.0" />
+              <point x="5712.303432413151" y="5588.0" />
+              <point x="5712.303432413151" y="190.0" />
+              <point x="5186.9008450306455" y="190.0" />
+              <point x="43.5" y="85.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.IPokemon">
+              <point x="18.91666666666697" y="-85.5" />
+              <point x="3309.104836627285" y="7235.0" />
+              <point x="3425.188169960618" y="7235.0" />
+              <point x="3425.188169960618" y="5548.0" />
+              <point x="4136.780817019441" y="5548.0" />
+              <point x="-141.30000000000018" y="349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.ICardPlayable">
+              <point x="-149.19999999999982" y="241.0" />
+              <point x="1083.6750000000004" y="2306.0" />
+              <point x="1065.2750000000003" y="2306.0" />
+              <point x="1065.2750000000003" y="8034.0" />
+              <point x="1063.0735071096972" y="8034.0" />
+              <point x="0.0" y="-25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase1Available" target="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor">
+              <point x="-34.5" y="-61.5" />
+              <point x="3431.882120555075" y="1301.0" />
+              <point x="2608.2250000000004" y="1301.0" />
+              <point x="41.09999999999991" y="73.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.Potion" target="cc3002.tarea1.Controller">
+              <point x="-79.66666666666652" y="-37.5" />
+              <point x="5426.289543524263" y="4610.0" />
+              <point x="2422.9318404430296" y="4610.0" />
+              <point x="125.33333333333303" y="337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Skill">
+              <point x="-56.94117647058829" y="13.0" />
+              <point x="3730.485897233345" y="977.5" />
+              <point x="3706.9270737039333" y="977.5" />
+              <point x="3706.9270737039333" y="944.5" />
+              <point x="-60.5" y="-0.0" />
+            </edge>
+            <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.EnergyCounter">
+              <point x="128.18181818181802" y="-145.0" />
+              <point x="4939.932952853354" y="6747.0" />
+              <point x="5693.928432413151" y="6747.0" />
+              <point x="5693.928432413151" y="835.0" />
+              <point x="5280.6508450306455" y="835.0" />
+              <point x="137.25" y="277.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.EnergyCounter">
+              <point x="10.083333333333371" y="-13.0" />
+              <point x="3797.5104070372668" y="835.0" />
+              <point x="5006.1508450306455" y="835.0" />
+              <point x="-137.25" y="277.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableSkillVisitor" target="cc3002.tarea1.Skill">
+              <point x="109.60000000000002" y="73.5" />
+              <point x="2612.2480721491784" y="865.0" />
+              <point x="3757.1770737039333" y="865.0" />
+              <point x="-30.25" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.InstantObjectCard" target="cc3002.tarea1.Card.ObjectCard">
+              <point x="56.5" y="-25.0" />
+              <point x="5504.622876857596" y="1381.0" />
+              <point x="5305.072922952723" y="1381.0" />
+              <point x="38.666666666666515" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase2Available">
+              <point x="113.75" y="-145.5" />
+              <point x="3370.2749776979317" y="1634.0" />
+              <point x="3737.632120555075" y="1634.0" />
+              <point x="-37.75" y="61.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather" target="cc3002.tarea1.Energy">
+              <point x="16.956521739130494" y="-169.0" />
+              <point x="2735.936358366415" y="7476.0" />
+              <point x="3199.3881699606177" y="7476.0" />
+              <point x="-90.80000000000018" y="85.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.Card.AttachObjectCard">
+              <point x="146.25" y="-145.5" />
+              <point x="3402.7749776979317" y="1644.0" />
+              <point x="5087.872876857596" y="1644.0" />
+              <point x="-84.75" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energies" target="cc3002.tarea1.ISkill">
+              <point x="53.25" y="-13.0" />
+              <point x="4579.139095117214" y="7546.0" />
+              <point x="4971.394892649693" y="7546.0" />
+              <point x="4971.394892649693" y="7087.0" />
+              <point x="4917.501134671536" y="7087.0" />
+              <point x="105.75" y="145.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.ISkill">
+              <point x="28.470588235294144" y="13.0" />
+              <point x="3815.897661939228" y="1054.0" />
+              <point x="4469.751260504201" y="1054.0" />
+              <point x="4469.751260504201" y="6707.0" />
+              <point x="4786.114771035173" y="6707.0" />
+              <point x="-25.636363636363512" y="-145.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Card.CardStack">
+              <point x="-58.894736842104976" y="-709.5" />
+              <point x="1370.9802631578953" y="2236.0" />
+              <point x="985.2749999999996" y="2236.0" />
+              <point x="116.39999999999964" y="85.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.SupportCard" target="cc3002.tarea1.Card.TrainerCard">
+              <point x="-94.16666666666652" y="-25.0" />
+              <point x="2770.6566303589966" y="8351.0" />
+              <point x="2224.5151737763636" y="8351.0" />
+              <point x="-59.75" y="73.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.TrainerCard" target="cc3002.tarea1.Controller">
+              <point x="34.14285714285734" y="-73.5" />
+              <point x="2318.4080309192204" y="8144.0" />
+              <point x="2295.2651737763636" y="8144.0" />
+              <point x="2295.2651737763636" y="4700.0" />
+              <point x="2266.2651737763636" y="4700.0" />
+              <point x="-31.333333333333485" y="337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.Controller">
+              <point x="-102.5454545454545" y="-145.0" />
+              <point x="4709.205680126082" y="6737.0" />
+              <point x="3695.188169960618" y="6737.0" />
+              <point x="3695.188169960618" y="5448.0" />
+              <point x="2955.6445202075693" y="5448.0" />
+              <point x="2955.6445202075693" y="4680.0" />
+              <point x="2328.9318404430305" y="4680.0" />
+              <point x="31.333333333333485" y="337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor" target="cc3002.tarea1.Controller">
+              <point x="-68.5" y="73.5" />
+              <point x="2498.625" y="1401.0" />
+              <point x="2419.8753474631976" y="1401.0" />
+              <point x="2419.8753474631976" y="3825.0" />
+              <point x="2342.124822899171" y="3825.0" />
+              <point x="44.526315789473756" y="-337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Skill">
+              <point x="59.368421052631675" y="-337.5" />
+              <point x="2356.9669281623283" y="3835.0" />
+              <point x="2686.2230721491787" y="3835.0" />
+              <point x="2686.2230721491787" y="1411.0" />
+              <point x="2714.625" y="1411.0" />
+              <point x="2714.625" y="1034.0" />
+              <point x="3751.8388384098157" y="1034.0" />
+              <point x="-35.58823529411768" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.Controller">
+              <point x="-28.545454545454504" y="-349.0" />
+              <point x="4249.535362473987" y="4630.0" />
+              <point x="2360.2651737763636" y="4630.0" />
+              <point x="62.666666666666515" y="337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor">
+              <point x="117.78947368421086" y="-709.5" />
+              <point x="1547.664473684211" y="2276.0" />
+              <point x="3089.382120555075" y="2276.0" />
+              <point x="-167.14285714285734" y="145.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Card.StadiumCard">
+              <point x="0.0" y="-709.5" />
+              <point x="1429.8750000000002" y="865.0" />
+              <point x="1634.5621895684608" y="865.0" />
+              <point x="-40.80000000000018" y="61.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="-74.60000000000036" y="241.0" />
+              <point x="1158.2749999999999" y="2316.0" />
+              <point x="1076.2750000000003" y="2316.0" />
+              <point x="1076.2750000000003" y="7566.0" />
+              <point x="2566.3711409751104" y="7566.0" />
+              <point x="-152.608695652174" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.Mazo" target="cc3002.tarea1.ICardComposite">
+              <point x="0.0" y="-121.5" />
+              <point x="557.875" y="1694.0" />
+              <point x="452.72307214917873" y="1694.0" />
+              <point x="30.75" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.IPokemon">
+              <point x="13.321428571428442" y="709.5" />
+              <point x="1443.1964285714287" y="3885.0" />
+              <point x="1427.5535714285718" y="3885.0" />
+              <point x="1427.5535714285718" y="4650.0" />
+              <point x="4192.444453383077" y="4650.0" />
+              <point x="-85.63636363636351" y="-349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.IEnergia">
+              <point x="56.75" y="-85.5" />
+              <point x="3346.938169960618" y="7245.0" />
+              <point x="3503.438169960618" y="7245.0" />
+              <point x="-56.75" y="49.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.ISkill">
+              <point x="78.5" y="349.0" />
+              <point x="4356.580817019441" y="5568.0" />
+              <point x="4393.8512605042015" y="5568.0" />
+              <point x="4393.8512605042015" y="6717.0" />
+              <point x="4760.478407398809" y="6717.0" />
+              <point x="-51.272727272727025" y="-145.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.StadiumCard" target="cc3002.tarea1.Controller">
+              <point x="102.0" y="61.0" />
+              <point x="1777.362189568461" y="825.0" />
+              <point x="2287.362189568461" y="825.0" />
+              <point x="2287.362189568461" y="3775.0" />
+              <point x="2267.9142965833807" y="3775.0" />
+              <point x="-29.684210526315837" y="-337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Card.Mazo">
+              <point x="-137.4210526315792" y="-709.5" />
+              <point x="1292.453947368421" y="2276.0" />
+              <point x="594.25" y="2276.0" />
+              <point x="36.375" y="121.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableCardVisitor" target="cc3002.tarea1.Energy">
+              <point x="48.75" y="109.5" />
+              <point x="4067.382120555075" y="2306.0" />
+              <point x="3961.9086134453783" y="2306.0" />
+              <point x="3961.9086134453783" y="5528.0" />
+              <point x="3257.8548366272844" y="5528.0" />
+              <point x="3257.8548366272844" y="7255.0" />
+              <point x="3271.271503293951" y="7255.0" />
+              <point x="-18.91666666666697" y="-85.5" />
+            </edge>
+            <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.IPokemon">
+              <point x="-76.90909090909099" y="-145.0" />
+              <point x="4734.842043762445" y="6727.0" />
+              <point x="4382.8512605042015" y="6727.0" />
+              <point x="4382.8512605042015" y="5578.0" />
+              <point x="4325.180817019442" y="5578.0" />
+              <point x="47.09999999999991" y="349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="55.71428571428578" y="145.5" />
+              <point x="3312.239263412218" y="2316.0" />
+              <point x="3216.9086134453783" y="2316.0" />
+              <point x="3216.9086134453783" y="5498.0" />
+              <point x="2718.523314888154" y="5498.0" />
+              <point x="0.0" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather" target="cc3002.tarea1.Entrenador">
+              <point x="-135.6521739130435" y="-169.0" />
+              <point x="2583.327662714241" y="7556.0" />
+              <point x="1120.2750000000003" y="7556.0" />
+              <point x="1120.2750000000003" y="3875.0" />
+              <point x="1336.6250000000002" y="3875.0" />
+              <point x="-93.25" y="709.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableCardVisitor" target="cc3002.tarea1.Controller">
+              <point x="-48.75" y="109.5" />
+              <point x="3969.882120555075" y="2296.0" />
+              <point x="3950.9086134453783" y="2296.0" />
+              <point x="3950.9086134453783" y="3885.0" />
+              <point x="2431.1774544781183" y="3885.0" />
+              <point x="133.57894736842127" y="-337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Controller">
+              <point x="-28.470588235294144" y="13.0" />
+              <point x="3758.9564854686396" y="1044.0" />
+              <point x="2736.625" y="1044.0" />
+              <point x="2736.625" y="3845.0" />
+              <point x="2371.8090334254866" y="3845.0" />
+              <point x="74.2105263157896" y="-337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.Card.SupportCard">
+              <point x="111.42857142857156" y="145.5" />
+              <point x="3367.9535491265033" y="2306.0" />
+              <point x="3325.1586134453783" y="2306.0" />
+              <point x="3325.1586134453783" y="5508.0" />
+              <point x="2924.4798366272844" y="5508.0" />
+              <point x="2924.4798366272844" y="8351.0" />
+              <point x="2921.323297025663" y="8351.0" />
+              <point x="56.5" y="-25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IEnergia" target="cc3002.tarea1.ISkill">
+              <point x="45.399999999999636" y="-49.0" />
+              <point x="3605.5881699606175" y="7077.0" />
+              <point x="4706.001134671536" y="7077.0" />
+              <point x="-105.75" y="145.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.ObjectCard" target="cc3002.tarea1.Card.TrainerCard">
+              <point x="12.888888888888687" y="13.0" />
+              <point x="5279.295145174945" y="1401.0" />
+              <point x="5307.122876857596" y="1401.0" />
+              <point x="5307.122876857596" y="5538.0" />
+              <point x="5078.781256286056" y="5538.0" />
+              <point x="5078.781256286056" y="8134.0" />
+              <point x="2352.5508880620773" y="8134.0" />
+              <point x="68.28571428571422" y="-73.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Controller">
+              <point x="146.53571428571468" y="709.5" />
+              <point x="1576.410714285715" y="3865.0" />
+              <point x="2208.545875530749" y="3865.0" />
+              <point x="-89.05263157894751" y="-337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.PokemonTypes">
+              <point x="-16.25" y="-145.5" />
+              <point x="3240.2749776979317" y="1321.0" />
+              <point x="4547.583193277311" y="1321.0" />
+              <point x="-66.78571428571422" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.ICardComposite" target="cc3002.tarea1.ICard">
+              <point x="0.0" y="-37.0" />
+              <point x="421.97307214917873" y="1411.0" />
+              <point x="398.47307214917873" y="1411.0" />
+              <point x="43.25" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase2Available" target="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor">
+              <point x="-37.75" y="-61.5" />
+              <point x="3737.632120555075" y="1281.0" />
+              <point x="2663.0250000000005" y="1281.0" />
+              <point x="95.90000000000009" y="73.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather" target="cc3002.tarea1.Card.StadiumCard">
+              <point x="-169.5652173913045" y="-169.0" />
+              <point x="2549.41461923598" y="7576.0" />
+              <point x="1035.8750000000002" y="7576.0" />
+              <point x="1035.8750000000002" y="845.0" />
+              <point x="1593.762189568461" y="845.0" />
+              <point x="-81.59999999999991" y="61.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.IEnergia">
+              <point x="7.117647058823536" y="13.0" />
+              <point x="3794.544720762757" y="1084.0" />
+              <point x="4279.735897233345" y="1084.0" />
+              <point x="4279.735897233345" y="3895.0" />
+              <point x="3100.788660156696" y="3895.0" />
+              <point x="3100.788660156696" y="5488.0" />
+              <point x="2693.0361253196934" y="5488.0" />
+              <point x="2693.0361253196934" y="7097.0" />
+              <point x="3469.3881699606177" y="7097.0" />
+              <point x="-90.80000000000018" y="-49.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="-45.399999999999636" y="85.5" />
+              <point x="3244.7881699606182" y="7486.0" />
+              <point x="2752.8928801055454" y="7486.0" />
+              <point x="33.91304347826099" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="-41.09999999999991" y="73.5" />
+              <point x="2526.0250000000005" y="1411.0" />
+              <point x="2473.375" y="1411.0" />
+              <point x="2473.375" y="7506.0" />
+              <point x="2668.110271409893" y="7506.0" />
+              <point x="-50.86956521739148" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.ICardPlayable">
+              <point x="0.0" y="85.5" />
+              <point x="3290.188169960618" y="8024.0" />
+              <point x="1156.132330639109" y="8024.0" />
+              <point x="93.05882352941171" y="-25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Energy">
+              <point x="-39.964285714285325" y="709.5" />
+              <point x="1389.910714285715" y="3895.0" />
+              <point x="1142.2750000000003" y="3895.0" />
+              <point x="1142.2750000000003" y="7255.0" />
+              <point x="3195.604836627285" y="7255.0" />
+              <point x="-94.58333333333303" y="-85.5" />
+            </edge>
+            <edge source="cc3002.tarea1.ICardComposite" target="cc3002.tarea1.ICardPlayable">
+              <point x="-92.25" y="37.0" />
+              <point x="329.72307214917873" y="1684.0" />
+              <point x="90.875" y="1684.0" />
+              <point x="90.875" y="8024.0" />
+              <point x="970.0146835802855" y="8024.0" />
+              <point x="-93.05882352941171" y="-25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.EnergyType">
+              <point x="-10.083333333333371" y="-13.0" />
+              <point x="3777.3437403706002" y="190.0" />
+              <point x="5099.9008450306455" y="190.0" />
+              <point x="-43.5" y="85.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.PokemonPark" target="cc3002.tarea1.Card.StadiumCard">
+              <point x="-56.5" y="-49.5" />
+              <point x="1734.1730721491786" y="875.0" />
+              <point x="1675.362189568461" y="875.0" />
+              <point x="0.0" y="61.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor">
+              <point x="-42.70588235294122" y="13.0" />
+              <point x="3744.7211913509923" y="1024.0" />
+              <point x="2669.875" y="1024.0" />
+              <point x="102.75" y="-73.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableCardVisitor" target="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor">
+              <point x="0.0" y="-109.5" />
+              <point x="4018.632120555075" y="1271.0" />
+              <point x="2690.425" y="1271.0" />
+              <point x="123.29999999999995" y="73.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableSkillVisitor" target="cc3002.tarea1.Controller">
+              <point x="-109.60000000000002" y="73.5" />
+              <point x="2393.0480721491786" y="795.0" />
+              <point x="2419.625" y="795.0" />
+              <point x="2419.625" y="1371.0" />
+              <point x="2375.625" y="1371.0" />
+              <point x="2375.625" y="3795.0" />
+              <point x="2297.5985071096966" y="3795.0" />
+              <point x="0.0" y="-337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.ICardPlayable">
+              <point x="-21.35294117647061" y="13.0" />
+              <point x="3766.074132527463" y="1054.0" />
+              <point x="3032.9073306391083" y="1054.0" />
+              <point x="3032.9073306391083" y="5458.0" />
+              <point x="2495.375" y="5458.0" />
+              <point x="2495.375" y="8004.0" />
+              <point x="1129.5440953449909" y="8004.0" />
+              <point x="66.47058823529369" y="-25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.StadiumCard" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="-102.0" y="61.0" />
+              <point x="1573.362189568461" y="835.0" />
+              <point x="1024.8750000000002" y="835.0" />
+              <point x="1024.8750000000002" y="7586.0" />
+              <point x="2532.4580974968494" y="7586.0" />
+              <point x="-186.52173913043498" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Pokemon">
+              <point x="49.82352941176464" y="13.0" />
+              <point x="3837.250603115698" y="1024.0" />
+              <point x="4498.8689075630255" y="1024.0" />
+              <point x="4498.8689075630255" y="5508.0" />
+              <point x="4822.337162571882" y="5508.0" />
+              <point x="-34.28571428571422" y="-529.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableCardVisitor" target="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase2Available">
+              <point x="-55.71428571428555" y="-109.5" />
+              <point x="3962.9178348407895" y="1574.0" />
+              <point x="3888.632120555075" y="1574.0" />
+              <point x="113.25" y="61.5" />
+            </edge>
+            <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.Pokemon">
+              <point x="0.0" y="-145.0" />
+              <point x="4811.751134671536" y="6697.0" />
+              <point x="4728.622876857596" y="6697.0" />
+              <point x="-128.0" y="529.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Energies" target="cc3002.tarea1.Energy">
+              <point x="-53.25" y="-13.0" />
+              <point x="4472.639095117214" y="7486.0" />
+              <point x="3335.5881699606175" y="7486.0" />
+              <point x="45.399999999999636" y="85.5" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="-109.90000000000009" y="349.0" />
+              <point x="4168.180817019442" y="5558.0" />
+              <point x="3436.188169960618" y="5558.0" />
+              <point x="3436.188169960618" y="7496.0" />
+              <point x="2769.849401844676" y="7496.0" />
+              <point x="50.86956521739148" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.AttachObjectCard" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="84.75" y="25.0" />
+              <point x="5257.372876857596" y="1654.0" />
+              <point x="5234.622876857596" y="1654.0" />
+              <point x="5234.622876857596" y="7566.0" />
+              <point x="2871.5885322794584" y="7566.0" />
+              <point x="152.608695652174" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectPlayEnergy" target="cc3002.tarea1.Entrenador">
+              <point x="-109.33333333333348" y="49.5" />
+              <point x="1703.0416666666667" y="1694.0" />
+              <point x="1701.0068404430303" y="1694.0" />
+              <point x="1701.0068404430303" y="2236.0" />
+              <point x="1469.1381578947369" y="2236.0" />
+              <point x="39.26315789473665" y="-709.5" />
+            </edge>
+            <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.Entrenador">
+              <point x="149.19999999999982" y="241.0" />
+              <point x="1382.075" y="2216.0" />
+              <point x="1410.243421052632" y="2216.0" />
+              <point x="-19.631578947368325" y="-709.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.Premio" target="cc3002.tarea1.ICardPlayable">
+              <point x="-36.375" y="85.5" />
+              <point x="210.5" y="2316.0" />
+              <point x="179.625" y="2316.0" />
+              <point x="179.625" y="8004.0" />
+              <point x="996.6029188744026" y="8004.0" />
+              <point x="-66.4705882352946" y="-25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.ISkill">
+              <point x="78.92857142857133" y="13.0" />
+              <point x="4693.297478991597" y="1391.0" />
+              <point x="5027.122876857596" y="1391.0" />
+              <point x="5027.122876857596" y="6737.0" />
+              <point x="4914.296589216991" y="6737.0" />
+              <point x="102.5454545454545" y="-145.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.IPokemon">
+              <point x="14.235294117647072" y="13.0" />
+              <point x="3801.6623678215806" y="1074.0" />
+              <point x="4286.853544292168" y="1074.0" />
+              <point x="4286.853544292168" y="4710.0" />
+              <point x="4278.080817019441" y="4710.0" />
+              <point x="0.0" y="-349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableCardVisitor" target="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase1Available">
+              <point x="-111.42857142857133" y="-109.5" />
+              <point x="3907.2035491265033" y="1584.0" />
+              <point x="3569.882120555075" y="1584.0" />
+              <point x="103.5" y="61.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.AttachObjectCard" target="cc3002.tarea1.Card.ObjectCard">
+              <point x="-56.5" y="-25.0" />
+              <point x="5116.122876857596" y="1401.0" />
+              <point x="5240.628478508279" y="1401.0" />
+              <point x="-25.77777777777783" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.ProfessorJuniper" target="cc3002.tarea1.Card.SupportCard">
+              <point x="0.0" y="-25.0" />
+              <point x="-56.5" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor" target="cc3002.tarea1.Entrenador">
+              <point x="-41.0" y="37.0" />
+              <point x="1952.862189568461" y="1411.0" />
+              <point x="1986.8750000000002" y="1411.0" />
+              <point x="1986.8750000000002" y="2256.0" />
+              <point x="1508.4013157894735" y="2256.0" />
+              <point x="78.5263157894733" y="-709.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Card.TrainerCard">
+              <point x="-62.666666666666515" y="337.5" />
+              <point x="2234.9318404430305" y="4710.0" />
+              <point x="2284.2651737763636" y="4710.0" />
+              <point x="0.0" y="-73.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.Controller">
+              <point x="-102.85714285714289" y="-529.5" />
+              <point x="4753.765734000453" y="5538.0" />
+              <point x="4445.580817019441" y="5538.0" />
+              <point x="4445.580817019441" y="4620.0" />
+              <point x="2391.5985071096966" y="4620.0" />
+              <point x="94.0" y="337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.Card.ObjectCard">
+              <point x="114.18181818181802" y="-349.0" />
+              <point x="4392.262635201259" y="4700.0" />
+              <point x="5038.122876857596" y="4700.0" />
+              <point x="5038.122876857596" y="1381.0" />
+              <point x="5214.850700730502" y="1381.0" />
+              <point x="-51.55555555555566" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.ProfessorJuniper" target="cc3002.tarea1.Controller">
+              <point x="-79.66666666666652" y="-25.0" />
+              <point x="2728.6566303589966" y="8446.0" />
+              <point x="2154.2651737763636" y="8446.0" />
+              <point x="2154.2651737763636" y="4710.0" />
+              <point x="2203.5985071096966" y="4710.0" />
+              <point x="-94.0" y="337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.ISkill">
+              <point x="0.0" y="337.5" />
+              <point x="2297.5985071096966" y="4690.0" />
+              <point x="2484.375" y="4690.0" />
+              <point x="2484.375" y="6747.0" />
+              <point x="4683.569316489718" y="6747.0" />
+              <point x="-128.18181818181802" y="-145.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="41.0" y="37.0" />
+              <point x="2034.862189568461" y="1371.0" />
+              <point x="1997.8750000000002" y="1371.0" />
+              <point x="1997.8750000000002" y="7516.0" />
+              <point x="2651.1537496707624" y="7516.0" />
+              <point x="-67.82608695652198" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="-66.60714285714312" y="709.5" />
+              <point x="1363.267857142857" y="3885.0" />
+              <point x="1131.2750000000003" y="3885.0" />
+              <point x="1131.2750000000003" y="7546.0" />
+              <point x="2600.2841844533714" y="7546.0" />
+              <point x="-118.695652173913" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableCardVisitor">
+              <point x="118.73684210526335" y="-337.5" />
+              <point x="2416.33534921496" y="3875.0" />
+              <point x="3872.5336134453783" y="3875.0" />
+              <point x="-146.25" y="109.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Card.NullStadiumCard">
+              <point x="98.15789473684254" y="-709.5" />
+              <point x="1528.0328947368428" y="2266.0" />
+              <point x="2008.8750000000002" y="2266.0" />
+              <point x="2008.8750000000002" y="1391.0" />
+              <point x="2179.362189568461" y="1391.0" />
+              <point x="2179.362189568461" y="1064.0" />
+              <point x="2147.112189568461" y="1064.0" />
+              <point x="-37.75" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.PokemonPark" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="-45.19999999999982" y="49.5" />
+              <point x="1745.4730721491787" y="1074.0" />
+              <point x="1637.8750000000002" y="1074.0" />
+              <point x="1637.8750000000002" y="7526.0" />
+              <point x="2634.1972279316324" y="7526.0" />
+              <point x="-84.78260869565202" y="-169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energies" target="cc3002.tarea1.IPokemon">
+              <point x="17.75" y="-13.0" />
+              <point x="4543.639095117214" y="7466.0" />
+              <point x="4371.8512605042015" y="7466.0" />
+              <point x="4371.8512605042015" y="5588.0" />
+              <point x="4293.780817019441" y="5588.0" />
+              <point x="15.699999999999818" y="349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.Entrenador">
+              <point x="0.0" y="145.5" />
+              <point x="3256.5249776979317" y="2306.0" />
+              <point x="1606.559210526316" y="2306.0" />
+              <point x="176.68421052631584" y="-709.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Card.NullStadiumCard">
+              <point x="-59.368421052631675" y="-337.5" />
+              <point x="2238.230086057065" y="3845.0" />
+              <point x="2123.177979042145" y="3845.0" />
+              <point x="2123.177979042145" y="1401.0" />
+              <point x="2190.362189568461" y="1401.0" />
+              <point x="2190.362189568461" y="1084.0" />
+              <point x="2222.612189568461" y="1084.0" />
+              <point x="37.75" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectPlayEnergy" target="cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor">
+              <point x="82.0" y="-49.5" />
+              <point x="1894.3750000000002" y="1411.0" />
+              <point x="1870.862189568461" y="1411.0" />
+              <point x="-123.0" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase2Available" target="cc3002.tarea1.Controller">
+              <point x="37.75" y="61.5" />
+              <point x="3813.132120555075" y="3865.0" />
+              <point x="2401.4932439518025" y="3865.0" />
+              <point x="103.89473684210543" y="-337.5" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.PokemonTypes">
+              <point x="-78.92857142857133" y="13.0" />
+              <point x="4535.440336134454" y="1210.5" />
+              <point x="4509.3689075630255" y="1210.5" />
+              <point x="4509.3689075630255" y="1177.5" />
+              <point x="-85.0" y="-0.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.Energy">
+              <point x="167.14285714285688" y="145.5" />
+              <point x="3423.6678348407886" y="2316.0" />
+              <point x="3336.1586134453783" y="2316.0" />
+              <point x="3336.1586134453783" y="5518.0" />
+              <point x="2963.6048366272844" y="5518.0" />
+              <point x="2963.6048366272844" y="7245.0" />
+              <point x="3233.438169960618" y="7245.0" />
+              <point x="-56.75" y="-85.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather" target="cc3002.tarea1.Card.InstantObjectCard">
+              <point x="186.52173913043498" y="-169.0" />
+              <point x="2905.5015757577194" y="7586.0" />
+              <point x="5375.95621019093" y="7586.0" />
+              <point x="5375.95621019093" y="1694.0" />
+              <point x="5466.956210190929" y="1694.0" />
+              <point x="18.833333333333485" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.Premio" target="cc3002.tarea1.ICardComposite">
+              <point x="0.0" y="-85.5" />
+              <point x="246.875" y="1694.0" />
+              <point x="391.22307214917873" y="1694.0" />
+              <point x="-30.75" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectPlayEnergy" target="cc3002.tarea1.Card.PokemonPark">
+              <point x="-82.0" y="-49.5" />
+              <point x="1730.3750000000002" y="1084.0" />
+              <point x="1790.6730721491786" y="1084.0" />
+              <point x="0.0" y="49.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableCardVisitor" target="cc3002.tarea1.Card.InstantObjectCard">
+              <point x="167.1428571428571" y="-109.5" />
+              <point x="4185.774977697932" y="1674.0" />
+              <point x="5391.622876857596" y="1674.0" />
+              <point x="-56.5" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor" target="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.Phase1Available">
+              <point x="48.75" y="-145.5" />
+              <point x="3305.2749776979317" y="1614.0" />
+              <point x="3431.882120555075" y="1614.0" />
+              <point x="-34.5" y="61.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather" target="cc3002.tarea1.Card.PokemonPark">
+              <point x="-101.73913043478251" y="-169.0" />
+              <point x="2617.240706192502" y="7536.0" />
+              <point x="1626.8750000000002" y="7536.0" />
+              <point x="1626.8750000000002" y="1064.0" />
+              <point x="1700.2730721491785" y="1064.0" />
+              <point x="-90.40000000000009" y="49.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.StadiumCard" target="cc3002.tarea1.Card.TrainerCard">
+              <point x="-142.80000000000018" y="61.0" />
+              <point x="1532.5621895684608" y="815.0" />
+              <point x="0.0" y="815.0" />
+              <point x="0.0" y="8144.0" />
+              <point x="2181.836602347792" y="8144.0" />
+              <point x="-102.42857142857156" y="-73.5" />
+            </edge>
+            <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.Card.StadiumCard">
+              <point x="0.0" y="-241.0" />
+              <point x="1232.8750000000002" y="855.0" />
+              <point x="1614.1621895684611" y="855.0" />
+              <point x="-61.19999999999982" y="61.0" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.EnergyCounter">
+              <point x="56.66666666666674" y="-13.0" />
+              <point x="4671.035574229692" y="1084.0" />
+              <point x="4635.031797411598" y="1084.0" />
+              <point x="4635.031797411598" y="875.0" />
+              <point x="5128.1508450306455" y="875.0" />
+              <point x="-15.25" y="277.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableCardVisitor" target="cc3002.tarea1.Card.AttachObjectCard">
+              <point x="111.42857142857133" y="-109.5" />
+              <point x="4130.060691983646" y="1654.0" />
+              <point x="5144.372876857596" y="1654.0" />
+              <point x="-28.25" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.Skill">
+              <point x="-56.66666666666666" y="-13.0" />
+              <point x="4557.7022408963585" y="1014.0" />
+              <point x="3844.3682501745216" y="1014.0" />
+              <point x="56.94117647058806" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.ICardPlayable">
+              <point x="-125.33333333333348" y="337.5" />
+              <point x="2172.2651737763636" y="4700.0" />
+              <point x="2143.2651737763636" y="4700.0" />
+              <point x="2143.2651737763636" y="7994.0" />
+              <point x="1116.2499776979323" y="7994.0" />
+              <point x="53.176470588235134" y="-25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.SupportCard" target="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather">
+              <point x="-18.833333333333485" y="-25.0" />
+              <point x="2845.9899636923296" y="8331.0" />
+              <point x="2754.203343736981" y="8331.0" />
+              <point x="2754.203343736981" y="8014.0" />
+              <point x="2718.9798366272844" y="8014.0" />
+              <point x="0.0" y="169.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.ICardPlayable">
+              <point x="-146.53571428571468" y="709.5" />
+              <point x="1283.3392857142856" y="3855.0" />
+              <point x="1098.2750000000003" y="3855.0" />
+              <point x="1098.2750000000003" y="8024.0" />
+              <point x="1089.6617424038152" y="8024.0" />
+              <point x="26.58823529411802" y="-25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.VisitorFather" target="cc3002.tarea1.Card.AttachObjectCard">
+              <point x="135.6521739130435" y="-169.0" />
+              <point x="2854.632010540328" y="7556.0" />
+              <point x="5223.622876857596" y="7556.0" />
+              <point x="5223.622876857596" y="1654.0" />
+              <point x="5200.872876857596" y="1654.0" />
+              <point x="28.25" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.Card.ObjectCard">
+              <point x="34.28571428571445" y="-529.5" />
+              <point x="4890.90859114331" y="5518.0" />
+              <point x="5049.122876857596" y="5518.0" />
+              <point x="5049.122876857596" y="1391.0" />
+              <point x="5227.73958961939" y="1391.0" />
+              <point x="-38.666666666666515" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.NullStadiumCard" target="cc3002.tarea1.Card.StadiumCard">
+              <point x="-37.75" y="-13.0" />
+              <point x="2147.112189568461" y="855.0" />
+              <point x="1716.1621895684611" y="855.0" />
+              <point x="40.80000000000018" y="61.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card.CardStack" target="cc3002.tarea1.ICardComposite">
+              <point x="0.0" y="-85.5" />
+              <point x="868.875" y="1684.0" />
+              <point x="514.2230721491787" y="1684.0" />
+              <point x="92.25" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableSkillVisitor" target="cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor">
+              <point x="0.0" y="73.5" />
+              <point x="2502.6480721491785" y="875.0" />
+              <point x="2504.4730721491787" y="875.0" />
+              <point x="2504.4730721491787" y="1084.0" />
+              <point x="2532.875" y="1084.0" />
+              <point x="-34.25" y="-73.5" />
+            </edge>
+            <edge source="cc3002.tarea1.ICardPlayable" target="cc3002.tarea1.ICard">
+              <point x="-106.35294117647027" y="-25.0" />
+              <point x="956.7205659332269" y="8034.0" />
+              <point x="64.75" y="8034.0" />
+              <point x="64.75" y="1411.0" />
+              <point x="311.97307214917873" y="1411.0" />
+              <point x="-43.25" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.IPokemon">
+              <point x="0.0" y="241.0" />
+              <point x="1232.8750000000002" y="2316.0" />
+              <point x="1202.2750000000003" y="2316.0" />
+              <point x="1202.2750000000003" y="4670.0" />
+              <point x="4135.353544292168" y="4670.0" />
+              <point x="-142.72727272727298" y="-349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor" target="cc3002.tarea1.Card.PokemonPark">
+              <point x="0.0" y="-37.0" />
+              <point x="1993.862189568461" y="1084.0" />
+              <point x="1835.8730721491784" y="1084.0" />
+              <point x="45.19999999999982" y="49.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.22469325153374234" x="919.1228668941978" y="3718.1228668941976" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/SupportCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/StadiumCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="180">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/AttachObjectCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
           <folding>
-            <element signature="e#397#398#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/NullStadiumCard.java">
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/ExpShare.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
-            <element signature="e#149#150#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#99#100#0" expanded="true" />
+            <element signature="e#146#147#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectDeadPokemon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="79" lean-forward="true" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/CardStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/InstantObjectCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/PokemonParkTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/PokemonPark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding>
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Pokemon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="189">
+          <caret line="218" column="4" selection-start-line="218" selection-start-column="4" selection-end-line="218" selection-end-column="4" />
           <folding>
+            <element signature="e#3632#3633#0" expanded="true" />
             <element signature="e#3663#3664#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/EnergyCounter.java">
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/IPokemon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="285">
+          <caret line="131" column="26" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Energies/FireEnergy.java">
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/Potion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="180">
+          <caret line="12" column="83" selection-start-line="12" selection-start-column="83" selection-end-line="12" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/ControllerSimulateATurnTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-267">
+          <caret line="62" column="49" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
           <folding>
-            <element signature="e#368#369#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Energy.java">
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Moneda.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="120">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#108#109#0" expanded="true" />
+            <element signature="e#143#144#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test/PokemonParkTest.java">
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="468">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/PotionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/VisitorFather.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/RareCandyEffect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1089#1090#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/UsableCardVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/UsableSkillVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/RareCandy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -954,342 +2470,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="150">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectVisitor/EffectPlayEnergy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Skill/Attack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Skill/nullSkill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Skill/Skill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="62" column="52" lean-forward="true" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test/PotionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicLeafPokemon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/Potion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/VisitorFather.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/Mazo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/CardStack.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test/HydroPumpTest.java">
+    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/ICard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/ICardPlayable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/ICardComposite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Card/TrainerCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-          <folding>
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1FighterPokemon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/ControlVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#402#403#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/UsableSkillVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/UsableCardVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="438">
+          <caret line="74" column="13" lean-forward="true" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#554#555#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayBasic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="38" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayAttachObjectCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayInstantObjectCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="16" selection-start-line="17" selection-end-line="18" />
-          <folding>
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test/ControllerSimulateATurnTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="50" column="192" selection-start-line="50" selection-start-column="192" selection-end-line="50" selection-end-column="192" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayStadiumCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="42" />
-          <folding>
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlaySupportCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="20" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayObjectCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="e#881#882#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayEnergyCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" selection-start-line="22" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/IEntrenador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayPhase1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayPhase2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="46" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/Phase2Available.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3330#3331#0" expanded="true" />
+            <element signature="e#3373#3374#0" expanded="true" />
+            <element signature="e#3441#3442#0" expanded="true" />
+            <element signature="e#3484#3485#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="188" column="18" selection-start-line="188" selection-start-column="18" selection-end-line="188" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3821#3822#0" expanded="true" />
-            <element signature="e#3855#3856#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/BasicFirePokemon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding>
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/PlayVisitor/PlayVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
-          <folding>
-            <element signature="e#3053#3054#0" expanded="true" />
-            <element signature="e#3096#3097#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test/testVisitorEvolutions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/Phase1FirePokemon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding>
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#910#911#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/ControlVisitor/Phase1Available.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="-435">
+          <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/RareCandyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/TestEnergyBurner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="106" column="36" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="36" />
         </state>
       </provider>
     </entry>

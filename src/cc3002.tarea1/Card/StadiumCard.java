@@ -2,9 +2,6 @@ package cc3002.tarea1.Card;
 
 
 import cc3002.tarea1.Controller;
-import cc3002.tarea1.Entrenador;
-import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayStadiumCard;
-import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 public abstract class StadiumCard extends TrainerCard{
@@ -15,11 +12,7 @@ public abstract class StadiumCard extends TrainerCard{
     public void accept(VisitorFather visitor){
         visitor.visitedStadiumCard(this);
     }
-    public void jugarCarta(Entrenador trainer){
-        PlayVisitor visitor = new PlayStadiumCard(trainer);
-        this.accept(visitor);
-        visitor.play();
-    }
+
     @Override
     public void applyEffect(Controller controller){}
 

@@ -39,18 +39,18 @@ public class TestWingBuzz {
         bigController.startTurn();
         bigController.selectSkill(1);
         assertEquals(iDoTheEffect.getActiva().getSelectedSkill(), null);
-        bigController.useSkill();
+        bigController.useSkill(1);
         assertTrue(bigController.getWingBuzzPlayed()==0);
         bigController.selectObjective(0);
         bigController.playCard(1);
         bigController.selectSkill(1);
-        bigController.useSkill();
+        bigController.useSkill(1);
         assertTrue(bigController.getWingBuzzPlayed()==0); // No cards to be buzzed
         bigController.endTurn();
         bigController.endTurn();
         assertEquals(enemyTrainer.getMazo().getSize(), 59);
         bigController.selectCard(1);
-        bigController.useSkill();
+        bigController.useSkill(1);
         assertTrue(bigController.getWingBuzzPlayed()==1);
         assertTrue(iDoTheEffect.getMano().size()==0); // Popeo la que seleccione
         assertEquals(enemyTrainer.getMazo().getSize(),58); //Popeo 1
@@ -60,16 +60,17 @@ public class TestWingBuzz {
         bigController.selectObjective(0);
         bigController.playCard(1);
         bigController.selectSkill(1);
-        bigController.useSkill();
+        bigController.useSkill(1);
         bigController.endTurn();
         bigController.endTurn();
         bigController.endTurn();
         bigController.endTurn();
         bigController.selectCard(1);
-        bigController.useSkill();
+        bigController.useSkill(1);
         assertTrue(bigController.getWingBuzzPlayed()==1);
         assertTrue(iDoTheEffect.getMano().size()==1);
-        bigController.useSkill();
+        bigController.selectCard(1);
+        bigController.useSkill(1);
         assertTrue(bigController.getWingBuzzPlayed()==1);
         assertTrue(iDoTheEffect.getMano().size()==1);
     }

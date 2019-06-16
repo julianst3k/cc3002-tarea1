@@ -1,6 +1,10 @@
 package cc3002.tarea1;
 
-import cc3002.tarea1.Card.*;
+import cc3002.tarea1.Card.CardStack;
+import cc3002.tarea1.Card.Mazo;
+import cc3002.tarea1.Card.NullStadiumCard;
+import cc3002.tarea1.Card.Premio;
+import cc3002.tarea1.Card.StadiumCard;
 import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
@@ -27,7 +31,7 @@ public class Entrenador extends Observable implements IEntrenador {
 
     public Entrenador(IPokemon pokemonActivo, Mazo newMazo, Premio newPremio) { // Defino el inicio del juego con un pokemon activo :)
         Activa = pokemonActivo;
-        objective = Activa;
+        objective = null;
         Banca = new ArrayList<IPokemon>();
         Mano = new ArrayList<ICardPlayable>();
         pila = new CardStack();
@@ -233,15 +237,6 @@ public class Entrenador extends Observable implements IEntrenador {
      */
     public void backToHand(ICardPlayable card) {
         this.Mano.add(card);
-    }
-
-    /**
-     * Same as above, but with the energy card
-     *
-     * @param cardE A energy card
-     */
-    public void jugarCartaEnergia(Energy cardE) {
-        this.activeUseEnergy(cardE);
     }
 
     @Override

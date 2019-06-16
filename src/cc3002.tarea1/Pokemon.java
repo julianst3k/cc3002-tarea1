@@ -1,5 +1,6 @@
 package cc3002.tarea1;
 
+import cc3002.tarea1.Card.AttachObjectCard;
 import cc3002.tarea1.Card.ObjectCard;
 import cc3002.tarea1.Skill.Attack;
 
@@ -196,6 +197,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
         this.getSelectedSkill().beUsed(this, poke);
         setChanged();
         this.notifyObservers(this.getSelectedSkill());
+        clearSelectedSkill();
     }
 
     @Override
@@ -215,8 +217,8 @@ public abstract class Pokemon extends Observable implements IPokemon {
         this.energies = array;
     }
     @Override
-    public void setObject(ObjectCard object){
-        this.associated = object;
+    public void setObject(AttachObjectCard object){
+        this.associated = object; object.setPokemon(this);
     }
     @Override
     public ObjectCard getActualObject(){
@@ -242,6 +244,13 @@ public abstract class Pokemon extends Observable implements IPokemon {
         for(int i=0; i<getSkills().size(); i++){
             this.getSkills().get(i).applyDefense(receivedDmg);
         }
+    }
+
+    /** Clears the selected skill after using it
+     *
+     */
+    public void clearSelectedSkill(){
+        selectedSkill = null;
     }
 
     @Override

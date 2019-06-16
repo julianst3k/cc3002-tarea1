@@ -53,44 +53,58 @@ public class TestEnergyBurner {
     }
     @Test
     public void testQuemaCartasDeTodoTipo(){
+        bigController.selectObjective(0);
         bigController.startTurn();
         bigController.playCard(1); // iDoEffect habilita la carta
         bigController.endTurn();
+        bigController.selectObjective(0);
         bigController.playCard(1); // enemyTrainer habilita la carta
         bigController.endTurn();
+        bigController.selectObjective(0);
         bigController.playCard(1); // iDoEffect = 2 fuego si usa burn
         bigController.endTurn();
+        bigController.selectObjective(0);
         bigController.playCard(1); // enemyTrainer = 2 fighter si usa burn
         bigController.endTurn();
+        bigController.selectObjective(0);
         bigController.playCard(1); // 3
         bigController.endTurn();
+        bigController.selectObjective(0);
         bigController.playCard(1); // 3
         bigController.endTurn();
+        bigController.selectObjective(0);
         bigController.playCard(1); // 4
         bigController.endTurn();
+        bigController.selectObjective(0);
         bigController.playCard(1); // 4
         bigController.endTurn();
+        bigController.selectObjective(0);
         bigController.playCard(1); // 5
         bigController.endTurn();
+        bigController.selectObjective(0);
         bigController.playCard(1); // 5
         bigController.endTurn();
         bigController.selectSkill(1);
-        bigController.useSkill();
+        bigController.useSkill(1);
         assertEquals(iDoTheEffect.getActiva().getEnergies().getFireEnergy(), 5);
         bigController.endTurn();
         bigController.selectSkill(1);
-        bigController.useSkill();
+        bigController.useSkill(1);
         assertEquals(enemyTrainer.getActiva().getEnergies().getFighterEnergy(), 5);
 
     }
     @Test public void testQuemaCartasDistintosTipos(){
         voidTrainer.sacarCarta();
+        voidTrainer.setObjective(0);
         voidTrainer.jugarCarta(1);
         voidTrainer.sacarCarta();
+        voidTrainer.setObjective(0);
         voidTrainer.jugarCarta(1);
         voidTrainer.sacarCarta();
+        voidTrainer.setObjective(0);
         voidTrainer.jugarCarta(1); // Aqui los 4 pokemon ya estan en el campo
         voidTrainer.sacarCarta();
+        voidTrainer.setObjective(0);
         voidTrainer.jugarCarta(1);
         voidTrainer.selectAttack(1);
         voidTrainer.pokemonAttack(voidTrainer);

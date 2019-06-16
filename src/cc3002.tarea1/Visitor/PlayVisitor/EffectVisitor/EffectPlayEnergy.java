@@ -7,15 +7,20 @@ public class EffectPlayEnergy extends EffectVisitor {
     Entrenador trainer;
     public EffectPlayEnergy(){
     }
+    @Override
     public void visitedPokemonPark(PokemonPark card){
-        trainer.getObjective().setHealthPoints(trainer.getObjective().getHp()+card.getHealthEffect());
+        if(trainer.getObjective().getMaxHp()-trainer.getObjective().getHp()>10) {
+            trainer.getObjective().setHealthPoints(trainer.getObjective().getHp() + 10);
+        }
+        else{
+            trainer.getObjective().setHealthPoints(trainer.getObjective().getMaxHp());
+
+        }
     }
+    @Override
     public void visitedEntrenador(Entrenador entrenador){
         trainer = entrenador;
         entrenador.getStadiumCard().accept(this);
-    }
-    public void doEffect(){
-
     }
 
 }

@@ -1,18 +1,23 @@
 package test;
 
 import cc3002.tarea1.Card.Mazo;
-import cc3002.tarea1.Energies.FireEnergy;
-import cc3002.tarea1.Energies.LeafEnergy;
-import cc3002.tarea1.Energies.WaterEnergy;
+import cc3002.tarea1.Card.PokemonPark;
+import cc3002.tarea1.Card.Premio;
+import cc3002.tarea1.Card.ProfessorJuniper;
+import cc3002.tarea1.Controller;
+import cc3002.tarea1.Energies.*;
 import cc3002.tarea1.Entrenador;
 import cc3002.tarea1.ISkill;
 import cc3002.tarea1.Pokemon;
 import cc3002.tarea1.PokemonTypes.*;
 import cc3002.tarea1.Skill.*;
 import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import static junit.framework.TestCase.assertEquals;
 
 public class ControllerSimulateATurnTest {
     private Mazo deckTrainer;
@@ -29,14 +34,12 @@ public class ControllerSimulateATurnTest {
     private Pokemon pokemon6ix;
     private Pokemon enemyPokemonUno;
     private Pokemon enemyPokemonDos;
-    private Pokemon enemyPokemonTres;
-    private Pokemon enemyPokemonCuatro;
-    private Pokemon enemyPokemonCinco;
     private ISkill wingBuzz;
     private ISkill invisibleWall;
     private ISkill invisibleWall2;
     private ISkill hydroPump;
     private ISkill energyBurn;
+    private Controller controller;
     @Before public void setUp(){
         wingBuzz = new WingBuzz(new ArrayList<>(Arrays.asList(new LeafEnergy())));
         energyBurn = new EnergyBurn(new ArrayList<>(Arrays.asList(new LeafEnergy())));
@@ -53,5 +56,55 @@ public class ControllerSimulateATurnTest {
         pokemonUnoSecondEvo = new Phase2FirePokemon("Deep Time", 52, 800, new ArrayList<>(Arrays.asList(new BasicAttack("Omega", 50, new ArrayList<>(Arrays.asList(new FireEnergy())), "yeap"))), 52);
         enemyPokemonUno = new BasicLeafPokemon("Forest", 420, 1000, new ArrayList<>(Arrays.asList(invisibleWall2)));
         enemyPokemonDos = new BasicWaterPokemon("Waves", 300, 400, new ArrayList<>(Arrays.asList(new BasicAttack("Wave", 50, new ArrayList<>(Arrays.asList(new WaterEnergy())), "xD"))));
+        deckTrainer = new Mazo(new ArrayList<>(Arrays.asList(new ProfessorJuniper(), pokemonDos, new FireEnergy(), new PsychEnergy(), new ProfessorJuniper(), new PokemonPark(), pokemonTres, pokemonCuatro, pokemonCinco, pokemonUnoEvo, pokemonUnoSecondEvo)));
+        deckEnemy = new Mazo(new ArrayList<>(Arrays.asList(new ProfessorJuniper(), enemyPokemonDos, new FighterEnergy(), new LeafEnergy(), new FighterEnergy(), new FireEnergy(), new LeafEnergy(), new LeafEnergy())));
+        for(int i=0; i<60; i++){
+            deckTrainer.addCarta(new FireEnergy());
+            deckEnemy.addCarta(new FireEnergy());
+        }
+        entrenador = new Entrenador(pokemonUno, deckTrainer, new Premio(new ArrayList<>()));
+        enemyTrainer = new Entrenador(enemyPokemonUno, deckEnemy, new Premio(new ArrayList<>()));
+        controller = new Controller(entrenador, enemyTrainer);
+        controller.startTurn();
+    }
+    @Test public void limitationsOfSupportAndEnergy(){
+        controller.playCard(1);
+        assertEquals(entrenador.getMano().size(), 7);
+        assertEquals(entrenador.getMazo().getSize(), 52);
+        controller.playCard(4);
+        assertEquals(entrenador.getMazo().getSize(), 52); // Didn't get played
+        controller.selectObjective(0);
+        controller.playCard(2);
+        assertEquals(entrenador.getMano().size(), 6);
+        controller.selectObjective(0);
+        controller.playCard(2);
+        assertEquals(entrenador.getMano().size(), 6); // Didn't get played
+    }
+    @Test public void stadiumCardAffectsEveryone(){
+        controller.playCard(1);
+        controller.endTurn();
+        controller.playCard(1);
+        controller.endTurn();
+        controller.playCard(5);
+        controller.selectObjective(0);
+        controller.playCard(2);
+        controller.useSkill(1);
+        assertEquals(enemyPokemonUno.getHp(), 940);
+        controller.selectObjective(0);
+        controller.playCard(2);
+        assertEquals(enemyTrainer.getStadiumCard().getName(), "Pokemon Park");
+        assertEquals(enemyPokemonUno.getHp(), 950);
+
+
+    }
+    @Test public void attackSkipTurn(){
+        controller.playCard(1);
+        controller.endTurn();
+        controller.playCard(1);
+        controller.endTurn();
+        controller.selectObjective(0);
+        controller.playCard(2);
+        controller.useSkill(1);
+        assertEquals(controller.getNotInTurnTrainer(), entrenador);
     }
 }

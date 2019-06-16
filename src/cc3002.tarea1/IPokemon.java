@@ -1,4 +1,5 @@
 package cc3002.tarea1;
+import cc3002.tarea1.Card.AttachObjectCard;
 import cc3002.tarea1.Card.ObjectCard;
 import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor;
 import cc3002.tarea1.Skill.Attack;
@@ -128,7 +129,7 @@ public interface IPokemon extends ICardPlayable {
      *
      * @param card object card
      */
-    void setObject(ObjectCard card);
+    void setObject(AttachObjectCard card);
     /** Return the object card
      *
      */

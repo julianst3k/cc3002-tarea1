@@ -29,12 +29,15 @@ public class HydroPumpTest {
         attacker.useSkill(attacked);
         assertEquals(attacked.getHp(), 980); // Debiese pegar el dmg normal
         attacker.setEnergy(new FireEnergy());
+        attacker.selectSkill(0);
         attacker.useSkill(attacked);
         assertEquals(attacked.getHp(), 950); // 30
         attacker.setEnergy(new FireEnergy());
+        attacker.selectSkill(0);
         attacker.useSkill(attacked);
         assertEquals(attacked.getHp(), 910); // 40
         attacker.setEnergy(new WaterEnergy());
+        attacker.selectSkill(0);
         attacker.useSkill(attacked);
         assertEquals(attacked.getHp(), 860); // 50, y funciona para cualquier energia :)
     }

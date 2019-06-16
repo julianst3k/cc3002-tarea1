@@ -4,10 +4,8 @@ import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 public class PokemonPark extends StadiumCard {
-    private int healing;
-    public PokemonPark(int heal){
+    public PokemonPark(){
         super("Pokemon Park", "Una vez por turno blabla");
-        healing = heal;
     }
 
     /** Does an overload over the accept stadium card
@@ -16,15 +14,11 @@ public class PokemonPark extends StadiumCard {
      */
     public void accept(VisitorFather visitor){
         visitor.visitedPokemonPark(this);
-
     }
 
     /** Return the health effect
      *
      * @return Healing amount
      */
-    public int getHealthEffect(){
-        return healing;
-    }
 
 }

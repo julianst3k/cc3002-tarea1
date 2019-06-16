@@ -27,6 +27,7 @@ public class TestFirePokemon {
         firePokemon.useSkill(leafPokemon); waterPokemon.useSkill(firePokemon);
         assertTrue(firePokemon.getHp()==100);
         assertTrue(leafPokemon.getHp()==100);
+        waterPokemon.selectSkill(0);
         waterPokemon.useSkill(leafPokemon);
         assertTrue(leafPokemon.getHp()==30);
     }

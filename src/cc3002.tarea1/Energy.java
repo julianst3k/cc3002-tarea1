@@ -1,7 +1,5 @@
 package cc3002.tarea1;
 
-import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayEnergyCard;
-import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 abstract public class Energy implements IEnergia, ICardPlayable {
@@ -20,12 +18,7 @@ abstract public class Energy implements IEnergia, ICardPlayable {
     public String getDescrp() { return this.name; }
     @Override
     public void accept(VisitorFather visitor){ visitor.visitedEnergyType(this);}
-    @Override
-    public void jugarCarta(Entrenador player){
-        PlayVisitor visitor = new PlayEnergyCard(player);
-        this.accept(visitor);
-        visitor.play();
-    }
+
     @Override
     abstract public void getSetted(IPokemon pokemon);
     @Override

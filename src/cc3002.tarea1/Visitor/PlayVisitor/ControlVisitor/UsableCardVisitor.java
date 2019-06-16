@@ -1,5 +1,7 @@
 package cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor;
 
+import cc3002.tarea1.Card.AttachObjectCard;
+import cc3002.tarea1.Card.InstantObjectCard;
 import cc3002.tarea1.Card.SupportCard;
 import cc3002.tarea1.Controller;
 import cc3002.tarea1.Energy;
@@ -28,6 +30,13 @@ public class UsableCardVisitor extends ControlVisitor {
         ControlVisitor visitor = new Phase2Available(control, card);
         status = visitor.usable();
     }
+    public void visitedInstantObjectCard(InstantObjectCard card){
+        status = (control.getInTurnTrainer().getObjective()!=null);
+    }
+    public void visitedAttachObjectCard(AttachObjectCard card){
+        status = (control.getInTurnTrainer().getObjective()!=null);
+    }
+
     public boolean usable(){
         return status;
     }

@@ -10,8 +10,8 @@ public class Potion extends InstantObjectCard {
     }
     public void applyEffect(Controller controller){
         if(controller.getInTurnTrainer().getObjective()!=null) {
-            if (controller.getInTurnTrainer().getObjective().getHp() + this.heal < controller.getInTurnTrainer().getObjective().getMaxHp())
-                controller.getInTurnTrainer().getObjective().setHealthPoints(controller.getInTurnTrainer().getObjective().getHp() + this.heal);
+            if (controller.getInTurnTrainer().getObjective().getHp() + this.heal*10 < controller.getInTurnTrainer().getObjective().getMaxHp())
+                controller.getInTurnTrainer().getObjective().setHealthPoints(controller.getInTurnTrainer().getObjective().getHp() + this.heal*10);
             else {
                 controller.getInTurnTrainer().getObjective().setHealthPoints(controller.getInTurnTrainer().getObjective().getMaxHp());
             }

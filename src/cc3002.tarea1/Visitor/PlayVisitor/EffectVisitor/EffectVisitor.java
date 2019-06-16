@@ -10,5 +10,4 @@ public abstract class EffectVisitor extends VisitorFather {
     }
     public void visitedEntrenador(Entrenador trainer){}
     public void visitedPokemonPark(PokemonPark card){}
-    public abstract void doEffect();
 }

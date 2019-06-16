@@ -55,6 +55,7 @@ public class testVisitorEvolutions {
         energy2 = secondTrainer.getActiva().getEnergies();
     }
     @Test public void getEvolved(){
+        myTrainer.setObjective(0);
         myTrainer.sacarCarta();
         myTrainer.sacarCarta(); myTrainer.jugarCarta(2);
         myTrainer.sacarCarta(); myTrainer.jugarCarta(2);
@@ -89,6 +90,7 @@ public class testVisitorEvolutions {
         assertTrue(!myTrainer.getBanca().contains(firstEvoCopy));
     }
     @Test public void getTripleEvolved(){
+        secondTrainer.setObjective(0);
         secondTrainer.sacarCarta();
         secondTrainer.sacarCarta(); myTrainer.setObjective(0); secondTrainer.jugarCarta(2);
         secondTrainer.sacarCarta(); myTrainer.setObjective(0); secondTrainer.jugarCarta(2);

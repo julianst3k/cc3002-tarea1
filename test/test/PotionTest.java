@@ -25,7 +25,7 @@ public class PotionTest {
     private Pokemon trainerPok;
     private Pokemon otherPok;
     @Before public void setUp(){
-        decktrainer = new Mazo(new ArrayList<>()); decktrainer.addCarta(new Potion(25)); decktrainer.addCarta(new Potion(10000));
+        decktrainer = new Mazo(new ArrayList<>()); decktrainer.addCarta(new Potion(2)); decktrainer.addCarta(new Potion(100));
         deckOther = new Mazo(new ArrayList<>());
         for(int i=0; i<60; i++){
             decktrainer.addCarta(new FireEnergy());
@@ -42,16 +42,16 @@ public class PotionTest {
         bigController.startTurn();
         bigController.endTurn();
         bigController.selectSkill(1);
-        bigController.useSkill();
+        bigController.useSkill(1);
         assertEquals(trainer.getActiva().getHp(), 970);
         bigController.selectObjective(0);
         bigController.playCard(1);
-        assertEquals(trainer.getActiva().getHp(), 995);
+        assertEquals(trainer.getActiva().getHp(), 990);
         bigController.endTurn();
         bigController.selectObjective(0);
         bigController.selectSkill(1);
-        bigController.useSkill();
-        assertEquals(trainer.getActiva().getHp(), 965);
+        bigController.useSkill(1);
+        assertEquals(trainer.getActiva().getHp(), 960);
         bigController.selectObjective(0);
         bigController.playCard(1);
         assertEquals(trainer.getActiva().getHp(), 1000);

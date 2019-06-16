@@ -28,5 +28,4 @@ public abstract class TrainerCard implements ICardPlayable {
      * @param controller the controller who demand the effect
      */
     public void applyEffect(Controller controller){};
-    public void accept(VisitorFather visitor){}
 }

@@ -6,6 +6,7 @@ import cc3002.tarea1.Controller;
 import cc3002.tarea1.ICardPlayable;
 import cc3002.tarea1.IEnergia;
 import cc3002.tarea1.Skill.Skill;
+import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 import java.util.ArrayList;
 
@@ -24,5 +25,9 @@ public class WingBuzz extends Skill {
             controller.getNotInTurnTrainer().descartarMazo();
             controller.setWingBuzzPlayed();
         }
+    }
+    @Override
+    public void accept(VisitorFather visitor){
+        visitor.visitedWingBuzz(this);
     }
 }

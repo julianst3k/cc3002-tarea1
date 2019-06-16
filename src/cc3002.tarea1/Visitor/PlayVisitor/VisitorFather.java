@@ -63,10 +63,7 @@ public abstract class VisitorFather {
      * @param card The card
      */
     public void visitedEnergyType(Energy card){};
-    /** Visited pokemon park
-     * @param card The pokemon park card
-     */
-    public void visitedPokemonPark(PokemonPark card){};
+
 
     /** Visited an skill
      *
@@ -79,10 +76,15 @@ public abstract class VisitorFather {
      * @param attack the attack
      */
     public void visitedAttack(Attack attack){};
+    /** Visited a pokemon park
+     *
+     */
+    public void visitedPokemonPark(PokemonPark park){}
 
     /** Visited a WingBuzz skill
      *
      * @param wingBuzz the wingbuzz
      */
     public void visitedWingBuzz(WingBuzz wingBuzz){};
+
 }

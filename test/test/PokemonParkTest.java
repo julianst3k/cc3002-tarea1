@@ -24,14 +24,14 @@ public class PokemonParkTest {
     private Controller controller;
     @Before
     public void setUp(){
-        deck = new Mazo(new ArrayList<>(Arrays.asList(new PokemonPark(30), new FireEnergy())));
+        deck = new Mazo(new ArrayList<>(Arrays.asList(new PokemonPark(), new FireEnergy())));
         secondDeck = new Mazo(new ArrayList<>());
         for(int i=0; i<60; i++){
             deck.addCarta(new FireEnergy());
             secondDeck.addCarta(new FireEnergy());
         }
         pokemon = new BasicFirePokemon("LULW", 33, 1000, new ArrayList<>());
-        pokemonSecond = new BasicFirePokemon("WidePeepo", 33, 10000, new ArrayList<>(Arrays.asList(new BasicAttack("XD", 50, new ArrayList<>(), ",,,"))));
+        pokemonSecond = new BasicFirePokemon("WidePeepo", 33, 10000, new ArrayList<>(Arrays.asList(new BasicAttack("XD", 15, new ArrayList<>(), ",,,"))));
         entrenador = new Entrenador(pokemon, deck, new Premio(new ArrayList<>()));
         entrenadorSecond = new Entrenador(pokemonSecond, secondDeck, new Premio(new ArrayList<>()));
         controller = new Controller(entrenador, entrenadorSecond);
@@ -40,18 +40,22 @@ public class PokemonParkTest {
     public void testPokemonPark(){
         controller.startTurn();
         controller.endTurn();
-        controller.selectSkill(1);
-        controller.useSkill();
-        assertEquals(entrenador.getActiva().getHp(), 950);
+        controller.useSkill(1);
+        assertEquals(entrenador.getActiva().getHp(), 985);
         controller.selectObjective(0);
         controller.playCard(2);
-        assertEquals(entrenador.getActiva().getHp(), 950); // No lo cura
+        assertEquals(entrenador.getActiva().getHp(), 985); // No lo cura
+        controller.endTurn();
+        controller.endTurn();
+        controller.playCard(1);
+        controller.selectObjective(0);
+        controller.playCard(1);
+        assertEquals(entrenador.getActiva().getHp(), 995);
         controller.endTurn();
         controller.endTurn();
         controller.selectObjective(0);
         controller.playCard(1);
-        controller.playCard(1);
-        assertEquals(entrenador.getActiva().getHp(), 980);
+        assertEquals(entrenador.getActiva().getHp(), 1000);
 
 
     }
