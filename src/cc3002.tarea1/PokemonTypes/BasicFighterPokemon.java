@@ -6,6 +6,9 @@ import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 import java.util.ArrayList;
 
 public class BasicFighterPokemon extends AbstractFighterPokemon implements IBasicType {
+    /** Basic fighter pokemon
+     * @author Julian Solis Torrejon
+     */
     public BasicFighterPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
     }

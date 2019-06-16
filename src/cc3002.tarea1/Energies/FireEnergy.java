@@ -11,9 +11,11 @@ public class FireEnergy extends Energy {
     public FireEnergy(){
         super("Energia de Fuego");
     }
+    @Override
     public void getSetted(IPokemon pokemon){
         pokemon.getEnergies().setFireEnergy();
     }
+    @Override
     public void getSetted(ISkill skill){
         skill.getCost().setFireEnergy();
     }

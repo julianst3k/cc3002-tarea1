@@ -11,6 +11,10 @@ import cc3002.tarea1.Skill.Skill;
 import cc3002.tarea1.Skill.WingBuzz;
 
 public abstract class VisitorFather {
+    /** Creates an abstract visitor that set all the entities that are visited
+     * @author  Julian Solis Torrejon
+     *
+     */
     /** Visited a BasicType pokemon. It is used to play basic type cards or to check if the phase 1 is playable
      *
      * @param card The card
@@ -86,5 +90,9 @@ public abstract class VisitorFather {
      * @param wingBuzz the wingbuzz
      */
     public void visitedWingBuzz(WingBuzz wingBuzz){};
+    /** Visited a Frozen City
+     * @param frozenCity the frozenCity
+     */
+    public void visitedFrozenCity(FrozenCity city){}
 
 }

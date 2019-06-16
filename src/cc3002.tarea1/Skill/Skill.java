@@ -51,13 +51,8 @@ public class Skill implements ISkill {
      * @return String of the energies that the attack cost
      */
     public String getCostString(){
-            String result = "";
-            for (EnergyType entry : EnergyType.values()) {
-                if(costo.getMap().get(entry)>0) {
-                    result += String.valueOf(entry) + ": " + String.valueOf(costo.getMap().get(entry)) + ". ";
-                }
-            }
-            return result;
+        return costo.printEnergyCounter();
+
     }
     @Override
     public void beUsed(Pokemon user, IPokemon poke){
@@ -65,9 +60,11 @@ public class Skill implements ISkill {
     public String showAttributes(){
         return "Descripcion: "+this.getDescripcion()+". Requiere: "+this.getCostString();
     }
+    @Override
     public void accept(VisitorFather visitor){
         visitor.visitedSkill(this);
     }
+    @Override
     public boolean isUsable(Controller contr){
         ControlVisitor visitor = new UsableSkillVisitor(contr);
         this.accept(visitor);

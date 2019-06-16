@@ -9,8 +9,8 @@ public class RareCandy extends InstantObjectCard {
     public RareCandy(){
         super("Rare Candy","Evolute a basic card");
     }
+    @Override
     public void applyEffect(Controller controller){
         EffectVisitor visitor = new RareCandyEffect(controller);
-        controller.getInTurnTrainer().accept(visitor);
     }
 }

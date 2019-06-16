@@ -11,9 +11,11 @@ public class WaterEnergy extends Energy {
     public WaterEnergy(){
         super("Energia de Agua");
     }
+    @Override
     public void getSetted(IPokemon pokemon){
         pokemon.getEnergies().setWaterEnergy();
     }
+    @Override
     public void getSetted(ISkill skill){
         skill.getCost().setWaterEnergy();
     }

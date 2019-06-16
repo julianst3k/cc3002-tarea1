@@ -61,13 +61,7 @@ public abstract class Pokemon extends Observable implements IPokemon {
      */
     public String getEnergiesString() {
         EnergyCounter energia = this.getEnergies();
-        String result = "";
-        for (EnergyType entry : EnergyType.values()) {
-            if(energia.getMap().get(entry)>0) {
-                result += String.valueOf(entry) + ": " + String.valueOf(energia.getMap().get(entry)) + ". ";
-            }
-        }
-        return result;
+        return energia.printEnergyCounter();
     }
     @Override
     public int getIndex() {
@@ -177,16 +171,21 @@ public abstract class Pokemon extends Observable implements IPokemon {
 
     /** Modify the attack list out of the constructor
      *
-     * @param a A generic skill
+     * @param skill An skill
      */
-    public void addAttack(ISkill a){
+    public void addAttack(ISkill skill){
         if(this.skills.size()<4){
-            this.skills.add(a);
+            this.skills.add(skill);
         }
     }
-    public void deleteAttack(int a){
-        if(a<=this.getSkills().size()){
-            this.getSkills().remove(a-1);
+
+    /** Deletes an attack from the pokemon
+     *
+     * @param val index of the card
+     */
+    public void deleteAttack(int val){
+        if(val<=this.getSkills().size()){
+            this.getSkills().remove(val-1);
         }
     }
     @Override

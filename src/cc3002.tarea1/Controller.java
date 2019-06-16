@@ -25,6 +25,7 @@ public class Controller implements Observer {
     private StadiumCard currentStadium;
     public boolean turnedStarted;
     public Moneda coin;
+    public boolean status;
     public Controller(Entrenador first, Entrenador second){
         energyCardPlayed = 0; wingBuzzPlayed=0; supportCardPlayed = 0;
         inTurn = first; first.subscribeTrainer(this);
@@ -32,6 +33,7 @@ public class Controller implements Observer {
         currentStadium = new NullStadiumCard(); inTurn.setCurrentStadium(currentStadium); notInTurn.setCurrentStadium(currentStadium);
         turnedStarted = false;
         coin = new Moneda();
+        status = true;
 
     }
 
@@ -54,9 +56,19 @@ public class Controller implements Observer {
         notInTurn = trainerHolder; turnedStarted = false;
         this.startTurn();
     }
+
+    /** Select an skill
+     *
+     * @param index index of the card
+     */
     public void selectSkill(int index){
         inTurn.selectAttack(index);
     }
+
+    /** Use an skill of certain index
+     *
+     * @param index index of the card
+     */
     public void useSkill(int index){
         selectSkill(index);
         if(inTurn.getActiva().getSelectedSkill() != null && inTurn.getActiva().getSelectedSkill().isUsable(this)) {
@@ -66,6 +78,12 @@ public class Controller implements Observer {
             System.out.println("Not usable");
         }
     }
+
+    /** Update the status of the skills, since they are not accessible at all times
+     *
+     * @param o The observable, normally the pokemon
+     * @param arg The argument, which is the attack.
+     */
     public void update(Observable o, Object arg){
         if(arg instanceof ISkill){
             ((ISkill) arg).applyEffect(this);
@@ -90,20 +108,98 @@ public class Controller implements Observer {
     public int getWingBuzzPlayed(){
         return wingBuzzPlayed;
     }
+
+    /** Play a card of certain index if it is usable
+     *
+     * @param index index
+     */
     public void playCard(int index){ if(isUsable(inTurn.getMano().get(index-1))){inTurn.jugarCarta(index);}}
+
+    /** See if the card is usable based on the current status
+     *
+     * @param card Card that is being judged
+     * @return True if playable
+     */
     public boolean isUsable(ICardPlayable card){
         ControlVisitor control = new UsableCardVisitor(this);
         card.accept(control);
         return control.usable();
     }
+
+    /** A energy card was played
+     *
+     */
     public void setEnergyCardPlayed(){ energyCardPlayed = 1;}
+
+    /** A support card was played
+     *
+     */
     public void setSupportCardPlayed(){ supportCardPlayed = 1;}
+
+    /** A getter to see if the energy card was played
+     *
+     * @return 1 if played
+     */
     public int getEnergyCardPlayed(){ return energyCardPlayed;}
+
+    /** A getter to see if a support card was played
+     *
+     * @return 1 if played
+     */
     public int getSupportCardPlayed(){ return supportCardPlayed;}
+
+    /** A setter to notify that a Wing Buzz was played
+     *
+     */
     public void setWingBuzzPlayed(){ wingBuzzPlayed = 1;}
+
+    /** get the not in turn trainer, which is the one affected as enemy
+     *
+     * @return not in turn trainer
+     */
     public Entrenador getNotInTurnTrainer(){ return notInTurn; }
+
+    /** get the in turn trainer, which is the one who acts
+     *
+     * @return in turn trainer
+     */
     public Entrenador getInTurnTrainer(){ return inTurn; }
+
+    /** Select a card, which is sometimes needed for some actions
+     *
+     * @param index index of the card selected
+     */
     public void selectCard(int index){ inTurn.setSelectedCard(index);}
+
+    /** Select an objective pokemon, which is sometimes needed for some actions
+     *
+     * @param index index of the card, if it is the active is 0,
+     */
     public void selectObjective(int index){ inTurn.setObjective(index);}
+
+    /** The card that does an effect call this method when played so the controller gives its information
+     * to them
+     *
+     * @param card The card played
+     */
     public void manageEffect(TrainerCard card){ card.applyEffect(this);}
+
+    /** Set the game status, if it is false, then the game can't be played (?
+     *
+     * @param val 0 if not playable
+     */
+    public void gameStatus(int val){
+        if(val == 0){
+            status = false;
+        }
+    }
+
+    /** Gets the status of the game, for simplicity this is not asked when playing (Since every action
+     * needs the status to be true)
+     *
+     * @return the status
+     */
+    public boolean getStatus(){
+        return status;
+    }
 }

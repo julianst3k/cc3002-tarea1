@@ -16,9 +16,5 @@ public class PokemonPark extends StadiumCard {
         visitor.visitedPokemonPark(this);
     }
 
-    /** Return the health effect
-     *
-     * @return Healing amount
-     */
 
 }

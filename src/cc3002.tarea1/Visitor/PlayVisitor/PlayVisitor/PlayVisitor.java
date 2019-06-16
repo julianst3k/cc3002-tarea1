@@ -15,7 +15,7 @@ import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 
 public class PlayVisitor extends VisitorFather {
-    /** An abstract class in common for all the playable cards
+    /** A visitor to play cards, that are already accepted to be playable
      *
      * @author: Julian Solis Torrejon
      */
@@ -62,8 +62,7 @@ public class PlayVisitor extends VisitorFather {
     }
     @Override
     public void visitedEnergyType(Energy energy){
-        EffectVisitor visitor = new EffectPlayEnergy();
-        entrenador.accept(visitor);
+        EffectVisitor visitor = new EffectPlayEnergy(entrenador.getActualController());
         energy.getSetted(entrenador.getObjective());
         entrenador.getActualController().setEnergyCardPlayed();
     }
@@ -99,6 +98,8 @@ public class PlayVisitor extends VisitorFather {
     public void visitedPokemonPark(PokemonPark card){
         entrenador.setStadium(card);
     }
+    @Override
+    public void visitedFrozenCity(FrozenCity card){ entrenador.setStadium(card);}
 
 
 }

@@ -11,6 +11,9 @@ import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 import java.util.ArrayList;
 
 public class WingBuzz extends Skill {
+    /** Creates a wing buzz
+     * @author Julian Solis Torrejon
+     */
     public WingBuzz(ArrayList<IEnergia> costo){
         super("Wing Buzz", costo, "Una vez por turno, si  ́este Pokemon es el activo, puedes descartar una carta de tu mano. Si lo haces, descarta la carta superior del mazo de tu oponente");
     }

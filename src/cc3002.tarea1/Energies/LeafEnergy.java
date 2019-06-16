@@ -11,9 +11,11 @@ public class LeafEnergy extends Energy {
     public LeafEnergy(){
         super("Energia de Planta");
     }
+    @Override
     public void getSetted(IPokemon pokemon){
         pokemon.getEnergies().setLeafEnergy();
     }
+    @Override
     public void getSetted(ISkill skill){
         skill.getCost().setLeafEnergy();
     }

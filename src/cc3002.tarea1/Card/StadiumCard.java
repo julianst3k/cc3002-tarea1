@@ -5,7 +5,9 @@ import cc3002.tarea1.Controller;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 public abstract class StadiumCard extends TrainerCard{
-
+    /** Creates an stadium card, that it is common for implemented cards
+     * @author Julian Solis Torrejon
+     */
     public StadiumCard(String nombre, String descrp){
         super(nombre, descrp);
     }
@@ -15,9 +17,6 @@ public abstract class StadiumCard extends TrainerCard{
 
     @Override
     public void applyEffect(Controller controller){}
-
-
-
     /** When the controller sets this stadium cards, and if the stadium card have a passive effect, this card will set its passive effect
      *
      * @param controller the controller

@@ -1,10 +1,23 @@
 package cc3002.tarea1;
 
 public class Moneda {
+    /** Creates a coin, it is used for certain methods. But it is currently unused
+     *
+     */
     public Moneda(){
 
     }
-    public double getResult(){
-        return Math.random();
+
+    /** Flips a coin
+     *
+     * @return Cara o Sello dependiendo del valor del random
+     */
+    public String getResult(){
+        double val = Math.random();
+        if(val<0.5)
+            return "Sello";
+        else{
+            return "Cara";
+        }
     }
 }

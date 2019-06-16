@@ -193,6 +193,7 @@ public class Entrenador extends Observable implements IEntrenador {
             carta.accept(visitor);
         }
     }
+    @Override
     public ICardPlayable sacarCartaMano(int cardIndex){
         if (cardIndex > 0 && cardIndex <= this.Mano.size()) {
             ICardPlayable Card = this.Mano.get(cardIndex - 1);
@@ -457,4 +458,21 @@ public class Entrenador extends Observable implements IEntrenador {
      * @return
      */
     public StadiumCard getStadiumCard(){return stadiumCard;}
+    /** Purge a card from the sidelines or the active
+     * @param  index
+     */
+    public void purgePokemon(int index){
+        if(index==0){
+            if(getBanca().size()>0) {
+                deadActive();
+            }
+            else{
+                actualController.gameStatus(0);
+            }
+        }
+        else{
+            pila.addCarta(this.Banca.get(index-1));
+            this.Banca.remove(index-1);
+        }
+    }
 }

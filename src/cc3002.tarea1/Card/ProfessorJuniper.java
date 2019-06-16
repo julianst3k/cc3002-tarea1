@@ -4,9 +4,13 @@ import cc3002.tarea1.Card.SupportCard;
 import cc3002.tarea1.Controller;
 
 public class ProfessorJuniper extends SupportCard {
+    /** Creates a professor juniper card
+     * @author Julian Solis Torrejon
+     */
     public ProfessorJuniper(){
         super("Professor Juniper", "Descarta tu mano y saca 7 del mazo");
     }
+    @Override
     public void applyEffect(Controller controller) {
         while (controller.getInTurnTrainer().getMano().size() > 0){
             controller.getInTurnTrainer().descartarMano(1);

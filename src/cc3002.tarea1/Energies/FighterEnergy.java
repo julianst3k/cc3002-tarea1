@@ -11,9 +11,11 @@ public class FighterEnergy extends Energy {
     public FighterEnergy(){
         super("Energia de Lucha");
     }
+    @Override
     public void getSetted(IPokemon pokemon){
         pokemon.getEnergies().setFighterEnergy();
     }
+    @Override
     public void getSetted(ISkill skill){
         skill.getCost().setFighterEnergy();
     }

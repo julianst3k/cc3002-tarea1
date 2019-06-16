@@ -9,6 +9,9 @@ import java.util.ArrayList;
 
 
 public class nullSkill extends Attack {
+    /** Creates a null skill
+     * @author Julian Solis Torrejon
+     */
     public nullSkill(){
         super("", 0, new ArrayList<IEnergia>(), "");
     }

@@ -11,10 +11,12 @@ public class PsychEnergy extends Energy {
     public PsychEnergy(){
         super("Energia de Psiquico");
     }
+    @Override
     public void getSetted(IPokemon pokemon){
         pokemon.getEnergies().setPsychEnergy();
 
     }
+    @Override
     public void getSetted(ISkill skill){
         skill.getCost().setPsychEnergy();
     }

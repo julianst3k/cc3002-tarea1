@@ -6,17 +6,24 @@ import cc3002.tarea1.Skill.Skill;
 import cc3002.tarea1.Skill.WingBuzz;
 
 public class UsableSkillVisitor extends ControlVisitor{
+    /** In this case we are looking for skills that are usable or not
+     * @author Julian Solis Torrejon
+     */
     boolean status;
     public UsableSkillVisitor(Controller contr){
         super(contr);
     }
+    @Override
     public void visitedSkill(Skill skill){status = true;};
+    @Override
     public void visitedAttack(Attack attack){status = true;};
+    @Override
     public void visitedWingBuzz(WingBuzz wingBuzz){if(control.getWingBuzzPlayed()==1){status = false;}
     else{
         status=true;
     }
     }
+    @Override
     public boolean usable(){
         return status;
     }

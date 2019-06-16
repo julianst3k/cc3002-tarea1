@@ -8,6 +8,9 @@ import cc3002.tarea1.Skill.Skill;
 import java.util.ArrayList;
 
 public class InvisibleWall extends Skill {
+    /** Creates an invisible wall
+     * @author Julian Solis Torrejon
+     */
     private int sucked;
     public InvisibleWall(ArrayList<IEnergia> costo, int absorb){
         super("Invisible Wall", costo,"come dmg");

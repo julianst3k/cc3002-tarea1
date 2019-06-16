@@ -108,4 +108,11 @@ public interface IEntrenador {
      * @param card The card that will be setted
      */
     void setStadium(StadiumCard card);
+
+    /** Pops a card from the hand
+     *
+     * @param cardIndex the index of the card
+     * @return the card that is popped
+     */
+    ICardPlayable sacarCartaMano(int cardIndex);
 }

@@ -5,6 +5,9 @@ import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 import java.util.ArrayList;
 
 public class BasicLightPokemon extends AbstractLightPokemon implements IBasicType{
+    /** Basic light pokemon
+     * @author Julian Solis Torrejon
+     */
     public BasicLightPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
     }

@@ -39,10 +39,12 @@ public class RareCandyTest {
     public void evolucionaDeUnaAFase2(){
         trainer.getMano().add(rare);
         trainer.getMano().add(evoPhaseTwo);
+        trainer.getMano().add(evo);
         trainer.jugarCarta(1);
-        assertEquals(trainer.getMano().size(), 2);
+        assertEquals(trainer.getMano().size(), 3);
         trainer.setObjective(0);
-        trainer.jugarCarta(2);
+        trainer.setSelectedCard(1);
+        trainer.jugarCarta(3);
         assertEquals(trainer.getActiva().getName(), "xD Phase 2");
     }
     @Test
@@ -52,6 +54,7 @@ public class RareCandyTest {
         trainer.jugarCarta(1);
         assertEquals(trainer.getMano().size(), 2);
         trainer.setObjective(0);
+        trainer.setSelectedCard(1);
         trainer.jugarCarta(2);
         assertEquals(trainer.getActiva().getName(), "xD Phase 1");
     }

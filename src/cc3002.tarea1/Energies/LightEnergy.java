@@ -12,9 +12,11 @@ public class LightEnergy extends Energy {
         super("Energia de Rayo");
 
     }
+    @Override
     public void getSetted(IPokemon pokemon){
         pokemon.getEnergies().setLightEnergy();
     }
+    @Override
     public void getSetted(ISkill skill){
         skill.getCost().setLightEnergy();
     }

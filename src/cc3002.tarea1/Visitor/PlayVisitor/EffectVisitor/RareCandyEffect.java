@@ -13,11 +13,16 @@ import java.util.ArrayList;
 import static java.awt.SystemColor.control;
 
 public class RareCandyEffect extends EffectVisitor {
+    /** Rare Candy Effect
+     * @author Julian Solis Torrejon
+     *
+     */
     private IPokemon selectedCard;
     private Entrenador entrenador;
     public RareCandyEffect(Controller controller){
-        selectedCard = null;
-        entrenador = null;
+        super(controller);
+        entrenador = controller.getInTurnTrainer();
+        entrenador.accept(this);
     }
     public void visitedPhase1Type(IPhase1Type poke){
         if(selectedCard!=null && poke.getPreEvolutionID()==selectedCard.getIndex()) {
@@ -32,8 +37,8 @@ public class RareCandyEffect extends EffectVisitor {
     public void visitedEntrenador(Entrenador trainer){
         entrenador = trainer;
         trainer.getObjective().accept(this);
-        for(int i=0; i<trainer.getMano().size(); i++){
-            trainer.getMano().get(i).accept(this);
+        if(trainer.getSelectedCard()!=null) {
+            trainer.getSelectedCard().accept(this);
         }
     }
     public void visitedBasicType(IBasicType type){
