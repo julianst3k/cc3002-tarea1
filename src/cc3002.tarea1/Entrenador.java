@@ -124,14 +124,6 @@ public class Entrenador extends Observable implements IEntrenador {
         }
     }
 
-    /**
-     * Set an energy in the pokemon
-     *
-     * @param energyCard An energy
-     */
-    public void activeUseEnergy(Energy energyCard) {
-        this.objective.setEnergy(energyCard);
-    }
 
     @Override
     public IPokemon getActiva() {
@@ -222,7 +214,7 @@ public class Entrenador extends Observable implements IEntrenador {
     }
 
     /**
-     * Plays a pokemon card. This is thrown by the playCard() when the argument is a Pokemon card
+     * Set a pokemon to the sidelines
      *
      * @param poke A pokemon card
      */

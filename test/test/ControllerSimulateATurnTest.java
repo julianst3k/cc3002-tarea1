@@ -47,7 +47,7 @@ public class ControllerSimulateATurnTest {
         invisibleWall2 = new InvisibleWall(new ArrayList<>(Arrays.asList(new LeafEnergy(), new LeafEnergy(), new LeafEnergy())), 10);
         hydroPump = new HydroPump(30, new ArrayList<>(Arrays.asList(new LeafEnergy(), new FireEnergy(), new FireEnergy())), 30);
         pokemonUno = new BasicFirePokemon("Into", 50, 200, new ArrayList<>(Arrays.asList(new BasicAttack("Omega", 30, new ArrayList<>(Arrays.asList(new FireEnergy())), "yeap"))));
-        pokemonDos = new BasicLeafPokemon("Seal", 50, 200, new ArrayList<>(Arrays.asList(wingBuzz, new EnergyBurn(new ArrayList<>()))));
+        pokemonDos = new BasicLeafPokemon("Seal", 50, 200, new ArrayList<>(Arrays.asList(wingBuzz, new EnergyBurn(new ArrayList<>()), new BasicAttack("attack", 1000, new ArrayList<>(), "lul"))));
         pokemonDos.setEnergy(new FireEnergy()); pokemonDos.setEnergy(new FireEnergy());
         pokemonTres = new BasicPsychPokemon("Alaka", 70, 2000, new ArrayList<>(Arrays.asList(invisibleWall)));
         pokemonCuatro = new BasicWaterPokemon("Leon", 80, 50, new ArrayList<>(Arrays.asList(hydroPump)));
@@ -71,16 +71,16 @@ public class ControllerSimulateATurnTest {
     }
     @Test public void limitationsOfSupportAndEnergy(){
         controller.playCard(1);
-        assertEquals(entrenador.getMano().size(), 7);
+        assertEquals(controller.getMano().size(), 7);
         assertEquals(entrenador.getMazo().getSize(), 52);
         controller.playCard(4);
         assertEquals(entrenador.getMazo().getSize(), 52); // Didn't get played
         controller.selectObjective(1);
         controller.playCard(2);
-        assertEquals(entrenador.getMano().size(), 6); // Can be played to sidelanes!
+        assertEquals(controller.getMano().size(), 6); // Can be played to sidelanes!
         controller.selectObjective(0);
         controller.playCard(2);
-        assertEquals(entrenador.getMano().size(), 6); // Didn't get played
+        assertEquals(controller.getMano().size(), 6); // Didn't get played
     }
     @Test public void stadiumCardAffectsEveryone(){
         controller.playCard(1);
@@ -91,7 +91,8 @@ public class ControllerSimulateATurnTest {
         controller.selectObjective(0);
         controller.playCard(2);
         controller.useSkill(1);
-        assertEquals(enemyPokemonUno.getHp(), 940);
+        assertEquals(controller.getActivePokemon().getHp(), 940);
+        assertEquals(controller.getEnemyPokemon().getName(), "Into");
         controller.selectObjective(0);
         controller.playCard(2);
         assertEquals(enemyTrainer.getStadiumCard().getName(), "Pokemon Park");
@@ -119,5 +120,16 @@ public class ControllerSimulateATurnTest {
         assertEquals(pokemonDos.getEnergies().getLeafEnergy(), 0);
         controller.useSkill(2);
         assertEquals(pokemonDos.getEnergies().getLeafEnergy(), 2);
+        controller.endTurn();
+        controller.playCard(1);
+        controller.endTurn();
+        assertEquals(controller.getEnemyBanca().size(), 1);
+        controller.useSkill(3);
+        assertEquals(controller.getBanca().size(), 0);
+        controller.endTurn();
+        assertEquals(controller.getEnemyPokemon(), enemyPokemonDos);
+
+
     }
+
 }

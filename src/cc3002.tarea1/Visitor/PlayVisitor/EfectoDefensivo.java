@@ -9,6 +9,11 @@ public class EfectoDefensivo extends VisitorFather {
      *
      */
     private int originalDmg;
+
+    /** Creates the defense
+     *
+     * @param dmg the dmg to be deffended to
+     */
     public EfectoDefensivo(int dmg){
         originalDmg = dmg;
     }

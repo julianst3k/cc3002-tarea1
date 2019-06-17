@@ -10,6 +10,7 @@ import cc3002.tarea1.Visitor.PlayVisitor.UsableCardVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.EfectoOnDemand;
 import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor;
 
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -230,4 +231,24 @@ public class Controller implements Observer {
     public void playFromBanca(int index){
         inTurn.activePokemonSwapWithIndex(index);
     }
+    /** gets the current banca
+     *
+     */
+    public ArrayList<IPokemon> getBanca(){ return inTurn.getBanca(); }
+    /** gets the current mano
+     *
+     */
+    public ArrayList<ICardPlayable> getMano(){ return inTurn.getMano(); }
+    /** gets the enemy banca
+     *
+     */
+    public ArrayList<IPokemon> getEnemyBanca(){ return notInTurn.getBanca(); }
+    /** gets the active pokemon
+     *
+     */
+    public IPokemon getActivePokemon(){ return inTurn.getActiva(); }
+    /** gets the enemy active pokemon
+     *
+     */
+    public IPokemon getEnemyPokemon(){ return notInTurn.getActiva();}
 }

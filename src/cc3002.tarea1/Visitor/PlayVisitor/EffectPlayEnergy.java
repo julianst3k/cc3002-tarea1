@@ -11,6 +11,11 @@ public class EffectPlayEnergy extends EffectVisitor {
      * @author The energy
      */
     Entrenador trainer;
+
+    /** Creates the visitor that gets activated when energy are played
+     *
+     * @param controller the controller
+     */
     public EffectPlayEnergy(Controller controller){
         super(controller);
         trainer = controller.getInTurnTrainer();

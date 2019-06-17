@@ -10,8 +10,11 @@ public class EfectoExtraDmg extends VisitorFather {
      *
      */
     private int value;
+
+    /** Creates the visitor
+     *
+     */
     public void EfectoExtraDmg(){
-        value = 0;
     }
     @Override
     public void visitedHydroPump(HydroPump pump){

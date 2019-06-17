@@ -74,7 +74,7 @@ public class TestWingBuzz {
         bigController.selectCard(1);
         bigController.useSkill(1);
         assertTrue(bigController.getWingBuzzPlayed()==1);
-        assertTrue(iDoTheEffect.getMano().size()==1);
+        assertTrue(bigController.getMano().size()==1);
         bigController.selectCard(1);
         bigController.useSkill(1);
         assertTrue(bigController.getWingBuzzPlayed()==1);
