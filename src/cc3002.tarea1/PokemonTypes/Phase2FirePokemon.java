@@ -10,7 +10,13 @@ public class Phase2FirePokemon extends AbstractFirePokemon implements IPhase2Typ
      * @author Julian Solis Torrejon
      */
     private int preEvolutionID;
-
+    /** Fase 2 pokemon fire
+     *
+     * @param name nombre
+     * @param id the index
+     * @param healthPoints the hp
+     * @param skills the skills
+     */
     public Phase2FirePokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
         preEvolutionID= id;

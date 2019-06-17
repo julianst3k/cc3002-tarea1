@@ -8,6 +8,9 @@ public class LeafEnergy extends Energy {
      * @author: Julian Solis Torrejon
      *
      */
+    /** creates the leaf energy
+     *
+     */
     public LeafEnergy(){
         super("Energia de Planta");
     }

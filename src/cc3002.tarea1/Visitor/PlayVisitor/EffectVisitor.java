@@ -11,6 +11,11 @@ public abstract class EffectVisitor extends VisitorFather {
      *
      */
     protected Controller controller;
+
+    /** Creates effect visitor
+     *
+     * @param control the controller
+     */
     public EffectVisitor(Controller control){
         controller = control;
     }

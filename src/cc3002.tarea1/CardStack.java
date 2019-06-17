@@ -6,6 +6,9 @@ import cc3002.tarea1.ICardPlayable;
 import java.util.ArrayList;
 
 public class CardStack implements ICardComposite {
+    /** Creates a card stack
+     * @author Julian Solis Torrejon
+     */
     private ArrayList<ICardPlayable> pila;
 
     /** Initializes the stack, the stack is normally initialized as a null

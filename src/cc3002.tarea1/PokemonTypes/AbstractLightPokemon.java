@@ -9,6 +9,13 @@ public abstract class AbstractLightPokemon extends Pokemon{
      * @author: Julian Solis Torrejon
      *
      */
+    /** abstract pokemon light
+     *
+     * @param name nombre
+     * @param id the index
+     * @param healthPoints the hp
+     * @param skills the skills
+     */
     public AbstractLightPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
     }

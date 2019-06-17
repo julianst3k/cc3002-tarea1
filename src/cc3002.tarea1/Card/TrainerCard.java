@@ -11,6 +11,12 @@ public abstract class TrainerCard implements ICardPlayable {
      */
     private String name;
     private String description;
+
+    /** creates the trainer card
+     *
+     * @param nombre name
+     * @param descrp description
+     */
     public TrainerCard(String nombre, String descrp){
         name = nombre;
         description = descrp;

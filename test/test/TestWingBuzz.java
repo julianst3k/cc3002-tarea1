@@ -37,6 +37,11 @@ public class TestWingBuzz {
     }
     @Test public void worksAsIntended(){
         bigController.startTurn();
+
+    }
+    @Test public void noMazoEnemy(){
+        enemyTrainer.getMazo().popNCards(60);
+        bigController.startTurn();
         bigController.selectSkill(1);
         assertEquals(iDoTheEffect.getActiva().getSelectedSkill(), null);
         bigController.useSkill(1);
@@ -48,12 +53,13 @@ public class TestWingBuzz {
         assertTrue(bigController.getWingBuzzPlayed()==0); // No cards to be buzzed
         bigController.endTurn();
         bigController.endTurn();
-        assertEquals(enemyTrainer.getMazo().getSize(), 59);
+        assertEquals(enemyTrainer.getMazo().getSize(), 0);
         bigController.selectCard(1);
         bigController.useSkill(1);
         assertTrue(bigController.getWingBuzzPlayed()==1);
         assertTrue(iDoTheEffect.getMano().size()==0); // Popeo la que seleccione
-        assertEquals(enemyTrainer.getMazo().getSize(),58); //Popeo 1
+        assertEquals(enemyTrainer.getMazo().getSize(),0); //Popeo 1
+
     }
     @Test public void cantBePlayedTwice(){
         bigController.startTurn();

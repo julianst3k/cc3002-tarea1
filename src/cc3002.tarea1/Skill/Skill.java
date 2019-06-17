@@ -17,6 +17,12 @@ public class Skill implements ISkill {
     private EnergyCounter costo;
     private Pokemon pokemon;
 
+    /** creates the skill
+     *
+     * @param name the name
+     * @param costo the cost
+     * @param description the description
+     */
     public Skill(String name, ArrayList<IEnergia> costo, String description){
         this.name = name;
         this.HashCreate(costo);

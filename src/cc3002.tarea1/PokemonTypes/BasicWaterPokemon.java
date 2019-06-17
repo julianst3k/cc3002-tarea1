@@ -8,6 +8,13 @@ public class BasicWaterPokemon extends AbstractWaterPokemon implements IBasicTyp
     /** Basic water pokemon
      * @author Julian Solis Torrejon
      */
+    /** basic pokemon water
+     *
+     * @param name nombre
+     * @param id the index
+     * @param healthPoints the hp
+     * @param skills the skills
+     */
     public BasicWaterPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
     }

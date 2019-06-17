@@ -11,6 +11,12 @@ public class InvisibleWall extends Skill {
      * @author Julian Solis Torrejon
      */
     private int sucked;
+
+    /** Creates the invisible wall
+     *
+     * @param costo the cost
+     * @param absorb the total absorbed damage
+     */
     public InvisibleWall(ArrayList<IEnergia> costo, int absorb){
         super("Invisible Wall", costo,"come dmg");
         sucked = absorb;

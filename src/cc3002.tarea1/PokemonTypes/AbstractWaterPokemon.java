@@ -9,6 +9,13 @@ public abstract class AbstractWaterPokemon extends Pokemon{
      * @author: Julian Solis Torrejon
      *
      */
+    /** abstract pokemon water
+     *
+     * @param name nombre
+     * @param id the index
+     * @param healthPoints the hp
+     * @param skills the skills
+     */
     public AbstractWaterPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
     }

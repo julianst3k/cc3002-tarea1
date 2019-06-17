@@ -8,6 +8,13 @@ public class BasicPsychPokemon extends AbstractPsychPokemon implements IBasicTyp
     /** Basic psych pokemon
      * @author Julian Solis Torrejon
      */
+    /** basic pokemon psych
+     *
+     * @param name nombre
+     * @param id the index
+     * @param healthPoints the hp
+     * @param skills the skills
+     */
     public BasicPsychPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
     }

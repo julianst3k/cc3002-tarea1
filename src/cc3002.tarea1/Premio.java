@@ -6,6 +6,10 @@ import cc3002.tarea1.ICardPlayable;
 import java.util.ArrayList;
 
 public class Premio implements ICardComposite {
+    /** The premio set of cards
+     * @author Julian Solis Torrejon
+     *
+     */
     private ArrayList<ICardPlayable> premio;
 
     /** Initializes the special stack :)

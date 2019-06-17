@@ -14,21 +14,29 @@ public class RareCandyEffect extends EffectVisitor {
      */
     private IPokemon selectedCard;
     private Entrenador entrenador;
+
+    /** Creates a rare candy effect
+     *
+     * @param controller the controller
+     */
     public RareCandyEffect(Controller controller){
         super(controller);
         entrenador = controller.getInTurnTrainer();
         entrenador.accept(this);
     }
+    @Override
     public void visitedPhase1Type(IPhase1Type poke){
         if(selectedCard!=null && poke.getPreEvolutionID()==selectedCard.getIndex()) {
             entrenador.pokemonEvolve(poke);
         }
     }
+    @Override
     public void visitedPhase2Type(IPhase2Type poke){
         if(selectedCard!=null && poke.getPreEvolutionID()==selectedCard.getIndex()) {
             entrenador.pokemonEvolve(poke);
         }
     }
+    @Override
     public void visitedEntrenador(Entrenador trainer){
         entrenador = trainer;
         trainer.getObjective().accept(this);

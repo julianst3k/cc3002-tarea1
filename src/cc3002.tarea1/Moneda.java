@@ -2,6 +2,9 @@ package cc3002.tarea1;
 
 public class Moneda {
     /** Creates a coin, it is used for certain methods. But it is currently unused
+     * @author  Julian Solis Torrejon
+     */
+    /** Creates the coin
      *
      */
     public Moneda(){

@@ -8,6 +8,11 @@ public class UsableSkillVisitor extends ControlVisitor{
      * @author Julian Solis Torrejon
      */
     boolean status;
+
+    /** Creates a visitor that checks if a skill is usable
+     *
+     * @param contr the controller that operates right now
+     */
     public UsableSkillVisitor(Controller contr){
         super(contr);
         status = true;

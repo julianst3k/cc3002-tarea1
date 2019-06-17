@@ -25,6 +25,12 @@ public class Entrenador extends Observable implements IEntrenador {
     private Controller actualController;
     private ICardPlayable selectedCard;
 
+    /** Creates a trainer
+     *
+     * @param pokemonActivo The active pokemon
+     * @param newMazo the deck
+     * @param newPremio the award cards
+     */
     public Entrenador(IPokemon pokemonActivo, Mazo newMazo, Premio newPremio) { // Defino el inicio del juego con un pokemon activo :)
         Activa = pokemonActivo;
         objective = null;
@@ -113,7 +119,9 @@ public class Entrenador extends Observable implements IEntrenador {
 
     @Override
     public void sacarCarta() {
-        this.Mano.add(this.mazo.sacarCarta());
+        if(mazo.getSize()>0){
+            this.Mano.add(this.mazo.sacarCarta());
+        }
     }
 
     /**
@@ -421,7 +429,9 @@ public class Entrenador extends Observable implements IEntrenador {
      *
      */
     public void descartarMazo(){
-        pila.addCarta(mazo.sacarCarta());
+        if(mazo.getSize()>0) {
+            pila.addCarta(mazo.sacarCarta());
+        }
     }
     /** Discard a card from the playable cards
      *

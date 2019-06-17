@@ -10,6 +10,13 @@ public abstract class AbstractLeafPokemon extends Pokemon{
      * @author: Julian Solis Torrejon
      *
      */
+    /** abstract pokemon grass
+     *
+     * @param name nombre
+     * @param id the index
+     * @param healthPoints the hp
+     * @param skills the skills
+     */
     public AbstractLeafPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
     }

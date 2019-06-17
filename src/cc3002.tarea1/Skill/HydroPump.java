@@ -11,6 +11,13 @@ public class HydroPump extends Attack {
      * @author Julian Solis Torrejon
      */
     int maxdmg;
+
+    /** Creates an hydropump
+     *
+     * @param dmg the damage
+     * @param costo the cost
+     * @param max the max damage
+     */
     public HydroPump(int dmg, ArrayList<IEnergia> costo, int max) {
         super("Hydro Pump", dmg, costo, "Does the hydropump effect");
         maxdmg = max;

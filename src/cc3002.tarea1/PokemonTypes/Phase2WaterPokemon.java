@@ -11,6 +11,13 @@ public class Phase2WaterPokemon extends AbstractWaterPokemon implements IPhase2T
      */
     private int preEvolutionID;
 
+    /** Fase 2 pokemon agua
+     *
+     * @param name nombre
+     * @param id the index
+     * @param healthPoints the hp
+     * @param skills the skills
+     */
     public Phase2WaterPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
         preEvolutionID= id;

@@ -21,7 +21,13 @@ public abstract class Pokemon extends Observable implements IPokemon {
     private ISkill selectedSkill;
     private ObjectCard associated;
 
-
+    /** Creates the pokemon
+     *
+     * @param name its name
+     * @param id the id
+     * @param healthPoints the hp
+     * @param skills the skills
+     */
     public Pokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills) {
         this.id = id;
         this.healthPoints = healthPoints; maxHp = this.healthPoints;

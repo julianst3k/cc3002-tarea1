@@ -9,6 +9,11 @@ public class AttachObjectCard extends ObjectCard {
      */
     Pokemon pokemon;
 
+    /** Attach an object card
+     *
+     * @param name name
+     * @param descrp description
+     */
     public AttachObjectCard(String name, String descrp){
         super(name,descrp);
     }

@@ -45,4 +45,14 @@ public class ProfessorJuniperTest {
         assertEquals(entrenador.getMazo().getSize(), 48);
         assertEquals(entrenador.getPila().getSize(), 4);
     }
+    @Test public void testProfessorJuniperFunctionalityWithout7CardsOnDeck(){
+        controller.startTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn();
+        assertEquals(entrenador.getMano().size(), 5);
+        entrenador.getMazo().popNCards(50);
+        assertEquals(entrenador.getMazo().getSize(), 5);
+        controller.playCard(1);
+        assertEquals(entrenador.getMano().size(), 5);
+        assertEquals(entrenador.getMazo().getSize(), 0);
+        assertEquals(entrenador.getPila().getSize(), 4);
+    }
 }

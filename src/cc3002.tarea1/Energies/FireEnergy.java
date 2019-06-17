@@ -8,6 +8,9 @@ public class FireEnergy extends Energy {
      * @author: Julian Solis Torrejon
      *
      */
+    /** creates the fire energy
+     *
+     */
     public FireEnergy(){
         super("Energia de Fuego");
     }

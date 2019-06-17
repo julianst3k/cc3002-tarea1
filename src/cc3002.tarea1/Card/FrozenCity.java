@@ -7,6 +7,11 @@ public class FrozenCity extends StadiumCard {
      * @author Julian Solis Torrejon
      */
     int cont;
+
+    /** Creates a frozen city
+     *
+     * @param contador defines counter
+     */
     public FrozenCity(int contador){
         super("Frozen City", "Quita hasta "+contador+" contadores de daño");
         cont = contador;

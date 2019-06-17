@@ -9,6 +9,10 @@ public class EnergyCounter {
      *
      */
     private Map<EnergyType, Integer> energies = new EnumMap<>(EnergyType.class);
+
+    /** Creates an energy counter
+     *
+     */
     public EnergyCounter(){
      for(EnergyType type: EnergyType.values()){
          energies.put(type,0);

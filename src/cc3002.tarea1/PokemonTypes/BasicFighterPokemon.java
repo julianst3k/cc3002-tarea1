@@ -9,6 +9,13 @@ public class BasicFighterPokemon extends AbstractFighterPokemon implements IBasi
     /** Basic fighter pokemon
      * @author Julian Solis Torrejon
      */
+    /** basic pokemon fighter
+     *
+     * @param name nombre
+     * @param id the index
+     * @param healthPoints the hp
+     * @param skills the skills
+     */
     public BasicFighterPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
     }

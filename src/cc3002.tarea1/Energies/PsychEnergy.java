@@ -8,6 +8,9 @@ public class PsychEnergy extends Energy {
      * @author: Julian Solis Torrejon
      *
      */
+    /** creates the psych energy
+     *
+     */
     public PsychEnergy(){
         super("Energia de Psiquico");
     }

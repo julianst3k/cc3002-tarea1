@@ -6,6 +6,9 @@ public class ProfessorJuniper extends SupportCard {
     /** Creates a professor juniper card
      * @author Julian Solis Torrejon
      */
+    /** creates a professor juniper card
+     *
+     */
     public ProfessorJuniper(){
         super("Professor Juniper", "Descarta tu mano y saca 7 del mazo");
     }

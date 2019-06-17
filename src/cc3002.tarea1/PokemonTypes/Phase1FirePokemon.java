@@ -11,6 +11,13 @@ public class Phase1FirePokemon extends AbstractFirePokemon implements IPhase1Typ
      * @author Julian Solis Torrejon
      */
     private int preEvolutionID;
+    /** Fase 1 pokemon fire
+     *
+     * @param name nombre
+     * @param id the index
+     * @param healthPoints the hp
+     * @param skills the skills
+     */
 
     public Phase1FirePokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);

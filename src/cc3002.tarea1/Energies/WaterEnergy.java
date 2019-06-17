@@ -8,6 +8,9 @@ public class WaterEnergy extends Energy {
      * @author: Julian Solis Torrejon
      *
      */
+    /** creates the water energy
+     *
+     */
     public WaterEnergy(){
         super("Energia de Agua");
     }

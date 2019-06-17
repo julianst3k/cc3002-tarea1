@@ -8,6 +8,9 @@ public class FighterEnergy extends Energy {
      * @author: Julian Solis Torrejon
      *
      */
+    /** creates the fighter energy
+     *
+     */
     public FighterEnergy(){
         super("Energia de Lucha");
     }

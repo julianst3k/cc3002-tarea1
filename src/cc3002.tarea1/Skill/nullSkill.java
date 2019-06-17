@@ -12,6 +12,9 @@ public class nullSkill extends Attack {
     /** Creates a null skill
      * @author Julian Solis Torrejon
      */
+    /** Creates the null skill
+     *
+     */
     public nullSkill(){
         super("", 0, new ArrayList<IEnergia>(), "");
     }

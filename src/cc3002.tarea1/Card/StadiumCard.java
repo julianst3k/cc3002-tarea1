@@ -8,6 +8,11 @@ public abstract class StadiumCard extends TrainerCard{
     /** Creates an stadium card, that it is common for implemented cards
      * @author Julian Solis Torrejon
      */
+    /** creates the trainer card
+     *
+     * @param nombre name
+     * @param descrp description
+     */
     public StadiumCard(String nombre, String descrp){
         super(nombre, descrp);
     }

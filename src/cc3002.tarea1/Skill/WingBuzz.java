@@ -14,6 +14,10 @@ public class WingBuzz extends Skill {
     /** Creates a wing buzz
      * @author Julian Solis Torrejon
      */
+    /** Creates the wingbuzz
+     *
+     * @param costo the cost
+     */
     public WingBuzz(ArrayList<IEnergia> costo){
         super("Wing Buzz", costo, "Una vez por turno, si  ́este Pokemon es el activo, puedes descartar una carta de tu mano. Si lo haces, descarta la carta superior del mazo de tu oponente");
     }

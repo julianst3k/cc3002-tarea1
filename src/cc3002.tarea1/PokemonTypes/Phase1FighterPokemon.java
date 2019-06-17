@@ -10,6 +10,13 @@ public class Phase1FighterPokemon extends AbstractFighterPokemon implements IPha
      * @author Julian Solis Torrejon
      */
     private int preEvolutionID;
+    /** Fase 1 pokemon fighter
+     *
+     * @param name nombre
+     * @param id the index
+     * @param healthPoints the hp
+     * @param skills the skills
+     */
     public Phase1FighterPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
         preEvolutionID= id;

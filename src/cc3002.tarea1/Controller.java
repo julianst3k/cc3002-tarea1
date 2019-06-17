@@ -28,6 +28,12 @@ public class Controller implements Observer {
     public boolean turnedStarted;
     public Moneda coin;
     public boolean status;
+
+    /** Creates a controller
+     *
+     * @param first the trainer that starts a turn
+     * @param second the trainer that go after him
+     */
     public Controller(Entrenador first, Entrenador second){
         energyCardPlayed = 0; wingBuzzPlayed=0; supportCardPlayed = 0;
         inTurn = first; first.subscribeTrainer(this);

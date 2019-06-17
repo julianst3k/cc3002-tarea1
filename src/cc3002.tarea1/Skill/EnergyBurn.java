@@ -10,6 +10,10 @@ public class EnergyBurn extends Skill {
     /** Energy Burn skill
      * @author Julian Solis Torrejon
      */
+    /** creates an energy burn skill
+     *
+     * @param costo the cost
+     */
     public EnergyBurn(ArrayList<IEnergia> costo){
         super("Energy Burn", costo ,"Cambia tus chakras bb");
     }

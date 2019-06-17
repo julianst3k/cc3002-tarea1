@@ -9,8 +9,12 @@ abstract public class Energy implements IEnergia, ICardPlayable {
      */
     private String name;
 
-    public Energy(String a){
-        this.name = a;
+    /** Creates an energy card
+     *
+     * @param name The name of the card
+     */
+    public Energy(String name){
+        this.name = name;
     }
     @Override
     public String getName() { return this.name; }

@@ -8,6 +8,13 @@ public class BasicFirePokemon extends AbstractFirePokemon implements IBasicType 
     /** Basic fire pokemon
      * @author Julian Solis Torrejon
      */
+    /** basic pokemon fire
+     *
+     * @param name nombre
+     * @param id the index
+     * @param healthPoints the hp
+     * @param skills the skills
+     */
     public BasicFirePokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
     }

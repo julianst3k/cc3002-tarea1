@@ -16,6 +16,10 @@ public class UsableCardVisitor extends ControlVisitor {
      */
     boolean status;
 
+    /** Creates a visitor that checks if a card is usable
+     *
+     * @param controller the controller that operates right now
+     */
     public UsableCardVisitor(Controller controller){
         super(controller);
         status = true;

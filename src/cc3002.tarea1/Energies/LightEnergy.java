@@ -8,6 +8,9 @@ public class LightEnergy extends Energy {
      * @author: Julian Solis Torrejon
      *
      */
+    /** creates the light energy
+     *
+     */
     public LightEnergy(){
         super("Energia de Rayo");
 
