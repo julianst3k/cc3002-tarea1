@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e54f3207-1a2f-4a2d-aa19-02ac0ee0fe87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EfectoDefensivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EfectoDefensivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EfectoExtraDmg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EfectoExtraDmg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectPlayEnergy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EffectPlayEnergy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test/ControllerSimulateATurnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/ControllerSimulateATurnTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test/TestWingBuzz.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/TestWingBuzz.java" afterDir="false" />
-    </list>
+    <list default="true" id="e54f3207-1a2f-4a2d-aa19-02ac0ee0fe87" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,11 +32,732 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EfectoExtraDmg.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="uml://JAVA/cc3002.tarea1">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>cc3002.tarea1</OriginalElement>
+              <nodes>
+                <node x="2353.110940530058" y="4703.0">cc3002.tarea1.IPokemon</node>
+                <node x="2732.2626645952323" y="5543.0">cc3002.tarea1.Skill</node>
+                <node x="50.38065969039235" y="3482.0">cc3002.tarea1.Energy</node>
+                <node x="1659.724668651075" y="2232.0">cc3002.tarea1.IEntrenador</node>
+                <node x="1770.6093670035261" y="5531.0">cc3002.tarea1.Moneda</node>
+                <node x="522.5357142857142" y="2078.0">cc3002.tarea1.ICardComposite</node>
+                <node x="2681.048440530058" y="220.0">cc3002.tarea1.EnergyCounter</node>
+                <node x="932.3806596903923" y="2339.5">cc3002.tarea1.Mazo</node>
+                <node x="672.6306596903923" y="472.5">cc3002.tarea1.ICard</node>
+                <node x="609.3806596903923" y="2399.5">cc3002.tarea1.Premio</node>
+                <node x="2073.7246686510753" y="2102.0">cc3002.tarea1.Card</node>
+                <node x="0.0" y="7060.0">cc3002.tarea1.Energies</node>
+                <node x="2753.050201545596" y="0.0">cc3002.tarea1.EnergyType</node>
+                <node x="1785.4010336701926" y="4447.0">cc3002.tarea1.Visitor.PlayVisitor</node>
+                <node x="1737.6093670035261" y="5719.0">cc3002.tarea1.Controller</node>
+                <node x="808.8806596903923" y="1403.5">cc3002.tarea1.ICardPlayable</node>
+                <node x="2446.1455437318764" y="6758.0">cc3002.tarea1.ISkill</node>
+                <node x="1256.1364333569577" y="2858.0">cc3002.tarea1.Entrenador</node>
+                <node x="298.38065969039235" y="2399.5">cc3002.tarea1.CardStack</node>
+                <node x="2651.2136279386696" y="3554.5">cc3002.tarea1.PokemonTypes</node>
+                <node x="2451.6719612720026" y="899.0">cc3002.tarea1.Pokemon</node>
+                <node x="2318.675201545596" y="460.5">cc3002.tarea1.IEnergia</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="cc3002.tarea1.EnergyCounter" target="cc3002.tarea1.EnergyType">
+                  <point x="76.25" y="-289.5" />
+                  <point x="2909.798440530058" y="195.0" />
+                  <point x="2840.050201545596" y="195.0" />
+                  <point x="29.0" y="85.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Card" target="cc3002.tarea1.Visitor.PlayVisitor">
+                  <point x="4.75" y="13.0" />
+                  <point x="2135.4746686510753" y="4367.0" />
+                  <point x="1886.077504258428" y="4367.0" />
+                  <point x="19.176470588235247" y="-13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.Skill">
+                  <point x="79.99999999999989" y="529.5" />
+                  <point x="2691.6719612720026" y="2028.0" />
+                  <point x="2870.6367048617467" y="2028.0" />
+                  <point x="2870.6367048617467" y="5471.0" />
+                  <point x="2811.378049210617" y="5471.0" />
+                  <point x="18.61538461538464" y="-13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Entrenador">
+                  <point x="-121.14285714285711" y="-469.5" />
+                  <point x="1775.4665098606688" y="5679.0" />
+                  <point x="1285.8961317094086" y="5679.0" />
+                  <point x="1285.8961317094086" y="4427.0" />
+                  <point x="1271.6781000236242" y="4427.0" />
+                  <point x="-170.95833333333326" y="709.5" />
+                </edge>
+                <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.IPokemon">
+                  <point x="-30.214285714285666" y="-121.0" />
+                  <point x="2556.931258017591" y="6688.0" />
+                  <point x="2396.743389843431" y="6688.0" />
+                  <point x="2396.743389843431" y="5501.0" />
+                  <point x="2510.110940530058" y="5501.0" />
+                  <point x="0.0" y="349.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Card">
+                  <point x="75.71428571428567" y="-469.5" />
+                  <point x="1972.3236527178117" y="5649.0" />
+                  <point x="2257.3423157098987" y="5649.0" />
+                  <point x="2257.3423157098987" y="2182.0" />
+                  <point x="2173.4746686510753" y="2182.0" />
+                  <point x="42.75" y="13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Controller">
+                  <point x="15.125" y="13.0" />
+                  <point x="2807.8876645952323" y="5699.0" />
+                  <point x="2048.0379384320972" y="5699.0" />
+                  <point x="151.42857142857133" y="-469.5" />
+                </edge>
+                <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.Visitor.PlayVisitor">
+                  <point x="46.625" y="253.0" />
+                  <point x="1892.849668651075" y="4347.0" />
+                  <point x="1866.9010336701926" y="4347.0" />
+                  <point x="0.0" y="-13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.EnergyCounter">
+                  <point x="40.0" y="-529.5" />
+                  <point x="2651.6719612720026" y="869.0" />
+                  <point x="2726.798440530058" y="869.0" />
+                  <point x="-106.75" y="289.5" />
+                </edge>
+                <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Controller">
+                  <point x="-46.625" y="709.5" />
+                  <point x="1396.0114333569577" y="4427.0" />
+                  <point x="1329.8961317094086" y="4427.0" />
+                  <point x="1329.8961317094086" y="5639.0" />
+                  <point x="1836.0379384320975" y="5639.0" />
+                  <point x="-60.571428571428555" y="-469.5" />
+                </edge>
+                <edge source="cc3002.tarea1.IEnergia" target="cc3002.tarea1.ISkill">
+                  <point x="-97.28571428571433" y="49.0" />
+                  <point x="2334.889487259881" y="859.0" />
+                  <point x="39.88065969039235" y="859.0" />
+                  <point x="39.88065969039235" y="6738.0" />
+                  <point x="2456.216972303305" y="6738.0" />
+                  <point x="-130.92857142857144" y="-121.0" />
+                </edge>
+                <edge source="cc3002.tarea1.ICardComposite" target="cc3002.tarea1.ICard">
+                  <point x="-61.5" y="-37.0" />
+                  <point x="584.0357142857142" y="1988.0" />
+                  <point x="552.1820247095097" y="1988.0" />
+                  <point x="552.1820247095097" y="849.0" />
+                  <point x="715.8806596903923" y="849.0" />
+                  <point x="-43.25" y="37.0" />
+                </edge>
+                <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.Visitor.PlayVisitor">
+                  <point x="-90.64285714285711" y="-121.0" />
+                  <point x="2496.5026865890195" y="6718.0" />
+                  <point x="202.22946504274182" y="6718.0" />
+                  <point x="202.22946504274182" y="4663.0" />
+                  <point x="1819.3593670035261" y="4663.0" />
+                  <point x="-47.541666666666686" y="13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Card" target="cc3002.tarea1.Pokemon">
+                  <point x="0.0" y="-13.0" />
+                  <point x="2130.7246686510753" y="1998.0" />
+                  <point x="2478.338627938669" y="1998.0" />
+                  <point x="-133.33333333333331" y="529.5" />
+                </edge>
+                <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.PokemonTypes">
+                  <point x="57.529411764705856" y="-13.0" />
+                  <point x="1924.4304454348985" y="4407.0" />
+                  <point x="2683.0886279386696" y="4407.0" />
+                  <point x="-53.125" y="13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.IEnergia">
+                  <point x="27.923076923076906" y="-13.0" />
+                  <point x="2820.6857415183094" y="5481.0" />
+                  <point x="2879.9443971694386" y="5481.0" />
+                  <point x="2879.9443971694386" y="849.0" />
+                  <point x="2529.46091583131" y="849.0" />
+                  <point x="97.28571428571422" y="49.0" />
+                </edge>
+                <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.IEnergia">
+                  <point x="49.0625" y="-349.0" />
+                  <point x="2559.173440530058" y="4533.0" />
+                  <point x="2441.1719612720026" y="4533.0" />
+                  <point x="2441.1719612720026" y="879.0" />
+                  <point x="2464.603772974167" y="879.0" />
+                  <point x="32.42857142857133" y="49.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Visitor.PlayVisitor">
+                  <point x="-45.428571428571445" y="-469.5" />
+                  <point x="1851.1807955749546" y="5629.0" />
+                  <point x="1749.1093670035261" y="5629.0" />
+                  <point x="1749.1093670035261" y="4673.0" />
+                  <point x="1832.9427003368594" y="4673.0" />
+                  <point x="-33.95833333333337" y="13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.IPokemon">
+                  <point x="121.14285714285711" y="-469.5" />
+                  <point x="2017.752224146383" y="5679.0" />
+                  <point x="2385.743389843431" y="5679.0" />
+                  <point x="2385.743389843431" y="5491.0" />
+                  <point x="2465.2537976729154" y="5491.0" />
+                  <point x="-44.85714285714289" y="349.0" />
+                </edge>
+                <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.Visitor.PlayVisitor">
+                  <point x="-127.5625" y="-349.0" />
+                  <point x="2382.548440530058" y="4623.0" />
+                  <point x="1928.0260336701926" y="4623.0" />
+                  <point x="61.125" y="13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.ICardPlayable">
+                  <point x="56.75" y="-85.5" />
+                  <point x="220.63065969039235" y="2838.0" />
+                  <point x="163.76132778783995" y="2838.0" />
+                  <point x="163.76132778783995" y="1998.0" />
+                  <point x="815.5277185139219" y="1998.0" />
+                  <point x="-106.3529411764705" y="25.0" />
+                </edge>
+                <edge source="cc3002.tarea1.ICardComposite" target="cc3002.tarea1.ICardPlayable">
+                  <point x="61.5" y="-37.0" />
+                  <point x="707.0357142857142" y="2038.0" />
+                  <point x="868.704189102157" y="2038.0" />
+                  <point x="-53.17647058823536" y="25.0" />
+                </edge>
+                <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.IPokemon">
+                  <point x="31.875" y="13.0" />
+                  <point x="2768.0886279386696" y="4427.0" />
+                  <point x="2762.9636279386696" y="4427.0" />
+                  <point x="2762.9636279386696" y="4673.0" />
+                  <point x="2637.673440530058" y="4673.0" />
+                  <point x="127.5625" y="-349.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.ISkill">
+                  <point x="-18.916666666666742" y="85.5" />
+                  <point x="144.9639930237256" y="4427.0" />
+                  <point x="158.38065969039235" y="4427.0" />
+                  <point x="158.38065969039235" y="6728.0" />
+                  <point x="2476.359829446162" y="6728.0" />
+                  <point x="-110.78571428571428" y="-121.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Card" target="cc3002.tarea1.Controller">
+                  <point x="33.25" y="13.0" />
+                  <point x="2163.9746686510753" y="2192.0" />
+                  <point x="2246.3423157098987" y="2192.0" />
+                  <point x="2246.3423157098987" y="5639.0" />
+                  <point x="1957.1807955749546" y="5639.0" />
+                  <point x="60.571428571428555" y="-469.5" />
+                </edge>
+                <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.Visitor.PlayVisitor">
+                  <point x="-74.70833333333334" y="13.0" />
+                  <point x="1792.1927003368594" y="4493.0" />
+                  <point x="1765.4010336701926" y="4493.0" />
+                  <point x="1765.4010336701926" y="4466.5" />
+                  <point x="-81.5" y="6.5" />
+                </edge>
+                <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.Card">
+                  <point x="93.25" y="-253.0" />
+                  <point x="1939.474668651075" y="2212.0" />
+                  <point x="2125.9746686510753" y="2212.0" />
+                  <point x="-4.75" y="13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Pokemon">
+                  <point x="0.0" y="-13.0" />
+                  <point x="2792.7626645952323" y="5451.0" />
+                  <point x="2852.021320246362" y="5451.0" />
+                  <point x="2852.021320246362" y="2048.0" />
+                  <point x="2656.116405716447" y="2048.0" />
+                  <point x="44.44444444444434" y="529.5" />
+                </edge>
+                <edge source="cc3002.tarea1.Card" target="cc3002.tarea1.Card">
+                  <point x="-52.25" y="13.0" />
+                  <point x="2078.4746686510753" y="2148.0" />
+                  <point x="2053.7246686510753" y="2148.0" />
+                  <point x="2053.7246686510753" y="2115.0" />
+                  <point x="-57.0" y="-0.0" />
+                </edge>
+                <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.Pokemon">
+                  <point x="110.78571428571433" y="-121.0" />
+                  <point x="2697.931258017591" y="6728.0" />
+                  <point x="3018.5014319830498" y="6728.0" />
+                  <point x="3018.5014319830498" y="1988.0" />
+                  <point x="2762.7830723831134" y="1988.0" />
+                  <point x="151.11111111111097" y="529.5" />
+                </edge>
+                <edge source="cc3002.tarea1.Energies" target="cc3002.tarea1.Energy">
+                  <point x="-53.25" y="-13.0" />
+                  <point x="17.75" y="7040.0" />
+                  <point x="2.0949454046781284" y="7040.0" />
+                  <point x="2.0949454046781284" y="4417.0" />
+                  <point x="69.29732635705886" y="4417.0" />
+                  <point x="-94.58333333333348" y="85.5" />
+                </edge>
+                <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.Entrenador">
+                  <point x="-46.625" y="253.0" />
+                  <point x="1799.599668651075" y="2838.0" />
+                  <point x="1616.7031000236243" y="2838.0" />
+                  <point x="174.0666666666666" y="-709.5" />
+                </edge>
+                <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Visitor.PlayVisitor">
+                  <point x="46.625" y="709.5" />
+                  <point x="1489.2614333569577" y="4357.0" />
+                  <point x="1828.5480924937222" y="4357.0" />
+                  <point x="-38.35294117647061" y="-13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.IPokemon">
+                  <point x="-27.923076923076906" y="-13.0" />
+                  <point x="2764.8395876721556" y="5431.0" />
+                  <point x="2599.825226244344" y="5431.0" />
+                  <point x="89.71428571428578" y="349.0" />
+                </edge>
+                <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.Pokemon">
+                  <point x="-63.75" y="-13.0" />
+                  <point x="2672.4636279386696" y="2838.0" />
+                  <point x="2617.1719612720026" y="2838.0" />
+                  <point x="2617.1719612720026" y="2058.0" />
+                  <point x="2620.5608501608913" y="2058.0" />
+                  <point x="8.888888888888914" y="529.5" />
+                </edge>
+                <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.ISkill">
+                  <point x="74.375" y="13.0" />
+                  <point x="2810.5886279386696" y="4417.0" />
+                  <point x="2974.5014319830498" y="4417.0" />
+                  <point x="2974.5014319830498" y="6688.0" />
+                  <point x="2617.359829446162" y="6688.0" />
+                  <point x="30.214285714285666" y="-121.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Premio" target="cc3002.tarea1.ICardPlayable">
+                  <point x="97.0" y="-85.5" />
+                  <point x="851.8806596903923" y="2212.0" />
+                  <point x="825.1820247095097" y="2212.0" />
+                  <point x="825.1820247095097" y="2058.0" />
+                  <point x="895.2924243962748" y="2058.0" />
+                  <point x="-26.588235294117567" y="25.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.Entrenador">
+                  <point x="-57.52941176470591" y="-13.0" />
+                  <point x="1809.3716219054868" y="4377.0" />
+                  <point x="1427.0947666902907" y="4377.0" />
+                  <point x="-15.541666666666742" y="709.5" />
+                </edge>
+                <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Moneda">
+                  <point x="-15.14285714285711" y="-469.5" />
+                  <point x="1881.4665098606688" y="5609.0" />
+                  <point x="1812.6093670035261" y="5609.0" />
+                  <point x="-42.0" y="25.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.Controller">
+                  <point x="-44.44444444444446" y="529.5" />
+                  <point x="2567.2275168275582" y="2048.0" />
+                  <point x="2268.3423157098987" y="2048.0" />
+                  <point x="2268.3423157098987" y="5659.0" />
+                  <point x="1987.4665098606688" y="5659.0" />
+                  <point x="90.85714285714289" y="-469.5" />
+                </edge>
+                <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.ISkill">
+                  <point x="115.55555555555554" y="529.5" />
+                  <point x="2727.2275168275582" y="2008.0" />
+                  <point x="2996.5014319830498" y="2008.0" />
+                  <point x="2996.5014319830498" y="6708.0" />
+                  <point x="2657.6455437318764" y="6708.0" />
+                  <point x="70.5" y="-121.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Mazo" target="cc3002.tarea1.ICardComposite">
+                  <point x="-97.0" y="-145.5" />
+                  <point x="980.8806596903923" y="2202.0" />
+                  <point x="727.5357142857142" y="2202.0" />
+                  <point x="82.0" y="37.0" />
+                </edge>
+                <edge source="cc3002.tarea1.IEnergia" target="cc3002.tarea1.IPokemon">
+                  <point x="0.0" y="49.0" />
+                  <point x="2432.175201545596" y="879.0" />
+                  <point x="2430.1719612720026" y="879.0" />
+                  <point x="2430.1719612720026" y="4543.0" />
+                  <point x="2539.548440530058" y="4543.0" />
+                  <point x="29.4375" y="-349.0" />
+                </edge>
+                <edge source="cc3002.tarea1.CardStack" target="cc3002.tarea1.ICardPlayable">
+                  <point x="0.0" y="-85.5" />
+                  <point x="443.88065969039235" y="2212.0" />
+                  <point x="401.7827437807532" y="2212.0" />
+                  <point x="401.7827437807532" y="2028.0" />
+                  <point x="855.4100714550982" y="2028.0" />
+                  <point x="-66.47058823529414" y="25.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.ISkill">
+                  <point x="79.5" y="469.5" />
+                  <point x="1976.1093670035261" y="6698.0" />
+                  <point x="2536.7884008747337" y="6698.0" />
+                  <point x="-50.35714285714289" y="-121.0" />
+                </edge>
+                <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.Skill">
+                  <point x="134.57142857142867" y="349.0" />
+                  <point x="2644.682369101487" y="5421.0" />
+                  <point x="2774.147279979848" y="5421.0" />
+                  <point x="-18.61538461538464" y="-13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Card">
+                  <point x="124.33333333333326" y="-709.5" />
+                  <point x="1566.9697666902907" y="2828.0" />
+                  <point x="1543.9494104474197" y="2828.0" />
+                  <point x="1543.9494104474197" y="2202.0" />
+                  <point x="2116.4746686510753" y="2202.0" />
+                  <point x="-14.25" y="13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.IPokemon">
+                  <point x="-8.888888888888914" y="529.5" />
+                  <point x="2602.783072383114" y="2058.0" />
+                  <point x="2606.1719612720026" y="2058.0" />
+                  <point x="2606.1719612720026" y="4683.0" />
+                  <point x="2598.423440530058" y="4683.0" />
+                  <point x="88.3125" y="-349.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.Controller">
+                  <point x="-20.375" y="13.0" />
+                  <point x="1846.5260336701926" y="4683.0" />
+                  <point x="1760.1093670035261" y="4683.0" />
+                  <point x="1760.1093670035261" y="5619.0" />
+                  <point x="1866.323652717812" y="5619.0" />
+                  <point x="-30.28571428571422" y="-469.5" />
+                </edge>
+                <edge source="cc3002.tarea1.Card" target="cc3002.tarea1.ICardPlayable">
+                  <point x="-45.59999999999991" y="-13.0" />
+                  <point x="2085.1246686510754" y="1998.0" />
+                  <point x="1014.9394832198043" y="1998.0" />
+                  <point x="93.05882352941194" y="25.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.IEntrenador">
+                  <point x="149.20000000000005" y="-709.5" />
+                  <point x="1591.8364333569575" y="2828.0" />
+                  <point x="1706.349668651075" y="2828.0" />
+                  <point x="-139.875" y="253.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.IEnergia">
+                  <point x="-120.0" y="-529.5" />
+                  <point x="2491.6719612720026" y="879.0" />
+                  <point x="2497.0323444027385" y="879.0" />
+                  <point x="64.85714285714278" y="49.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.Visitor.PlayVisitor">
+                  <point x="-80.0" y="529.5" />
+                  <point x="2531.6719612720026" y="2028.0" />
+                  <point x="2198.2246686510753" y="2028.0" />
+                  <point x="2198.2246686510753" y="4387.0" />
+                  <point x="1905.2539748466634" y="4387.0" />
+                  <point x="38.35294117647061" y="-13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.ICardPlayable">
+                  <point x="9.8125" y="-349.0" />
+                  <point x="2519.923440530058" y="4553.0" />
+                  <point x="2419.1719612720026" y="4553.0" />
+                  <point x="2419.1719612720026" y="1978.0" />
+                  <point x="1028.233600866863" y="1978.0" />
+                  <point x="106.35294117647072" y="25.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.Energy">
+                  <point x="-76.70588235294122" y="-13.0" />
+                  <point x="1790.1951513172517" y="4397.0" />
+                  <point x="220.63065969039235" y="4397.0" />
+                  <point x="56.75" y="85.5" />
+                </edge>
+                <edge source="cc3002.tarea1.Energies" target="cc3002.tarea1.IPokemon">
+                  <point x="17.75" y="-13.0" />
+                  <point x="88.75" y="7020.0" />
+                  <point x="24.09494540467813" y="7020.0" />
+                  <point x="24.09494540467813" y="5471.0" />
+                  <point x="2375.5395119586296" y="5471.0" />
+                  <point x="-134.57142857142856" y="349.0" />
+                </edge>
+                <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.EnergyCounter">
+                  <point x="147.1875" y="-349.0" />
+                  <point x="2657.298440530058" y="4683.0" />
+                  <point x="2831.7136279386696" y="4683.0" />
+                  <point x="2831.7136279386696" y="879.0" />
+                  <point x="2848.798440530058" y="879.0" />
+                  <point x="15.25" y="289.5" />
+                </edge>
+                <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.ICardPlayable">
+                  <point x="-93.25" y="-253.0" />
+                  <point x="1752.974668651075" y="2008.0" />
+                  <point x="1001.6453655727455" y="2008.0" />
+                  <point x="79.76470588235316" y="25.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.IPokemon">
+                  <point x="18.916666666666515" y="85.5" />
+                  <point x="182.79732635705886" y="4427.0" />
+                  <point x="169.38065969039235" y="4427.0" />
+                  <point x="169.38065969039235" y="4633.0" />
+                  <point x="2362.923440530058" y="4633.0" />
+                  <point x="-147.1875" y="-349.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.Card">
+                  <point x="28.764705882352928" y="-13.0" />
+                  <point x="1895.6657395525458" y="4377.0" />
+                  <point x="2166.8496686510753" y="4377.0" />
+                  <point x="2166.8496686510753" y="2212.0" />
+                  <point x="2144.9746686510753" y="2212.0" />
+                  <point x="14.25" y="13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Skill">
+                  <point x="-45.375" y="13.0" />
+                  <point x="2747.3876645952323" y="5589.0" />
+                  <point x="2712.2626645952323" y="5589.0" />
+                  <point x="2712.2626645952323" y="5556.0" />
+                  <point x="-60.5" y="-0.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.Card">
+                  <point x="-97.77777777777783" y="529.5" />
+                  <point x="2513.8941834942248" y="2018.0" />
+                  <point x="2176.324668651075" y="2018.0" />
+                  <point x="45.59999999999991" y="-13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.PokemonTypes">
+                  <point x="-74.375" y="13.0" />
+                  <point x="2661.8386279386696" y="3600.5" />
+                  <point x="2631.2136279386696" y="3600.5" />
+                  <point x="2631.2136279386696" y="3567.5" />
+                  <point x="-85.0" y="-0.0" />
+                </edge>
+                <edge source="cc3002.tarea1.CardStack" target="cc3002.tarea1.ICardComposite">
+                  <point x="97.0" y="-85.5" />
+                  <point x="540.8806596903923" y="2212.0" />
+                  <point x="563.5357142857142" y="2212.0" />
+                  <point x="-82.0" y="37.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Premio">
+                  <point x="-99.4666666666667" y="-709.5" />
+                  <point x="1343.169766690291" y="2808.0" />
+                  <point x="682.1306596903923" y="2808.0" />
+                  <point x="-72.75" y="85.5" />
+                </edge>
+                <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.EnergyCounter">
+                  <point x="130.92857142857144" y="-121.0" />
+                  <point x="2718.074115160448" y="6738.0" />
+                  <point x="3029.5014319830498" y="6738.0" />
+                  <point x="3029.5014319830498" y="879.0" />
+                  <point x="2970.798440530058" y="879.0" />
+                  <point x="137.25" y="289.5" />
+                </edge>
+                <edge source="cc3002.tarea1.IEnergia" target="cc3002.tarea1.Visitor.PlayVisitor">
+                  <point x="-32.428571428571445" y="49.0" />
+                  <point x="2399.7466301170243" y="879.0" />
+                  <point x="2043.224668651075" y="879.0" />
+                  <point x="2043.224668651075" y="4357.0" />
+                  <point x="1876.4892689643104" y="4357.0" />
+                  <point x="9.58823529411768" y="-13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.EnergyCounter">
+                  <point x="46.53846153846155" y="-13.0" />
+                  <point x="2839.301126133694" y="5501.0" />
+                  <point x="2952.1168165984345" y="5501.0" />
+                  <point x="2952.1168165984345" y="829.0" />
+                  <point x="2909.798440530058" y="829.0" />
+                  <point x="76.25" y="289.5" />
+                </edge>
+                <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.Visitor.PlayVisitor">
+                  <point x="-10.625" y="13.0" />
+                  <point x="2725.5886279386696" y="4427.0" />
+                  <point x="1943.606916023134" y="4427.0" />
+                  <point x="76.70588235294122" y="-13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Premio" target="cc3002.tarea1.ICardComposite">
+                  <point x="-97.0" y="-85.5" />
+                  <point x="657.8806596903923" y="2212.0" />
+                  <point x="645.5357142857142" y="2212.0" />
+                  <point x="0.0" y="37.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Energies" target="cc3002.tarea1.ISkill">
+                  <point x="53.25" y="-13.0" />
+                  <point x="124.25" y="7040.0" />
+                  <point x="2587.1455437318764" y="7040.0" />
+                  <point x="0.0" y="121.0" />
+                </edge>
+                <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.EnergyCounter">
+                  <point x="21.25" y="-13.0" />
+                  <point x="2757.4636279386696" y="2838.0" />
+                  <point x="2782.1719612720026" y="2838.0" />
+                  <point x="2782.1719612720026" y="879.0" />
+                  <point x="2787.798440530058" y="879.0" />
+                  <point x="-45.75" y="289.5" />
+                </edge>
+                <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.Card">
+                  <point x="-9.8125" y="-349.0" />
+                  <point x="2500.298440530058" y="4563.0" />
+                  <point x="2408.1719612720026" y="4563.0" />
+                  <point x="2408.1719612720026" y="2172.0" />
+                  <point x="2182.9746686510753" y="2172.0" />
+                  <point x="52.25" y="13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.IPokemon">
+                  <point x="74.70833333333337" y="13.0" />
+                  <point x="1941.6093670035261" y="4613.0" />
+                  <point x="2402.173440530058" y="4613.0" />
+                  <point x="-107.9375" y="-349.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.Skill">
+                  <point x="47.54166666666663" y="13.0" />
+                  <point x="1914.4427003368594" y="4643.0" />
+                  <point x="2342.610940530058" y="4643.0" />
+                  <point x="2342.610940530058" y="5441.0" />
+                  <point x="2755.5318953644633" y="5441.0" />
+                  <point x="-37.23076923076928" y="-13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Visitor.PlayVisitor">
+                  <point x="-55.84615384615381" y="-13.0" />
+                  <point x="2736.916510749079" y="5461.0" />
+                  <point x="1971.1093670035261" y="5461.0" />
+                  <point x="1971.1093670035261" y="4663.0" />
+                  <point x="1887.2760336701926" y="4663.0" />
+                  <point x="20.375" y="13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.ISkill">
+                  <point x="45.375" y="13.0" />
+                  <point x="2838.1376645952323" y="5699.0" />
+                  <point x="2845.4501645952323" y="5699.0" />
+                  <point x="2845.4501645952323" y="6678.0" />
+                  <point x="2597.216972303305" y="6678.0" />
+                  <point x="10.071428571428555" y="-121.0" />
+                </edge>
+                <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.Skill">
+                  <point x="53.125" y="13.0" />
+                  <point x="2789.3386279386696" y="4427.0" />
+                  <point x="2842.7136279386696" y="4427.0" />
+                  <point x="2842.7136279386696" y="5441.0" />
+                  <point x="2783.4549722875404" y="5441.0" />
+                  <point x="-9.307692307692264" y="-13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.ICardPlayable">
+                  <point x="-151.42857142857156" y="-469.5" />
+                  <point x="1745.1807955749546" y="5699.0" />
+                  <point x="287.88065969039235" y="5699.0" />
+                  <point x="287.88065969039235" y="2008.0" />
+                  <point x="828.8218361609806" y="2008.0" />
+                  <point x="-93.05882352941171" y="25.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Mazo" target="cc3002.tarea1.ICardPlayable">
+                  <point x="97.0" y="-145.5" />
+                  <point x="1174.8806596903923" y="2212.0" />
+                  <point x="1143.6364333569577" y="2212.0" />
+                  <point x="1143.6364333569577" y="2048.0" />
+                  <point x="948.4688949845099" y="2048.0" />
+                  <point x="26.588235294117567" y="25.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.ICardPlayable">
+                  <point x="-49.73333333333335" y="-709.5" />
+                  <point x="1392.9031000236241" y="2788.0" />
+                  <point x="910.8806596903923" y="2788.0" />
+                  <point x="910.8806596903923" y="2058.0" />
+                  <point x="908.5865420433336" y="2058.0" />
+                  <point x="-13.294117647058783" y="25.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.CardStack">
+                  <point x="-124.33333333333348" y="-709.5" />
+                  <point x="1318.3031000236242" y="2818.0" />
+                  <point x="540.8806596903923" y="2818.0" />
+                  <point x="97.0" y="85.5" />
+                </edge>
+                <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.Controller">
+                  <point x="-70.5" y="-121.0" />
+                  <point x="2516.6455437318764" y="6708.0" />
+                  <point x="1817.1093670035261" y="6708.0" />
+                  <point x="-79.5" y="469.5" />
+                </edge>
+                <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.Visitor.PlayVisitor">
+                  <point x="94.58333333333348" y="85.5" />
+                  <point x="258.46399302372583" y="4387.0" />
+                  <point x="1799.7833866113692" y="4387.0" />
+                  <point x="-67.11764705882354" y="-13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.ICardPlayable" target="cc3002.tarea1.Visitor.PlayVisitor">
+                  <point x="66.47058823529414" y="25.0" />
+                  <point x="988.3512479256865" y="2018.0" />
+                  <point x="1649.2246686510753" y="2018.0" />
+                  <point x="1649.2246686510753" y="4327.0" />
+                  <point x="1857.312798376075" y="4327.0" />
+                  <point x="-9.58823529411768" y="-13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.Controller">
+                  <point x="-89.71428571428567" y="349.0" />
+                  <point x="2420.3966548157723" y="5481.0" />
+                  <point x="2374.743389843431" y="5481.0" />
+                  <point x="2374.743389843431" y="5669.0" />
+                  <point x="2002.6093670035261" y="5669.0" />
+                  <point x="106.0" y="-469.5" />
+                </edge>
+                <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Skill">
+                  <point x="136.28571428571422" y="-469.5" />
+                  <point x="2032.8950812892404" y="5689.0" />
+                  <point x="2777.6376645952323" y="5689.0" />
+                  <point x="-15.125" y="13.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.IPokemon">
+                  <point x="170.95833333333326" y="709.5" />
+                  <point x="1613.5947666902907" y="4297.0" />
+                  <point x="2324.6743651181564" y="4297.0" />
+                  <point x="2324.6743651181564" y="4583.0" />
+                  <point x="2461.048440530058" y="4583.0" />
+                  <point x="-49.0625" y="-349.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Mazo">
+                  <point x="24.86666666666656" y="-709.5" />
+                  <point x="1467.503100023624" y="2758.0" />
+                  <point x="1150.6306596903923" y="2758.0" />
+                  <point x="72.75" y="145.5" />
+                </edge>
+                <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.IEnergia">
+                  <point x="-56.75" y="-85.5" />
+                  <point x="107.13065969039235" y="2838.0" />
+                  <point x="144.18779837607508" y="2838.0" />
+                  <point x="144.18779837607508" y="869.0" />
+                  <point x="2367.3180586884528" y="869.0" />
+                  <point x="-64.85714285714289" y="49.0" />
+                </edge>
+                <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.ISkill">
+                  <point x="44.85714285714289" y="349.0" />
+                  <point x="2554.9680833872007" y="5511.0" />
+                  <point x="2407.743389843431" y="5511.0" />
+                  <point x="2407.743389843431" y="6678.0" />
+                  <point x="2577.074115160448" y="6678.0" />
+                  <point x="-10.071428571428555" y="-121.0" />
+                </edge>
+                <edge source="cc3002.tarea1.ICardPlayable" target="cc3002.tarea1.ICard">
+                  <point x="0.0" y="-25.0" />
+                  <point x="921.8806596903923" y="849.0" />
+                  <point x="802.3806596903923" y="849.0" />
+                  <point x="43.25" y="37.0" />
+                </edge>
+                <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.IPokemon">
+                  <point x="139.875" y="253.0" />
+                  <point x="1986.099668651075" y="2838.0" />
+                  <point x="2335.6743651181564" y="2838.0" />
+                  <point x="2335.6743651181564" y="4573.0" />
+                  <point x="2480.673440530058" y="4573.0" />
+                  <point x="-29.4375" y="-349.0" />
+                </edge>
+                <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.ICardPlayable">
+                  <point x="-19.176470588235304" y="-13.0" />
+                  <point x="1847.7245630819575" y="4337.0" />
+                  <point x="1639.6364333569577" y="4337.0" />
+                  <point x="1639.6364333569577" y="2028.0" />
+                  <point x="975.0571302786277" y="2028.0" />
+                  <point x="53.17647058823536" y="25.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.38586080586080584" x="1954.713878868426" y="4717.341180937916" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Methods</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -63,15 +776,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/Phase1Available.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Visitor/PlayVisitor/EfectoOnDemand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -84,7 +788,7 @@
         <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="125" column="4" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="4" />
+              <caret line="125" selection-start-line="125" selection-end-line="125" />
             </state>
           </provider>
         </entry>
@@ -503,14 +1207,11 @@
       <workItem from="1560182648487" duration="9366000" />
       <workItem from="1560569560928" duration="69628000" />
       <workItem from="1560668461945" duration="33625000" />
-      <workItem from="1560740927948" duration="11892000" />
+      <workItem from="1560740927948" duration="12361000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_in_cc3002-tarea1 - 2019.06.17 at 01h 48m 00s.xml">
-      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
-    </history-entry>
     <history-entry file="test_in_cc3002-tarea1 - 2019.06.17 at 01h 48m 15s.xml">
       <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
     </history-entry>
@@ -538,9 +1239,12 @@
     <history-entry file="test_in_cc3002-tarea1 - 2019.06.17 at 04h 18m 53s.xml">
       <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
     </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.17 at 04h 25m 14s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250555000" />
+    <option name="totallyTimeSpent" value="251024000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -621,7 +1325,7 @@
       <FILTER>test.*</FILTER>
       <FILTER>cc3002.tarea1.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/tarea1$test_in_cc3002_tarea1.ic" NAME="test in cc3002-tarea1 Coverage Results" MODIFIED="1560759532846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/tarea1$test_in_cc3002_tarea1.ic" NAME="test in cc3002-tarea1 Coverage Results" MODIFIED="1560759913323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.*</FILTER>
       <FILTER>cc3002.tarea1.Effect.*</FILTER>
       <FILTER>cc3002.tarea1.*</FILTER>
@@ -631,13 +1335,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractLightPokemon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/PokemonTypes/AbstractLeafPokemon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1006,7 +1703,7 @@
     <entry file="file://$PROJECT_DIR$/src/cc3002.tarea1/Entrenador.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="125" column="4" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="4" />
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
         </state>
       </provider>
     </entry>
@@ -1055,6 +1752,725 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/cc3002.tarea1">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>cc3002.tarea1</OriginalElement>
+          <nodes>
+            <node x="2353.110940530058" y="4703.0">cc3002.tarea1.IPokemon</node>
+            <node x="2732.2626645952323" y="5543.0">cc3002.tarea1.Skill</node>
+            <node x="50.38065969039235" y="3482.0">cc3002.tarea1.Energy</node>
+            <node x="1659.724668651075" y="2232.0">cc3002.tarea1.IEntrenador</node>
+            <node x="1770.6093670035261" y="5531.0">cc3002.tarea1.Moneda</node>
+            <node x="522.5357142857142" y="2078.0">cc3002.tarea1.ICardComposite</node>
+            <node x="2681.048440530058" y="220.0">cc3002.tarea1.EnergyCounter</node>
+            <node x="932.3806596903923" y="2339.5">cc3002.tarea1.Mazo</node>
+            <node x="672.6306596903923" y="472.5">cc3002.tarea1.ICard</node>
+            <node x="609.3806596903923" y="2399.5">cc3002.tarea1.Premio</node>
+            <node x="2073.7246686510753" y="2102.0">cc3002.tarea1.Card</node>
+            <node x="0.0" y="7060.0">cc3002.tarea1.Energies</node>
+            <node x="2753.050201545596" y="0.0">cc3002.tarea1.EnergyType</node>
+            <node x="1785.4010336701926" y="4447.0">cc3002.tarea1.Visitor.PlayVisitor</node>
+            <node x="1737.6093670035261" y="5719.0">cc3002.tarea1.Controller</node>
+            <node x="808.8806596903923" y="1403.5">cc3002.tarea1.ICardPlayable</node>
+            <node x="2446.1455437318764" y="6758.0">cc3002.tarea1.ISkill</node>
+            <node x="1256.1364333569577" y="2858.0">cc3002.tarea1.Entrenador</node>
+            <node x="298.38065969039235" y="2399.5">cc3002.tarea1.CardStack</node>
+            <node x="2651.2136279386696" y="3554.5">cc3002.tarea1.PokemonTypes</node>
+            <node x="2451.6719612720026" y="899.0">cc3002.tarea1.Pokemon</node>
+            <node x="2318.675201545596" y="460.5">cc3002.tarea1.IEnergia</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="cc3002.tarea1.EnergyCounter" target="cc3002.tarea1.EnergyType">
+              <point x="76.25" y="-289.5" />
+              <point x="2909.798440530058" y="195.0" />
+              <point x="2840.050201545596" y="195.0" />
+              <point x="29.0" y="85.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card" target="cc3002.tarea1.Visitor.PlayVisitor">
+              <point x="4.75" y="13.0" />
+              <point x="2135.4746686510753" y="4367.0" />
+              <point x="1886.077504258428" y="4367.0" />
+              <point x="19.176470588235247" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.Skill">
+              <point x="79.99999999999989" y="529.5" />
+              <point x="2691.6719612720026" y="2028.0" />
+              <point x="2870.6367048617467" y="2028.0" />
+              <point x="2870.6367048617467" y="5471.0" />
+              <point x="2811.378049210617" y="5471.0" />
+              <point x="18.61538461538464" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Entrenador">
+              <point x="-121.14285714285711" y="-469.5" />
+              <point x="1775.4665098606688" y="5679.0" />
+              <point x="1285.8961317094086" y="5679.0" />
+              <point x="1285.8961317094086" y="4427.0" />
+              <point x="1271.6781000236242" y="4427.0" />
+              <point x="-170.95833333333326" y="709.5" />
+            </edge>
+            <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.IPokemon">
+              <point x="-30.214285714285666" y="-121.0" />
+              <point x="2556.931258017591" y="6688.0" />
+              <point x="2396.743389843431" y="6688.0" />
+              <point x="2396.743389843431" y="5501.0" />
+              <point x="2510.110940530058" y="5501.0" />
+              <point x="0.0" y="349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Card">
+              <point x="75.71428571428567" y="-469.5" />
+              <point x="1972.3236527178117" y="5649.0" />
+              <point x="2257.3423157098987" y="5649.0" />
+              <point x="2257.3423157098987" y="2182.0" />
+              <point x="2173.4746686510753" y="2182.0" />
+              <point x="42.75" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Controller">
+              <point x="15.125" y="13.0" />
+              <point x="2807.8876645952323" y="5699.0" />
+              <point x="2048.0379384320972" y="5699.0" />
+              <point x="151.42857142857133" y="-469.5" />
+            </edge>
+            <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.Visitor.PlayVisitor">
+              <point x="46.625" y="253.0" />
+              <point x="1892.849668651075" y="4347.0" />
+              <point x="1866.9010336701926" y="4347.0" />
+              <point x="0.0" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.EnergyCounter">
+              <point x="40.0" y="-529.5" />
+              <point x="2651.6719612720026" y="869.0" />
+              <point x="2726.798440530058" y="869.0" />
+              <point x="-106.75" y="289.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Controller">
+              <point x="-46.625" y="709.5" />
+              <point x="1396.0114333569577" y="4427.0" />
+              <point x="1329.8961317094086" y="4427.0" />
+              <point x="1329.8961317094086" y="5639.0" />
+              <point x="1836.0379384320975" y="5639.0" />
+              <point x="-60.571428571428555" y="-469.5" />
+            </edge>
+            <edge source="cc3002.tarea1.IEnergia" target="cc3002.tarea1.ISkill">
+              <point x="-97.28571428571433" y="49.0" />
+              <point x="2334.889487259881" y="859.0" />
+              <point x="39.88065969039235" y="859.0" />
+              <point x="39.88065969039235" y="6738.0" />
+              <point x="2456.216972303305" y="6738.0" />
+              <point x="-130.92857142857144" y="-121.0" />
+            </edge>
+            <edge source="cc3002.tarea1.ICardComposite" target="cc3002.tarea1.ICard">
+              <point x="-61.5" y="-37.0" />
+              <point x="584.0357142857142" y="1988.0" />
+              <point x="552.1820247095097" y="1988.0" />
+              <point x="552.1820247095097" y="849.0" />
+              <point x="715.8806596903923" y="849.0" />
+              <point x="-43.25" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.Visitor.PlayVisitor">
+              <point x="-90.64285714285711" y="-121.0" />
+              <point x="2496.5026865890195" y="6718.0" />
+              <point x="202.22946504274182" y="6718.0" />
+              <point x="202.22946504274182" y="4663.0" />
+              <point x="1819.3593670035261" y="4663.0" />
+              <point x="-47.541666666666686" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card" target="cc3002.tarea1.Pokemon">
+              <point x="0.0" y="-13.0" />
+              <point x="2130.7246686510753" y="1998.0" />
+              <point x="2478.338627938669" y="1998.0" />
+              <point x="-133.33333333333331" y="529.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.PokemonTypes">
+              <point x="57.529411764705856" y="-13.0" />
+              <point x="1924.4304454348985" y="4407.0" />
+              <point x="2683.0886279386696" y="4407.0" />
+              <point x="-53.125" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.IEnergia">
+              <point x="27.923076923076906" y="-13.0" />
+              <point x="2820.6857415183094" y="5481.0" />
+              <point x="2879.9443971694386" y="5481.0" />
+              <point x="2879.9443971694386" y="849.0" />
+              <point x="2529.46091583131" y="849.0" />
+              <point x="97.28571428571422" y="49.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.IEnergia">
+              <point x="49.0625" y="-349.0" />
+              <point x="2559.173440530058" y="4533.0" />
+              <point x="2441.1719612720026" y="4533.0" />
+              <point x="2441.1719612720026" y="879.0" />
+              <point x="2464.603772974167" y="879.0" />
+              <point x="32.42857142857133" y="49.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Visitor.PlayVisitor">
+              <point x="-45.428571428571445" y="-469.5" />
+              <point x="1851.1807955749546" y="5629.0" />
+              <point x="1749.1093670035261" y="5629.0" />
+              <point x="1749.1093670035261" y="4673.0" />
+              <point x="1832.9427003368594" y="4673.0" />
+              <point x="-33.95833333333337" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.IPokemon">
+              <point x="121.14285714285711" y="-469.5" />
+              <point x="2017.752224146383" y="5679.0" />
+              <point x="2385.743389843431" y="5679.0" />
+              <point x="2385.743389843431" y="5491.0" />
+              <point x="2465.2537976729154" y="5491.0" />
+              <point x="-44.85714285714289" y="349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.Visitor.PlayVisitor">
+              <point x="-127.5625" y="-349.0" />
+              <point x="2382.548440530058" y="4623.0" />
+              <point x="1928.0260336701926" y="4623.0" />
+              <point x="61.125" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.ICardPlayable">
+              <point x="56.75" y="-85.5" />
+              <point x="220.63065969039235" y="2838.0" />
+              <point x="163.76132778783995" y="2838.0" />
+              <point x="163.76132778783995" y="1998.0" />
+              <point x="815.5277185139219" y="1998.0" />
+              <point x="-106.3529411764705" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.ICardComposite" target="cc3002.tarea1.ICardPlayable">
+              <point x="61.5" y="-37.0" />
+              <point x="707.0357142857142" y="2038.0" />
+              <point x="868.704189102157" y="2038.0" />
+              <point x="-53.17647058823536" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.IPokemon">
+              <point x="31.875" y="13.0" />
+              <point x="2768.0886279386696" y="4427.0" />
+              <point x="2762.9636279386696" y="4427.0" />
+              <point x="2762.9636279386696" y="4673.0" />
+              <point x="2637.673440530058" y="4673.0" />
+              <point x="127.5625" y="-349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.ISkill">
+              <point x="-18.916666666666742" y="85.5" />
+              <point x="144.9639930237256" y="4427.0" />
+              <point x="158.38065969039235" y="4427.0" />
+              <point x="158.38065969039235" y="6728.0" />
+              <point x="2476.359829446162" y="6728.0" />
+              <point x="-110.78571428571428" y="-121.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Card" target="cc3002.tarea1.Controller">
+              <point x="33.25" y="13.0" />
+              <point x="2163.9746686510753" y="2192.0" />
+              <point x="2246.3423157098987" y="2192.0" />
+              <point x="2246.3423157098987" y="5639.0" />
+              <point x="1957.1807955749546" y="5639.0" />
+              <point x="60.571428571428555" y="-469.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.Visitor.PlayVisitor">
+              <point x="-74.70833333333334" y="13.0" />
+              <point x="1792.1927003368594" y="4493.0" />
+              <point x="1765.4010336701926" y="4493.0" />
+              <point x="1765.4010336701926" y="4466.5" />
+              <point x="-81.5" y="6.5" />
+            </edge>
+            <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.Card">
+              <point x="93.25" y="-253.0" />
+              <point x="1939.474668651075" y="2212.0" />
+              <point x="2125.9746686510753" y="2212.0" />
+              <point x="-4.75" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Pokemon">
+              <point x="0.0" y="-13.0" />
+              <point x="2792.7626645952323" y="5451.0" />
+              <point x="2852.021320246362" y="5451.0" />
+              <point x="2852.021320246362" y="2048.0" />
+              <point x="2656.116405716447" y="2048.0" />
+              <point x="44.44444444444434" y="529.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Card" target="cc3002.tarea1.Card">
+              <point x="-52.25" y="13.0" />
+              <point x="2078.4746686510753" y="2148.0" />
+              <point x="2053.7246686510753" y="2148.0" />
+              <point x="2053.7246686510753" y="2115.0" />
+              <point x="-57.0" y="-0.0" />
+            </edge>
+            <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.Pokemon">
+              <point x="110.78571428571433" y="-121.0" />
+              <point x="2697.931258017591" y="6728.0" />
+              <point x="3018.5014319830498" y="6728.0" />
+              <point x="3018.5014319830498" y="1988.0" />
+              <point x="2762.7830723831134" y="1988.0" />
+              <point x="151.11111111111097" y="529.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Energies" target="cc3002.tarea1.Energy">
+              <point x="-53.25" y="-13.0" />
+              <point x="17.75" y="7040.0" />
+              <point x="2.0949454046781284" y="7040.0" />
+              <point x="2.0949454046781284" y="4417.0" />
+              <point x="69.29732635705886" y="4417.0" />
+              <point x="-94.58333333333348" y="85.5" />
+            </edge>
+            <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.Entrenador">
+              <point x="-46.625" y="253.0" />
+              <point x="1799.599668651075" y="2838.0" />
+              <point x="1616.7031000236243" y="2838.0" />
+              <point x="174.0666666666666" y="-709.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Visitor.PlayVisitor">
+              <point x="46.625" y="709.5" />
+              <point x="1489.2614333569577" y="4357.0" />
+              <point x="1828.5480924937222" y="4357.0" />
+              <point x="-38.35294117647061" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.IPokemon">
+              <point x="-27.923076923076906" y="-13.0" />
+              <point x="2764.8395876721556" y="5431.0" />
+              <point x="2599.825226244344" y="5431.0" />
+              <point x="89.71428571428578" y="349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.Pokemon">
+              <point x="-63.75" y="-13.0" />
+              <point x="2672.4636279386696" y="2838.0" />
+              <point x="2617.1719612720026" y="2838.0" />
+              <point x="2617.1719612720026" y="2058.0" />
+              <point x="2620.5608501608913" y="2058.0" />
+              <point x="8.888888888888914" y="529.5" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.ISkill">
+              <point x="74.375" y="13.0" />
+              <point x="2810.5886279386696" y="4417.0" />
+              <point x="2974.5014319830498" y="4417.0" />
+              <point x="2974.5014319830498" y="6688.0" />
+              <point x="2617.359829446162" y="6688.0" />
+              <point x="30.214285714285666" y="-121.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Premio" target="cc3002.tarea1.ICardPlayable">
+              <point x="97.0" y="-85.5" />
+              <point x="851.8806596903923" y="2212.0" />
+              <point x="825.1820247095097" y="2212.0" />
+              <point x="825.1820247095097" y="2058.0" />
+              <point x="895.2924243962748" y="2058.0" />
+              <point x="-26.588235294117567" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.Entrenador">
+              <point x="-57.52941176470591" y="-13.0" />
+              <point x="1809.3716219054868" y="4377.0" />
+              <point x="1427.0947666902907" y="4377.0" />
+              <point x="-15.541666666666742" y="709.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Moneda">
+              <point x="-15.14285714285711" y="-469.5" />
+              <point x="1881.4665098606688" y="5609.0" />
+              <point x="1812.6093670035261" y="5609.0" />
+              <point x="-42.0" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.Controller">
+              <point x="-44.44444444444446" y="529.5" />
+              <point x="2567.2275168275582" y="2048.0" />
+              <point x="2268.3423157098987" y="2048.0" />
+              <point x="2268.3423157098987" y="5659.0" />
+              <point x="1987.4665098606688" y="5659.0" />
+              <point x="90.85714285714289" y="-469.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.ISkill">
+              <point x="115.55555555555554" y="529.5" />
+              <point x="2727.2275168275582" y="2008.0" />
+              <point x="2996.5014319830498" y="2008.0" />
+              <point x="2996.5014319830498" y="6708.0" />
+              <point x="2657.6455437318764" y="6708.0" />
+              <point x="70.5" y="-121.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Mazo" target="cc3002.tarea1.ICardComposite">
+              <point x="-97.0" y="-145.5" />
+              <point x="980.8806596903923" y="2202.0" />
+              <point x="727.5357142857142" y="2202.0" />
+              <point x="82.0" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IEnergia" target="cc3002.tarea1.IPokemon">
+              <point x="0.0" y="49.0" />
+              <point x="2432.175201545596" y="879.0" />
+              <point x="2430.1719612720026" y="879.0" />
+              <point x="2430.1719612720026" y="4543.0" />
+              <point x="2539.548440530058" y="4543.0" />
+              <point x="29.4375" y="-349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.CardStack" target="cc3002.tarea1.ICardPlayable">
+              <point x="0.0" y="-85.5" />
+              <point x="443.88065969039235" y="2212.0" />
+              <point x="401.7827437807532" y="2212.0" />
+              <point x="401.7827437807532" y="2028.0" />
+              <point x="855.4100714550982" y="2028.0" />
+              <point x="-66.47058823529414" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.ISkill">
+              <point x="79.5" y="469.5" />
+              <point x="1976.1093670035261" y="6698.0" />
+              <point x="2536.7884008747337" y="6698.0" />
+              <point x="-50.35714285714289" y="-121.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.Skill">
+              <point x="134.57142857142867" y="349.0" />
+              <point x="2644.682369101487" y="5421.0" />
+              <point x="2774.147279979848" y="5421.0" />
+              <point x="-18.61538461538464" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Card">
+              <point x="124.33333333333326" y="-709.5" />
+              <point x="1566.9697666902907" y="2828.0" />
+              <point x="1543.9494104474197" y="2828.0" />
+              <point x="1543.9494104474197" y="2202.0" />
+              <point x="2116.4746686510753" y="2202.0" />
+              <point x="-14.25" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.IPokemon">
+              <point x="-8.888888888888914" y="529.5" />
+              <point x="2602.783072383114" y="2058.0" />
+              <point x="2606.1719612720026" y="2058.0" />
+              <point x="2606.1719612720026" y="4683.0" />
+              <point x="2598.423440530058" y="4683.0" />
+              <point x="88.3125" y="-349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.Controller">
+              <point x="-20.375" y="13.0" />
+              <point x="1846.5260336701926" y="4683.0" />
+              <point x="1760.1093670035261" y="4683.0" />
+              <point x="1760.1093670035261" y="5619.0" />
+              <point x="1866.323652717812" y="5619.0" />
+              <point x="-30.28571428571422" y="-469.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Card" target="cc3002.tarea1.ICardPlayable">
+              <point x="-45.59999999999991" y="-13.0" />
+              <point x="2085.1246686510754" y="1998.0" />
+              <point x="1014.9394832198043" y="1998.0" />
+              <point x="93.05882352941194" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.IEntrenador">
+              <point x="149.20000000000005" y="-709.5" />
+              <point x="1591.8364333569575" y="2828.0" />
+              <point x="1706.349668651075" y="2828.0" />
+              <point x="-139.875" y="253.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.IEnergia">
+              <point x="-120.0" y="-529.5" />
+              <point x="2491.6719612720026" y="879.0" />
+              <point x="2497.0323444027385" y="879.0" />
+              <point x="64.85714285714278" y="49.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.Visitor.PlayVisitor">
+              <point x="-80.0" y="529.5" />
+              <point x="2531.6719612720026" y="2028.0" />
+              <point x="2198.2246686510753" y="2028.0" />
+              <point x="2198.2246686510753" y="4387.0" />
+              <point x="1905.2539748466634" y="4387.0" />
+              <point x="38.35294117647061" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.ICardPlayable">
+              <point x="9.8125" y="-349.0" />
+              <point x="2519.923440530058" y="4553.0" />
+              <point x="2419.1719612720026" y="4553.0" />
+              <point x="2419.1719612720026" y="1978.0" />
+              <point x="1028.233600866863" y="1978.0" />
+              <point x="106.35294117647072" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.Energy">
+              <point x="-76.70588235294122" y="-13.0" />
+              <point x="1790.1951513172517" y="4397.0" />
+              <point x="220.63065969039235" y="4397.0" />
+              <point x="56.75" y="85.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Energies" target="cc3002.tarea1.IPokemon">
+              <point x="17.75" y="-13.0" />
+              <point x="88.75" y="7020.0" />
+              <point x="24.09494540467813" y="7020.0" />
+              <point x="24.09494540467813" y="5471.0" />
+              <point x="2375.5395119586296" y="5471.0" />
+              <point x="-134.57142857142856" y="349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.EnergyCounter">
+              <point x="147.1875" y="-349.0" />
+              <point x="2657.298440530058" y="4683.0" />
+              <point x="2831.7136279386696" y="4683.0" />
+              <point x="2831.7136279386696" y="879.0" />
+              <point x="2848.798440530058" y="879.0" />
+              <point x="15.25" y="289.5" />
+            </edge>
+            <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.ICardPlayable">
+              <point x="-93.25" y="-253.0" />
+              <point x="1752.974668651075" y="2008.0" />
+              <point x="1001.6453655727455" y="2008.0" />
+              <point x="79.76470588235316" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.IPokemon">
+              <point x="18.916666666666515" y="85.5" />
+              <point x="182.79732635705886" y="4427.0" />
+              <point x="169.38065969039235" y="4427.0" />
+              <point x="169.38065969039235" y="4633.0" />
+              <point x="2362.923440530058" y="4633.0" />
+              <point x="-147.1875" y="-349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.Card">
+              <point x="28.764705882352928" y="-13.0" />
+              <point x="1895.6657395525458" y="4377.0" />
+              <point x="2166.8496686510753" y="4377.0" />
+              <point x="2166.8496686510753" y="2212.0" />
+              <point x="2144.9746686510753" y="2212.0" />
+              <point x="14.25" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Skill">
+              <point x="-45.375" y="13.0" />
+              <point x="2747.3876645952323" y="5589.0" />
+              <point x="2712.2626645952323" y="5589.0" />
+              <point x="2712.2626645952323" y="5556.0" />
+              <point x="-60.5" y="-0.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Pokemon" target="cc3002.tarea1.Card">
+              <point x="-97.77777777777783" y="529.5" />
+              <point x="2513.8941834942248" y="2018.0" />
+              <point x="2176.324668651075" y="2018.0" />
+              <point x="45.59999999999991" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.PokemonTypes">
+              <point x="-74.375" y="13.0" />
+              <point x="2661.8386279386696" y="3600.5" />
+              <point x="2631.2136279386696" y="3600.5" />
+              <point x="2631.2136279386696" y="3567.5" />
+              <point x="-85.0" y="-0.0" />
+            </edge>
+            <edge source="cc3002.tarea1.CardStack" target="cc3002.tarea1.ICardComposite">
+              <point x="97.0" y="-85.5" />
+              <point x="540.8806596903923" y="2212.0" />
+              <point x="563.5357142857142" y="2212.0" />
+              <point x="-82.0" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Premio">
+              <point x="-99.4666666666667" y="-709.5" />
+              <point x="1343.169766690291" y="2808.0" />
+              <point x="682.1306596903923" y="2808.0" />
+              <point x="-72.75" y="85.5" />
+            </edge>
+            <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.EnergyCounter">
+              <point x="130.92857142857144" y="-121.0" />
+              <point x="2718.074115160448" y="6738.0" />
+              <point x="3029.5014319830498" y="6738.0" />
+              <point x="3029.5014319830498" y="879.0" />
+              <point x="2970.798440530058" y="879.0" />
+              <point x="137.25" y="289.5" />
+            </edge>
+            <edge source="cc3002.tarea1.IEnergia" target="cc3002.tarea1.Visitor.PlayVisitor">
+              <point x="-32.428571428571445" y="49.0" />
+              <point x="2399.7466301170243" y="879.0" />
+              <point x="2043.224668651075" y="879.0" />
+              <point x="2043.224668651075" y="4357.0" />
+              <point x="1876.4892689643104" y="4357.0" />
+              <point x="9.58823529411768" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.EnergyCounter">
+              <point x="46.53846153846155" y="-13.0" />
+              <point x="2839.301126133694" y="5501.0" />
+              <point x="2952.1168165984345" y="5501.0" />
+              <point x="2952.1168165984345" y="829.0" />
+              <point x="2909.798440530058" y="829.0" />
+              <point x="76.25" y="289.5" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.Visitor.PlayVisitor">
+              <point x="-10.625" y="13.0" />
+              <point x="2725.5886279386696" y="4427.0" />
+              <point x="1943.606916023134" y="4427.0" />
+              <point x="76.70588235294122" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Premio" target="cc3002.tarea1.ICardComposite">
+              <point x="-97.0" y="-85.5" />
+              <point x="657.8806596903923" y="2212.0" />
+              <point x="645.5357142857142" y="2212.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Energies" target="cc3002.tarea1.ISkill">
+              <point x="53.25" y="-13.0" />
+              <point x="124.25" y="7040.0" />
+              <point x="2587.1455437318764" y="7040.0" />
+              <point x="0.0" y="121.0" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.EnergyCounter">
+              <point x="21.25" y="-13.0" />
+              <point x="2757.4636279386696" y="2838.0" />
+              <point x="2782.1719612720026" y="2838.0" />
+              <point x="2782.1719612720026" y="879.0" />
+              <point x="2787.798440530058" y="879.0" />
+              <point x="-45.75" y="289.5" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.Card">
+              <point x="-9.8125" y="-349.0" />
+              <point x="2500.298440530058" y="4563.0" />
+              <point x="2408.1719612720026" y="4563.0" />
+              <point x="2408.1719612720026" y="2172.0" />
+              <point x="2182.9746686510753" y="2172.0" />
+              <point x="52.25" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.IPokemon">
+              <point x="74.70833333333337" y="13.0" />
+              <point x="1941.6093670035261" y="4613.0" />
+              <point x="2402.173440530058" y="4613.0" />
+              <point x="-107.9375" y="-349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.Skill">
+              <point x="47.54166666666663" y="13.0" />
+              <point x="1914.4427003368594" y="4643.0" />
+              <point x="2342.610940530058" y="4643.0" />
+              <point x="2342.610940530058" y="5441.0" />
+              <point x="2755.5318953644633" y="5441.0" />
+              <point x="-37.23076923076928" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.Visitor.PlayVisitor">
+              <point x="-55.84615384615381" y="-13.0" />
+              <point x="2736.916510749079" y="5461.0" />
+              <point x="1971.1093670035261" y="5461.0" />
+              <point x="1971.1093670035261" y="4663.0" />
+              <point x="1887.2760336701926" y="4663.0" />
+              <point x="20.375" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Skill" target="cc3002.tarea1.ISkill">
+              <point x="45.375" y="13.0" />
+              <point x="2838.1376645952323" y="5699.0" />
+              <point x="2845.4501645952323" y="5699.0" />
+              <point x="2845.4501645952323" y="6678.0" />
+              <point x="2597.216972303305" y="6678.0" />
+              <point x="10.071428571428555" y="-121.0" />
+            </edge>
+            <edge source="cc3002.tarea1.PokemonTypes" target="cc3002.tarea1.Skill">
+              <point x="53.125" y="13.0" />
+              <point x="2789.3386279386696" y="4427.0" />
+              <point x="2842.7136279386696" y="4427.0" />
+              <point x="2842.7136279386696" y="5441.0" />
+              <point x="2783.4549722875404" y="5441.0" />
+              <point x="-9.307692307692264" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.ICardPlayable">
+              <point x="-151.42857142857156" y="-469.5" />
+              <point x="1745.1807955749546" y="5699.0" />
+              <point x="287.88065969039235" y="5699.0" />
+              <point x="287.88065969039235" y="2008.0" />
+              <point x="828.8218361609806" y="2008.0" />
+              <point x="-93.05882352941171" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Mazo" target="cc3002.tarea1.ICardPlayable">
+              <point x="97.0" y="-145.5" />
+              <point x="1174.8806596903923" y="2212.0" />
+              <point x="1143.6364333569577" y="2212.0" />
+              <point x="1143.6364333569577" y="2048.0" />
+              <point x="948.4688949845099" y="2048.0" />
+              <point x="26.588235294117567" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.ICardPlayable">
+              <point x="-49.73333333333335" y="-709.5" />
+              <point x="1392.9031000236241" y="2788.0" />
+              <point x="910.8806596903923" y="2788.0" />
+              <point x="910.8806596903923" y="2058.0" />
+              <point x="908.5865420433336" y="2058.0" />
+              <point x="-13.294117647058783" y="25.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.CardStack">
+              <point x="-124.33333333333348" y="-709.5" />
+              <point x="1318.3031000236242" y="2818.0" />
+              <point x="540.8806596903923" y="2818.0" />
+              <point x="97.0" y="85.5" />
+            </edge>
+            <edge source="cc3002.tarea1.ISkill" target="cc3002.tarea1.Controller">
+              <point x="-70.5" y="-121.0" />
+              <point x="2516.6455437318764" y="6708.0" />
+              <point x="1817.1093670035261" y="6708.0" />
+              <point x="-79.5" y="469.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.Visitor.PlayVisitor">
+              <point x="94.58333333333348" y="85.5" />
+              <point x="258.46399302372583" y="4387.0" />
+              <point x="1799.7833866113692" y="4387.0" />
+              <point x="-67.11764705882354" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.ICardPlayable" target="cc3002.tarea1.Visitor.PlayVisitor">
+              <point x="66.47058823529414" y="25.0" />
+              <point x="988.3512479256865" y="2018.0" />
+              <point x="1649.2246686510753" y="2018.0" />
+              <point x="1649.2246686510753" y="4327.0" />
+              <point x="1857.312798376075" y="4327.0" />
+              <point x="-9.58823529411768" y="-13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.Controller">
+              <point x="-89.71428571428567" y="349.0" />
+              <point x="2420.3966548157723" y="5481.0" />
+              <point x="2374.743389843431" y="5481.0" />
+              <point x="2374.743389843431" y="5669.0" />
+              <point x="2002.6093670035261" y="5669.0" />
+              <point x="106.0" y="-469.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Controller" target="cc3002.tarea1.Skill">
+              <point x="136.28571428571422" y="-469.5" />
+              <point x="2032.8950812892404" y="5689.0" />
+              <point x="2777.6376645952323" y="5689.0" />
+              <point x="-15.125" y="13.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.IPokemon">
+              <point x="170.95833333333326" y="709.5" />
+              <point x="1613.5947666902907" y="4297.0" />
+              <point x="2324.6743651181564" y="4297.0" />
+              <point x="2324.6743651181564" y="4583.0" />
+              <point x="2461.048440530058" y="4583.0" />
+              <point x="-49.0625" y="-349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Entrenador" target="cc3002.tarea1.Mazo">
+              <point x="24.86666666666656" y="-709.5" />
+              <point x="1467.503100023624" y="2758.0" />
+              <point x="1150.6306596903923" y="2758.0" />
+              <point x="72.75" y="145.5" />
+            </edge>
+            <edge source="cc3002.tarea1.Energy" target="cc3002.tarea1.IEnergia">
+              <point x="-56.75" y="-85.5" />
+              <point x="107.13065969039235" y="2838.0" />
+              <point x="144.18779837607508" y="2838.0" />
+              <point x="144.18779837607508" y="869.0" />
+              <point x="2367.3180586884528" y="869.0" />
+              <point x="-64.85714285714289" y="49.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IPokemon" target="cc3002.tarea1.ISkill">
+              <point x="44.85714285714289" y="349.0" />
+              <point x="2554.9680833872007" y="5511.0" />
+              <point x="2407.743389843431" y="5511.0" />
+              <point x="2407.743389843431" y="6678.0" />
+              <point x="2577.074115160448" y="6678.0" />
+              <point x="-10.071428571428555" y="-121.0" />
+            </edge>
+            <edge source="cc3002.tarea1.ICardPlayable" target="cc3002.tarea1.ICard">
+              <point x="0.0" y="-25.0" />
+              <point x="921.8806596903923" y="849.0" />
+              <point x="802.3806596903923" y="849.0" />
+              <point x="43.25" y="37.0" />
+            </edge>
+            <edge source="cc3002.tarea1.IEntrenador" target="cc3002.tarea1.IPokemon">
+              <point x="139.875" y="253.0" />
+              <point x="1986.099668651075" y="2838.0" />
+              <point x="2335.6743651181564" y="2838.0" />
+              <point x="2335.6743651181564" y="4573.0" />
+              <point x="2480.673440530058" y="4573.0" />
+              <point x="-29.4375" y="-349.0" />
+            </edge>
+            <edge source="cc3002.tarea1.Visitor.PlayVisitor" target="cc3002.tarea1.ICardPlayable">
+              <point x="-19.176470588235304" y="-13.0" />
+              <point x="1847.7245630819575" y="4337.0" />
+              <point x="1639.6364333569577" y="4337.0" />
+              <point x="1639.6364333569577" y="2028.0" />
+              <point x="975.0571302786277" y="2028.0" />
+              <point x="53.17647058823536" y="25.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.38586080586080584" x="1954.713878868426" y="4717.341180937916" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>

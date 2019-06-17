@@ -104,7 +104,8 @@ Los tests de las energias fueron básicamente observar si correspondía lo esper
 ### Test Pokemon
 La idea del testing pokemon fue ver si las debilidades estaban correctamente implementadas. Además de verificar que todos los métodos comúnes estaban correctamente implementados mediante el uso de getters. Además, mediante los pokemón se verifica el funcionamiento correcto de las habilidades.   
 ### Test de Controlador
-El ControllerSimulateATurnTest verifica las propiedades principales de como debiese ser el flow del turno, como es que no se jueguen mas de una carta de soporte o energía por turno, que se pase turno al atacar. Además se verifica que se puede jugar energías a las cartas de la banca.
+El ControllerSimulateATurnTest verifica las propiedades principales de como debiese ser el flow del turno, como es que no se jueguen mas de una carta de soporte o energía por turno, que se pase turno al atacar. Además se verifica que se puede jugar energías a las cartas de la banca.  
+Además se ve si el controlador es capaz de mostrar lo que es el campo y la mano al usuario.  
 ### Tests de Objetos (Habilidades, Ataques, Soporte, Objeto, Estadio)
 Los tests de objetos hacen lo especificado anteriormente en cada objeto. Además, como nunca se uso una carta objeto que se añadiese al pokémon, se realizó un test que verifique que el solo se puede añadir una carta objeto a un pokémon, sin overwrite.
 ### Test de Visitor Evolutivo
