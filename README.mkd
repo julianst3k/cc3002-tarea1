@@ -106,6 +106,6 @@ La idea del testing pokemon fue ver si las debilidades estaban correctamente imp
 ### Test de Controlador
 El ControllerSimulateATurnTest verifica las propiedades principales de como debiese ser el flow del turno, como es que no se jueguen mas de una carta de soporte o energía por turno, que se pase turno al atacar. Además se verifica que se puede jugar energías a las cartas de la banca.
 ### Tests de Objetos (Habilidades, Ataques, Soporte, Objeto, Estadio)
-Los tests de objetos hacen lo especificado anteriormente en cada objeto.
+Los tests de objetos hacen lo especificado anteriormente en cada objeto. Además, como nunca se uso una carta objeto que se añadiese al pokémon, se realizó un test que verifique que el solo se puede añadir una carta objeto a un pokémon, sin overwrite.
 ### Test de Visitor Evolutivo
 Este test muestra que funcionan las evoluciones de basico a fase 1, y de fase 1 a fase 2. Además de que se puede evolucionar en la banca. 
