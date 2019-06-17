@@ -1,7 +1,6 @@
 package cc3002.tarea1;
 
 import cc3002.tarea1.Card.StadiumCard;
-import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 import java.util.ArrayList;

@@ -1,9 +1,6 @@
 package cc3002.tarea1.Card;
 
-import cc3002.tarea1.Controller;
-import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EfectoOnDemand;
-import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
-import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.RareCandyEffect;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor;
 
 
 public class RareCandy extends InstantObjectCard {

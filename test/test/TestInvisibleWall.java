@@ -67,5 +67,17 @@ public class TestInvisibleWall {
         attackerv2.useSkill(attackedResistent);
         assertEquals(attackedResistent.getHp(), 110);
     }
+    @Test public void useSkill(){
+        Mazo mazo = new Mazo(new ArrayList<>());
+        for(int i =0;i<60; i++ ){
+            mazo.addCarta(new FireEnergy());
+        }
+        Entrenador entrenador = new Entrenador(attacked, mazo, null);
+        assertEquals(attacked.getHp(), 200);
+        entrenador.getActualController().useSkill(1);
+        attacked.useSkill(attacked);
+        assertEquals(attacked.getHp(), 200); // No hace nada
+
+    }
 
 }

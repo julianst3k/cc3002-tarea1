@@ -1,7 +1,6 @@
 package cc3002.tarea1.Card;
 
-import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
-import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor;
 
 public class PokemonPark extends StadiumCard {
     public PokemonPark(){

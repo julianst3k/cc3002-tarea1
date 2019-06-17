@@ -1,10 +1,7 @@
 package cc3002.tarea1.Skill;
 
 
-import cc3002.tarea1.Controller;
 import cc3002.tarea1.IEnergia;
-import cc3002.tarea1.Skill.Skill;
-import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 import java.util.ArrayList;

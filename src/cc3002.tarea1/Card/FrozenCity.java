@@ -1,8 +1,6 @@
 package cc3002.tarea1.Card;
 
-import cc3002.tarea1.Pokemon;
-import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
-import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor;
 
 public class FrozenCity extends StadiumCard {
     /** Creates an stadium card called Frozen City

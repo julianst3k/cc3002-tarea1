@@ -1,6 +1,5 @@
 package cc3002.tarea1;
 
-import cc3002.tarea1.Visitor.PlayVisitor.PlayVisitor.PlayVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 public interface IEnergia {

@@ -2,8 +2,8 @@ package test;
 import static org.junit.Assert.*;
 
 import cc3002.tarea1.*;
-import cc3002.tarea1.Card.Mazo;
-import cc3002.tarea1.Card.Premio;
+import cc3002.tarea1.Mazo;
+import cc3002.tarea1.Premio;
 import cc3002.tarea1.Energies.FireEnergy;
 import cc3002.tarea1.Skill.BasicAttack;
 import cc3002.tarea1.Skill.Skill;

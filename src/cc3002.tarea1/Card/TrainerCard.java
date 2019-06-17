@@ -1,9 +1,7 @@
 package cc3002.tarea1.Card;
 
-import cc3002.tarea1.Controller;
 import cc3002.tarea1.ICardPlayable;
-import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
-import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor;
 
 public abstract class TrainerCard implements ICardPlayable {
     /** The cards that extend Trainer Card will have an effect. This effect type will depends on the card. Object Cards has pokemon effects, which will act over a pokemon, Stadium Cards will

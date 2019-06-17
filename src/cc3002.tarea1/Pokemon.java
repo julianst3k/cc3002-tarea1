@@ -3,8 +3,7 @@ package cc3002.tarea1;
 import cc3002.tarea1.Card.AttachObjectCard;
 import cc3002.tarea1.Card.ObjectCard;
 import cc3002.tarea1.Skill.Attack;
-import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EfectoDefensivo;
-import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
+import cc3002.tarea1.Visitor.PlayVisitor.EfectoDefensivo;
 
 import java.util.*;
 

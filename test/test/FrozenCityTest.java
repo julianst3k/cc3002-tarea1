@@ -1,9 +1,8 @@
 package test;
 
 import cc3002.tarea1.Card.FrozenCity;
-import cc3002.tarea1.Card.Mazo;
-import cc3002.tarea1.Card.PokemonPark;
-import cc3002.tarea1.Card.Premio;
+import cc3002.tarea1.Mazo;
+import cc3002.tarea1.Premio;
 import cc3002.tarea1.Controller;
 import cc3002.tarea1.Energies.FireEnergy;
 import cc3002.tarea1.Entrenador;

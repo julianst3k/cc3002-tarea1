@@ -1,8 +1,7 @@
 package cc3002.tarea1.Skill;
 import cc3002.tarea1.*;
-import cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor;
-import cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableSkillVisitor;
-import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
+import cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor;
+import cc3002.tarea1.Visitor.PlayVisitor.UsableSkillVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 import java.util.ArrayList;

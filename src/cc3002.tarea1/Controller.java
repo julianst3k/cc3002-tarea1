@@ -5,10 +5,10 @@ import cc3002.tarea1.Card.NullStadiumCard;
 import cc3002.tarea1.Card.StadiumCard;
 import cc3002.tarea1.Card.TrainerCard;
 import cc3002.tarea1.Skill.Attack;
-import cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor;
-import cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableCardVisitor;
-import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EfectoOnDemand;
-import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
+import cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor;
+import cc3002.tarea1.Visitor.PlayVisitor.UsableCardVisitor;
+import cc3002.tarea1.Visitor.PlayVisitor.EfectoOnDemand;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor;
 
 import java.util.Observable;
 import java.util.Observer;
