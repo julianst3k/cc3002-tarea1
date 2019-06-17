@@ -2,6 +2,7 @@ package cc3002.tarea1.Card;
 
 import cc3002.tarea1.Controller;
 import cc3002.tarea1.ICardPlayable;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 public abstract class TrainerCard implements ICardPlayable {
@@ -24,8 +25,12 @@ public abstract class TrainerCard implements ICardPlayable {
     public String getName(){
         return name;
     }
-    /** Apply an effect on demand
-     * @param controller the controller who demand the effect
+    /** Accept an effect visitor, while the effect visitor is an extension of the father visitor, which
+     * is already set to be accepted in ICardPlayable, the idea is that all the cards that are of the same
+     * family are played the same, so they get played by the PlayVisitor as a general way. The different
+     * effects have different needs, so the effect visitor manages that differents ways!
+     *
+     * @param visitor the effect visitor
      */
-    public void applyEffect(Controller controller){};
+    public void acceptEffect(EffectVisitor visitor){}
 }

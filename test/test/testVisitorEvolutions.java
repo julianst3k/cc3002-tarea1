@@ -34,10 +34,10 @@ public class testVisitorEvolutions {
     @Before public void setUp(){
         firstEvo = new BasicFirePokemon("Myth",35, 100, new ArrayList<>(Arrays.asList(new nullSkill())));
         firstEvoCopy = new BasicFirePokemon("Mythx",35, 100, new ArrayList<>(Arrays.asList(new nullSkill())));
-        secondEvo = new Phase1FirePokemon("Myth Evo", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())), 35);
-        thirdEvo = new Phase2FirePokemon("Myth Evo Omega", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())), 35);
-        secondEvoCopy = new Phase1FirePokemon("Myth Evo Copy", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())), 35);
-        secondEvoNoFirst = new Phase1FirePokemon("Beach", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())), 36);
+        secondEvo = new Phase1FirePokemon("Myth Evo", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
+        thirdEvo = new Phase2FirePokemon("Myth Evo Omega", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
+        secondEvoCopy = new Phase1FirePokemon("Myth Evo Copy", 35, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
+        secondEvoNoFirst = new Phase1FirePokemon("Beach", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
         enduranceTester2 = new BasicLightPokemon("Myth", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
         enduranceTester = new BasicPsychPokemon("Myth", 37, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
         enduranceTester3 = new BasicWaterPokemon("Myth", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())));

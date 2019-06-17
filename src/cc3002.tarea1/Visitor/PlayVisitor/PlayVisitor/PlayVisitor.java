@@ -77,7 +77,7 @@ public class PlayVisitor extends VisitorFather {
     }
     @Override
     public void visitedAttachObjectCard(AttachObjectCard card){
-        if(entrenador.getObjective().getActualObject()!=null){
+        if(entrenador.getObjective().getActualObject()==null){
             entrenador.getObjective().setObject(card);
 
         }
@@ -94,12 +94,5 @@ public class PlayVisitor extends VisitorFather {
     public void visitedStadiumCard(StadiumCard card){
         entrenador.setStadium(card);
     }
-    @Override
-    public void visitedPokemonPark(PokemonPark card){
-        entrenador.setStadium(card);
-    }
-    @Override
-    public void visitedFrozenCity(FrozenCity card){ entrenador.setStadium(card);}
-
 
 }

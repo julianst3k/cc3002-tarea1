@@ -3,6 +3,8 @@ package cc3002.tarea1;
 import cc3002.tarea1.Card.AttachObjectCard;
 import cc3002.tarea1.Card.ObjectCard;
 import cc3002.tarea1.Skill.Attack;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EfectoDefensivo;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
 
 import java.util.*;
 
@@ -95,8 +97,13 @@ public abstract class Pokemon extends Observable implements IPokemon {
      * @param skill The skill that the other pokemon uses
      */
     public void getAttackedResist(Attack skill) {
-        this.healthPoints -= skill.getDamage() - 30;
-        this.releasesDefenses(skill.getDamage()-30);
+        if(skill.getDamage() - 30 >0 ) {
+            this.healthPoints -= skill.getDamage() - 30;
+            this.releasesDefenses(skill.getDamage() - 30);
+        }
+        else{
+            return;
+        }
     }
 
     /** The pokemon is attacked by someone who is strong against him
@@ -240,8 +247,9 @@ public abstract class Pokemon extends Observable implements IPokemon {
         healthPoints = health;
     }
     public void releasesDefenses(int receivedDmg){
+        EfectoDefensivo visitor = new EfectoDefensivo(receivedDmg);
         for(int i=0; i<getSkills().size(); i++){
-            this.getSkills().get(i).applyDefense(receivedDmg);
+            this.getSkills().get(i).accept(visitor);
         }
     }
 

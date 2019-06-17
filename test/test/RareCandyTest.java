@@ -27,8 +27,8 @@ public class RareCandyTest {
     @Before public void setUp(){
         rare = new RareCandy();
         preEvo = new BasicFirePokemon("xD", 30, 300, new ArrayList<>());
-        evo = new Phase1FirePokemon("xD Phase 1", 30, 200, new ArrayList<>(), 30);
-        evoPhaseTwo = new Phase2FirePokemon("xD Phase 2", 30, 300, new ArrayList<>(), 30);
+        evo = new Phase1FirePokemon("xD Phase 1", 30, 200, new ArrayList<>());
+        evoPhaseTwo = new Phase2FirePokemon("xD Phase 2", 30, 300, new ArrayList<>());
         deck = new Mazo(new ArrayList<>());
         for(int i=0; i<60; i++){
             deck.addCarta(new FireEnergy());

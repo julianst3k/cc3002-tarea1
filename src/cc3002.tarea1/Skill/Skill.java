@@ -73,14 +73,6 @@ public class Skill implements ISkill {
     @Override
     public void setToPokemon(Pokemon poke){pokemon = poke;}
 
-    /** Apply defense on demand, in this case there is no defensive stat
-     *
-     * @param dmg the damage that the pokemon receives
-     */
-    public void applyDefense(int dmg){}
-    @Override
-    public void applyEffect(Controller controller){}
-
     /** Returns the pokemon
      *
      * @return The pokemon which this is skill is setted to

@@ -59,14 +59,6 @@ public interface ISkill {
      * @param poke The pokemon which the skill is set to
      */
     void setToPokemon(Pokemon poke);
-    /** Apply an effect on demand
-     * @param controller the controller who demand the effect
-     */
-    void applyEffect(Controller controller);
-    /** Apply defensive effect on demand
-     * @param dmg The dmg received
-     */
-    void applyDefense(int dmg);
     /** Use effect visitor if needed
      *
      */

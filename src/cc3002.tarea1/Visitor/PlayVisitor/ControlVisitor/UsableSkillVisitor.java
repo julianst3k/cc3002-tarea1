@@ -12,16 +12,12 @@ public class UsableSkillVisitor extends ControlVisitor{
     boolean status;
     public UsableSkillVisitor(Controller contr){
         super(contr);
+        status = true;
     }
-    @Override
-    public void visitedSkill(Skill skill){status = true;};
-    @Override
-    public void visitedAttack(Attack attack){status = true;};
+
     @Override
     public void visitedWingBuzz(WingBuzz wingBuzz){if(control.getWingBuzzPlayed()==1){status = false;}
-    else{
-        status=true;
-    }
+
     }
     @Override
     public boolean usable(){

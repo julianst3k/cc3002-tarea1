@@ -3,37 +3,109 @@ En este proyecto se implementará un TCG de Pokemón, el cual involucra diversos
 ## Como correr el programa
 Actualmente el programa simplemente consiste en objetos sin un main, por ende lo único que es posible correr son los tests existentes en la carpeta testing.
 ## Implementación
-La implementación consistió a grandes rasgos en cuatro objetos, los cuales son el entrenador, las cartas de energía, las cartas de Pokemon y las cartas de ataque.  
+La primera implementación consistió a grandes rasgos en cuatro objetos, los cuales son el entrenador, las cartas de energía, las cartas de Pokemon y las cartas de ataque. La segunda implementación consistió en la correción de errores de la primera, la implementación de las cartas de entrenador y de las habilidades. Las habilidades y las cartas de entrenador poseen efectos, estos efectos son aplicados mediante el uso de un manejador de efectos, el cual puede o no ser un visitor, lo cual depende del tipo de efecto.  
+Si el efecto necesita información sobre tipos, o incurre tras una acción, entonces se usa un visitor. En cualquier otro caso es validado como innecesario, y simplemente se aplica el efecto de manera inmediata.  
+Además se genero un controlador. El controlador maneja el flujo del juego, y valida o no las acciones.
 ### Entrenador
 El entrenador tiene como función jugar las cartas, por ende es posible de observar todas las cartas y elegir que hacer con ellas. Para ello le impuse una mano, la cual puede coger cualquier tipo de carta, una banca, a la cual van los pokemon que se juegan cuando ya hay previamente un activo, y un pokemon activo. El pokemon activo al morir debiese ser cambiado automaticamente, esto se hara asumiendo que la unica manera de morir es que otro entrenador haya atacado a tu pokemon. En ese caso, el entrenador ataca al otro entrenador, y al otro entrenador se le envia un mensaje sobre si su pokemon esta o no vivo.  
 Las cartas de la mano serán jugadas a partir del acceso de una lista, pero claramente aquí se enfrenta a dos formas de jugar una carta, siendo una de energía y otra de pokemon. Para resolver aquello se uso un double dispatch, donde se manda un mensaje a la carta a jugar, y la carta a jugar responde con su tipo. Si la carta jugada es un Pokemon, entonces va a la banca o activo, si la carta jugada es una carta de energía, entonces es seteada al pokemon activo.  
 El entrenador tiene la facultad de ver las cartas de su enemigo y las cartas de todo el campo tambien. Cada metodo de impresion se dejo por separado para asi poder ser electo, para asi alivianar cuantos mensajes se imprimen.  
-
 El entrenador además tiene varios métodos para obtener acceso a la información de las cartas según lo que suponga necesario.  
-### Cartas
-Ahora lo relevante serán las cartas. Las cartas es posible dividirlas en dos tipos, de energía y de Pokemon. Estas cartas tendrán en común dos métodos, el ser jugadas por un entrenador y el ofrecer una descripción de lo que hacen. Tanto las cartas de energía como las de Pokemon tendrán varias subclases que ofrecen el tipo de carta (Fuego, Agua, Planta, Rayo, Psíquico o Lucha) que ofrecen.  
-### Pokemon
-A grandes rasgos, la clase abstracta de Pokemon ofrece un getter para el nombre, el id, la cantidad de vida, las habilidades que tiene el pokemon y las energías. Las habilidades fueron implementadas a través de un arreglo, y las energías a través de un HashMap. Finalmente también los descriptores son strings que muestran información según lo necesario.  
+### Controlador
 
-El HashMap del Pokemon se genera simplemente a través de la visualización del tipo de la carta de energía asociada. El tipo de la carta será un mensaje en string que dará la propia carta. Se pensó en un principio hacer esto por double dispatch, pero finalmente la situación era equivalente e incluso mas engorroso, dado que en vez de simplemente generar una clase solamente, habría que además generar un método adicional en la clase pokemon.
+El controlador tiene como función ser una suerte de interfaz entre el usuario y las entidades. Por ende, el controlador posee todos los métodos para jugar cartas y, además, chequea los parámetros de usabilidad de las cartas, mediante parámetros propios del controlador. Además, el controlador posee una carta estadio en todo momento.  
+Respecto a las funcionalidades indicadas necesarias, el controlador puede mostrar las cartas el entrenador y el campo también, eso se testeo en el test entrenador, dado que ya estaba implementado. Además, el controlador cambia de turno cuando el pokémon ataca, lo cual se puede observar en el simulador de turnos, y no deja jugar mas de una carta de energía o soporte.  
+Como funcionalidad adicional, si el usuario juega con el controlador, jamás debiese haber un puntero nulo, dado que en cualquier caso que se requiera un campo para jugar una carta, la usabilidad dependerá de ese campo.  
+El entrenador puede usar habilidades además, las cuales no hacen pasar de turno, esto se testea en el simulador de turno, en attackSkipTurn(), dado que en esta instancia se usa WingBuzz y EnergyBurn secuencialmente sin cambiar de turno.  
+### Cartas
+Las cartas actualmente se pueden dividir en 5 tipos. Existen las cartas de tipo Pokemon, las cartas tipo Energía, las cartas tipo Soporte, las cartas tipo Estadio y las cartas tipo Objeto. Todas las cartas tienen nombre y descripción, además de aceptar un visitor. 
+### Pokemon
+A grandes rasgos, la clase abstracta de Pokemon ofrece un getter para el nombre, el id, la cantidad de vida, las habilidades que tiene el pokemon y las energías. Las habilidades son implementadas a través de un arreglo, y las energías a través de un contador de energías. Finalmente también los descriptores son strings que muestran información según lo necesario.  
+
+El contador de energías se específica en la sección de energías, pero es común para tanto habilidades como pokémon, la idea final es usar double dispatch para ver el tipo de energía sin pedir el tipo.  
 
 El Pokemon puede agregar y deshabilitar habilidades, por si es necesario. La pelea entre Pokemon se hace de Pokemon a Pokemon (En vez de skill de Pokemon a Pokemon), dado que mediante el double dispatch se es capaz de conseguir el tipo del Pokemon que ataca al otro, y finalmente el Pokemon atacado es debilitado por una habilidad proveniente del Pokemon atacante.  
+
+El pokémon puede tener 3 fases, aquí se asumió que debido al funcionamiento del objeto Rare Candy, las evoluciones tienen el mismo id. Esto podría no ser legal, en ese sentido se puede modificar el constructor tal que tenga los parametros necesarios.  
+
+Los pokemon además serán un observable del controlador, dado que es quién ataca. Entonces, dado que el pokémon ataca, el controlador recibe un update sobre el estado del juego, el cual le indica que se termino el turno.  
+ 
 ### Energias
-Finalmente, las energías simplemente tienen un descriptor que enseña que tipo es. La implementación de las energías es suficiente pero no es mejorable, dado que existe una clase que se prefirió no eliminar que no tiene ningún próposito.  
-### Ataques
-Por último, la clase de habilidad también tiene getters, en cuanto al daño que realiza, el nombre, la descripción y los costes. Los costes son un HashMap, mediante el cual el Pokemon es capaz de ver si tiene suficientes energías para satisfacer tal costo. El HashMap se hace mediante el uso de una lista en el constructor.
+Las energías se juegan mediante el visitor, y se setean a los energy counter de los pokemon. Además las cartas de energía pueden potencialmente afectar al pokemon al cual se setea si existe un estadio en específico, por ende previo a jugar se ve si existe un estadio que altere los efectos de la carta de energía.
+### Habilidad
+Por último, la clase de habilidad también tiene getters, los cuales son el nombre, la descripción y los costes. Los costes son un energy counter, mediante el cual el Pokemon es capaz de ver si tiene suficientes energías para satisfacer tal costo. El energy counter se hace mediante el uso de una lista en el constructor.  
+Las habilidades es el tipo general de ataques, o sea, una habilidad no tiene un campo daño pero sus ataques si tienen campo. Por ende, esto es un factor distintivo que varía como se usan. Esto lo que provoca es que los ataques finalmente se distingan sobre las habilidades dado que existe un override del método de uso.  
+Las habilidades en general tienen efectos. Para las cartas sin efecto, que son ataques básicos dentro de la implementación o una habilidad vacía, se crearon cartas que específicamente no hiciesen nada, o sea que su efecto al ser llamado fuese vacío.  
+Las habilidades que tienen efecto aplican su efecto de distintas maneras, dependiendo del tipo de habilidad. Para ello usan un visitor de efectos, y se cataloga el efecto necesario (El cual puede ser on demand o reactivo) de manera pertinente. O sea, si el efecto de la carta habilidad es on demand, al jugar la carta se manda un mensaje al controlador, el cual genera aplica un efecto on demand donde acepta la carta respectiva. En tanto, si es reactivo, la reacción se ha de definir previamente como algún método, y a partir de ese método generar un visitor para tal reacción, dado que solo se requiere activar cartas que tengan sentido de activarse.  
+Por ejemplo, invisible wall es una reacción defensiva, entonces existe el visitor para reacciones defensivas que solamente en esta implementación posee a invisible wall, pero potencialmente podría tener cualquier otra cartas.
+#### Habilidades Implementadas
+##### Invisible Wall (Habilidad)
+La pared invisible funciona según el test invisible wall. Lo que hace esta es ser activada por el status defensivo del pokemon, el cual llama a un visitor defensivo, que visita cartas y ve si alguna es defensiva.   
+La carta solamente se activa si se cumplen los criterios de energía.  
+##### Hydro Pump (Ataque)
+La hydro pump es un modificador de valor de ataque, por ende también usa un visitor distinto a un efecto on demand, el cual es el visitor modificador de daño. La carta funciona según el test testHydroPump.  
+En el test se testeo que solo se activase si cumpliese la energías necesarias, que el valor escalase y que no escalase mas de lo necesario.
+##### WingBuzz (Habilidad Adicional)
+El wing buzz es un efecto on demand, entonces simplemente se activa mediante la aceptación del visitor on demand. Su funcionalidad se comprueba en el testWingBuzz.
+El test ve que no actue si no cumple las energías necesarias, que solo actue una vez por turno y que haga lo necesario. WingBuzz requiere que el entrenador seleccione su carta a descartar.
+##### Energy Burn (Habilidad Adicional)
+El energy burn es un efecto on demand, entonces simplemente se activa mediante la aceptación del visitor on demand. Su funcionalidad se comprueba en el testEnergyBurner.  
+El test ve que funcione para diversas energías (Esto no era necesario, dado que la implementación no depende de la energía, pero de todos modos se realizó) y que se activase si habían suficientes energías.  
+### Cartas de Entrenador
+Las cartas de entrenador se juegan dependiendo de su tipo. 
+#### Cartas de Soporte 
+Si la carta es soporte, se juega solamente una por turno. El controlador, es quien controla aquello y en el simulador de turno se puede observar que funciona. La carta soporte simplemente intenta hacer un efecto instantaneo, por ende el efecto es manejado por el visitor de efectos on demand.
+##### Profesor Juniper
+La carta simplemente quita 7 del mazo y los pone a la mano, su funcionalidad esta comprobada en el testProfessorJuniper, donde además se ve que si hay menos de 7 cartas en el mazo no genera ningún tipo de error (Aquí se asumió que no pasaba nada en tal caso, y simplemente se usaba).  
+
+#### Cartas de Estadio
+Las cartas de estadio se añaden al controlador, y también a los entrenadores desde el controlador por temas de accesibilidad y necesidad. Entonces, el efecto de las cartas de estadio no es en demanda, por ende su implementación de efectos depende de la necesidad o requerimiento.
+##### Pokemon Park
+Existe un visitor que activa el pokemon park si se juega una energía, o sea, que cuando se juega una energía se llama al visitor sobre la carta estadio actual del entrenador. Entonces, si esta el pokemon park, actua su efecto.  
+Su funcionalidad esta testeada en testPokemonPark, donde es posible observar que se cura 10 de daño si se juega una carta de energía, y su funcionalidad además no hace overflow sobre la vida máxima.
+##### FrozenCity (Adicional)
+Se implementa de manera muy similar al Pokemon Park, dado que su activación es sobre la misma acción. En el caso de que muera el pokemon por dar una energía, este pokemon es purgado y eliminado del campo. Si se purga un pokemon activo y no hay mas pokemon en la carta, el controlador cambia su status de juego a false, evitando que hayan referencias nulas al hacer cambios.  
+Su implementación se testea en FrozenCity, donde se ve que cambian los contadores cuando se juega una energía si esta activa, y que si el pokemon muere es eliminado del juego.  
+#### Cartas Objeto
+Las cartas objetas siempre necesitan que haya un pokemon objetivo para ser jugada, lo cual es comprobado por el controlador. La carta objeto puede ser consumida o añadida, esto se resuelve haciendo dos tipos, una que consume y una que añade, las cuales son resueltas por el visitor de jugar cartas. Las que se añaden debiesen tener un visitor según el caso, al igual que las carta estadio. Esto no se realizó porque no se hizo ninguna carta que lo requiriese (Las 2 cartas implementadas se consumían).
+##### Potion
+La poción cura hasta x contadores de daño, esto se puede ver en el PotionTest. Se puede ver que tanto cura como solamente llega hasta el máximo valor de HP que puede tener el pokémon.
+##### RareCandy (Adicional?) 
+El RareCandy evoluciona una carta de la mano directamente simplemente viendo si coincide el ID del pokemon objetivo con alguna de las cartas de la mano. En este caso la carta de la mano tiene que estar seleccionada previamenente.   
+El test esta en testRareCandy, donde se puede observar que evoluciona directamente el fase 2 aún cuando en la mano hay un fase 1 dado que esta seleccionado el pokémon de segunda fase.  
+Como disclaimer, pese a que se supone que la implementación es así, depende mucho de asunciones de implementación (Selección previa de cartas, IDs), por ende solo se dejo porque ya se había realizado.  
+### Efectos
+Se considero que los efectos se relacionaban directamente con la carta/habilidad que la describe, aún cuando en el principio estaba desacoplado. Esto se propone dado que añadir el efecto como objeto independiente implicaría un nivel de indirección "innecesario", el cual requeriría que el efecto básicamente tuviese los mismos paráemtros que la carta o a la misma carta, ya que la carta tiene los parámetros que requiere para jugarse y debido a que la carta/habilidad de por sí tiene es el efecto (O sea, si se quiere un efecto X, se ha de tener tal carta, no tiene sentido añadirlo a otra carta/habilidad, porque pasaría a ser la misma carta/habilidad. Y añadir efectos de Estadio a una carta Soporte, por ejemplo, no tendría mucho sentido).  
 ## Patrones de Diseño
-Se usaron dos clases abstractes, la de energía y la de pokemón, para asi ser extendidas por parte de los diversos tipos. Además, se uso una interfaz común para las cartas de Pokemón y Energía para realizar double dispatch para el juego de cartas. Las interacciones entre dos pokemón son descritas por un double dispatch. 
+### Template 
+La clase Skill es un template para la clase Ataque, la clase VisitorFather es un template para las clases que la extienden, la clases abstract de cada pokemon y la carta Pokémon es un template para los distintos pokémon.
+### Visitor
+Se realizó un visitor para jugar cartas, para realizar efectos, y para ver la factibilidad de uso de cartas. El visitor de factibilidad de uso es solamente accesible desde el controlador, por ende si se juegan cartas directamente desde el entrenador no actúa, pero eso es irrelevante si el usuario actúa solo sobre el controlador.
+### Double-Dispatch
+Se realizó double-dispatch para setear energías y atacar pokémon según su debilidad-resistencia.
+### Adapter
+El controlador adapta las opciones que tiene el entrenador.
+### Observer
+El controlador esta suscrito a los Pokemon, dado que para evitar tener una excesiva cantidad de parametros en el Pokemon, se decidió tener una indirección y que este notificará si se usa un ataque para así pasar turno. El observer evidentemente chequea tipos, dado que se uso el original por temas de compatibilidad.
+### Null Object
+Se usa un null object como placeholder para futuros estadios pokemon. 
+
 
 ## Testing
 En la carpeta testing estan los diversos tests que se realizarón para ver la validez del código.  
 
 ### Test Entrenador
 En el test de entrenador consistió en aplicar los distintos getters. La idea fue simular lo que puede hacer el entrenador en un juego común, y ver si los mensajes eran correctamente enviados por parte del entrenador a sus diversos objetos.  
+Además, se chequeo, para aprovechar código previo, si el controlador es capaz de mostrar el campo y las cartas a su respectivo entrenador. 
 
 ### Test Energias
 Los tests de las energias fueron básicamente observar si correspondía lo esperado respecto a su tipo.  
 
 ### Test Pokemon
-La idea del testing pokemon fue ver si las debilidades estaban correctamente implementadas. Además de verificar que todos los métodos comúnes estaban correctamente implementados mediante el uso de getters. Además, mediante los pokemón se verifica el funcionamiento correcto de las habilidades.
-
+La idea del testing pokemon fue ver si las debilidades estaban correctamente implementadas. Además de verificar que todos los métodos comúnes estaban correctamente implementados mediante el uso de getters. Además, mediante los pokemón se verifica el funcionamiento correcto de las habilidades.   
+### Test de Controlador
+El ControllerSimulateATurnTest verifica las propiedades principales de como debiese ser el flow del turno, como es que no se jueguen mas de una carta de soporte o energía por turno, que se pase turno al atacar. Además se verifica que se puede jugar energías a las cartas de la banca.
+### Tests de Objetos (Habilidades, Ataques, Soporte, Objeto, Estadio)
+Los tests de objetos hacen lo especificado anteriormente en cada objeto.
+### Test de Visitor Evolutivo
+Este test muestra que funcionan las evoluciones de basico a fase 1, y de fase 1 a fase 2. Además de que se puede evolucionar en la banca. 

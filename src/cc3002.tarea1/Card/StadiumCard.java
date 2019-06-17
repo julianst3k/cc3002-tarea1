@@ -15,8 +15,6 @@ public abstract class StadiumCard extends TrainerCard{
         visitor.visitedStadiumCard(this);
     }
 
-    @Override
-    public void applyEffect(Controller controller){}
     /** When the controller sets this stadium cards, and if the stadium card have a passive effect, this card will set its passive effect
      *
      * @param controller the controller

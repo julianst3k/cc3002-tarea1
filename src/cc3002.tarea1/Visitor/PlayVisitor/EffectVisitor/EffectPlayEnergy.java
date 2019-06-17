@@ -14,7 +14,7 @@ public class EffectPlayEnergy extends EffectVisitor {
     public EffectPlayEnergy(Controller controller){
         super(controller);
         trainer = controller.getInTurnTrainer();
-        trainer.getStadiumCard().accept(this);
+        trainer.getStadiumCard().acceptEffect(this);
     }
     @Override
     public void visitedPokemonPark(PokemonPark card){

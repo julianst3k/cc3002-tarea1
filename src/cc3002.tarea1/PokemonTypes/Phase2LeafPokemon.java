@@ -11,9 +11,9 @@ public class Phase2LeafPokemon extends  AbstractLeafPokemon implements IPhase2Ty
      */
     private int preEvolutionID;
 
-    public Phase2LeafPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills, int preid){
+    public Phase2LeafPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
-        preEvolutionID= preid;
+        preEvolutionID= id;
     }
     @Override
     public void accept(VisitorFather visitor){

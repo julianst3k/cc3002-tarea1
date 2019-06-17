@@ -6,9 +6,7 @@ import cc3002.tarea1.Entrenador;
 import cc3002.tarea1.PokemonTypes.IBasicType;
 import cc3002.tarea1.PokemonTypes.IPhase1Type;
 import cc3002.tarea1.PokemonTypes.IPhase2Type;
-import cc3002.tarea1.Skill.Attack;
-import cc3002.tarea1.Skill.Skill;
-import cc3002.tarea1.Skill.WingBuzz;
+import cc3002.tarea1.Skill.*;
 
 public abstract class VisitorFather {
     /** Creates an abstract visitor that set all the entities that are visited
@@ -91,8 +89,34 @@ public abstract class VisitorFather {
      */
     public void visitedWingBuzz(WingBuzz wingBuzz){};
     /** Visited a Frozen City
-     * @param frozenCity the frozenCity
+     * @param city the frozenCity
      */
     public void visitedFrozenCity(FrozenCity city){}
+    /** Visited potion
+     * @param pot the potion
+     */
+    public void visitedPotion(Potion pot){};
+    /** Visited a professor juniper
+     * @param juniper the card juniper
+     */
+    public void visitedProfessorJuniper(ProfessorJuniper juniper){}
+    /** Visited a rare candy
+     * @param candy the candy
+     */
+    public void visitedRareCandy(RareCandy candy){}
+    /** Visited energy burn
+     * @param skill the energy burn
+     */
+    public void visitedEnergyBurn(EnergyBurn skill){
+    }
+    /** Visited the hydro pump
+     * @param pump The hydro pump
+     *
+     */
+    public void visitedHydroPump(HydroPump pump){}
+    /** Visited invisible wall
+     * @param wall the wall
+     */
+    public void visitedInvisibleWall(InvisibleWall wall){}
 
 }

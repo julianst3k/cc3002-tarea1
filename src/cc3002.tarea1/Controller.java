@@ -7,6 +7,8 @@ import cc3002.tarea1.Card.TrainerCard;
 import cc3002.tarea1.Skill.Attack;
 import cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.UsableCardVisitor;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EfectoOnDemand;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -86,7 +88,8 @@ public class Controller implements Observer {
      */
     public void update(Observable o, Object arg){
         if(arg instanceof ISkill){
-            ((ISkill) arg).applyEffect(this);
+            EffectVisitor visitor = new EfectoOnDemand(this);
+            ((ISkill) arg).accept(visitor);
         }
         if(arg instanceof Attack){
             endTurn();
@@ -182,7 +185,8 @@ public class Controller implements Observer {
      *
      * @param card The card played
      */
-    public void manageEffect(TrainerCard card){ card.applyEffect(this);}
+    public void manageEffect(TrainerCard card){  EffectVisitor visitor = new EfectoOnDemand(this);
+        card.acceptEffect(visitor);}
 
     /** Set the game status, if it is false, then the game can't be played (?
      *
@@ -201,5 +205,23 @@ public class Controller implements Observer {
      */
     public boolean getStatus(){
         return status;
+    }
+
+    /** show the current playable cards of the in turn trainer
+     *
+     * @return in turn
+     */
+    public String showMano(){ return inTurn.showMano();}
+    /** show the current field
+     *
+     * @return not in turn
+     */
+    public String showField(){ return inTurn.showEntireField(notInTurn);}
+    /** plays from the sidelines
+     *
+     * @param index index of the pokemon in the sidelines;
+     */
+    public void playFromBanca(int index){
+        inTurn.activePokemonSwapWithIndex(index);
     }
 }

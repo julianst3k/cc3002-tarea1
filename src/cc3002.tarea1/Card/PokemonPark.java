@@ -12,7 +12,8 @@ public class PokemonPark extends StadiumCard {
      *
      * @param visitor The play energy card visitor
      */
-    public void accept(VisitorFather visitor){
+    @Override
+    public void acceptEffect(EffectVisitor visitor){
         visitor.visitedPokemonPark(this);
     }
 

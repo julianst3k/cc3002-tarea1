@@ -17,7 +17,7 @@ public class HydroPumpTest {
     private Pokemon attacker;
     private Pokemon attacked;
     @Before public void setUp(){
-        attacker = new BasicFirePokemon("Attacker", 33, 100, new ArrayList<>(Arrays.asList(new HydroPump(20, new ArrayList<>(Arrays.asList(new FireEnergy()))))));
+        attacker = new BasicFirePokemon("Attacker", 33, 100, new ArrayList<>(Arrays.asList(new HydroPump(20, new ArrayList<>(Arrays.asList(new FireEnergy())), 30))));
         attacked = new BasicFirePokemon("Attacked", 33, 1000, new ArrayList<>());
     }
     @Test public void testDmgScaling(){
@@ -40,5 +40,9 @@ public class HydroPumpTest {
         attacker.selectSkill(0);
         attacker.useSkill(attacked);
         assertEquals(attacked.getHp(), 860); // 50, y funciona para cualquier energia :)
+        attacker.setEnergy(new FireEnergy());
+        attacker.selectSkill(0);
+        attacker.useSkill(attacked);
+        assertEquals(attacked.getHp(), 810); // 50, este es el tope
     }
 }

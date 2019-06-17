@@ -2,6 +2,8 @@ package cc3002.tarea1.Card;
 
 import cc3002.tarea1.Card.SupportCard;
 import cc3002.tarea1.Controller;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EfectoOnDemand;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
 
 public class ProfessorJuniper extends SupportCard {
     /** Creates a professor juniper card
@@ -10,13 +12,9 @@ public class ProfessorJuniper extends SupportCard {
     public ProfessorJuniper(){
         super("Professor Juniper", "Descarta tu mano y saca 7 del mazo");
     }
+
     @Override
-    public void applyEffect(Controller controller) {
-        while (controller.getInTurnTrainer().getMano().size() > 0){
-            controller.getInTurnTrainer().descartarMano(1);
-        }
-        for(int i=0; i<7; i++) {
-            controller.getInTurnTrainer().sacarCarta();
-        }
+    public void acceptEffect(EffectVisitor visitor) {
+        visitor.visitedProfessorJuniper(this);
     }
 }

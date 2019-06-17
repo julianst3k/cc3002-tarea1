@@ -30,8 +30,11 @@ public class TestEntrenador {
     private Mazo firstmazo;
     private Mazo fakersmazo;
     private Mazo secondmazo;
+    private Mazo vacio;
     private Premio premio;
+    private Controller control;
     @Before public void setUp(){
+        vacio = new Mazo(new ArrayList<>(Arrays.asList(new LeafEnergy())));
         Green = new ArrayList<IEnergia>(Arrays.asList(new LeafEnergy(), new FireEnergy()));
         LeafAttack = new BasicAttack("Cures Cancer", 420, Green, "Smoke that");
         ByronsEnergies = new ArrayList<IEnergia>(Arrays.asList(new FireEnergy(), new FireEnergy()));
@@ -58,7 +61,7 @@ public class TestEntrenador {
         entrenador = new Entrenador(new BasicFirePokemon("Byron", 23, 69, skills), firstmazo, premio);
         faker = new Entrenador(new BasicFirePokemon("Unkillable Demon King", 666, 10000, new ArrayList<ISkill>(Arrays.asList(elMataNachos))), fakersmazo, premio);
         secondTrainer = new Entrenador(new BasicFirePokemon("Byron", 23, 69, skills), secondmazo, premio);
-
+        control = new Controller(entrenador, faker);
     }
     @Test public void testInitial() {
         assertEquals(entrenador.cardInfo(entrenador.getActiva()), "Nombre: Byron, ID: 23, Health Points: 69, Energias: \n1. Big Flames, de tipo fuego y realiza 33 de daño. Descripcion: Pega. Requiere: FIRE: 2. \n");
@@ -73,7 +76,7 @@ public class TestEntrenador {
         assertEquals(entrenador.cantidadMano(), 1);
         entrenador.sacarCarta();
         faker.sacarCarta();
-        assertEquals(entrenador.showMano(), "1. Energia de Fuego.\n2. Energia de Fuego.\n");
+        assertEquals(control.showMano(), "1. Energia de Fuego.\n2. Energia de Fuego.\n");
         assertEquals(entrenador.cardInfoMano(2), "Energia de Fuego");
         entrenador.setObjective(0);
         entrenador.jugarCarta(1);
@@ -99,7 +102,8 @@ public class TestEntrenador {
         assertEquals(entrenador.activeSelectedSkill(), "El ataque selecto es: Big Flames, de tipo fuego y realiza 33 de daño. Descripcion: Pega. Requiere: FIRE: 2. \n");
         entrenador.activePokemonSwap();
         assertEquals(entrenador.getActiva().getName(), "Byron");
-        assertEquals(entrenador.showEntireField(faker), "Tu campo: \nActivo: Nombre: Byron, ID: 23, Health Points: 69, Energias: FIRE: 2. \n1. Big Flames, de tipo fuego y realiza 33 de daño. Descripcion: Pega. Requiere: FIRE: 2. \nBanca: \nCampo enemigo: \nActivo: Nombre: Unkillable Demon King, ID: 666, Health Points: 10000, Energias: FIRE: 2. \n1. Bomb, de tipo fuego y realiza 10000 de daño. Descripcion: Kills everything. Requiere: FIRE: 2. \nBanca: \n" );
+        control.endTurn();
+        assertEquals(control.showField(), "Tu campo: \nActivo: Nombre: Byron, ID: 23, Health Points: 69, Energias: FIRE: 2. \n1. Big Flames, de tipo fuego y realiza 33 de daño. Descripcion: Pega. Requiere: FIRE: 2. \nBanca: \nCampo enemigo: \nActivo: Nombre: Unkillable Demon King, ID: 666, Health Points: 10000, Energias: FIRE: 2. \n1. Bomb, de tipo fuego y realiza 10000 de daño. Descripcion: Kills everything. Requiere: FIRE: 2. \nBanca: \n" );
 
     }
     @Test public void testAddingWayTooMuch(){
@@ -114,5 +118,13 @@ public class TestEntrenador {
         assertEquals(secondTrainer.cardInfoMano(1), "Nombre: Misunderstood Green, ID: 420, Health Points: 1000, Energias: \n1. Cures Cancer, de tipo hierba y realiza 420 de daño. Descripcion: Smoke that. Requiere: FIRE: 1. LEAF: 1. \n");
         assertEquals(secondTrainer.cardInfoMano(2), "");
         assertEquals(faker.enemyBanca(secondTrainer), secondTrainer.getBanca());
+    }
+    @Test public void cantStartWithout60Cards(){
+        try{
+            Entrenador failedTrainer = new Entrenador(new BasicFirePokemon("hola", 3, 3,  new ArrayList<>()), vacio, new Premio(new ArrayList<>()));
+        }
+        catch (AssertionError e){
+            assertTrue(true);
+        }
     }
 }

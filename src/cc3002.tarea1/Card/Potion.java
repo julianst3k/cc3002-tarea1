@@ -1,6 +1,9 @@
 package cc3002.tarea1.Card;
 
 import cc3002.tarea1.Controller;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EfectoOnDemand;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
+import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 public class Potion extends InstantObjectCard {
     private int heal;
@@ -8,15 +11,18 @@ public class Potion extends InstantObjectCard {
         super("Potion", "Heals for "+healing);
         heal = healing;
     }
+
     @Override
-    public void applyEffect(Controller controller){
-        if(controller.getInTurnTrainer().getObjective()!=null) {
-            if (controller.getInTurnTrainer().getObjective().getHp() + this.heal*10 < controller.getInTurnTrainer().getObjective().getMaxHp())
-                controller.getInTurnTrainer().getObjective().setHealthPoints(controller.getInTurnTrainer().getObjective().getHp() + this.heal*10);
-            else {
-                controller.getInTurnTrainer().getObjective().setHealthPoints(controller.getInTurnTrainer().getObjective().getMaxHp());
-            }
-        }
+    public void acceptEffect(EffectVisitor visitor){
+        visitor.visitedPotion(this);
+    }
+
+    /** get the heal
+     *
+     * @return get heal
+     */
+    public int getHeal(){
+        return heal;
     }
 
 }

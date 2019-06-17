@@ -1,6 +1,7 @@
 package cc3002.tarea1.Card;
 
 import cc3002.tarea1.Pokemon;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EffectVisitor;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 public class FrozenCity extends StadiumCard {
@@ -14,7 +15,7 @@ public class FrozenCity extends StadiumCard {
     }
 
     @Override
-    public void accept(VisitorFather visitor) {
+    public void acceptEffect(EffectVisitor visitor) {
         visitor.visitedFrozenCity(this);
     }
 

@@ -4,6 +4,7 @@ import cc3002.tarea1.Visitor.PlayVisitor.ControlVisitor.ControlVisitor;
 import cc3002.tarea1.IEnergia;
 import cc3002.tarea1.IPokemon;
 import cc3002.tarea1.Pokemon;
+import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor.EfectoExtraDmg;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 import java.util.ArrayList;
@@ -34,6 +35,10 @@ public abstract class Attack extends Skill {
     public void accept(VisitorFather visitor){
         visitor.visitedAttack(this);
     }
-    public int getExtradmg(){return extradmg;}
+    public int getExtradmg(){
+        EfectoExtraDmg visitor = new EfectoExtraDmg();
+        this.accept(visitor);
+        return visitor.getValue();
+    }
 
 }

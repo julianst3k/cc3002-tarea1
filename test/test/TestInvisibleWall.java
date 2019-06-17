@@ -59,13 +59,13 @@ public class TestInvisibleWall {
         assertEquals(attackedVulnerable.getHp(), 110);
         attackerv2.selectSkill(0);
         attackerv2.useSkill(attackedResistent);
-        assertEquals(attackedResistent.getHp(), 210);
+        assertEquals(attackedResistent.getHp(), 200);
         attackerv2.selectSkill(1);
         attackerv2.useSkill(attackedResistent);
-        assertEquals(attackedResistent.getHp(), 170);
+        assertEquals(attackedResistent.getHp(), 160);
         attackerv2.selectSkill(2);
         attackerv2.useSkill(attackedResistent);
-        assertEquals(attackedResistent.getHp(), 120);
+        assertEquals(attackedResistent.getHp(), 110);
     }
 
 }

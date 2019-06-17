@@ -12,9 +12,9 @@ public class Phase1FirePokemon extends AbstractFirePokemon implements IPhase1Typ
      */
     private int preEvolutionID;
 
-    public Phase1FirePokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills, int preid){
+    public Phase1FirePokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
-        preEvolutionID= preid;
+        preEvolutionID= id;
     }
     @Override
     public void accept(VisitorFather visitor){

@@ -17,12 +17,6 @@ public class AttachObjectCard extends ObjectCard {
         visitor.visitedAttachObjectCard(this);
     }
 
-    /** An object card tends to apply effects that are constant into the objective pokemon.
-     * This is not currently used since no attached object card were created
-     *
-     * @param poke Pokemon
-     */
-    public void applyConstantEffect(Pokemon poke){}
 
     /** Set a Pokemon to the card, to gather information
      *

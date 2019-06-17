@@ -11,9 +11,9 @@ public class Phase2FighterPokemon extends AbstractFighterPokemon implements IPha
      */
     private int preEvolutionID;
 
-    public Phase2FighterPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills, int preid){
+    public Phase2FighterPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
-        preEvolutionID= preid;
+        preEvolutionID= id;
     }
     @Override
     public void accept(VisitorFather visitor){

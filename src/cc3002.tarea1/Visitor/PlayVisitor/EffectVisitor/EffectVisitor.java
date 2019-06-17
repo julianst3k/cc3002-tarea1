@@ -10,7 +10,7 @@ public abstract class EffectVisitor extends VisitorFather {
     /** Applies an effect that needs to look for parameters
      *
      */
-    Controller controller;
+    protected Controller controller;
     public EffectVisitor(Controller control){
         controller = control;
     }

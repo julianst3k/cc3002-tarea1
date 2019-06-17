@@ -11,9 +11,9 @@ public class Phase2PsychPokemon extends AbstractPsychPokemon implements IPhase2T
      */
     private int preEvolutionID;
 
-    public Phase2PsychPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills, int preid){
+    public Phase2PsychPokemon(String name, int id, int healthPoints, ArrayList<ISkill> skills){
         super(name, id, healthPoints, skills);
-        preEvolutionID= preid;
+        preEvolutionID= id;
     }
     @Override
 
