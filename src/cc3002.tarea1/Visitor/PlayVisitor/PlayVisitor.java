@@ -1,16 +1,11 @@
 package cc3002.tarea1.Visitor.PlayVisitor;
 
 import cc3002.tarea1.Card.*;
-import cc3002.tarea1.Energy;
+import cc3002.tarea1.Energies.Energy;
 import cc3002.tarea1.Entrenador;
 import cc3002.tarea1.PokemonTypes.IPhase1Type;
 import cc3002.tarea1.PokemonTypes.IBasicType;
 import cc3002.tarea1.PokemonTypes.IPhase2Type;
-import cc3002.tarea1.Visitor.PlayVisitor.Phase1Available;
-import cc3002.tarea1.Visitor.PlayVisitor.Phase2Available;
-import cc3002.tarea1.Visitor.PlayVisitor.EffectPlayEnergy;
-import cc3002.tarea1.Visitor.PlayVisitor.EffectVisitor;
-import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 
 public class PlayVisitor extends VisitorFather {

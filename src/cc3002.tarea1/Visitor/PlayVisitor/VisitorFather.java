@@ -1,7 +1,7 @@
 package cc3002.tarea1.Visitor.PlayVisitor;
 
 import cc3002.tarea1.Card.*;
-import cc3002.tarea1.Energy;
+import cc3002.tarea1.Energies.Energy;
 import cc3002.tarea1.Entrenador;
 import cc3002.tarea1.PokemonTypes.IBasicType;
 import cc3002.tarea1.PokemonTypes.IPhase1Type;

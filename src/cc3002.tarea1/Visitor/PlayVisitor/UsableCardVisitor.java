@@ -4,7 +4,7 @@ import cc3002.tarea1.Card.AttachObjectCard;
 import cc3002.tarea1.Card.InstantObjectCard;
 import cc3002.tarea1.Card.SupportCard;
 import cc3002.tarea1.Controller;
-import cc3002.tarea1.Energy;
+import cc3002.tarea1.Energies.Energy;
 import cc3002.tarea1.PokemonTypes.IPhase1Type;
 import cc3002.tarea1.PokemonTypes.IPhase2Type;
 

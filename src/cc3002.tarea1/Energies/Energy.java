@@ -1,5 +1,9 @@
-package cc3002.tarea1;
+package cc3002.tarea1.Energies;
 
+import cc3002.tarea1.ICardPlayable;
+import cc3002.tarea1.IEnergia;
+import cc3002.tarea1.IPokemon;
+import cc3002.tarea1.ISkill;
 import cc3002.tarea1.Visitor.PlayVisitor.VisitorFather;
 
 abstract public class Energy implements IEnergia, ICardPlayable {
