@@ -44,7 +44,7 @@ public class FrozenCityTest {
         controller = new Controller(entrenador, entrenadorSecond);
 
     }
-    @Test
+    @Test // Funciona como debiese, purga el pokemon activo
     public void testFrozenCityToActive(){
         controller.startTurn();
         controller.endTurn();
@@ -65,7 +65,7 @@ public class FrozenCityTest {
         controller.playCard(1);
         assertTrue(!controller.getStatus()); // lo purga, no hay carta en la banca, gg
     }
-    @Test
+    @Test // Funciona como debiese, purga el pokemon en la banca tambien
     public void testFrozenCItyToBanca(){
         controller.startTurn();
         controller.endTurn();

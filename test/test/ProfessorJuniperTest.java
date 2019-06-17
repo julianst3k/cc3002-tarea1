@@ -35,7 +35,7 @@ public class ProfessorJuniperTest {
         entrenador = new Entrenador(pokemon, mazo, new Premio(new ArrayList<>()));
         othertrainer = new Entrenador(pokemon, mazotwo, new Premio(new ArrayList<>()));
         controller = new Controller(entrenador,othertrainer);
-    }
+    } // Funciona como debiese
     @Test public void testProfessorJuniperFunctionality(){
         controller.startTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn();
         assertEquals(entrenador.getMano().size(), 5);
@@ -44,7 +44,7 @@ public class ProfessorJuniperTest {
         assertEquals(entrenador.getMano().size(), 7);
         assertEquals(entrenador.getMazo().getSize(), 48);
         assertEquals(entrenador.getPila().getSize(), 4);
-    }
+    } // Funcionara hasta sin 7 cartas en el mazo (Se asumio)
     @Test public void testProfessorJuniperFunctionalityWithout7CardsOnDeck(){
         controller.startTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn(); controller.endTurn();
         assertEquals(entrenador.getMano().size(), 5);

@@ -19,7 +19,7 @@ public class HydroPumpTest {
     @Before public void setUp(){
         attacker = new BasicFirePokemon("Attacker", 33, 100, new ArrayList<>(Arrays.asList(new HydroPump(20, new ArrayList<>(Arrays.asList(new FireEnergy())), 30))));
         attacked = new BasicFirePokemon("Attacked", 33, 1000, new ArrayList<>());
-    }
+    } // Escala como debiese, hay un tope
     @Test public void testDmgScaling(){
         attacker.selectSkill(0);
         attacker.useSkill(attacked); //

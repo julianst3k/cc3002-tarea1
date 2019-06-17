@@ -37,12 +37,14 @@ public class PotionTest {
         otherTrainer = new Entrenador(otherPok, deckOther, new Premio(new ArrayList<>()));
 
         bigController = new Controller(trainer, otherTrainer);
-    }
+    } // Se debe seleccionar un pokemon, si no se selecciona no se juega. Se cura, y no hay sobre cura.
     @Test public void play(){
         bigController.startTurn();
         bigController.endTurn();
         bigController.selectSkill(1);
         bigController.useSkill(1);
+        assertEquals(trainer.getActiva().getHp(), 970);
+        bigController.playCard(1);
         assertEquals(trainer.getActiva().getHp(), 970);
         bigController.selectObjective(0);
         bigController.playCard(1);
@@ -53,7 +55,7 @@ public class PotionTest {
         bigController.useSkill(1);
         assertEquals(trainer.getActiva().getHp(), 960);
         bigController.selectObjective(0);
-        bigController.playCard(1);
+        bigController.playCard(1); // La pocion aca cura sobre 1000
         assertEquals(trainer.getActiva().getHp(), 1000);
     }
 }

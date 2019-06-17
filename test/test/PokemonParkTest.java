@@ -36,7 +36,7 @@ public class PokemonParkTest {
         entrenadorSecond = new Entrenador(pokemonSecond, secondDeck, new Premio(new ArrayList<>()));
         controller = new Controller(entrenador, entrenadorSecond);
     }
-    @Test
+    @Test // Funciona como debiese. No hay sobre cura.
     public void testPokemonPark(){
         controller.startTurn();
         controller.endTurn();

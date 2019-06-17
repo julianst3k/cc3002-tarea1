@@ -35,10 +35,30 @@ public class TestWingBuzz {
         enemyTrainer = new Entrenador(pokemon, seconddeck, new Premio(new ArrayList<>()));
         bigController = new Controller(iDoTheEffect, enemyTrainer);
     }
+    // En este test se muestra que funciona como debiese funcionar, o sea, si no le das una carta objetivo, no hace nada, si no hay energias, no hace nada, y si se cumple que haya
+    // energias, entonces hace lo neceesario
     @Test public void worksAsIntended(){
         bigController.startTurn();
-
+        bigController.selectSkill(1);
+        assertEquals(iDoTheEffect.getActiva().getSelectedSkill(), null);
+        bigController.useSkill(1);
+        assertTrue(bigController.getWingBuzzPlayed()==0);
+        bigController.selectObjective(0);
+        bigController.playCard(1);
+        bigController.selectSkill(1);
+        bigController.useSkill(1);
+        assertTrue(bigController.getWingBuzzPlayed()==0); // No cards to be buzzed
+        bigController.endTurn();
+        bigController.endTurn();
+        assertEquals(enemyTrainer.getMazo().getSize(), 59); // Mazo antes de que se active la skill
+        bigController.selectCard(1);
+        bigController.useSkill(1);
+        assertTrue(bigController.getWingBuzzPlayed()==1);
+        assertTrue(iDoTheEffect.getMano().size()==0); // Popeo la que seleccione
+        assertEquals(enemyTrainer.getMazo().getSize(),58); //Popeo 1
+        assertEquals(enemyTrainer.getPila().getSize(), 1); // se añadio a la pila
     }
+    // Si el enemigo no tiene cartas, igual funciona. Esto se asumio
     @Test public void noMazoEnemy(){
         enemyTrainer.getMazo().popNCards(60);
         bigController.startTurn();
@@ -61,6 +81,7 @@ public class TestWingBuzz {
         assertEquals(enemyTrainer.getMazo().getSize(),0); //Popeo 1
 
     }
+    // No se puede jugar dos veces el mismo turno
     @Test public void cantBePlayedTwice(){
         bigController.startTurn();
         bigController.selectObjective(0);

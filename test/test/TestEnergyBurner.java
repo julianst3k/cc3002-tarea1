@@ -51,7 +51,7 @@ public class TestEnergyBurner {
         bigController = new Controller(iDoTheEffect, enemyTrainer);
         voidTrainer = new Entrenador(leafpokemon, voiddeck, new Premio(new ArrayList<>()));
     }
-    @Test
+    @Test // Aca se le ponen 5 cartas de tipo fuego y las quema
     public void testQuemaCartasDeTodoTipo(){
         bigController.selectObjective(0);
         bigController.startTurn();
@@ -92,7 +92,7 @@ public class TestEnergyBurner {
         bigController.useSkill(1);
         assertEquals(enemyTrainer.getActiva().getEnergies().getFighterEnergy(), 5);
 
-    }
+    } // El quemar las energias funciona independiente del pokemon
     @Test public void testQuemaCartasDistintosTipos(){
         voidTrainer.sacarCarta();
         voidTrainer.setObjective(0);

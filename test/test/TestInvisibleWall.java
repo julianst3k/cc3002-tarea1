@@ -33,6 +33,7 @@ public class TestInvisibleWall {
 
 
     }
+    // Se defiende, aqui debiese quitarle 70 HP
     @Test public void ableToDefend(){
         attacker.selectSkill(0);
         attacker.useSkill(attacked);
@@ -42,6 +43,7 @@ public class TestInvisibleWall {
         assertEquals(attacked.getHp(), 130); // Just lost 50 HP
 
     }
+    // No se defiende pq no hay energias
     @Test public void notEnoughEnergiesToDefend(){
         attacker.selectSkill(0);
         attacker.useSkill(attackedNonEnoughEnergies);
@@ -50,6 +52,7 @@ public class TestInvisibleWall {
         attacker.useSkill(attackedNonEnoughEnergies);
         assertEquals(attackedNonEnoughEnergies.getHp(), 110);
     }
+    // Se defiende independientemente del tipo de ataque recibido
     @Test public void differentResist(){
         attacker.selectSkill(0);
         attacker.useSkill(attackedVulnerable);
@@ -67,6 +70,7 @@ public class TestInvisibleWall {
         attackerv2.useSkill(attackedResistent);
         assertEquals(attackedResistent.getHp(), 110);
     }
+    // No es usable
     @Test public void useSkill(){
         Mazo mazo = new Mazo(new ArrayList<>());
         for(int i =0;i<60; i++ ){

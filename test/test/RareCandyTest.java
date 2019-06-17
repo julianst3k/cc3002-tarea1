@@ -20,6 +20,7 @@ import static junit.framework.TestCase.assertEquals;
 public class RareCandyTest {
     private RareCandy rare;
     private Pokemon preEvo;
+    private Pokemon evo3;
     private Pokemon evo;
     private Pokemon evoPhaseTwo;
     private Entrenador trainer;
@@ -28,6 +29,8 @@ public class RareCandyTest {
         rare = new RareCandy();
         preEvo = new BasicFirePokemon("xD", 30, 300, new ArrayList<>());
         evo = new Phase1FirePokemon("xD Phase 1", 30, 200, new ArrayList<>());
+        evo3 = new Phase1FirePokemon("xD Phase 1", 31, 200, new ArrayList<>());
+
         evoPhaseTwo = new Phase2FirePokemon("xD Phase 2", 30, 300, new ArrayList<>());
         deck = new Mazo(new ArrayList<>());
         for(int i=0; i<60; i++){
@@ -35,7 +38,7 @@ public class RareCandyTest {
         }
         trainer = new Entrenador(preEvo, deck, new Premio(new ArrayList<>(Arrays.asList())));
     }
-    @Test
+    @Test // Aun con fase 1 y fase 2 en la mano, evoluciona el fase 2
     public void evolucionaDeUnaAFase2(){
         trainer.getMano().add(rare);
         trainer.getMano().add(evoPhaseTwo);
@@ -57,5 +60,16 @@ public class RareCandyTest {
         trainer.setSelectedCard(1);
         trainer.jugarCarta(2);
         assertEquals(trainer.getActiva().getName(), "xD Phase 1");
+    }
+    @Test // La carta noe s evolucionable
+    public void noPasaNada(){
+        trainer.getMano().add(rare);
+        trainer.getMano().add(evo3);
+        trainer.jugarCarta(1);
+        assertEquals(trainer.getMano().size(), 2);
+        trainer.setObjective(0);
+        trainer.setSelectedCard(2);
+        trainer.jugarCarta(2);
+        assertEquals(trainer.getActiva().getName(), "xD");
     }
 }
