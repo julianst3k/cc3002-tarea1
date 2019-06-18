@@ -174,6 +174,7 @@
       <find>evol</find>
       <find>isDed</find>
       <find>usable</find>
+      <find>pila.addCarta</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/test/test</dir>
@@ -256,8 +257,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -319,6 +318,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -494,15 +495,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_in_cc3002-tarea1 - 2019.06.17 at 04h 18m 53s.xml">
-      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.06.17 at 04h 25m 14s.xml">
-      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="test_in_cc3002-tarea1 - 2019.06.17 at 04h 50m 52s.xml">
-      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
-    </history-entry>
     <history-entry file="test_in_cc3002-tarea1 - 2019.06.17 at 17h 34m 39s.xml">
       <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
     </history-entry>
@@ -524,9 +516,18 @@
     <history-entry file="test_in_cc3002-tarea1 - 2019.06.17 at 19h 53m 54s.xml">
       <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
     </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.17 at 21h 07m 51s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.17 at 21h 08m 35s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="test_in_cc3002-tarea1 - 2019.06.17 at 21h 09m 13s.xml">
+      <configuration name="test in cc3002-tarea1" configurationId="AndroidJUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252838000" />
+    <option name="totallyTimeSpent" value="253279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -607,7 +608,7 @@
       <FILTER>test.*</FILTER>
       <FILTER>cc3002.tarea1.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/tarea1$test_in_cc3002_tarea1.ic" NAME="test in cc3002-tarea1 Coverage Results" MODIFIED="1560820150253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/tarea1$test_in_cc3002_tarea1.ic" NAME="test in cc3002-tarea1 Coverage Results" MODIFIED="1560820383325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.*</FILTER>
       <FILTER>cc3002.tarea1.*</FILTER>
     </SUITE>
