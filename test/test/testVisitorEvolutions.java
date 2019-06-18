@@ -62,6 +62,7 @@ public class testVisitorEvolutions {
         myTrainer.jugarCarta(1);
         assertEquals(myTrainer.getActiva(), secondEvo);
         assertEquals(myTrainer.getActiva().getEnergies(), energy);
+        assertTrue(myTrainer.getPila().getStack().contains(firstEvo)); // se añade a la pila
         Pokemon enduranceTester4 = new Phase2FirePokemon("Myth", 36, 200, new ArrayList<>(Arrays.asList(new nullSkill())));
         myTrainer.getMano().add(enduranceTester4);
         myTrainer.setObjective(0);

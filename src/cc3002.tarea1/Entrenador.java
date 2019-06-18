@@ -79,7 +79,7 @@ public class Entrenador extends Observable implements IEntrenador {
     @Override
     public void deadActive() {
         if (this.getActiva().isDed()) {
-            pila.addCarta(this.getActiva());
+            addToPila(this.getActiva());
             this.Activa = null;
             this.activePokemonSwap();
         }
@@ -354,6 +354,8 @@ public class Entrenador extends Observable implements IEntrenador {
             this.Banca.remove(place - 1);
             this.Banca.add( place - 1, after);
         }
+        addToPila(this.getObjective());
+        this.objective = null;
     }
 
     @Override
@@ -422,14 +424,14 @@ public class Entrenador extends Observable implements IEntrenador {
      */
     public void descartarMazo(){
         if(mazo.getSize()>0) {
-            pila.addCarta(mazo.sacarCarta());
+            addToPila(mazo.sacarCarta());
         }
     }
     /** Discard a card from the playable cards
      *
      */
     public void descartarMano(int cardIndex){
-        pila.addCarta(sacarCartaMano(cardIndex));
+        addToPila(sacarCartaMano(cardIndex));
     }
     /** Select the card that will be played, if necessary
      *
@@ -469,8 +471,14 @@ public class Entrenador extends Observable implements IEntrenador {
             }
         }
         else{
-            pila.addCarta(this.Banca.get(index-1));
+            addToPila(this.Banca.get(index-1));
             this.Banca.remove(index-1);
         }
+    }
+    /** Add a card to the stack
+     * @param  card the card
+     */
+    public void addToPila(ICardPlayable card){
+        pila.addCarta(card);
     }
 }
